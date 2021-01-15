@@ -33,7 +33,7 @@
 /obj/item/candle/attackby(obj/item/W, mob/user, params)
 	..()
 	var/msg = W.ignition_effect(src, user)
-	if(msg)
+	if(msg || W.is_hot())
 		light(msg)
 
 /obj/item/candle/fire_act(exposed_temperature, exposed_volume)
@@ -94,7 +94,7 @@
 /obj/item/candle/tribal_torch/attackby(obj/item/W, mob/user, params)
 	..()
 	var/msg = W.ignition_effect(src, user)
-	if(msg)
+	if(msg || W.is_hot())
 		light(msg)
 		set_light(7)
 

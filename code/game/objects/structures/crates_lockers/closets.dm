@@ -36,6 +36,7 @@
 	var/material_drop_amount = 2
 	var/delivery_icon = "deliverycloset" //which icon to use when packagewrapped. null to be unwrappable.
 	var/anchorable = TRUE
+	var/obj/item/lock_construct/lock
 
 
 /obj/structure/closet/Initialize(mapload)
@@ -85,12 +86,18 @@
 		to_chat(user, "<span class='notice'>It is <b>bolted</b> to the ground.</span>")
 	if(opened)
 		to_chat(user, "<span class='notice'>The parts are <b>welded</b> together.</span>")
+	if(lock)
+		to_chat(user, "<span class='notice'>It has [lock] installed.</span>")
 	else if(secure && !opened)
 		to_chat(user, "<span class='notice'>Alt-click to [locked ? "unlock" : "lock"].</span>")
+
 
 /obj/structure/closet/proc/can_open(mob/living/user)
 	if(welded || locked)
 		return FALSE
+	if(lock)
+		if(lock.locked)
+			return FALSE
 	var/turf/T = get_turf(src)
 	for(var/mob/living/L in T)
 		if(L.anchored || horizontal && L.mob_size > MOB_SIZE_TINY && L.density)
@@ -210,7 +217,22 @@
 /obj/structure/closet/attackby(obj/item/W, mob/user, params)
 	if(user in src)
 		return
-	if(src.tool_interact(W,user))
+	if(istype(W, /obj/item/lock_construct) && !secure && !opened)
+		var/obj/item/lock_construct/L = W
+		if(lock)
+			to_chat(user, "<span class='warning'>[src] already has [lock] on it</span>")
+		else if (user.transferItemToLoc(W, src))
+			lock = new
+			lock.lock_data = L.lock_data
+			L.Destroy()
+			to_chat(user, "<span class='warning'>You attach [W] on the [src]</span>")
+	else if(istype(W, /obj/item/key) && !opened)
+		var/obj/item/key/K = W
+		if(lock)
+			lock.check_key(K, user)
+		else
+			to_chat(user, "<span class='warning'>There is no lock installed</span>")
+	else if(src.tool_interact(W,user))
 		return 1 // No afterattack
 	else
 		return ..()
@@ -252,6 +274,9 @@
 							"<span class='notice'>You [welded ? "weld" : "unwelded"] \the [src] with \the [W].</span>",
 							"<span class='italics'>You hear welding.</span>")
 			update_icon()
+	else if(istype(W, /obj/item/crowbar))
+		if(lock.pry_off(user, src))
+			lock = null
 	else if(istype(W, /obj/item/wrench) && anchorable)
 		if(isinspace() && !anchored)
 			return

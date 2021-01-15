@@ -25,6 +25,15 @@
 	category = CAT_MOULD
 	subcategory = CAT_MOULD_BARREL
 
+/datum/crafting_recipe/mould/extended
+	result = /obj/item/prefabs/mould/barrel/extended
+	name = "Extended barrel"
+	tools = list(TOOL_FORGE, TOOL_GUNTIER3)
+	traits = list(TRAIT_GUNSMITH_THREE)
+	time = 30
+	category = CAT_MOULD
+	subcategory = CAT_MOULD_BARREL
+
 /datum/crafting_recipe/mould/dual
 	result = /obj/item/prefabs/mould/barrel/dual
 	name = "Multiple barrels"

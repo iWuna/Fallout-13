@@ -449,6 +449,12 @@ update_label("John Doe", "Clowny")
 	icon_state = "holodogtag"
 	id_type = "ID tags"
 
+/obj/item/card/id/dogtag/enclave
+	name = "holo dogtag"
+	desc = "An advanced holographic dogtag, that shows the duty of a Enclave member."
+	icon_state = "holodogtag"
+	id_type = "ID tags"
+
 /obj/item/card/id/selfassign/attack_self(mob/user)
     if(isliving(user))
         var/mob/living/living_user = user

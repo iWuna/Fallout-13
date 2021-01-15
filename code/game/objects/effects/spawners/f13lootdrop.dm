@@ -970,7 +970,8 @@
 				/obj/item/gun/ballistic/revolver/sequoia/scoped,
 				/obj/item/gun/ballistic/automatic/bozar,
 				/obj/item/gun/energy/gammagun,
-				/obj/item/gun/ballistic/automatic/p90
+				/obj/item/gun/ballistic/automatic/p90,
+				/obj/item/gun/energy/tesla_cannon
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/unique //UNIQUE GUN
@@ -1491,9 +1492,9 @@
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
-		/obj/item/advanced_crafting_components/flux,
+		/obj/item/advanced_crafting_components/capacitor/flux,
 		/obj/item/advanced_crafting_components/lenses,
-		/obj/item/advanced_crafting_components/conductors,
+		/obj/item/advanced_crafting_components/conductors/super,
 		/obj/item/advanced_crafting_components/receiver,
 		/obj/item/advanced_crafting_components/assembly,
 	    /obj/item/advanced_crafting_components/alloys,
@@ -1569,9 +1570,9 @@
 	lootcount = 1
 	lootdoubles = FALSE
 	loot = list(
-		/obj/item/advanced_crafting_components/flux,
+		/obj/item/advanced_crafting_components/capacitor/flux,
 		/obj/item/advanced_crafting_components/lenses,
-		/obj/item/advanced_crafting_components/conductors,
+		/obj/item/advanced_crafting_components/conductors/super,
 		/obj/item/advanced_crafting_components/receiver,
 		/obj/item/advanced_crafting_components/assembly,
 	    /obj/item/advanced_crafting_components/alloys,

@@ -32,6 +32,12 @@
 		target.mind.remove_antag_datum(/datum/antagonist/brainwashed)
 	target.adjustBrainLoss(-60)
 	target.cure_all_traumas(TRAUMA_RESILIENCE_SURGERY)
+	var/mob/living/U = user
+	if(U.has_trait(TRAIT_ADVANCED_SURGEON))
+		target.cure_all_traumas(TRAUMA_RESILIENCE_ABSOLUTE)
+		target.cure_all_traumas(TRAUMA_RESILIENCE_LOBOTOMY)
+		target.cure_all_traumas(TRAUMA_RESILIENCE_MAGIC)
+
 	return TRUE
 
 /datum/surgery_step/fix_brain/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)

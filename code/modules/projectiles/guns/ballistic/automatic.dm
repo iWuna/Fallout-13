@@ -1005,7 +1005,7 @@
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
-	burst_size = 3 //Who keeps nerfing this? S.B.
+	burst_size = 2 //Who keeps nerfing this? S.B.
 	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY

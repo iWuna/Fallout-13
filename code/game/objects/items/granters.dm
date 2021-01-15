@@ -43,7 +43,7 @@
 	if(used && oneuse)
 		recoil(user)
 	else
-		on_reading_start(user)
+		on_reading_start(user)	
 		reading = TRUE
 		for(var/i=1, i<=pages_to_mastery, i++)
 			if(!turn_page(user))
@@ -91,23 +91,26 @@
 
 //TRAIT GRANTERS///
 /obj/item/book/granter/trait
-	var/granted_trait
-	var/traitname = "catching bugs"
+	var/teachable = TRUE
+	var/datum/granter_trait/trait = /datum/granter_trait
 
 /obj/item/book/granter/trait/already_known(mob/living/user)
-	if(!granted_trait)
+	if(!trait)
 		return TRUE
-	if(user.has_trait(granted_trait))
-		to_chat(user, "<span class='notice'>You already know all about [traitname].</span>")
+	var/datum/granter_trait/T = new trait()
+	if(user.has_trait(T.grant))
+		to_chat(user, "<span class='notice'>You already know all about [T.name].</span>")
 		return TRUE
 	return FALSE
 
 /obj/item/book/granter/trait/on_reading_start(mob/living/user)
-	to_chat(user, "<span class='notice'>You start reading about [traitname]...</span>")
+	var/datum/granter_trait/T = new trait()
+	to_chat(user, "<span class='notice'>You start reading about [T.name]...</span>")
 
 /obj/item/book/granter/trait/on_reading_finished(mob/living/user)
-	to_chat(user, "<span class='notice'>You feel like you've got a good handle on [traitname]!</span>")
-	user.add_trait(granted_trait, TRAIT_GENERIC)
+	var/datum/granter_trait/T = new trait()
+	to_chat(user, "<span class='notice'>You feel like you've got a good handle on [T.name]!</span>")
+	user.add_trait(T.grant, TRAIT_GENERIC)
 	onlearned(user)
 
 /obj/item/book/granter/trait/onlearned(mob/living/user)
@@ -116,73 +119,124 @@
 		user.visible_message("<span class='caution'>[src]'s is useless to you now. You throw the book away.</span>")
 		qdel(src)
 
+
+/mob/living/proc/teach_skill()
+	set name = "Teach"
+	set desc = "Share the knowledge. Enlight the not enlightened!"
+	set category = "IC"
+
+	var/list/traits = list()
+	var/list/options = list()
+	for(var/path in subtypesof(/datum/granter_trait))
+		var/datum/granter_trait/T = new path()
+		if(is_string_in_list(T.grant, status_traits))
+			if (T.teachable)
+				traits[T.name] = path
+				options += T.name
+		
+	if(!length(options))
+		to_chat(src, "You don't know anything valuable to share.")
+		return
+	var/select = input(src, "Select a skill to teach", "Select skill") in options
+	if(!select)
+		return
+	var/p = traits[select]
+	var/datum/granter_trait/selected = new p()
+
+	var/list/possible_targets = list()
+	for(var/mob/living/carbon/target in oview())
+		// if(target.stat || !target.mind || !target.client)
+		if(target.stat)
+			continue
+		if(target.has_trait(selected.grant))
+			continue
+		possible_targets += target
+
+	if(!possible_targets.len)
+		to_chat(src, "Nobody here is capable of understanding the [selected.name]")
+		return
+
+	var/mob/living/carbon/C
+	C = input("Choose who to invite to your gang!", "Gang invitation") as null|mob in possible_targets
+	if(!C)
+		return
+
+	to_chat(src, "You begin teaching [C] the [selected.name]. Take a sit, this will take some time...")
+	to_chat(C, "[src] begins teaching you the [selected.name]. Take a sit, this will take some time...")
+
+	if(do_after(src, 200, FALSE, C))
+		to_chat(src, "<span class='notice'>You finish enlightining [C] about misteries of [selected.name]!</span>")
+
+		to_chat(C, "<span class='notice'>You feel like you've got a good handle on [selected.name]!</span>")
+		C.add_trait(selected.grant, TRAIT_GENERIC)
+
+
 /obj/item/book/granter/trait/chemistry
 	name = "Chemistry for Wastelanders"
 	desc = "A useful book on chemistry."
+	icon_state = "chem"
 	oneuse = TRUE
-	granted_trait = TRAIT_CHEMWHIZ
-	traitname = "chemistry"
+	trait = /datum/granter_trait/chemistry
 	remarks = list("Always have a safe working environment...", "Don't give chems to strangers...", "Never drink any chemicals straight from the dispenser...", "Always wear your labcoat...", "Never forget your goggles...")
 
 /obj/item/book/granter/trait/spirit_teachings
 	name = "Teachings of the Machine Spirits"
 	desc = "A book all about tribal life among the Machine Spirits."
-	icon_state = "ms_teachings"
+	icon_state = "spirit"
 	oneuse = TRUE
-	granted_trait = TRAIT_MACHINE_SPIRITS
-	traitname = "The Machine Spirits"
+	trait = /datum/granter_trait/spirit_teachings
 	remarks = list("There are five Machine Spirits...", "Each govern an aspect of life...", "Always respect the Machine Spirits", "Never use them for selfish reasons", "Honour and love those blessed by the machine spirits.")
 
 
 /obj/item/book/granter/trait/gunsmith
 	name = "Gunsmithing for dummies"
 	desc = "A book on how to use smith deadly weapons. It's pretty complicated."
+	icon_state = "gc"
 	oneuse = TRUE
-	granted_trait = TRAIT_MASTER_GUNSMITH
-	traitname = "Master Gunsmith"
+	trait = /datum/granter_trait/gunsmith
 	remarks = list("Try turning it off and on again...","Alwyas craft in good form.", "Dont forget PPE.", "Keep your mechanisms OILED.", "Stay organised.")
 
 
 /obj/item/book/granter/trait/techno
 	name = "Craftsmanship Monthly"
 	desc = "A book on how to use advanced tools and production machinery. It's pretty complicated."
+	icon_state = "work"
 	oneuse = TRUE
-	granted_trait = TRAIT_TECHNOPHREAK
-	traitname = "craftsmanship"
+	trait = /datum/granter_trait/techno
 	remarks = list("Try turning it off and on again...","Alwyas craft in good form.", "Dont forget PPE.", "Keep your mechanisms OILED.", "Stay organised.")
 
 /obj/item/book/granter/trait/pa_wear
 	name = "Advanced Armor and You"
 	desc = "An indepth look into how power armor functions."
+	icon_state = "apa"
 	oneuse = TRUE
-	granted_trait = TRAIT_PA_WEAR
-	traitname = "Power Armor"
+	trait = /datum/granter_trait/pa_wear
 	remarks = list("Don't forget to do daily maintenance...","Keep your armor well guarded..","Slow and steady wins the race...","Positioning is important while moving slow...","Tired? Take a nap in your suit...","Saftey comes first when wearing your gear...")
 
 /obj/item/book/granter/trait/trekking
 	name = "Ranger's Guide to the Wasteland"
 	desc = "An extensive guide about trekking through the wastes. Written by Allesandra Hall, former NCR Ranger."
+	icon_state = "wstlnd"
 	oneuse = TRUE
-	granted_trait = TRAIT_HARD_YARDS
-	traitname = "trekking"
+	trait = /datum/granter_trait/trekking
 	remarks = list("It never hurts to take the road less travelled...", "Proper movement is key to your survival...", "Whether during combat or for simple travel, the desert can be your friend...", "Without proper knowledge, it can be hard to traverse the desert on foot...", "A Ranger is always prepared...")
 
 
 /obj/item/book/granter/trait/field_surgery
 	name = "Field Surgery Handbook"
 	desc = "Most trusted and up-to-date manual offered by the Department of Defense for military medical personnel in the field"
+	icon_state = "surg"
 	oneuse = TRUE
-	granted_trait = TRAIT_MEDICALEXPERT
-	traitname = "Field Surgery"
+	trait = /datum/granter_trait/field_surgery
 	remarks = list("Keep missing limbs fresh...", "Every second matters...", "Bodies can be brought to life after applying a direct charge...", "Makeshift instruments is a handy replacement...", "Right actions can patch up a dead body without chemicals...")
 
 
 /obj/item/book/granter/trait/brain_surgery
 	name = "Brain Surgery Manual"
 	desc = "Handbook of advanced brain surgery techniques. Approved by 9 experts out of 10."
+	icon_state = "bruin"
 	oneuse = TRUE
-	granted_trait = TRAIT_ADVANCED_SURGEON
-	traitname = "Brain Surgery"
+	trait = /datum/granter_trait/brain_surgery
 	remarks = list("Pacient can be pacified just by cutting...", "Lobotomy is used for curing severe cerebral traumas...", "Bodies can be brought to life after applying a direct charge...", "Pacient can be kept in symbiotic relationship with a virus...")
 
 
@@ -201,9 +255,8 @@
 	desc = "A rare issue of Guns and Bullets detailing the basic manufacture of firearms, allowing the reader to craft Tier 2 firearms. It's barely holding up, and looks like only one person can study the knowledge from it."
 	icon_state = "gab1"
 	oneuse = FALSE
-	granted_trait = TRAIT_GUNSMITH_ONE
 	tool_behaviour = TOOL_GUNTIER1
-	traitname = "Basic Gunsmithing"
+	trait = /datum/granter_trait/gunsmith_one
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
 
 /obj/item/book/granter/trait/gunsmith_two
@@ -211,9 +264,8 @@
 	desc = "A rare issue of Guns and Bullets following up Part 1, going further indepth into weapon mechanics, allowing the reader to craft Tier 3 firearms. It's barely holding up, and looks like only one person can study the knowledge from it."
 	icon_state = "gab2"
 	oneuse = FALSE
-	granted_trait = TRAIT_GUNSMITH_TWO
 	tool_behaviour = list(TOOL_GUNTIER1, TOOL_GUNTIER2)
-	traitname = "Intermediate Gunsmithing"
+	trait = /datum/granter_trait/gunsmith_two
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
 
 /obj/item/book/granter/trait/gunsmith_three
@@ -221,9 +273,8 @@
 	desc = "A rare issue of Guns and Bullets following up Part 2, explaining difficult ballistics theory and weapon mechanics, allowing the reader to craft Tier 4 firearms. It's barely holding up, and looks like only one person can study the knowledge from it."
 	icon_state = "gab3"
 	oneuse = FALSE
-	granted_trait = TRAIT_GUNSMITH_THREE
 	tool_behaviour = list(TOOL_GUNTIER1, TOOL_GUNTIER2, TOOL_GUNTIER3)
-	traitname = "Experienced Gunsmithing"
+	trait = /datum/granter_trait/gunsmith_three
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
 
 /obj/item/book/granter/trait/gunsmith_four
@@ -231,9 +282,8 @@
 	desc = "An extremely rare issue of Guns and Bullets, showing some design flaws of weapons and how to rectify them, allowing the reader to craft Tier 5 firearms. It's barely holding up, and looks like only one person can study the knowledge from it."
 	icon_state = "gab4"
 	oneuse = FALSE
-	granted_trait = TRAIT_GUNSMITH_FOUR
 	tool_behaviour = list(TOOL_GUNTIER1, TOOL_GUNTIER2, TOOL_GUNTIER3, TOOL_GUNTIER4)
-	traitname = "Expert Gunsmithing"
+	trait = /datum/granter_trait/gunsmith_four
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
 
 /obj/item/book/granter/action/drink_fling

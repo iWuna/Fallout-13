@@ -122,7 +122,8 @@
 	suppressed = S
 	S.oldsound = fire_sound
 	fire_sound = 'sound/weapons/gunshot_silenced.ogg'
-	w_class += S.w_class //so pistols do not fit in pockets when suppressed
+	//so pistols do not fit in pockets when suppressed
+	//w_class += S.w_class 
 	update_icon()
 
 //ATTACK HAND IGNORING PARENT RETURN VALUE

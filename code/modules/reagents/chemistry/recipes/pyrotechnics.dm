@@ -327,7 +327,7 @@
 	name = "Napalm"
 	id = "napalm"
 	results = list("napalm" = 2)
-	required_reagents = list("oil" = 1, "welding_fuel" = 1, "ethanol" = 1)
+	required_reagents = list("oil" = 1, "hooch" = 1 )
 
 /datum/chemical_reaction/cryostylane
 	name = "cryostylane"

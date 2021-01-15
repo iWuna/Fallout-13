@@ -323,6 +323,7 @@
 	item_state = "meson"
 	resistance_flags = NONE
 	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
+	darkness_view = 200 //Literally NV
 
 	var/datum/action/item_action/chameleon/change/chameleon_action
 

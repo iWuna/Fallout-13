@@ -170,7 +170,7 @@
 	desc = "A heavy pre-war bomber coat, dyed blue with the number '113' embroidered on the back. Most often worn by leaders, such as the Overseer."
 	icon_state = "vault_commandcoat"
 	item_state = "vault_commandcoat"
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	armor = list(melee = 20, bullet = 20, laser = 20, energy = 20, bomb = 40, bio = 50, rad = 40, fire = 50, acid = 50)
 
 /obj/item/clothing/suit/armor/f13/battlecoat/tan
 	name = "tan battlecoat"

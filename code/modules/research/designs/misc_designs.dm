@@ -153,13 +153,13 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
 
-/*
+
 /datum/design/nvgmesons
 	name = "Night Vision Optical Meson Scanners"
 	desc = "Prototype meson scanners fitted with an extra sensor which amplifies the visible light spectrum and overlays it to the UHD display."
 	id = "nvgmesons"
 	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 600, MAT_GLASS = 600, MAT_PLASMA = 350, MAT_URANIUM = 1000)
+	materials = list(MAT_METAL = 6000, MAT_GLASS = 6000, MAT_PLASMA = 3500, MAT_URANIUM = 10000)
 	build_path = /obj/item/clothing/glasses/meson/night
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING | DEPARTMENTAL_FLAG_CARGO
@@ -169,11 +169,11 @@
 	desc = "Goggles that let you see through darkness unhindered."
 	id = "night_visision_goggles"
 	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 600, MAT_GLASS = 600, MAT_PLASMA = 350, MAT_URANIUM = 1000)
+	materials = list(MAT_METAL = 6000, MAT_GLASS = 6000, MAT_PLASMA = 3050, MAT_URANIUM = 10000)
 	build_path = /obj/item/clothing/glasses/night
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_SECURITY
-*/
+
 
 /datum/design/magboots
 	name = "Magnetic Boots"

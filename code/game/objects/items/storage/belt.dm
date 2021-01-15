@@ -613,40 +613,43 @@
 /obj/item/storage/belt/bandolier/shotgun/ComponentInitialize()
 	. = ..()
 	GET_COMPONENT(STR, /datum/component/storage)
-	STR.max_items = 14
-	STR.display_numerical_stacking = FALSE
+	STR.max_items = 42
+	STR.display_numerical_stacking = TRUE
 	STR.can_hold = typecacheof(list(
 		/obj/item/ammo_casing/shotgun
 		))
 
 
 /obj/item/storage/belt/bandolier/shotgun/attackby(obj/item/A, mob/user, params, silent = FALSE, replace_spent = 0)
-	var/num_loaded = 0
-	if (is_type_in_list(A, list(/obj/item/storage/box/rubbershot/beanbag,
-	 							 /obj/item/storage/box/lethalshot,
-								 /obj/item/storage/box/magnumshot,
-								 /obj/item/storage/box/slugshot,
-								 /obj/item/storage/box/beanbag)))
-		GET_COMPONENT(STR, /datum/component/storage)
-		var/obj/item/storage/box/AM = A
-		for(var/obj/item/ammo_casing/shotgun/AC in AM.contents)
-			if (!STR.can_be_inserted(AC, TRUE, user))
-				break
-			user.transferItemToLoc(AC, src, TRUE)
-			num_loaded++
-	if(istype(A, /obj/item/ammo_casing/shotgun))
-		GET_COMPONENT(STR, /datum/component/storage)
-		var/obj/item/ammo_casing/shotgun/AC = A
-		if (STR.can_be_inserted(AC, TRUE, user))
-			user.transferItemToLoc(AC, src, TRUE)
-			num_loaded++
-	if(num_loaded)
-		if(!silent)
-			to_chat(user, "<span class='notice'>You load [num_loaded] shell\s into \the [src]!</span>")
-			playsound(src, 'sound/weapons/shotguninsert.ogg', 60, 1)
-		A.update_icon()
-		update_icon()
-	. = ..()
+	if(istype(A, /obj/item/gun))
+		A.attackby(src, user)
+	else
+		var/num_loaded = 0
+		if (is_type_in_list(A, list(/obj/item/storage/box/rubbershot/beanbag,
+		 							 /obj/item/storage/box/lethalshot,
+									 /obj/item/storage/box/magnumshot,
+									 /obj/item/storage/box/slugshot,
+									 /obj/item/storage/box/beanbag)))
+			GET_COMPONENT(STR, /datum/component/storage)
+			var/obj/item/storage/box/AM = A
+			for(var/obj/item/ammo_casing/shotgun/AC in AM.contents)
+				if (!STR.can_be_inserted(AC, TRUE, user))
+					break
+				user.transferItemToLoc(AC, src, TRUE)
+				num_loaded++
+		if(istype(A, /obj/item/ammo_casing/shotgun))
+			GET_COMPONENT(STR, /datum/component/storage)
+			var/obj/item/ammo_casing/shotgun/AC = A
+			if (STR.can_be_inserted(AC, TRUE, user))
+				user.transferItemToLoc(AC, src, TRUE)
+				num_loaded++
+		if(num_loaded)
+			if(!silent)
+				to_chat(user, "<span class='notice'>You load [num_loaded] shell\s into \the [src]!</span>")
+				playsound(src, 'sound/weapons/shotguninsert.ogg', 60, 1)
+			A.update_icon()
+			update_icon()
+		. = ..()
 
 
 /obj/item/storage/belt/holster
@@ -675,7 +678,12 @@
 		/obj/item/gun/energy/laser/wattz,
 		/obj/item/gun/energy/laser/wattz/magneto,
 		/obj/item/gun/energy/laser/plasma/alien,
-		/obj/item/stock_parts/cell/ammo/ec
+		/obj/item/stock_parts/cell/ammo/ec,
+		/obj/item/stock_parts/cell/ammo/ecp,
+		/obj/item/stock_parts/cell/ammo/mfc,
+		/obj/item/gun/energy/ionrifle/carbine,
+		/obj/item/gun/energy/decloner,
+		/obj/item/gun/energy/floragun
 		))
 
 /obj/item/storage/belt/holster/full/PopulateContents()

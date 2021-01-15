@@ -127,7 +127,8 @@ GLOBAL_LIST_EMPTY(global_locks)
 
 /obj/item/key/proc/attach_id(lock_data)
 	src.lock_data = lock_data
-	src.name = "key #[lock_data]"
+	icon_state = "key_offset"
+	name = "key #[lock_data]"
 	if(!overlays_cache || !overlays_cache["usable_key"])
 		var/icon/O = icon('icons/fallout/objects/keys.dmi', "key_overlay")
 		if(!used_ids[num2text(lock_data)])

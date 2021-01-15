@@ -7,7 +7,7 @@
 	var/lock_override = NONE
 	var/mob/camera/aiEye/remote/eyeobj
 	var/mob/living/current_user = null
-	var/list/networks = list("ss13")
+	var/list/networks = list("ss13", "vertibird")
 	var/datum/action/innate/camera_off/off_action = new
 	var/datum/action/innate/camera_jump/jump_action = new
 	var/list/actions = list()

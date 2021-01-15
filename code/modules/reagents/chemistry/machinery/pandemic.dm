@@ -16,6 +16,7 @@
 	var/datum/symptom/selected_symptom
 	var/obj/item/reagent_containers/beaker
 
+/*
 /obj/machinery/computer/pandemic/Initialize()
 	. = ..()
 	update_icon()
@@ -248,6 +249,8 @@
 	eject_beaker()
 	. = ..()
 
+*/
+
 /obj/machinery/computer/virusmaker
 	name = "Virus Creator"
 	desc = "A fancy computer that can produce it's own bio engineered viruses."
@@ -258,7 +261,7 @@
 	circuit = /obj/item/circuitboard/computer/virusmaker
 	use_power = 1
 	idle_power_usage = 20
-
+/*
 /obj/machinery/computer/virusmaker/attack_hand(mob/user)
 	if(!user)
 		return
@@ -307,3 +310,4 @@
 	B.name = "[D.name] culture bottle"
 	B.desc = "A small bottle. Contains [D.agent] culture in synthblood medium."
 	B.reagents.add_reagent("blood",25,data)
+*/

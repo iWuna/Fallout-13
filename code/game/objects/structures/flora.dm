@@ -23,13 +23,15 @@
 	pixel_x = -16
 	layer = FLY_LAYER
 	var/log_amount = 9
+	var/busy = FALSE
 
 /obj/structure/flora/tree/attackby(obj/item/W, mob/user, params)
 	if(log_amount && (!(flags_1 & NODECONSTRUCT_1)))
-		if(W.sharpness && W.force > 0 && W.tool_behaviour != TOOL_SHOVEL)
-			playsound(get_turf(src), 'sound/effects/wood_cutting.ogg', 100, 0, 0)
+		if(W.sharpness && W.force > 0 && W.tool_behaviour != TOOL_SHOVEL && !busy)
+			busy = TRUE
 			user.visible_message("<span class='notice'>[user] begins to cut down [src] with [W].</span>","<span class='notice'>You begin to cut down [src] with [W].</span>", "You hear the sound of sawing.")
-			if(do_after(user, 1000/W.force, target = src)) //5 seconds with 20 force, 8 seconds with a hatchet, 20 seconds with a shard.
+			playsound(get_turf(src), 'sound/effects/wood_cutting.ogg', 100, 0, 0)
+			if(do_after(user, 1000/W.force, TRUE, src)) //5 seconds with 20 force, 8 seconds with a hatchet, 20 seconds with a shard.
 				user.visible_message("<span class='notice'>[user] fells [src] with the [W].</span>","<span class='notice'>You fell [src] with the [W].</span>", "You hear the sound of a tree falling.")
 				playsound(get_turf(src), 'sound/effects/meteorimpact.ogg', 100 , 0, 0)
 				for(var/i=1 to log_amount)
@@ -38,6 +40,10 @@
 				var/obj/structure/flora/stump/S = new(loc)
 				S.name = "[name] stump"
 				qdel(src)
+			else
+				busy = FALSE
+		else
+			user.show_message("Someone is cutting it already.")
 	else
 		return ..()
 

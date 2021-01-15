@@ -595,6 +595,7 @@
 	inhand_y_dimension = 64
 	slot_flags = ITEM_SLOT_BACK
 	force = 5
+	reach = 2
 	var/force_on = 60
 	w_class = WEIGHT_CLASS_BULKY
 	throwforce = 20

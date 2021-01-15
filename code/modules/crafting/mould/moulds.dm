@@ -12,6 +12,29 @@
 	var/obj/item/stack/sheet/sheet = new mould_sheet_type
 	to_chat(user, "It requires [sheet_amount] [sheet.name] and moulding bench")
 
+// Attachment
+
+/obj/item/prefabs/mould/attachment/scope
+	name = "Weapon Optics Mould"
+	item_path = /obj/item/attachments/scope
+	sheet_amount = 8
+	mould_sheet_type = /obj/item/stack/sheet/glass
+
+/obj/item/prefabs/mould/attachment/recoil_decrease
+	name = "Recoil Compensator Mould"
+	item_path = /obj/item/attachments/recoil_decrease
+	sheet_amount = 5
+
+/obj/item/prefabs/mould/attachment/bullet_speed
+	name = "Improved Barrel Mould"
+	item_path = /obj/item/attachments/bullet_speed
+	sheet_amount = 10
+
+/obj/item/prefabs/mould/attachment/burst_improvement
+	name = "Burst Cam Mould"
+	item_path = /obj/item/attachments/burst_improvement
+	sheet_amount = 7
+
 // Action
 
 /obj/item/prefabs/mould/action/simple
@@ -51,6 +74,11 @@
 	name = "Long Barrel Mould"
 	item_path = /obj/item/prefabs/complex/barrel/long
 	sheet_amount = 3
+
+/obj/item/prefabs/mould/barrel/extended
+	name = "Long Barrel Mould"
+	item_path = /obj/item/prefabs/complex/barrel/extended
+	sheet_amount = 6
 
 /obj/item/prefabs/mould/barrel/dual
 	name = "Multiple barrels Mould"
@@ -131,7 +159,7 @@
 	sheet_amount = 2
 
 /obj/item/prefabs/mould/m45mmdouble
-	name = ".45 Simple Magazine Loader Mould"
+	name = ".45 Double Magazine Loader Mould"
 	item_path = /obj/item/prefabs/complex/ammo_loader/m45mmdouble
 	sheet_amount = 4
 
@@ -152,7 +180,7 @@
 
 /obj/item/prefabs/mould/tube4570
 	name = "45-70 Internal Magazine Loader Mould"
-	item_path = /obj/item/ammo_box/magazine/internal/shot/tube4570
+	item_path = /obj/item/prefabs/complex/ammo_loader/m4570
 	sheet_amount = 8
 
 /obj/item/prefabs/mould/tube44
@@ -237,3 +265,9 @@
 	item_path = /obj/item/advanced_crafting_components/alloys
 	mould_sheet_type = /obj/item/stack/crafting/metalparts
 	sheet_amount = 2
+
+/obj/item/prefabs/mould/alloy/advanced
+	name = "Superlight Alloy Mould"
+	item_path = /obj/item/advanced_crafting_components/alloys/advanced
+	mould_sheet_type = /obj/item/stack/crafting/metalparts
+	sheet_amount = 6

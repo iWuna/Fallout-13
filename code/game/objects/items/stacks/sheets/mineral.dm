@@ -68,7 +68,8 @@ GLOBAL_LIST_INIT(sandstone_recipes, list ( \
 	w_class = WEIGHT_CLASS_NORMAL
 
 GLOBAL_LIST_INIT(sandbag_recipes, list ( \
-	new/datum/stack_recipe("sandbags", /obj/structure/barricade/sandbags, 1, time = 25, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("sandbags pile", /obj/structure/barricade/sandbags, 2, time = 25, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("sandbags", /obj/structure/barricade/better/sandbags, 1, time = 25, one_per_turf = 0, on_floor = 1), \
 	))
 
 /obj/item/stack/sheet/mineral/sandbags/Initialize(mapload, new_amount, merge = TRUE)

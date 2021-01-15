@@ -1790,11 +1790,11 @@
 			to_chat(usr, "This can only be used on instances of type /mob/living/carbon/human.")
 			return
 
-		var/obj/item/reagent_containers/food/snacks/cookie/cookie = new(H)
-		if(H.put_in_hands(cookie))
+		var/obj/item/stack/f13Cash/bottle_cap = new(H)
+		if(H.put_in_hands(bottle_cap))
 			H.update_inv_hands()
 		else
-			qdel(cookie)
+			qdel(bottle_cap)
 			log_admin("[key_name(H)] has their hands full, so they did not receive their cookie, spawned by [key_name(src.owner)].")
 			message_admins("[key_name(H)] has their hands full, so they did not receive their cookie, spawned by [key_name(src.owner)].")
 			return

@@ -3,7 +3,7 @@
 	desc = "Harsh snowstorms roam the topside of this area surface, burying any area unfortunate enough to be in its path."
 	probability = 15
 
-	telegraph_message = "<span class='userdanger'><i>Drifting particles of snow begin to dust the surrounding area..</i></span>"
+	telegraph_message = "<span class='userdanger'><i>Drifting particles of snow begin to dust the surrounding area.. You feel the temperature is slightly decreasing...</i></span>"
 	telegraph_duration = 300
 	telegraph_overlay = "snow_storm"
 	telegraph_sound = 'sound/f13effects/sandstorm_warning.ogg'
@@ -27,8 +27,8 @@
 	affects_turfs = TRUE
 	carbons_only = TRUE
 
-/datum/weather/snow/weather_act(mob/living/L)
-	L.adjust_bodytemperature(-rand(5, 15))
+// /datum/weather/snow/weather_act(mob/living/L)
+	// L.adjust_bodytemperature(-rand(5, 15))
 
 /datum/weather/snow/weather_act_turf(turf/T)
 	if(!T.snow)
@@ -41,8 +41,9 @@
 			M.snow_act()
 		for(var/obj/item/I in T.contents)
 			I.snow_act()
+	T.temperature = 243
 
-/datum/weather/snow
+/datum/weather/snow/strong
 	name = "Strong Snow"
 	desc = "Harsh snowstorms roam the topside of this area surface, burying any area unfortunate enough to be in its path."
 	probability = 15
@@ -50,5 +51,11 @@
 	telegraph_message = "<span class='userdanger'><i>Drifting particles of snow begin to dust the surrounding area... You feel the temperature is decreasing...</i></span>"
 
 
-/datum/weather/snow/strong/weather_act(mob/living/L)
-	L.adjust_bodytemperature(-rand(10, 30))
+// /datum/weather/snow/strong/weather_act(mob/living/L)
+	// L.adjust_bodytemperature(-rand(10, 30))
+
+
+/datum/weather/snow/strong/weather_act_turf(turf/T)
+	. = ..()
+	T.temperature = 225
+	

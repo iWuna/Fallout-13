@@ -74,12 +74,12 @@
 /obj/item/borg/upgrade/vtec/action(mob/living/silicon/robot/R, user = usr)
 	. = ..()
 	if(.)
-		if(R.speed < 0)
+		if(R.speed <= 0)
 			to_chat(R, "<span class='notice'>A VTEC unit is already installed!</span>")
 			to_chat(user, "<span class='notice'>There's no room for another VTEC unit!</span>")
 			return FALSE
 
-		R.speed = -2 // Gotta go fast.
+		R.speed = -1 // Gotta go fast.
 
 /obj/item/borg/upgrade/vtec/deactivate(mob/living/silicon/robot/R, user = usr)
 	. = ..()

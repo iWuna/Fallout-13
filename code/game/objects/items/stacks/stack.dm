@@ -258,6 +258,8 @@
 				var/obj/structure/window/W = AM
 				if(!W.fulltile)
 					continue
+			if(istype(AM, /obj/structure/barricade/better/sandbags))
+				continue
 			if(AM.density)
 				to_chat(usr, "<span class='warning'>Theres a [AM.name] here. You cant make a [R.title] here!</span>")
 				return FALSE

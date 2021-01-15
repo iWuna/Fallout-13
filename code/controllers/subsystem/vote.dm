@@ -17,6 +17,7 @@ SUBSYSTEM_DEF(vote)
 	var/list/generated_actions = list()
 	var/vote_sound = 'sound/f13/mysterious_stranger.ogg'
 	var/min_restart_time = 180 MINUTES
+	var/min_transfer_time = 180 MINUTES
 
 /datum/controller/subsystem/vote/fire()	//called by master_controller
 	if(mode)
@@ -65,8 +66,11 @@ SUBSYSTEM_DEF(vote)
 				non_voters -= non_voter_ckey
 		if(non_voters.len > 0)
 			if(mode == "restart")
-				if(choices["Continue Playing"] >= greatest_votes)
-					greatest_votes = choices["Continue Playing"]
+				if(choices["Continue playing"] >= greatest_votes)
+					greatest_votes = choices["Continue playing"]
+			if(mode == "transfer")
+				if(choices["Continue playing"] >= greatest_votes)
+					greatest_votes = choices["Continue playing"]
 			else if(mode == "gamemode")
 				if(GLOB.master_mode in choices)
 					choices[GLOB.master_mode] += non_voters.len
@@ -112,11 +116,15 @@ SUBSYSTEM_DEF(vote)
 /datum/controller/subsystem/vote/proc/result()
 	. = announce_result()
 	var/restart = 0
+	var/transfer = 0
 	if(.)
 		switch(mode)
 			if("restart")
-				if(. == "Restart Round")
+				if(. == "Restart round")
 					restart = 1
+			if("transfer")
+				if(. == "Call the train")
+					transfer = 1
 			if("gamemode")
 				if(GLOB.master_mode != .)
 					SSticker.save_mode(.)
@@ -135,6 +143,10 @@ SUBSYSTEM_DEF(vote)
 		else
 			to_chat(world, "<span style='boldannounce'>Notice:Restart vote will not restart the server automatically because there are active admins on.</span>")
 			message_admins("A restart vote has passed, but there are active admins on with +ban, so it has been canceled. If you wish, you may restart the server.")
+	if(transfer)
+		SSshuttle.emergency.request()
+		log_admin("Crew transfer shuttle called by players vote.")
+		message_admins("<span class='adminnotice'>Crew transfer shuttle called by players vote.</span>")
 
 	return .
 
@@ -169,7 +181,9 @@ SUBSYSTEM_DEF(vote)
 		reset()
 		switch(vote_type)
 			if("restart")
-				choices.Add("Restart Round","Continue Playing")
+				choices.Add("Restart round","Continue playing")
+			if("transfer")
+				choices.Add("Call the train","Continue playing")
 			if("gamemode")
 				choices.Add(config.votable_modes)
 			if("custom")
@@ -232,8 +246,12 @@ SUBSYSTEM_DEF(vote)
 			. += "(<a href='?src=[REF(src)];vote=cancel'>Cancel Vote</a>) "
 	else
 		. += "<h2>Start a vote:</h2><hr><ul><li>"
-		//restart
+		//transfer
 		var/avr = CONFIG_GET(flag/allow_vote_restart)
+		if(trialmin || avr)
+			. += "<a href='?src=[REF(src)];vote=transfer'>Vault transfer</a>"
+		. += "</li><li>"
+		//restart
 		if(trialmin || avr)
 			. += "<a href='?src=[REF(src)];vote=restart'>Restart</a>"
 		else
@@ -276,6 +294,12 @@ SUBSYSTEM_DEF(vote)
 		if("toggle_gamemode")
 			if(usr.client.holder)
 				CONFIG_SET(flag/allow_vote_mode, !CONFIG_GET(flag/allow_vote_mode))
+		if("transfer")
+			if(CONFIG_GET(flag/allow_vote_restart) || usr.client.holder)
+				if(min_transfer_time < world.time)
+					initiate_vote("transfer",usr.key)
+				else
+					to_chat(usr.client, "<span style='boldannounce'>Valut transfer can only initiate after [DisplayTimeText(min_restart_time)].</span>")
 		if("restart")
 			if(CONFIG_GET(flag/allow_vote_restart) || usr.client.holder)
 				if(min_restart_time < world.time)

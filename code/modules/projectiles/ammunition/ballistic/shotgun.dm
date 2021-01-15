@@ -60,7 +60,7 @@
 	desc = "A 12 gauge buckshot shell."
 	icon_state = "gshell"
 	projectile_type = /obj/item/projectile/bullet/pellet/shotgun_buckshot
-	pellets = 7
+	pellets = 3
 	variance = 15
 
 /obj/item/ammo_casing/shotgun/magnumshot
@@ -68,7 +68,7 @@
 	desc = "A 12 gauge magnum buckshot shell."
 	icon_state = "magshell"
 	projectile_type = /obj/item/projectile/bullet/pellet/magnum_buckshot
-	pellets = 7
+	pellets = 4
 	variance = 15
 
 /obj/item/ammo_casing/shotgun/rubbershot
@@ -76,7 +76,7 @@
 	desc = "A shotgun casing filled with densely-packed rubber balls, used to incapacitate crowds from a distance."
 	icon_state = "bshell"
 	projectile_type = /obj/item/projectile/bullet/pellet/shotgun_rubbershot
-	pellets = 7
+	pellets = 3
 	variance = 15
 
 /obj/item/ammo_casing/shotgun/improvised
@@ -85,7 +85,7 @@
 	icon_state = "improvshell"
 	projectile_type = /obj/item/projectile/bullet/pellet/shotgun_improvised
 	materials = list(MAT_METAL=250)
-	pellets = 6
+	pellets = 3
 	variance = 15
 
 /obj/item/ammo_casing/shotgun/ion

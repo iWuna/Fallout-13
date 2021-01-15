@@ -18,6 +18,14 @@
 	build_path = /obj/item/flashlight
 	category = list("initial","Tools")
 
+/datum/design/rpd
+	name = "Emergency Flare"
+	id = "remergency_flare"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 300)
+	build_path = /obj/item/flashlight/flare/emergency
+	category = list("hacked", "Construction")
+
 /datum/design/extinguisher
 	name = "Fire Extinguisher"
 	id = "extinguisher"

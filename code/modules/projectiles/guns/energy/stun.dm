@@ -16,6 +16,41 @@
 	pin = null
 	shaded_charge = 1
 
+/obj/item/gun/energy/tesla_rifle
+	name = "tesla rifle"
+	desc = "An experimental gun based on an experimental engine, it's about as likely to kill its operator as it is the target."
+	icon_state = "teslarifle"
+	item_state = "teslarifle"
+	can_attachments = FALSE
+	slot_flags = ITEM_SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	ammo_type = list(/obj/item/ammo_casing/energy/tesla_rifle)
+	can_scope = TRUE
+	burst_size = 3
+	burst_delay = 3
+
+	can_flashlight = 0
+	shaded_charge = 1
+
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
+
+/obj/item/gun/energy/tesla_cannon
+	name = "tesla cannon"
+	desc = "An experimental gun based on an experimental engine, it's about as likely to kill its operator as it is the target."
+	icon_state = "teslacannon"
+	item_state = "teslacannon"
+	can_attachments = FALSE
+	slot_flags = ITEM_SLOT_BACK
+	w_class = WEIGHT_CLASS_HUGE
+	weapon_weight = WEAPON_HEAVY
+	ammo_type = list(/obj/item/ammo_casing/energy/tesla_cannon)
+	
+	can_flashlight = 0
+	shaded_charge = 1
+
 /obj/item/gun/energy/e_gun/advtaser
 	name = "hybrid taser"
 	desc = "A dual-mode taser designed to fire both short-range high-power electrodes and long-range disabler beams."

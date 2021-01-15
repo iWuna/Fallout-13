@@ -1,7 +1,7 @@
 /datum/weather/rain
 	name = "rain"
 	desc = "Rain will fall on the Wasteland, cleaning it."
-	probability = 15
+	probability = 25
 
 	telegraph_duration = 300
 	telegraph_overlay = "snow_storm"
@@ -90,6 +90,7 @@
 	for(var/O in T) //Clean cleanable decals in affected areas
 		if(is_cleanable(O))
 			qdel(O)
+	T.temperature = T20C
 
 /datum/weather/rain/proc/wash_obj(obj/O)
 	. = SEND_SIGNAL(O, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_STRENGTH_BLOOD)

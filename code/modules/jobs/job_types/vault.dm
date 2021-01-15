@@ -53,7 +53,7 @@ Overseer
 /datum/outfit/job/vault/f13overseer
 	name = "Overseer"
 	jobtype = /datum/job/vault/f13overseer
-	chemwhiz = TRUE
+	// chemwhiz = TRUE
 
 	implants = list(/obj/item/implant/mindshield)
 
@@ -196,8 +196,8 @@ Scientist
 	access = list(ACCESS_ROBOTICS, ACCESS_RESEARCH, ACCESS_MINERAL_STOREROOM, ACCESS_TECH_STORAGE, ACCESS_CARGO)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_RESEARCH, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO)
 
-/datum/job/vault/f13vaultscientist/after_spawn(mob/living/carbon/human/H, mob/M)
-	H.add_quirk("Master Gunsmith")
+// /datum/job/vault/f13vaultscientist/after_spawn(mob/living/carbon/human/H, mob/M)
+// 	H.add_quirk("Master Gunsmith")
 
 /datum/outfit/job/vault/f13vaultscientist
 	name = "Scientist"

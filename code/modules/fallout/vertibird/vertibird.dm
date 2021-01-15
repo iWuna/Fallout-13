@@ -13,19 +13,29 @@
 	pixel_x = -128
 	pixel_y = -64
 	layer = 4
-	obj_integrity = 20000
-	max_integrity = 20000
+	obj_integrity = 10000
+	max_integrity = 10000
 	var/engine = FALSE
 	var/locked = TRUE
 	var/inFly = FALSE
 	anchored = TRUE
-	var/obj/machinery/camera/portable/builtInCamera
+	var/obj/machinery/camera/all/builtInCamera
 
 /obj/vertibird/New()
+	..()
 	var/obj/item/start = new /obj/landmark/vertibird()
 	start.name = "Camp Navarro"
 	start.loc = loc
 	vertibird = src
+	builtInCamera = new (src)
+	builtInCamera.network = list("vertibird")
+	builtInCamera.c_tag = "VB-02"
+
+	builtInCamera.view_range = 12
+
+/obj/vertibird/Destroy(force)
+	builtInCamera.Destroy()
+	. = ..()
 
 /obj/vertibird/attack_hand(mob/user)
 	if(locked)
@@ -48,6 +58,8 @@
 /obj/vertibird/attackby(obj/item/weapon/W, mob/user, params)
 	if(istype(W, /obj/item/key/vertibird))
 		toggleLock(user)
+	else
+		return ..()
 
 /obj/vertibird/MouseDrop_T(obj/O, mob/user)
 	if(locked)
@@ -70,7 +82,7 @@ obj/vertibird/proc/getLocationsHTML()
 	var/html
 	for(var/I = 1 to vertibirdLandZone.len)
 		var/obj/landmark/vertibird/mark = vertibirdLandZone[I]
-		html += "<a href='?src=\ref[src];fly=true;x=[mark.x];y=[mark.y];z=[mark.z]'>[mark.name]</a><br>"
+		html += "<a href='?src=\ref[src];fly=true;x=[mark.x];y=[mark.y];z=[mark.z];name=[mark.name]'>[mark.name]</a><br>"
 	return html
 
 obj/vertibird/proc/flew(targetX, targetY, targetZ)
@@ -100,7 +112,7 @@ obj/vertibird/proc/flyGlobal()
 	sound_to_playing_players("sound/f13machines/vertibird_global.ogg", 50, 0)
 
 
-obj/vertibird/proc/fly(targetX, targetY, targetZ)
+obj/vertibird/proc/fly(targetX, targetY, targetZ, name="")
 	if(inFly)
 		return
 
@@ -108,6 +120,14 @@ obj/vertibird/proc/fly(targetX, targetY, targetZ)
 	playsound(vertibirdEnterZone, "sound/f13machines/vertibird_takeoff.ogg", 50)
 	inFly = TRUE
 	icon_state = "vb-fast"
+	for(var/obj/machinery/computer/vertibird_console/C in vertibird_console)
+		var/message = "Now departing."
+		if(name)
+			message += " Destination: [name]."
+		message += " Please stand by"
+		C.say(message)
+
+
 	spawn(60)
 		playsound(src, "sound/f13machines/vertibird_local.ogg", 100)
 		playsound(vertibirdEnterZone, "sound/f13machines/vertibird_local.ogg", 50)
@@ -116,13 +136,16 @@ obj/vertibird/proc/fly(targetX, targetY, targetZ)
 
 		spawn(100)
 			flew(targetX, targetY, targetZ)
+			for(var/obj/machinery/computer/vertibird_console/C in vertibird_console)
+				C.say("Destination point reached. Doors safeties disabled")
 
 /obj/vertibird/Topic(href, href_list)
 	if(..())
 		return
 
 	if(href_list["fly"])
+		var/name = href_list["name"]
 		var/x = text2num(href_list["x"])
 		var/y = text2num(href_list["y"])
 		var/z = text2num(href_list["z"])
-		fly(x, y, z)
+		fly(x, y, z, name)

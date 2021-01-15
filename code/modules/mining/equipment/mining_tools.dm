@@ -42,12 +42,28 @@
 	desc = "A silver-plated pickaxe that mines slightly faster than standard-issue."
 	force = 17
 
+/obj/item/pickaxe/tribal
+	name = "Bone Pickaxe"
+	icon_state = "pickaxe_tribal"
+	item_state = "spickaxe"
+	toolspeed = 0.5 //mines faster than a normal pickaxe, bought from mining vendor
+	desc = "A bone-plated tribal pickaxe."
+	force = 17
+
 /obj/item/pickaxe/diamond
 	name = "diamond-tipped pickaxe"
 	icon_state = "dpickaxe"
 	item_state = "dpickaxe"
 	toolspeed = 0.3
 	desc = "A pickaxe with a diamond pick head. Extremely robust at cracking rock walls and digging up dirt."
+	force = 19
+
+/obj/item/pickaxe/minecraft
+	name = "Diamond Pickaxe"
+	icon_state = "minecraft"
+	item_state = "dpickaxe"
+	toolspeed = 0.3
+	desc = "For digging cubes."
 	force = 19
 
 /obj/item/pickaxe/drill
@@ -113,6 +129,13 @@
 	attack_verb = list("bashed", "bludgeoned", "thrashed", "whacked")
 	sharpness = IS_SHARP
 
+/obj/item/shovel/tribal
+	name = "Bone Shovel"
+	desc = "A large tool for digging and moving dirt."
+	icon = 'icons/obj/mining.dmi'
+	icon_state = "shovel_tribal"
+	item_state = "shovel"
+
 /obj/item/shovel/Initialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 150, 40) //it's sharp, so it works, but barely.
@@ -134,3 +157,9 @@
 	force = 5
 	throwforce = 7
 	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/shovel/tribal_spade
+	name = "Bone spade"
+	desc = "A small tool for digging and moving dirt."
+	icon_state = "spade_tribal"
+	item_state = "spade"

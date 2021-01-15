@@ -15,7 +15,7 @@
 	use_power = IDLE_POWER_USE				//this turret uses and requires power
 	idle_power_usage = 50		//when inactive, this turret takes up constant 50 Equipment power
 	active_power_usage = 300	//when active, this turret takes up constant 300 Equipment power
-	req_access = list(ACCESS_SEC_DOORS)
+	req_access = list()
 	power_channel = EQUIP	//drains power from the EQUIPMENT channel
 
 	var/base_icon_state = "standard"
@@ -29,7 +29,7 @@
 	integrity_failure = 25
 	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 30, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 90, "acid" = 90)
 
-	var/locked = TRUE			//if the turret's behaviour control access is locked
+	var/locked = FALSE			//if the turret's behaviour control access is locked
 	var/controllock = FALSE		//if the turret responds to control panels
 
 	var/installation = /obj/item/gun/energy/e_gun/turret		//the type of weapon installed by default
@@ -62,7 +62,7 @@
 
 	var/attacked = 0		//if set to 1, the turret gets pissed off and shoots at people nearby (unless they have sec access!)
 
-	var/on = TRUE				//determines if the turret is on
+	var/on = FALSE				//determines if the turret is on
 
 	var/list/faction = list("turret") // Same faction mobs will never be shot at, no matter the other settings
 
@@ -996,7 +996,8 @@
 	. = ..()
 
 /obj/machinery/porta_turret/lasertag
-	req_access = list(ACCESS_MAINT_TUNNELS, ACCESS_THEATRE)
+	// req_access = list(ACCESS_MAINT_TUNNELS, ACCESS_THEATRE)
+	req_access = list()
 	check_records = 0
 	criminals = 0
 	auth_weapons = 1

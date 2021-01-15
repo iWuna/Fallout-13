@@ -577,7 +577,7 @@
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 50, rad = 50, fire = 50, acid = 50)
 
 /obj/item/clothing/suit/f13/snow_coat
-	name = "Snow Cowboy Coat"
+	name = "Lucky Cowboy Coat"
 	desc = "Full of luck"
 	icon_state = "snow_coat"
 	body_parts_covered = FULL_BODY

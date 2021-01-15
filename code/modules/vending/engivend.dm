@@ -3,7 +3,8 @@
 	desc = "Spare tool vending. What? Did you expect some witty description?"
 	icon_state = "engivend"
 	icon_deny = "engivend-deny"
-	req_access = list(ACCESS_ENGINE_EQUIP)
+	// req_access = list(ACCESS_ENGINE_EQUIP)
+	req_access = list()
 	products = list(/obj/item/clothing/glasses/meson/engine = 2,
 					/obj/item/clothing/glasses/welding = 3,
 					/obj/item/multitool = 4,

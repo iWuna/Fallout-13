@@ -62,6 +62,17 @@
 	QDEL_NULL(stored_research)
 	return ..()
 
+/obj/machinery/rnd/production/proc/convert_r(rating)
+	switch(rating)
+		if(4)
+			return 2.5
+		if(3)
+			return 2
+		if(2)
+			return 1.5
+		else
+			return 1
+
 /obj/machinery/rnd/production/proc/calculate_efficiency()
 	efficiency_coeff = 1
 	if(reagents)		//If reagents/materials aren't initialized, don't bother, we'll be doing this again after reagents init anyways.
@@ -75,7 +86,7 @@
 			materials.max_amount += M.rating * 75000
 	var/total_rating = 0
 	for(var/obj/item/stock_parts/manipulator/M in component_parts)
-		total_rating += M.rating
+		total_rating += convert_r(M.rating)
 	total_rating = max(1, total_rating)
 	efficiency_coeff = total_rating
 

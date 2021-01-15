@@ -74,6 +74,7 @@
 		checkbarricade()
 	return
 
+
 /obj/structure/barricade/better/proc/checkbarricade()
 	icon_state = initial(icon_state) + "_[obj_state]"
 	if(obj_state <= 1)
@@ -96,3 +97,33 @@
 	climbable = TRUE
 	dirlike = TRUE
 	pixel_y = -2
+	layer = BELOW_OBJ_LAYER
+
+/obj/structure/barricade/better/sandbags/Initialize()
+	..()
+	update_icon()
+
+/obj/structure/barricade/setDir(newdir)
+	. = ..()
+	update_icon()
+
+/obj/structure/barricade/better/sandbags/update_icon()
+	. = ..()
+	switch(dir)
+		if(SOUTH)
+			layer = ABOVE_MOB_LAYER
+		if(NORTH)
+			layer = initial(layer) - 0.01
+		else
+			layer = initial(layer)
+
+/obj/structure/barricade/better/sandbags/attack_hand(mob/user)
+	. = ..()
+	if(.)
+		return
+	user.visible_message("<span class='notice'>[user] starts to take down [src]...</span>", "<span class='notice'>You start to take down [src]...</span>")
+	if(!has_buckled_mobs() && do_after(user, 80, target = src))
+		to_chat("<span class='notice'>You take down [src].</span>")
+		new /obj/item/stack/sheet/mineral/sandbags(src.loc)
+		qdel(src)
+		return

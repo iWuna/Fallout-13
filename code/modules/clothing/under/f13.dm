@@ -1202,3 +1202,22 @@
 	icon_state = "ny_trap"
 	item_state = "ny_trap"
 	item_color = "ny_trap"
+
+/obj/item/clothing/under/f13/gorshok
+	name = "Chief Punk Suit"
+	desc = "Not reference to КиШ."
+	flags_inv = HIDEEARS|HIDEHAIR
+	icon_state = "gorshok"
+	item_state = "gorshok"
+
+
+/obj/item/clothing/under/f13/brat
+	name = "Brat sweater"
+	icon_state = "brat"
+	item_state = "brat"
+	
+/obj/item/clothing/under/f13/white_shortdress
+	name = "General's apparel"
+	desc = "With long sleeves and buttons on upper arms."
+	icon_state = "white_shortdress"
+	item_state = "white_shortdress"

@@ -777,8 +777,8 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
     icon_state = "Hunter"
 
 /obj/effect/landmark/start/f13/Hhunter
-    name = "Head Hunter"
-    icon_state = "Head Hunter"
+    name = "Chief Hunter"
+    icon_state = "Chief Hunter"
 
 /obj/effect/landmark/start/f13/locustcaptain
     name = "Locust Captain"

@@ -1,3 +1,4 @@
+"aa" = (/obj/effect/landmark/start/f13/offduty,/turf/open/floor/f13/wood,/area/f13/building)
 "ab" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavement"; dir = 4},/area/f13/wasteland)
 "ac" = (/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
 "ad" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalleftborderleft0"},/area/f13/wasteland)
@@ -81,7 +82,11 @@
 "bD" = (/obj/structure/table,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "bE" = (/obj/machinery/light,/turf/open/floor/f13/wood,/area/f13/building)
 "bF" = (/turf/open/indestructible/ground/outside/desert,/area/start)
+"bG" = (/obj/structure/booth{icon_state = "booth_table_end"; dir = 4},/obj/item/storage/box/projectile_components,/turf/open/floor/f13/wood,/area/f13/building)
+"bH" = (/obj/structure/booth/middle{icon_state = "booth_table_middle"; dir = 4},/obj/item/storage/box/projectile_components/advanced,/turf/open/floor/f13/wood,/area/f13/building)
 "bI" = (/obj/structure/table,/obj/item/key/vertibird,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
+"bJ" = (/obj/structure/booth/middle{icon_state = "booth_table_middle"; dir = 4},/obj/item/storage/box/projectile_components/energy,/turf/open/floor/f13/wood,/area/f13/building)
+"bK" = (/obj/structure/booth{icon_state = "booth_table_end"; dir = 8},/obj/item/storage/toolbox/mechanical,/turf/open/floor/f13/wood,/area/f13/building)
 "bP" = (/turf/open/floor/f13/wood,/area/f13/building)
 "bQ" = (/obj/machinery/light,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "bR" = (/obj/structure/fence,/obj/machinery/light{icon_state = "tube"; dir = 8},/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
@@ -98,9 +103,6 @@
 "cc" = (/obj/structure/tires/five,/turf/open/floor/plasteel/f13{icon_state = "floorrusty"},/area/f13/wasteland)
 "cd" = (/obj/effect/mine/explosive,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "ce" = (/obj/effect/mine/explosive,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"cf" = (/obj/structure/booth{icon_state = "booth_table_end"; dir = 4},/turf/open/floor/f13/wood,/area/f13/building)
-"cg" = (/obj/structure/booth/middle{icon_state = "booth_table_middle"; dir = 4},/turf/open/floor/f13/wood,/area/f13/building)
-"ch" = (/obj/structure/booth{icon_state = "booth_table_end"; dir = 8},/turf/open/floor/f13/wood,/area/f13/building)
 "ci" = (/obj/structure/car/highwayman,/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
 "cj" = (/obj/structure/cargocrate{icon_state = "cargocrate4"},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
 "ck" = (/obj/structure/cargocrate{icon_state = "cargocrate5"},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
@@ -163,8 +165,8 @@ buabacadaeafafagahacaibububucIckbubkaOaPaPaPaPaQbucbbubzbIbDbhbPbmbmbPaVbubububu
 buabacadaeafafagahacaibuclbubucAbcblaSaUaUaUaUbdbububububebeaVbPbmbmbUaVbububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 buabacadaeafafagahacaibubububububuaZaZaZaZaZaZccbuaVaVbnaVaVaVbPbPbPbPaVbububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 buabacadaeafafagahacaibubucncocpbuaZbfbfctbfbfaZbgaVbAbPcmbpbBbCbPbPbPaVbubububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubucqcrcsbuaZbfbfcNbfbfaZbgaVbPbPbPbPbPbPbPbPbPaVbubububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafbaagahacaibubububububuaZbfbfctbfbfaZbgaVcDbEcfcgcgchbPbEcCaVbubububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
+buabacadaeafafagahacaibubucqcrcsbuaZbfbfcNbfbfaZbgaVbPbPbPbPbPbPaabPbPaVbubububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
+buabacadaeafbaagahacaibubububububuaZbfbfctbfbfaZbgaVcDbEbGbHbJbKbPbEcCaVbubububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 buabacadaeafafagahacaibubububucJbucucvaZcwaZcvcubuaVaVaVaVaVaVaVaVaVaVaVbubububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 buabacadaeafafagahacaibububububucOcxcxcxcxcxcxcxbubububububububububububububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
 buabboadaeafafagahacaibububucycycxcxbububububucxcxcycybububububububububububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq

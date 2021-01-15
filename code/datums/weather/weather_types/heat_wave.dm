@@ -27,9 +27,6 @@
 	affects_turfs = TRUE
 	carbons_only = TRUE
 
-/datum/weather/heat_wave/weather_act(mob/living/L)
-	L.adjust_bodytemperature(rand(10, 20))
-
 /datum/weather/heat_wave/weather_act_turf(turf/T)
 	for(var/obj/structure/snow/pile/P in T.contents)
 		P.Destroy()
@@ -45,3 +42,4 @@
 		ST.Destroy()
 	for(var/obj/effect/decal/cleanable/snow/footprints/FP in T.contents)
 		FP.Destroy()
+	T.temperature = T.temperature = 383.15

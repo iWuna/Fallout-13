@@ -109,10 +109,10 @@ Tribal Shaman
 		/obj/item/pestle=1)
 
 /*
-Tribal Head Hunter
+Tribal Chief Hunter
 */
 /datum/job/tribal/f13Hhunter
-    title = "Head Hunter"
+    title = "Chief Hunter"
     flag = F13HHUNTER
     department_flag = TRIBAL
     faction = "Village"
@@ -121,7 +121,7 @@ Tribal Head Hunter
     supervisors = "The Elders of the tribe and the chief."
     enforces = "The ways of the Machine spirits."
     forbids = "Abusing technology and using Pre-War weapons."
-    description = "You are the village Head Hunter; you organize the hunters of the tribe and are the authority in matters of protecting the tribe and the land of the Wayfarers. You lead the Great Hunts and War-Bands in time of conflict."
+    description = "You are the village Chief Hunter; you organize the hunters of the tribe and are the authority in matters of protecting the tribe and the land of the Wayfarers. You lead the Great Hunts and War-Bands in time of conflict."
     selection_color = "#006666"
 
     outfit = /datum/outfit/job/tribal/f13Hhunter
@@ -215,10 +215,10 @@ Hunter
     faction = "Village"
     total_positions = 3
     spawn_positions = 3
-    supervisors = "The chief and Head Hunter."
+    supervisors = "The chief and Chief Hunter."
     enforces = "The ways of the Machine spirits."
     forbids = "Abusing technology and using Pre-War weapons."
-    description = "You are a Hunter for the tribe; you bring back food and relics, anything that may house a machine spirit that can be purified by the shaman. You also are the protectors of the tribe, and work with the Head Hunter during Great Hunts or times of War."
+    description = "You are a Hunter for the tribe; you bring back food and relics, anything that may house a machine spirit that can be purified by the shaman. You also are the protectors of the tribe, and work with the Chief Hunter during Great Hunts or times of War."
     selection_color = "#006666"
 
     outfit = /datum/outfit/job/tribal/f13hunter

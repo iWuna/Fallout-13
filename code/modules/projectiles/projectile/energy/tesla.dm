@@ -24,6 +24,12 @@
 /obj/item/projectile/energy/tesla/revolver
 	name = "energy orb"
 
+/obj/item/projectile/energy/tesla/rifle
+	name = "tesla orb"
+	zap_range = 2
+	power = 30000
+
 /obj/item/projectile/energy/tesla/cannon
 	name = "tesla orb"
-	power = 20000
+	power = 120000
+	zap_range = 4

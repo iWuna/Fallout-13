@@ -10,7 +10,7 @@
 
 /obj/item/projectile/bullet/incendiary/shotgun
 	name = "incendiary slug"
-	damage = 25
+	damage = 15
 
 /obj/item/projectile/bullet/incendiary/shotgun/dragonsbreath
 	name = "dragonsbreath pellet"
@@ -47,12 +47,12 @@
 
 /obj/item/projectile/bullet/shotgun_frag12
 	name ="frag12 slug"
-	damage = 25
-	knockdown = 50
+	damage = 35
+	knockdown = 10
 
 /obj/item/projectile/bullet/shotgun_frag12/on_hit(atom/target, blocked = FALSE)
 	..()
-	explosion(target, -1, 0, 1)
+	explosion(target, 0, 0, 0, 0, -1, flame_range=2)
 	return TRUE
 
 /obj/item/projectile/bullet/pellet
@@ -61,17 +61,17 @@
 
 /obj/item/projectile/bullet/pellet/shotgun_buckshot
 	name = "buckshot pellet"
-	damage = 10
+	damage = 20
 
 /obj/item/projectile/bullet/pellet/magnum_buckshot
 	name = "magnum buckshot pellet"
-	damage = 11.5
-	armour_penetration = 7
+	damage = 23
+	armour_penetration = 10
 
 /obj/item/projectile/bullet/pellet/shotgun_rubbershot
 	name = "rubbershot pellet"
 	damage = 0
-	stamina = 8
+	stamina = 16
 
 /obj/item/projectile/bullet/pellet/Range()
 	..()
@@ -84,7 +84,7 @@
 
 /obj/item/projectile/bullet/pellet/shotgun_improvised
 	tile_dropoff = 0.55		//Come on it does 6 damage don't be like that.
-	damage = 12
+	damage = 24
 
 /obj/item/projectile/bullet/pellet/shotgun_improvised/Initialize()
 	. = ..()
