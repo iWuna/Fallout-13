@@ -1,0 +1,808 @@
+[33mcommit 87d4b6d24bfd2933bb8faee60aabec1a7a38408e[m[33m ([m[1;36mHEAD -> [m[1;32mReishi-F13[m[33m)[m
+Author: Rehishi42 <saringan1996@mail.ru>
+Date:   Mon Dec 7 21:18:33 2020 +0500
+
+    Jobban NCR & Ankap fix
+
+[33mcommit 7e6bbcc1fcf1c445e27fc2e712bc59de0f423f9c[m
+Merge: a1ebb8fb f153482d
+Author: Rehishi42 <saringan1996@mail.ru>
+Date:   Mon Dec 7 20:45:35 2020 +0500
+
+    Merge branch 'master' of https://github.com/iWuna/Fallout-13-RoseEdition into Reishi-F13
+
+[33mcommit a1ebb8fb0b317d2f1c660ed24c384e8edce61678[m
+Author: Rehishi42 <saringan1996@mail.ru>
+Date:   Mon Dec 7 20:36:50 2020 +0500
+
+    PA itmes hide
+
+[33mcommit f153482d20f30a635f0b894ec19ad964b884a585[m[33m ([m[1;31mupstream/master[m[33m)[m
+Merge: 495a4c34 5cd34c4a
+Author: Oceket <andreykeyrazum@gmail.com>
+Date:   Sun Dec 6 17:36:31 2020 +0200
+
+    Merge branch 'master' of https://github.com/iWuna/Fallout-13-RoseEdition
+
+[33mcommit 495a4c346b3fb6f6e32fabc5553bbc854d895f03[m
+Author: Oceket <andreykeyrazum@gmail.com>
+Date:   Sun Dec 6 17:36:28 2020 +0200
+
+    Апдейт?
+
+[33mcommit 5cd34c4a974599cdd31d12e16b250ff9fb40ee81[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Sun Dec 6 18:41:44 2020 +0600
+
+    ауф
+
+[33mcommit ecb665cdb818b8824cedc1698fd88a12cfb99fbc[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Sun Dec 6 17:16:00 2020 +0600
+
+    Update misc.dm
+
+[33mcommit 8f5339282d1b1a4e3c64f13684f25a7e045d716d[m
+Merge: 7be03fe4 bed3b84e
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Sun Dec 6 17:13:38 2020 +0600
+
+    Merge branch 'master' of https://github.com/iWuna/Fallout-13-RoseEdition
+
+[33mcommit 7be03fe41a58f380e11fa2ec361da1f488033202[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Sun Dec 6 17:13:34 2020 +0600
+
+    Update drug_reagents.dm
+
+[33mcommit bed3b84e7e8047ac6576527e12200bb0023211e1[m
+Author: Oceket <andreykeyrazum@gmail.com>
+Date:   Sun Dec 6 12:16:14 2020 +0200
+
+    Фикс лестниц, наверное
+
+[33mcommit 2f22fc496d1b44e5afe7155291db89f59da4fa80[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Sun Dec 6 11:57:49 2020 +0600
+
+    немного твиков которые никто не просил
+
+[33mcommit 77ab61aa48ccaeb3c2f679ad0f65c3bfef2d38ae[m
+Merge: 7b20c9aa 24a0aa89
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Sat Dec 5 20:52:55 2020 +0600
+
+    Merge branch 'master' of https://github.com/iWuna/Fallout-13-RoseEdition
+
+[33mcommit 7b20c9aa72037cb8b85aca61f212954164f1990d[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Sat Dec 5 20:52:52 2020 +0600
+
+    фиксы гуков
+
+[33mcommit 24a0aa89ee3de2cff54f2ec080258ea33f12b26d[m
+Merge: 4223026a f228c32d
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Sat Dec 5 19:28:09 2020 +0600
+
+    Merge pull request #64 from Vled-jpg/alt
+    
+    Компоненты для оружия в вендомате
+
+[33mcommit f228c32d9d456423344813bd2f081768a5d31225[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Sat Dec 5 15:19:37 2020 +0200
+
+    Компоненты для оружия в вендомате
+
+[33mcommit 4223026aed221aed110b5cc8d4728686c3850890[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Sat Dec 5 19:09:47 2020 +0600
+
+    Update oregon_wasteland-redux.dmm
+
+[33mcommit d4d83648aed197226453035b8e47ebf1c69cc7b5[m
+Merge: 97413bdb 24fd01c1
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Sat Dec 5 18:54:18 2020 +0600
+
+    Merge pull request #63 from Vled-jpg/alt
+    
+    Мержи с розы
+
+[33mcommit 24fd01c1740864641d70e41d4492be9fcf963b2c[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Sat Dec 5 14:47:20 2020 +0200
+
+    fix knight
+
+[33mcommit c25a5b1c1cce726879cd79fb28494fb2b8a68cbf[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Sat Dec 5 13:43:07 2020 +0200
+
+    restore stock recipe
+
+[33mcommit 7e09895462e236a81472eaa6001fabe95abc05eb[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Sat Dec 5 13:41:59 2020 +0200
+
+    Revert guncraft disable
+
+[33mcommit aa37c091af8c4e6684b3d417794c6570310d2cd9[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Sat Dec 5 12:56:19 2020 +0200
+
+    fix conflicts
+
+[33mcommit 6bed17e79905b2587e665e776541e97a47354b10[m
+Merge: 97413bdb 908bdd0e
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Sat Dec 5 11:41:42 2020 +0200
+
+    Merge remote-tracking branch 'alt/master' into alt
+
+[33mcommit 97413bdb64bc3df3cfe8380fd876d9afae7f0c31[m
+Merge: daf715c3 be440d62
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Fri Dec 4 21:29:13 2020 +0600
+
+    Merge pull request #61 from PhenyaMomota/falloutairlocksadding
+    
+    Added some fallout-style doors
+
+[33mcommit daf715c32e97f05ceca648552b149c4f33383547[m
+Merge: a582514e b0845043
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Fri Dec 4 21:28:48 2020 +0600
+
+    Merge pull request #62 from Vled-jpg/emote
+    
+    Эмоут панель.
+
+[33mcommit a582514e958fbfc707a843a2ea46a4f5e885ae5f[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Fri Dec 4 21:27:56 2020 +0600
+
+    Update misc.dm
+
+[33mcommit b0845043f83474c67a82f073ee46daa4607fcff1[m
+Merge: fbf90298 c4b46a75
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Fri Dec 4 17:22:35 2020 +0200
+
+    Merge branch 'master' into emote
+
+[33mcommit fbf90298b07d3b100158a5afbb20792c8144539c[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Fri Dec 4 17:21:45 2020 +0200
+
+    Больше звуков
+
+[33mcommit 1d5ca277c6c1f9b418e458a4119ea24502144090[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Fri Dec 4 10:27:14 2020 +0200
+
+    Эмоут панель
+
+[33mcommit c4b46a7535f57a577a9b4a5fea2063969128c25e[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Fri Dec 4 19:52:31 2020 +0600
+
+    Ахуел?
+
+[33mcommit be440d62c242b783b03d89b59bd13f410949c4f8[m
+Author: Игорь Терентьев <62373791+PhenyaMomota@users.noreply.github.com>
+Date:   Fri Dec 4 15:21:25 2020 +0300
+
+    Added some fallout-style doors
+
+[33mcommit 8429d4ebec5df2a72c7655af77f2c5bdde768886[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Fri Dec 4 10:01:34 2020 +0600
+
+    чел ты...
+
+[33mcommit cf035876d1ac14ee4c26179bc19d10a38c3b42c6[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Fri Dec 4 09:35:06 2020 +0600
+
+    Update f13lootdrop.dm
+
+[33mcommit 814197464d6c7bcfc61bd5e8cd89f19a8f9550ce[m
+Merge: a289126d 168c5293
+Author: Oceket <38756693+Oceket@users.noreply.github.com>
+Date:   Thu Dec 3 23:36:57 2020 +0200
+
+    Merge pull request #59 from Reishi42/Reishi-F13
+    
+    Map get BACK
+
+[33mcommit 168c529375e00708ebb3109a284c6c78a57403e6[m[33m ([m[1;31morigin/Reishi-F13[m[33m)[m
+Author: Rehishi42 <saringan1996@mail.ru>
+Date:   Fri Dec 4 02:29:22 2020 +0500
+
+    Map get BACK
+
+[33mcommit a289126d49847f842fc76402ce2f61b92fa68d51[m
+Merge: 75c93f22 035b59d6
+Author: Oceket <38756693+Oceket@users.noreply.github.com>
+Date:   Thu Dec 3 22:40:06 2020 +0200
+
+    Merge pull request #58 from Reishi42/Reishi-F13
+    
+    PA fix 2
+
+[33mcommit 035b59d6d7f08ba508e27d0095d33269c537bc23[m
+Author: Rehishi42 <saringan1996@mail.ru>
+Date:   Fri Dec 4 01:33:16 2020 +0500
+
+    PA traits fix
+
+[33mcommit 75c93f22e6b5c0512c3b249981cf80e276167b10[m
+Merge: c533d670 3cb54c16
+Author: Oceket <andreykeyrazum@gmail.com>
+Date:   Thu Dec 3 22:03:17 2020 +0200
+
+    Merge branch 'master' of https://github.com/iWuna/Fallout-13-RoseEdition
+
+[33mcommit c533d6707346a8c5b0ac5d2ba8d7edc469dd5eea[m
+Author: Oceket <andreykeyrazum@gmail.com>
+Date:   Thu Dec 3 22:02:48 2020 +0200
+
+    Огромный вкид снюсом для мапы
+    
+    - Новая локация - каньон.
+    - Новые атмосферные домики
+    - КАК ЖЕ ПОЗЕЛЕНЕЛА ПУСТОШЬ ПРИ АНДРЕЙГЕЕ
+    - Маленький квестик
+    - И МНОГОЕ ДРУГОЕ....
+
+[33mcommit a85d77138d97bbc88c5d2567e62be825289354ef[m
+Author: Rehishi42 <saringan1996@mail.ru>
+Date:   Thu Dec 3 23:47:41 2020 +0500
+
+    PA add hide suit, add Iron Fist
+
+[33mcommit 3cb54c164b5c83b663e72ad85bbd2a2122e48c3d[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Thu Dec 3 08:50:32 2020 +0600
+
+    зачем это обновление?
+    
+    просто
+
+[33mcommit 32a9dfbd9c0f72ae15137c8d66cb42673981f7ae[m
+Merge: 24f55dcd 0c3e9664
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Wed Dec 2 22:40:22 2020 +0600
+
+    Merge branch 'master' of https://github.com/iWuna/Fallout-13-RoseEdition
+
+[33mcommit 24f55dcd63c8a694ee778909deb03b817d52d40e[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Wed Dec 2 22:40:18 2020 +0600
+
+    Update supermutant.dm
+
+[33mcommit 0c3e966477537185ae9708cb1ecef1e60eb75ee8[m
+Merge: c007ee89 0af98b2c
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Wed Dec 2 22:26:45 2020 +0600
+
+    Merge pull request #55 from PhenyaMomota/falloutairlocksfix
+    
+    Fallout-style airlocs fix
+
+[33mcommit c007ee898e367853e9a933a45d9311a905ee4999[m
+Merge: b99bd566 28a4ad6b
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Wed Dec 2 22:26:26 2020 +0600
+
+    Merge pull request #56 from PhenyaMomota/feeniesexpistols
+    
+    Redrawed pistols
+
+[33mcommit 28a4ad6b0668c1572f2ac7fddb4c58c5655fd480[m
+Author: Игорь Терентьев <62373791+PhenyaMomota@users.noreply.github.com>
+Date:   Wed Dec 2 19:19:35 2020 +0300
+
+    Updated pistols in arms
+
+[33mcommit 2238d8013e66a963dcb13dff7f87aeebc876a8f8[m
+Author: Игорь Терентьев <62373791+PhenyaMomota@users.noreply.github.com>
+Date:   Wed Dec 2 19:18:52 2020 +0300
+
+    Updated rare pistols
+
+[33mcommit 0af98b2cc5aba98f0ff385a1f1e7d54c08e772ca[m
+Author: Игорь Терентьев <62373791+PhenyaMomota@users.noreply.github.com>
+Date:   Wed Dec 2 19:05:14 2020 +0300
+
+    Fix fallout-style airlocks
+
+[33mcommit bfdb8ae7f34eea613823e67edcec876ea328d145[m
+Merge: bd503ed7 b99bd566
+Author: Игорь Терентьев <62373791+PhenyaMomota@users.noreply.github.com>
+Date:   Wed Dec 2 19:01:04 2020 +0300
+
+    Merge pull request #1 from iWuna/master
+    
+    update
+
+[33mcommit b99bd5666607be2737b01909fdde9e80bb794eb5[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Wed Dec 2 20:11:52 2020 +0600
+
+    Update closet.dmi
+
+[33mcommit 1b5c5ce2671ec566361646c680f489dd137196cd[m
+Merge: 9337e289 73dcdef5
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Wed Dec 2 19:21:28 2020 +0600
+
+    Merge branch 'master' of https://github.com/iWuna/Fallout-13-RoseEdition
+
+[33mcommit 9337e2892e811ce3ee1aafe012a2b2e4e0dde7ff[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Wed Dec 2 19:20:45 2020 +0600
+
+    Update ooc.dm
+
+[33mcommit 73dcdef5099515e577d0f17d78626caba757498c[m
+Merge: 83ac5fcb 1e36b367
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Wed Dec 2 18:30:50 2020 +0600
+
+    Merge pull request #54 from Vled-jpg/tweaks
+    
+    Tweaks
+
+[33mcommit 1e36b367aa17719da28b2bacb0a90343cf924bfc[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Wed Dec 2 14:28:56 2020 +0200
+
+    NCR!!
+
+[33mcommit 20e4467d1e4d50490b72677f9ccd50940d6ed0f6[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Wed Dec 2 12:14:20 2020 +0200
+
+    Фикс крика для кириллицы
+
+[33mcommit a5ba368f2be7d78839f7f8ab7cfc24a6d9a07038[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Wed Dec 2 12:08:10 2020 +0200
+
+    Костер как инструмент
+
+[33mcommit a11e632ed9385c05ef3a7bb9723945ff2b759fdc[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Wed Dec 2 11:44:27 2020 +0200
+
+    Удешевление крафта настойки
+
+[33mcommit e582fbad536d66fd040702ca9955db986cfff5da[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Wed Dec 2 11:38:00 2020 +0200
+
+    Крафт порошка в 2 раза дешевле
+
+[33mcommit 908bdd0e62d20d75d4ec13ee0901fbb2aeb4778b[m
+Author: Goldrobo <62397253+Goldrobo@users.noreply.github.com>
+Date:   Wed Dec 2 00:24:51 2020 -0500
+
+    Supermutant.dmi extra (#1074)
+    
+    Adds a little holiday themed sprite for super mutants.
+
+[33mcommit 83ac5fcba1b2ea8c404fc18faf75f36ca180e8ac[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Wed Dec 2 09:39:17 2020 +0600
+
+    Update pray.dm
+
+[33mcommit a08349e2c6b36379fd6f8626decbe34e4ff36851[m
+Merge: a238ee58 d65d5628
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Tue Dec 1 20:27:25 2020 +0600
+
+    Merge branch 'master' of https://github.com/iWuna/Fallout-13-RoseEdition
+
+[33mcommit a238ee588e97d4c79f46f4d23b23ab81c47ef9e5[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Tue Dec 1 20:24:55 2020 +0600
+
+    кеклав
+
+[33mcommit d65d5628125ad47d7d63ccb4a49813cd431e54b6[m
+Merge: b9d9b544 0dc849c3
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Tue Dec 1 19:50:47 2020 +0600
+
+    Merge pull request #52 from PhenyaMomota/flashlight
+    
+    Updated flashlights
+
+[33mcommit b9d9b544be9b35fdab496f154b796770825021a7[m
+Merge: 82c1c33c cf884659
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Tue Dec 1 19:50:01 2020 +0600
+
+    Merge pull request #50 from Reishi42/Reishi-F13
+    
+    Power Armor Balance
+
+[33mcommit 82c1c33cd258a36661742d3b860dc81a090c3383[m
+Merge: 0dd9fd6e 5ef646b0
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Tue Dec 1 19:49:00 2020 +0600
+
+    Merge pull request #53 from PhenyaMomota/falloutairlocks
+    
+    Fallout-style Airlocks
+
+[33mcommit 5ef646b0bf1e376e9c758bc56fef4fd16535b200[m
+Author: Игорь Терентьев <62373791+PhenyaMomota@users.noreply.github.com>
+Date:   Tue Dec 1 15:09:37 2020 +0300
+
+    Fallout-style Airlocks
+
+[33mcommit 0dc849c3e0d3c5f474207c7d802d8cc464a7c429[m
+Author: Игорь Терентьев <62373791+PhenyaMomota@users.noreply.github.com>
+Date:   Tue Dec 1 10:21:48 2020 +0300
+
+    Updated flashlights
+    
+    Обновленные фонарики
+
+[33mcommit 0dd9fd6e13d833ffbc86ca737020a49099bfb0c3[m
+Merge: bd503ed7 67a533f5
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Mon Nov 30 19:52:09 2020 +0600
+
+    Merge pull request #51 from Vled-jpg/mutant-updates
+    
+    Фикс крафта
+
+[33mcommit bd503ed78f760e272644f731e87d984a8fefc0ca[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Mon Nov 30 10:36:59 2020 +0600
+
+    Update config.txt
+
+[33mcommit 6192442d73fcb3c166ab5df6e635250e6b0289c3[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Mon Nov 30 09:12:46 2020 +0600
+
+    oops
+
+[33mcommit 6fd3a98380f7cb774320f6785256ad60bcb21f75[m
+Merge: 8120015e be3de7f8
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Mon Nov 30 08:52:21 2020 +0600
+
+    Merge branch 'master' of https://github.com/iWuna/Fallout-13-RoseEdition
+
+[33mcommit 8120015edaf77e7d342b797bb195abf1755f3fdf[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Mon Nov 30 08:52:18 2020 +0600
+
+    bruh
+
+[33mcommit be3de7f8ccba1b30a9c4ea3dfaff49c8e9ffb183[m
+Merge: c6549f6a f8bb2bcd
+Author: Oceket <andreykeyrazum@gmail.com>
+Date:   Sun Nov 29 23:43:43 2020 +0200
+
+    Merge branch 'master' of https://github.com/iWuna/Fallout-13-RoseEdition
+
+[33mcommit c6549f6a16d376ff05672cddc2438ba047bcb3d0[m
+Author: Oceket <andreykeyrazum@gmail.com>
+Date:   Sun Nov 29 23:43:37 2020 +0200
+
+    Обновление текста при спавне, новое говно-графити из кишок
+
+[33mcommit 67a533f5cc27f1a881c25ac1f90ec1e1cec00278[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Sun Nov 29 19:54:20 2020 +0200
+
+    Меню крафта мутанотов вернулось
+
+[33mcommit cf8846591dd39047cce50daa9b6c685a5ea9965c[m
+Author: Rehishi42 <saringan1996@mail.ru>
+Date:   Sun Nov 29 19:34:18 2020 +0500
+
+    Power Armor Fix
+
+[33mcommit f8bb2bcd6d62a4f2730c7dc42c2bf075e18ac54d[m
+Merge: eb39050a da36ed7d
+Author: Oceket <38756693+Oceket@users.noreply.github.com>
+Date:   Sun Nov 29 13:56:28 2020 +0200
+
+    Merge pull request #49 from Vled-jpg/craft-updates
+    
+    Craft updates
+
+[33mcommit da36ed7dd3a93a159c8ae841c642538a8a45e360[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Sun Nov 29 13:36:32 2020 +0200
+
+    Фиксы рецептов
+
+[33mcommit a4917d97c633e9521ec182c83e3071600544c063[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Sun Nov 29 13:28:44 2020 +0200
+
+    Новая одежда супермутантов и ее крафт
+
+[33mcommit 1289fb880b147866f645c3f66db1c85e90a5111c[m
+Author: skateboardjones <46762013+skateboardjones@users.noreply.github.com>
+Date:   Sun Nov 29 06:01:36 2020 -0500
+
+    prime decanus fixhgeudrh (#1065)
+    
+    zsiordgtr
+
+[33mcommit 3497eaaf1da8e656fe5af794992b0308633f426e[m
+Author: Jaaackx <53274878+Jaaackx@users.noreply.github.com>
+Date:   Sun Nov 29 11:01:03 2020 +0000
+
+    fixing combat rifle mk2 (#1067)
+
+[33mcommit 6f1bf4c335ff87a237564119ddd335de45cc87fe[m
+Author: Cinnamon-BonBon <60239538+Cinnamon-BonBon@users.noreply.github.com>
+Date:   Sun Nov 29 06:00:16 2020 -0500
+
+    Senior Knight Armor OBJ Icon Hotfix (#1069)
+    
+    * Senior Knight OBJ Sprite Fix
+    
+    Placed obj state icons into correct dmi
+    
+    * Deletes Bloat Icons From Original PR
+    
+    Removes icons from incorrect dmis
+
+[33mcommit cadde1bb7a5156f01146a458f0d9c477c9f78ae1[m
+Author: skateboardjones <46762013+skateboardjones@users.noreply.github.com>
+Date:   Sun Nov 29 05:59:47 2020 -0500
+
+    sacid recipe (#1070)
+    
+    Because powergamers were not powerful enough already with their number of caps mirroring the national debt of the United States.
+
+[33mcommit a4fa712ac7be47c7f9c768a38c20ed95cf087c9c[m
+Author: AsterixCodix <47103776+AsterixCodix@users.noreply.github.com>
+Date:   Sun Nov 29 10:59:00 2020 +0000
+
+    Synth Sprites (#1071)
+    
+    * Update lewd
+    
+    * Update human_parts_greyscale.dmi
+    
+    Co-authored-by: AsterixCodix <hurricaneclaw66@gmail.com>
+
+[33mcommit ee0bc99b273225522d0989db3b162926f8762e81[m
+Author: Superballs69 <whatthesophie@gmail.com>
+Date:   Sun Nov 29 04:58:43 2020 -0600
+
+    Guncrafting disable. (#1072)
+    
+    * Temporarily disables guncrafting.
+    
+    * map changes
+
+[33mcommit e14f7d8af69e2c32d0c99fcf5425466a9676ba18[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Sun Nov 29 12:48:59 2020 +0200
+
+    Новые вещи и броня мутантов
+
+[33mcommit ebfa27179bd6523d5879f78b3ca223b91fc68fdb[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Sun Nov 29 12:06:40 2020 +0200
+
+    Крафт магазина томпсона
+
+[33mcommit 391e39e49ee47ecc560d1b29c234eb35f104f4ee[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Sun Nov 29 11:51:58 2020 +0200
+
+    Фиксы рецептов, понижение стоимости metal брони
+
+[33mcommit 0036d8398afc0de0073d9b5530ab0c65ee3b91b3[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Sun Nov 29 11:47:32 2020 +0200
+
+    Передезд крафтов для мутантов
+
+[33mcommit eb39050ab334890c6d02d98f52227a0080616790[m
+Merge: d88c8070 8ec65647
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Sat Nov 28 22:40:05 2020 +0600
+
+    Merge pull request #48 from Reishi42/Reishi-F13
+    
+    Range combat fix - AER14
+
+[33mcommit 8ec65647f3e10ca6848eedbb839d442d190f75f2[m
+Author: Rehishi42 <saringan1996@mail.ru>
+Date:   Sat Nov 28 21:36:27 2020 +0500
+
+    Range combat fix - AER14
+
+[33mcommit d88c807048c1a9e41c578b3ede145296e64e9aa8[m
+Merge: 1e497f2f 36ae6c8b
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Sat Nov 28 22:03:04 2020 +0600
+
+    Merge pull request #47 from Reishi42/Reishi-F13
+    
+    Range Combat Fix
+
+[33mcommit 36ae6c8b9b7027ef5f87c9affd31baa3988ea5ba[m
+Author: Rehishi42 <saringan1996@mail.ru>
+Date:   Sat Nov 28 19:53:53 2020 +0500
+
+    Range Combat Fix
+
+[33mcommit 1e497f2f6024882e4671f015c4a96e89208013c4[m
+Merge: a5af15aa 1b9fc8e7
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Sat Nov 28 19:49:17 2020 +0600
+
+    Merge pull request #46 from Vled-jpg/stun
+    
+    Выпил стана говна, понижение шанса стана
+
+[33mcommit 1b9fc8e787d2c6ffa593a9646d6ef5c5d5c7294d[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Sat Nov 28 15:48:41 2020 +0200
+
+    Еще и стан подрежем
+
+[33mcommit 7779e6b702b6320b204b28bf17f01cc548271c46[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Sat Nov 28 15:47:59 2020 +0200
+
+    Даже больше нерфов
+
+[33mcommit 73786d0f50653779211dbca57a2f441907895f7e[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Sat Nov 28 15:44:10 2020 +0200
+
+    Выпил стана говна, понижение шанса стана
+
+[33mcommit a5af15aa68c78bce6cda92d778bd7222bdbb5e89[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Sat Nov 28 11:07:44 2020 +0600
+
+    Update human_parts.dmi
+
+[33mcommit 41f22fec33058307c210397e19d768469b43f62b[m
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Sat Nov 28 10:00:03 2020 +0600
+
+    english
+
+[33mcommit ae43c419753079691fab9f09fffe51ee4a938e0b[m
+Merge: d122678d 86190c83
+Author: iWuna <vlad0g123.eremenko123@gmail.com>
+Date:   Sat Nov 28 09:08:06 2020 +0600
+
+    Merge pull request #45 from Vled-jpg/updates
+    
+    Микрофиксы
+
+[33mcommit 86190c83294cdf248bed4b20e248917d5742d9a0[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Fri Nov 27 23:45:51 2020 +0200
+
+    Создание плакатов раскраской балончика по пластику
+
+[33mcommit 4030e423401fff19af0257fafff8f8b6a7a47cde[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Fri Nov 27 23:22:06 2020 +0200
+
+    Добавление стелсбоев в точки спавна т.3-5 брони
+
+[33mcommit 0f3d3e4651ead7a4ffadf29fa7c13223ad90df0c[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Fri Nov 27 23:07:15 2020 +0200
+
+    Усиление базовой брони супермутантов
+
+[33mcommit a904255207f204a9a1df2107007ee66adf4845ef[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Fri Nov 27 19:17:31 2020 +0200
+
+    Крафт мин в правильной категории
+
+[33mcommit 2e5b43e5b8e6def12de42a9d56c5205c38ee0836[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Fri Nov 27 19:05:10 2020 +0200
+
+    pull radial updates from tg
+
+[33mcommit b99d1a6302c24ef7e2a4eb426a129b10a3f52fd5[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Fri Nov 27 15:09:13 2020 +0200
+
+    Остатки постеров можно убирать
+
+[33mcommit 70a4d07948f37d8861ad1ed0d489cd36989aade4[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Fri Nov 27 14:49:21 2020 +0200
+
+    Ящики не ломаются от переизбытка предметов
+
+[33mcommit 573b92eb5afb42b926de95174ab405b1c4ed85da[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Fri Nov 27 14:17:49 2020 +0200
+
+    Рецепт мусорки из металла
+
+[33mcommit 1529877fd1dc31bb0fe8acaf4e1d48a96ac1421c[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Fri Nov 27 14:01:19 2020 +0200
+
+    Рецепт мусорного мешка
+
+[33mcommit ae35bd8d050bfd7fc565b8e162463399bb8a7312[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Fri Nov 27 13:58:50 2020 +0200
+
+    Покраска лампочек балончиком
+
+[33mcommit 0c977e1d761e650ac184d44639e6840671d4efca[m
+Author: Jaaackx <53274878+Jaaackx@users.noreply.github.com>
+Date:   Fri Nov 27 04:42:29 2020 +0000
+
+    Map changes (#1064)
+    
+    * Map changes
+    
+    * Update StJeromesValley.dmm
+
+[33mcommit a6a5815fbf0320417aa471bfb388406a26a804af[m
+Author: nokele <67761424+nokele@users.noreply.github.com>
+Date:   Thu Nov 26 23:41:46 2020 -0500
+
+    Update combat_indicator.dm (#1063)
+
+[33mcommit d122678d28066e89a0a6112cbd58ee4b39116ac9[m
+Merge: 76e5921c 7df82bf5
+Author: Oceket <38756693+Oceket@users.noreply.github.com>
+Date:   Fri Nov 27 00:23:36 2020 +0200
+
+    Merge pull request #43 from Reishi42/Reishi-F13
+    
+    NPC faction fix
+
+[33mcommit 76e5921c5bf235631be31cc9491c12769991e675[m
+Merge: b2258645 9da5462d
+Author: Oceket <38756693+Oceket@users.noreply.github.com>
+Date:   Fri Nov 27 00:23:17 2020 +0200
+
+    Merge pull request #44 from Vled-jpg/supermutant
+    
+    Раса супермутантов
+
+[33mcommit 9da5462dc8be99e9fa085c586e2d56ff4d8c86a1[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Thu Nov 26 23:45:44 2020 +0200
+
+    supermutant armor tweak
+
+[33mcommit ff451980ec478f03eee1984fdedc361002bcb937[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Thu Nov 26 23:37:56 2020 +0200
+
+    update mutant headset
+
+[33mcommit 010c5dcaf2720be55e4d7eee6bd6df5e3e198eca[m
+Author: Vled-jpg <vled0slav@gmail.com>
+Date:   Thu Nov 26 23:35:50 2020 +0200
+
+    supermutant craft recipes

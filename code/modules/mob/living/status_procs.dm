@@ -142,8 +142,6 @@
 /////////////////////////////////// DISABILITIES ////////////////////////////////////
 
 /mob/living/proc/add_trait(trait, source)
-	if(special_i >= 9)
-		verbs |= /mob/living/proc/teach_skill
 	if(!status_traits[trait])
 		status_traits[trait] = list(source)
 	else

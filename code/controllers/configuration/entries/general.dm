@@ -424,3 +424,6 @@
 
 /datum/config_entry/string/default_view
 	config_entry_value = "15x15"
+
+/datum/config_entry/string/default_view_square
+	config_entry_value = "15x15"

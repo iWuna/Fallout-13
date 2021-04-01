@@ -14,6 +14,7 @@
 	var/list/emote_taunt
 	var/emote_taunt_sound = FALSE // Does it have a sound associated with the emote? Defaults to false.
 	var/taunt_chance = 0
+	var/ignore_stealth = FALSE
 
 	var/ranged_message = "fires" //Fluff text for ranged mobs
 	var/ranged_cooldown = 0 //What the current cooldown on ranged attacks is, generally world.time + ranged_cooldown_time
@@ -161,7 +162,7 @@
 		var/mob/M = the_target
 		if(M.status_flags & GODMODE)
 			return FALSE
-		if(M.alpha < 100)
+		if(M.alpha < 100 && !ignore_stealth)
 			if (!src.Adjacent(M))
 				return FALSE
 

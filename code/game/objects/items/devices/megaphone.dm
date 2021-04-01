@@ -56,8 +56,20 @@
 	icon = 'icons/obj/musician.dmi'
 	icon_state = "cornu"
 	item_state = "cornu"
+	actions_types = list(/datum/action/item_action/horn)
 	lefthand_file = 'icons/mob/inhands/equipment/horns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/horns_righthand.dmi'
+
+/obj/item/megaphone/cornu/attack_self(mob/user)
+	. = ..()
+	horn()
+
+/obj/item/megaphone/cornu/proc/horn(mob/living/carbon/user)
+	if(spamcheck > world.time)
+		to_chat(user, "<span class='warning'>\The [src] is not to be overused in battle!</span>")
+	else
+		playsound(loc, 'sound/items/cornu.ogg', 100, 0, 1)
+		spamcheck = world.time + 50
 
 /obj/item/megaphone/cornu/get_held_item_speechspans(mob/living/carbon/user)
 	if(spamcheck > world.time)

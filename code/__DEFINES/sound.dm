@@ -18,6 +18,7 @@
 
 #define SOUND_MINIMUM_PRESSURE 10
 #define FALLOFF_SOUNDS 1
+#define SOUND_FALLOFF_EXPONENT 6
 
 
 //Ambience types

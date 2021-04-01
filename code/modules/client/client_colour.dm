@@ -107,6 +107,9 @@
 /datum/client_colour/glass_colour/gray
 	colour = "#cccccc"
 
+/datum/client_colour/cat_eye
+	priority = 200
+	colour = list(rgb(63, 63, 56), rgb(105, 103, 77), rgb(172, 149, 46))
 
 /datum/client_colour/monochrome
 	colour = list(rgb(77,77,77), rgb(150,150,150), rgb(28,28,28), rgb(0,0,0))

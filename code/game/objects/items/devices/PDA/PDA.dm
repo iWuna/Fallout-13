@@ -2,6 +2,18 @@
 //The advanced pea-green monochrome lcd of tomorrow.
 
 GLOBAL_LIST_EMPTY(PDAs)
+GLOBAL_LIST_INIT(pipboy_static, list(
+	'sound/machines/pipboy/static/ui_static_c_01.wav',
+	'sound/machines/pipboy/static/ui_static_c_02.wav',
+	'sound/machines/pipboy/static/ui_static_c_03.wav',
+	'sound/machines/pipboy/static/ui_static_c_04.wav',
+	'sound/machines/pipboy/static/ui_static_c_05.wav',
+	'sound/machines/pipboy/static/ui_static_d_01.wav',
+	'sound/machines/pipboy/static/ui_static_d_02.wav',
+	'sound/machines/pipboy/static/ui_static_d_03.wav',
+	'sound/machines/pipboy/static/ui_static_d_04.wav',
+	'sound/machines/pipboy/static/ui_static_d_05.wav',
+))
 
 #define PDA_SCANNER_NONE		0
 #define PDA_SCANNER_MEDICAL		1
@@ -43,6 +55,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 	var/font_index = 0 //This int tells DM which font is currently selected and lets DM know when the last font has been selected so that it can cycle back to the first font when "toggle font" is pressed again.
 	var/font_mode = "font-family:monospace;" //The currently selected font.
 	var/background_color = "#808000" //The currently selected background color.
+	var/privacy = FALSE // show or hide name on examine, not related to messanger
 
 	#define FONT_MONO "font-family:monospace;"
 	#define FONT_SHARE "font-family:\"Share Tech Mono\", monospace;letter-spacing:0px;"
@@ -141,7 +154,10 @@ GLOBAL_LIST_EMPTY(PDAs)
 			equipped = TRUE
 
 /obj/item/pda/proc/update_label()
-	name = "Pip-Boy 3000-[owner] ([ownjob])" //Name generalisation
+	name = "Pip-Boy 3000-[owner]" //Name generalisation
+
+/obj/item/pda/proc/reset_label()
+	name = initial(name)
 
 /obj/item/pda/GetAccess()
 	if(id)
@@ -158,8 +174,10 @@ GLOBAL_LIST_EMPTY(PDAs)
 		return
 	if(light_on)
 		set_light_on(FALSE)
+		playsound(src, 'sound/items/flashlight_off.ogg', 25, 1)
 	else if(light_range)
 		set_light_on(TRUE)
+		playsound(src, 'sound/items/flashlight_on.ogg', 25, 1) 
 	update_icon()
 	for(var/X in actions)
 		var/datum/action/A = X
@@ -213,7 +231,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 
 	user.set_machine(src)
 
-	var/dat = "<!DOCTYPE html><html><head><title>Personal Data Assistant</title><link href=\"https://fonts.googleapis.com/css?family=Orbitron|Share+Tech+Mono|VT323\" rel=\"stylesheet\"></head><body bgcolor=\"" + background_color + "\"><style>body{" + font_mode + "}ul,ol{list-style-type: none;}a, a:link, a:visited, a:active, a:hover { color: #000000;text-decoration:none; }img {border-style:none;}a img{padding-right: 9px;}</style>"
+	var/dat = "<!DOCTYPE html><html><head><meta charset=utf-8><title>Personal Data Assistant</title><link href=\"https://fonts.googleapis.com/css?family=Orbitron|Share+Tech+Mono|VT323\" rel=\"stylesheet\"></head><body bgcolor=\"" + background_color + "\"><style>body{" + font_mode + "}ul,ol{list-style-type: none;}a, a:link, a:visited, a:active, a:hover { color: #000000;text-decoration:none; }img {border-style:none;}a img{padding-right: 9px;}</style>"
 	dat += assets.css_tag()
 
 	dat += "<a href='byond://?src=[REF(src)];choice=Refresh'>[PDAIMG(refresh)]Refresh</a>"
@@ -227,6 +245,8 @@ GLOBAL_LIST_EMPTY(PDAs)
 		dat += "<div align=\"center\">"
 		dat += "<br><a href='byond://?src=[REF(src)];choice=Toggle_Font'>Toggle Font</a>"
 		dat += " | <a href='byond://?src=[REF(src)];choice=Change_Color'>Change Color</a>"
+		dat += " | <a href='byond://?src=[REF(src)];choice=Reset'>Reset</a>"
+		dat += " | <a href='byond://?src=[REF(src)];choice=Change_Name'>Change Name</a>"
 		dat += " | <a href='byond://?src=[REF(src)];choice=Toggle_Underline'>Toggle Underline</a>" //underline button
 
 		dat += "</div>"
@@ -234,18 +254,23 @@ GLOBAL_LIST_EMPTY(PDAs)
 	dat += "<br>"
 
 	if (!owner)
-		dat += "Warning: No owner information entered.  Please swipe card.<br><br>"
+		dat += "Warning: No owner information entered.  Please swipe card or <a href='byond://?src=[REF(src)];choice=Register'>Enter your name</a>.<br><br>"
 		dat += "<a href='byond://?src=[REF(src)];choice=Refresh'>[PDAIMG(refresh)]Retry</a>"
 	else
 		switch (mode)
 			if (0)
 				dat += "<h2>PERSONAL DATA ASSISTANT v.1.2</h2>"
-				dat += "Owner: [owner], [ownjob]<br>"
+				dat += "Owner: [owner]<br>"
 				dat += text("ID: <a href='?src=[REF(src)];choice=Authenticate'>[id ? "[id.registered_name], [id.assignment]" : "----------"]")
-				dat += text("<br><a href='?src=[REF(src)];choice=UpdateInfo'>[id ? "Update PDA Info" : ""]</A><br><br>")
+				dat += text("<br><a href='?src=[REF(src)];choice=UpdateInfo'>[id ? "Update PDA Info" : ""]</A>")
+				if(privacy)
+					dat += text("<br><a href='byond://?src=[REF(src)];choice=Toggle_Privacy'>Show Name</a>")
+				else
+					dat += text("<br><a href='byond://?src=[REF(src)];choice=Toggle_Privacy'>Hide Name</a>")
 
+				dat += "<br><br>"
 				dat += "[station_time_timestamp()]<br>" //:[world.time / 100 % 6][world.time / 100 % 10]"
-				dat += "[time2text(world.realtime, "MMM DD")] [GLOB.year_integer+262]"
+				dat += "[time2text(world.realtime, "MMM DD")] 2277"
 
 				dat += "<br><br>"
 
@@ -414,6 +439,8 @@ GLOBAL_LIST_EMPTY(PDAs)
 //BASIC FUNCTIONS===================================
 
 			if("Refresh")//Refresh, goes to the end of the proc.
+				if(!silent)
+					playsound(src, 'sound/machines/pipboy/select.wav', 15, TRUE)
 
 			if ("Toggle_Font")
 				//CODE REVISION 2
@@ -428,13 +455,50 @@ GLOBAL_LIST_EMPTY(PDAs)
 						font_mode = FONT_ORBITRON
 					if (MODE_VT)
 						font_mode = FONT_VT
+				if(!silent)
+					playsound(src, 'sound/machines/pipboy/select.wav', 15, TRUE)
 			if ("Change_Color")
 				var/new_color = input("Please enter a color name or hex value (Default is \'#808000\').",background_color)as color
 				background_color = new_color
+				if(!silent)
+					playsound(src, 'sound/machines/pipboy/select.wav', 15, TRUE)
+			if ("Change_Name", "Register")
+				var/custom_name = input(U, name, "Enter your name")
 
+				// Защита от старой автоподписи пипбоя(меты) "Pip-Boy3000-имя (должность)"
+				if(findtext(custom_name, "(") || findtext(custom_name, ")"))
+					to_chat(U, "<span class='danger'>Wrong character.</span>")
+					playsound(src, 'sound/machines/terminal_error.ogg', 15, TRUE)
+					return 
+				
+				if(custom_name)
+					owner = custom_name
+					ownjob = ""
+					update_label()
+					to_chat(U, "<span class='notice'>Information updated.</span>")
+				if(!silent)
+					playsound(src, 'sound/machines/terminal_processing.ogg', 15, TRUE)
+					addtimer(CALLBACK(GLOBAL_PROC, .proc/playsound, src, 'sound/machines/terminal_success.ogg', 15, TRUE), 1.3 SECONDS)
+			if ("Reset")
+				owner = initial(owner)
+				ownjob = initial(ownjob)
+				reset_label()
+				to_chat(U, "<span class='notice'>[name] have been reset.</span>")
+				if(!silent)
+					playsound(src, 'sound/machines/terminal_processing.ogg', 15, TRUE)
+					addtimer(CALLBACK(GLOBAL_PROC, .proc/playsound, src, 'sound/machines/terminal_success.ogg', 15, TRUE), 1.3 SECONDS)
 			if ("Toggle_Underline")
 				underline_flag = !underline_flag
-
+				if(!silent)
+					playsound(src, 'sound/machines/pipboy/select.wav', 15, TRUE)
+			if ("Toggle_Privacy")
+				privacy = !privacy
+				if(privacy)
+					reset_label()
+				else
+					update_label()
+				if(!silent)
+					playsound(src, 'sound/machines/pipboy/select.wav', 15, TRUE)
 			if("Return")//Return
 				if(mode<=9)
 					mode = 0
@@ -442,6 +506,9 @@ GLOBAL_LIST_EMPTY(PDAs)
 					mode = round(mode/10)
 					if(mode==4 || mode == 5)//Fix for cartridges. Redirects to hub.
 						mode = 0
+				if(!silent)
+					playsound(src, pick(GLOB.pipboy_static), 15, FALSE)
+					playsound(src, 'sound/machines/pipboy/tab.wav', 15, FALSE)
 			if ("Authenticate")//Checks for ID
 				id_check(U)
 			if("UpdateInfo")
@@ -449,6 +516,9 @@ GLOBAL_LIST_EMPTY(PDAs)
 				if(istype(id, /obj/item/card/id/syndicate))
 					owner = id.registered_name
 				update_label()
+				if(!silent)
+					playsound(src, 'sound/machines/terminal_processing.ogg', 15, TRUE)
+					addtimer(CALLBACK(GLOBAL_PROC, .proc/playsound, src, 'sound/machines/terminal_success.ogg', 15, TRUE), 1.3 SECONDS)
 			if("Eject")//Ejects the cart, only done from hub.
 				if (!isnull(cartridge))
 					U.put_in_hands(cartridge)
@@ -457,42 +527,69 @@ GLOBAL_LIST_EMPTY(PDAs)
 					cartridge.host_pda = null
 					cartridge = null
 					update_icon()
+				if(!silent)
+					playsound(src, 'sound/machines/terminal_eject.ogg', 50, TRUE)
 
 //MENU FUNCTIONS===================================
 
 			if("0")//Hub
 				mode = 0
+				if(!silent)
+					playsound(src, pick(GLOB.pipboy_static), 15, FALSE)
+					playsound(src, 'sound/machines/pipboy/tab.wav', 15, FALSE)
 			if("1")//Notes
 				mode = 1
+				if(!silent)
+					playsound(src, pick(GLOB.pipboy_static), 15, FALSE)
+					playsound(src, 'sound/machines/pipboy/tab.wav', 15, FALSE)
 			if("2")//Messenger
 				mode = 2
+				if(!silent)
+					playsound(src, pick(GLOB.pipboy_static), 15, FALSE)
+					playsound(src, 'sound/machines/pipboy/tab.wav', 15, FALSE)
 			if("21")//Read messeges
 				mode = 21
+				if(!silent)
+					playsound(src, pick(GLOB.pipboy_static), 15, FALSE)
+					playsound(src, 'sound/machines/pipboy/tab.wav', 15, FALSE)
 			if("3")//Atmos scan
 				mode = 3
+				if(!silent)
+					playsound(src, 'sound/machines/pipboy/tab.wav', 15, FALSE)
 			if("4")//Redirects to hub
 				mode = 0
+				if(!silent)
+					playsound(src, pick(GLOB.pipboy_static), 15, FALSE)
+					playsound(src, 'sound/machines/pipboy/tab.wav', 15, FALSE)
 
 
 //MAIN FUNCTIONS===================================
 
 			if("Light")
 				toggle_light()
+				// if(!silent)
+				// 	playsound(src, 'sound/machines/pipboy/select.wav', 15, TRUE)
 			if("Medical Scan")
 				if(scanmode == PDA_SCANNER_MEDICAL)
 					scanmode = PDA_SCANNER_NONE
 				else if((!isnull(cartridge)) && (cartridge.access & CART_MEDICAL))
 					scanmode = PDA_SCANNER_MEDICAL
+				if(!silent)
+					playsound(src, 'sound/machines/pipboy/select.wav', 15, TRUE)
 			if("Reagent Scan")
 				if(scanmode == PDA_SCANNER_REAGENT)
 					scanmode = PDA_SCANNER_NONE
 				else if((!isnull(cartridge)) && (cartridge.access & CART_REAGENT_SCANNER))
 					scanmode = PDA_SCANNER_REAGENT
+				if(!silent)
+					playsound(src, 'sound/machines/pipboy/select.wav', 15, TRUE)
 			if("Halogen Counter")
 				if(scanmode == PDA_SCANNER_HALOGEN)
 					scanmode = PDA_SCANNER_NONE
 				else if((!isnull(cartridge)) && (cartridge.access & CART_ENGINE))
 					scanmode = PDA_SCANNER_HALOGEN
+				if(!silent)
+					playsound(src, 'sound/machines/pipboy/select.wav', 15, TRUE)
 			if("Honk")
 				if ( !(last_noise && world.time < last_noise + 20) )
 					playsound(src, 'sound/items/bikehorn.ogg', 50, 1)
@@ -506,6 +603,8 @@ GLOBAL_LIST_EMPTY(PDAs)
 					scanmode = PDA_SCANNER_NONE
 				else if((!isnull(cartridge)) && (cartridge.access & CART_ATMOS))
 					scanmode = PDA_SCANNER_GAS
+				if(!silent)
+					playsound(src, 'sound/machines/pipboy/select.wav', 15, TRUE)
 			if("Drone Phone")
 				var/alert_s = input(U,"Alert severity level","Ping Drones",null) as null|anything in list("Low","Medium","High","Critical")
 				var/area/A = get_area(U)
@@ -513,6 +612,8 @@ GLOBAL_LIST_EMPTY(PDAs)
 					var/msg = "<span class='boldnotice'>NON-DRONE PING: [U.name]: [alert_s] priority alert in [A.name]!</span>"
 					_alert_drones(msg, TRUE, U)
 					to_chat(U, msg)
+				if(!silent)
+					playsound(src, 'sound/machines/terminal_success.ogg', 15, TRUE)
 
 
 //NOTEKEEPER FUNCTIONS===================================
@@ -617,6 +718,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 		to_chat(usr, "<span class='notice'>You remove the ID from the [name].</span>")
 		id = null
 		update_icon()
+		playsound(src, 'sound/machines/terminal_eject.ogg', 50, TRUE)
 
 /obj/item/pda/proc/msg_input(mob/living/U = usr)
 	var/t = stripped_input(U, "Please enter message", name)
@@ -663,6 +765,8 @@ GLOBAL_LIST_EMPTY(PDAs)
 	// If it didn't reach, note that fact
 	if (!signal.data["done"])
 		to_chat(user, "<span class='notice'>ERROR: Server isn't responding.</span>")
+		if(!silent)
+			playsound(src, 'sound/machines/terminal_error.ogg', 15, TRUE)
 		return
 
 	var/target_text = signal.format_target()
@@ -680,6 +784,8 @@ GLOBAL_LIST_EMPTY(PDAs)
 	// Log in the talk log
 	log_talk(user, "[key_name(user)] (PDA: [initial(name)]) sent \"[message]\" to [target_text]", LOGPDA)
 	to_chat(user, "<span class='info'>Message sent to [target_text]: \"[message]\"</span>")
+	if(!silent)
+		playsound(src, 'sound/machines/terminal_success.ogg', 15, TRUE)
 	// Reset the photo
 	photo = null
 	last_text = world.time
@@ -764,6 +870,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 		to_chat(usr, "<span class='notice'>You remove [inserted_item] from [src].</span>")
 		inserted_item = null
 		update_icon()
+		playsound(src, 'sound/machines/pda_button2.ogg', 50, TRUE)
 	else
 		to_chat(usr, "<span class='warning'>This PDA does not have a pen in it!</span>")
 
@@ -786,6 +893,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 		if(old_id)
 			user.put_in_hands(old_id)
 		update_icon()
+		playsound(src, 'sound/machines/pda_button1.ogg', 50, TRUE)
 	return TRUE
 
 // access to status display signals
@@ -797,17 +905,22 @@ GLOBAL_LIST_EMPTY(PDAs)
 		cartridge.host_pda = src
 		to_chat(user, "<span class='notice'>You insert [cartridge] into [src].</span>")
 		update_icon()
+		playsound(src, 'sound/machines/pda_button1.ogg', 50, TRUE)
 
 	else if(istype(C, /obj/item/card/id))
 		var/obj/item/card/id/idcard = C
 		if(!idcard.registered_name)
 			to_chat(user, "<span class='warning'>\The [src] rejects the ID!</span>")
+			if(!silent)
+				playsound(src, 'sound/machines/terminal_error.ogg', 50, TRUE)
 			return
 		if(!owner)
 			owner = idcard.registered_name
 			ownjob = idcard.assignment
 			update_label()
 			to_chat(user, "<span class='notice'>Card scanned.</span>")
+			if(!silent)
+				playsound(src, 'sound/machines/terminal_success.ogg', 50, TRUE)
 		else
 			//Basic safety check. If either both objects are held by user or PDA is on ground and card is in hand.
 			if(((src in user.contents) || (isturf(loc) && in_range(src, user))) && (C in user.contents))
@@ -833,6 +946,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 			to_chat(user, "<span class='notice'>You slide \the [C] into \the [src].</span>")
 			inserted_item = C
 			update_icon()
+			playsound(src, 'sound/machines/pda_button1.ogg', 50, TRUE)
 	else if(istype(C, /obj/item/photo))
 		var/obj/item/photo/P = C
 		photo = P.img

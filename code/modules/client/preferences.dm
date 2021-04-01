@@ -230,6 +230,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/parallax
 	var/arousable = TRUE
 	var/ambientocclusion = TRUE
+	var/widescreenpref = TRUE
 	var/auto_fit_viewport = FALSE
 
 	var/uplink_spawn_loc = UPLINK_PDA
@@ -664,6 +665,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			dat += "<b>Ambient Occlusion:</b> <a href='?_src_=prefs;preference=ambientocclusion'>[ambientocclusion ? "Enabled" : "Disabled"]</a><br>"
 			dat += "<b>Fit Viewport:</b> <a href='?_src_=prefs;preference=auto_fit_viewport'>[auto_fit_viewport ? "Auto" : "Manual"]</a><br>"
+			if (CONFIG_GET(string/default_view) != CONFIG_GET(string/default_view_square))
+				dat += "<b>Widescreen:</b> <a href='?_src_=prefs;preference=widescreenpref'>[widescreenpref ? "Enabled ([CONFIG_GET(string/default_view)])" : "Disabled ([CONFIG_GET(string/default_view_square)])"]</a><br>"
 
 			if (CONFIG_GET(flag/maprotation))
 				var/p_map = preferred_map
@@ -2230,6 +2233,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(auto_fit_viewport && parent)
 						parent.fit_viewport()
 
+				if("widescreenpref")
+					widescreenpref = !widescreenpref
+					user.client.change_view(CONFIG_GET(string/default_view))
+
 				if("save")
 					save_preferences()
 					save_character()
@@ -2274,23 +2281,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.gender = gender
 	character.age = age
 	//special stuff
-	character.special_s = special_s
-	character.special_p = special_p
-	character.special_e = special_e
-	character.special_c = special_c
-	character.special_i = special_i
-//	if (character.special_i<3)
-//		character.dna.add_mutation(UNINTELLIGIBLE)
-	character.special_a = special_a
-	character.special_l = special_l
+	character.special.from_prefs(src)
 
 	character.has_dick = has_dick
 	character.has_vulva = has_vulva
 	character.has_breast = has_breast
-
-
-	character.maxHealth = initial(character.maxHealth) * (1 + special_e * 0.05)
-	character.health = initial(character.health) * (1 + special_e * 0.05)
 
 	character.eye_color = eye_color
 	var/obj/item/organ/eyes/organ_eyes = character.getorgan(/obj/item/organ/eyes)

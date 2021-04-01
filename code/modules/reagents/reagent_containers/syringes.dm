@@ -128,18 +128,42 @@
 			if(L) //living mob
 				if(!L.can_inject(user, TRUE))
 					return
+				var/target_zone = user.zone_selected
+				var/port = FALSE
+				if(ishuman(target))
+					var/mob/living/carbon/human/H = target
+					if(above_neck(target_zone))
+						if(H.head && istype(H.head, /obj/item/clothing))
+							var/obj/item/clothing/CH = H.head
+							if(CH.clothing_flags & THICKMATERIALPORT)
+								port = TRUE
+					else
+						if(H.wear_suit && istype(H.wear_suit, /obj/item/clothing))
+							var/obj/item/clothing/CS = H.wear_suit
+							if(CS.clothing_flags & THICKMATERIALPORT)
+								port = TRUE
 				if(L != user)
-					L.visible_message("<span class='danger'>[user] is trying to inject [L]!</span>", \
-											"<span class='userdanger'>[user] is trying to inject [L]!</span>")
-					if(!do_mob(user, L, extra_checks=CALLBACK(L, /mob/living/proc/can_inject,user,1)))
-						return
 					if(!reagents.total_volume)
 						return
 					if(L.reagents.total_volume >= L.reagents.maximum_volume)
 						return
+					
+					if(port)
+						user.visible_message("<span class='danger'>[user] begins hunting for an injection port on [target]'s suit!</span>")
+						if(!do_mob(user, target, 90))
+							return
+					else
+						L.visible_message("<span class='danger'>[user] is trying to inject [L]!</span>", \
+											"<span class='userdanger'>[user] is trying to inject [L]!</span>")
+						if(!do_mob(user, L))
+							return
 					L.visible_message("<span class='danger'>[user] injects [L] with the syringe!", \
 									"<span class='userdanger'>[user] injects [L] with the syringe!</span>")
-
+				else
+					if(port)
+						user.visible_message("<span class='danger'>[user] begins hunting for an injection port!</span>")
+						if(!do_mob(user, target, 90))
+							return
 				if(L != user)
 					add_logs(user, L, "injected", src, addition="which had [contained]")
 				else

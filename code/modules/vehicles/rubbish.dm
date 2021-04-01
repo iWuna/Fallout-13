@@ -307,16 +307,22 @@
 	density = 1
 	layer = ABOVE_MOB_LAYER
 	resistance_flags = INDESTRUCTIBLE
+	var/is_busy = FALSE
 	var/looted = FALSE
 	var/weld = 0
 
 /obj/structure/car/attack_hand(mob/user)
 	. = ..()
+	if(is_busy)
+		to_chat(user, "Someone is already looking throught it.")
+		return
 	if(!looted)
+		is_busy = TRUE
 		if(do_after(user, 5, TRUE, src))
 			to_chat(user, "You remove the old battery.")
 			new /obj/item/defibrillator/ghetto(user.loc)
 			looted = TRUE
+		is_busy = FALSE
 	else
 		to_chat(user, "Its empty.")
 

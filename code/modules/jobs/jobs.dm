@@ -146,7 +146,7 @@ GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
 	"US Commander"
 ))
 
-GLOBAL_LIST_INIT(ankap_positions, list(
+GLOBAL_LIST_INIT(enclave_positions, list(
 	"US Private",
 	"US Heavy Soldier",
 	"US Scientist",
@@ -343,11 +343,10 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
     EXP_TYPE_RANGER        = list("titles" = list("NCR Veteran Ranger","NCR Patrol Ranger", "NCR Scout Ranger")),
     EXP_TYPE_SCRIBE        = list("titles" = list("Scribe")),
     EXP_TYPE_DECANUS       = list("titles" = list("Legion Decanus")),
-
     EXP_TYPE_TRIBALCOMMAND = list("titles" = list("Chief","Shaman","Chief Hunter")),
     EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Lead Practitioner")),
   	EXP_TYPE_NCRCOMMAND    = list("titles" = list("NCR Lieutenant","NCR Sergeant","NCR Captain","NCR Ambassador"),
-  	EXP_TYPE_ENCLAVE = list("titles" = list("US Private", "US Medic", "US Engineer", "US Commander")))
+  	EXP_TYPE_ENCLAVE = list("titles" = enclave_positions))
     // EXP_TYPE_CREW = list("titles" = command_positions | engineering_positions | medical_positions | science_positions | supply_positions | security_positions | civilian_positions | list("AI","Cyborg")), // crew positions
     // EXP_TYPE_COMMAND = list("titles" = command_positions),
     // EXP_TYPE_ENGINEERING = list("titles" = engineering_positions),

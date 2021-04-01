@@ -27,7 +27,7 @@
 
 /datum/crafting_recipe/mould/extended
 	result = /obj/item/prefabs/mould/barrel/extended
-	name = "Extended barrel"
+	name = "Sniper barrel"
 	tools = list(TOOL_FORGE, TOOL_GUNTIER3)
 	traits = list(TRAIT_GUNSMITH_THREE)
 	time = 30

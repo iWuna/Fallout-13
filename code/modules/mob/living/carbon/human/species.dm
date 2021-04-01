@@ -1257,7 +1257,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			else
 				user.do_attack_animation(target, ATTACK_EFFECT_PUNCH)
 
-		var/damage = rand(user.dna.species.punchdamagelow, user.dna.species.punchdamagehigh)
+		var/damage = rand(user.dna.species.punchdamagelow, user.dna.species.punchdamagehigh + user.special.punch_mod)
 
 		var/obj/item/bodypart/affecting = target.get_bodypart(ran_zone(user.zone_selected))
 
@@ -1465,12 +1465,12 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/hit_percent = (100-(blocked+armor))/100
 	hit_percent = (hit_percent * (100-H.physiology.damage_resistance))/100
 
-	var/missProb = 2 * H.special_l + 6.5
+	var/miss_chance = H.special.miss_chance
 
 	if(H.stat == DEAD)
-		missProb = 0
+		miss_chance = 0
 
-	if(prob(missProb))
+	if(prob(miss_chance))
 		H.visible_message("<font color='green'>[H] are lucky!</font>")
 		hit_percent = 0
 
@@ -1531,6 +1531,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			H.show_message("<span class='notice'>The radiation beam dissipates harmlessly through your body.</span>")
 
 /datum/species/proc/bullet_act(obj/item/projectile/P, mob/living/carbon/human/H)
+	SEND_SIGNAL(H, COMSIG_HUMAN_BULLET_ACT, H, P)
 	// called before a projectile hit
 	return 0
 

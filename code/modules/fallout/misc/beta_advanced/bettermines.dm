@@ -51,9 +51,10 @@
 			if(ismob(AM))
 				var/mob/MM = AM
 				if(!(MM.movement_type & FLYING))
-					triggermine(AM)
-				if(!MM.special_a > 8)
-					triggermine(AM)
+					if(MM.special.trigger_mines)
+						triggermine(AM)
+					else
+						to_chat(MM, "You move over [src] without stepping on it")
 			else
 				triggermine(AM)
 

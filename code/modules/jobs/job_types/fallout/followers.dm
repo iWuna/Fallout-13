@@ -68,13 +68,16 @@ Administrator
 	jobtype = /datum/job/followers/f13leadpractitioner
 	id = 		/obj/item/card/id/silver
 	chemwhiz = TRUE
+	gloves = 	/obj/item/pda/heads/cmo/fa
 	uniform = 	/obj/item/clothing/under/f13/followers
 	suit= 		/obj/item/clothing/suit/toggle/labcoat/cmo
 	shoes = 	/obj/item/clothing/shoes/f13/brownie
-	belt = 		/obj/item/healthanalyzer/advanced
+	belt = 		/obj/item/storage/belt/medical
 	backpack = 	/obj/item/storage/backpack/medic
 	satchel = 	/obj/item/storage/backpack/satchel/med
 	duffelbag = /obj/item/storage/backpack/duffelbag/med
+	l_pocket = 	/obj/item/healthanalyzer/advanced
+	neck = /obj/item/clothing/neck/cloak/cmo
 	backpack_contents = list(
 		/obj/item/reagent_containers/glass/beaker/bluespace=1,
 		/obj/item/storage/firstaid/ancient=1,
@@ -349,8 +352,8 @@ Follower Volunteer
 	name = "Followers Ranged Guard"
 	suit_store = /obj/item/gun/ballistic/automatic/m1carbine
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m10mm_adv,
-		/obj/item/ammo_box/magazine/m10mm_adv
+		/obj/item/ammo_box/magazine/m10mm_adv=1,
+		/obj/item/ammo_box/magazine/m10mm_adv=1
 	)
 
 /datum/outfit/loadout/guard_close

@@ -191,8 +191,12 @@
 		if(has_breathable_mask && istype(belt, /obj/item/tank))
 			dat += "&nbsp;<A href='?src=[REF(src)];internal=[SLOT_BELT]'>[internal ? "Disable Internals" : "Set Internals"]</A>"
 		dat += "</td></tr>"
-		dat += "<tr><td>&nbsp;&#8627;<B>Pockets:</B></td><td><A href='?src=[REF(src)];pockets=left'>[(l_store && !(l_store.item_flags & ABSTRACT)) ? "Left (Full)" : "<font color=grey>Left (Empty)</font>"]</A>"
-		dat += "&nbsp;<A href='?src=[REF(src)];pockets=right'>[(r_store && !(r_store.item_flags & ABSTRACT)) ? "Right (Full)" : "<font color=grey>Right (Empty)</font>"]</A></td></tr>"
+		if(user.special.can_see_pockets)
+			dat += "<tr><td>&nbsp;&#8627;<B>Pockets:</B></td><td><A href='?src=[REF(src)];pockets=left'>[(l_store && !(l_store.item_flags & ABSTRACT)) ? l_store : "<font color=grey>Left (Empty)</font>"]</A>"
+			dat += "&nbsp;<A href='?src=[REF(src)];pockets=right'>[(r_store && !(r_store.item_flags & ABSTRACT)) ? r_store : "<font color=grey>Right (Empty)</font>"]</A></td></tr>"
+		else
+			dat += "<tr><td>&nbsp;&#8627;<B>Pockets:</B></td><td><A href='?src=[REF(src)];pockets=left'>[(l_store && !(l_store.item_flags & ABSTRACT)) ? "Left (Full)" : "<font color=grey>Left (Empty)</font>"]</A>"
+			dat += "&nbsp;<A href='?src=[REF(src)];pockets=right'>[(r_store && !(r_store.item_flags & ABSTRACT)) ? "Right (Full)" : "<font color=grey>Right (Empty)</font>"]</A></td></tr>"
 		dat += "<tr><td>&nbsp;&#8627;<B>ID:</B></td><td><A href='?src=[REF(src)];item=[SLOT_WEAR_ID]'>[(wear_id && !(wear_id.item_flags & ABSTRACT)) ? wear_id : "<font color=grey>Empty</font>"]</A></td></tr>"
 
 	if(handcuffed)
@@ -276,6 +280,7 @@
 				if(pocket_item)
 					if(pocket_item == (pocket_id == SLOT_R_STORE ? r_store : l_store)) //item still in the pocket we search
 						dropItemToGround(pocket_item)
+						usr.put_in_hands(pocket_item)
 				else
 					if(place_item)
 						if(place_item.mob_can_equip(src, usr, pocket_id, FALSE, TRUE))
@@ -511,6 +516,7 @@
 		target_zone = user.zone_selected
 	if(has_trait(TRAIT_PIERCEIMMUNE))
 		. = 0
+	var/no_skill = FALSE
 	// If targeting the head, see if the head item is thin enough.
 	// If targeting anything else, see if the wear suit is thin enough.
 	if (!penetrate_thick)
@@ -519,14 +525,29 @@
 				var/obj/item/clothing/CH = head
 				if (CH.clothing_flags & THICKMATERIAL)
 					. = 0
+				if(CH.clothing_flags & THICKMATERIALPORT)
+					if(isliving(user))
+						var/mob/living/L = user
+						if(!L.has_trait(TRAIT_PA_WEAR))
+							. = 0
+							no_skill = TRUE
 		else
 			if(wear_suit && istype(wear_suit, /obj/item/clothing))
 				var/obj/item/clothing/CS = wear_suit
 				if (CS.clothing_flags & THICKMATERIAL)
 					. = 0
+				if(CS.clothing_flags & THICKMATERIALPORT)
+					if(isliving(user))
+						var/mob/living/L = user
+						if(!L.has_trait(TRAIT_PA_WEAR))
+							. = 0
+							no_skill = TRUE
 	if(!. && error_msg && user)
 		// Might need re-wording.
-		to_chat(user, "<span class='alert'>There is no exposed flesh or thin material [above_neck(target_zone) ? "on [p_their()] head" : "on [p_their()] body"].</span>")
+		if(no_skill)
+			to_chat(user, "<span class='alert'>You don't have a proper knowledge to find the injection.</span>")
+		else
+			to_chat(user, "<span class='alert'>There is no exposed flesh or thin material [above_neck(target_zone) ? "on [p_their()] head" : "on [p_their()] body"].</span>")
 
 /mob/living/carbon/human/proc/check_obscured_slots()
 	var/list/obscured = list()

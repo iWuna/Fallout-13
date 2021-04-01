@@ -268,3 +268,12 @@
 /obj/item/storage/pill_bottle/chem_tin/radx/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/radx(src)
+
+/obj/item/storage/pill_bottle/chem_tin/cateye
+	name = "Cateye"
+	icon_state = "pill_canister_cateye"
+	desc = "Contains pills used to treat and prevent radiation and minor toxin damage."
+
+/obj/item/storage/pill_bottle/chem_tin/cateye/PopulateContents()
+	for(var/i in 1 to 5)
+		new /obj/item/reagent_containers/pill/cateye(src)

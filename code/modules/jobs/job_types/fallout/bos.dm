@@ -106,7 +106,7 @@ Sentinel
 
 	outfit = /datum/outfit/job/bos/f13sentinel
 
-	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	access = list(ACCESS_BOS_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 
 /datum/outfit/job/bos/f13sentinel/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -122,13 +122,14 @@ Sentinel
 	uniform = 		/obj/item/clothing/under/f13/recon
 	accessory = 	/obj/item/clothing/accessory/bos/sentinel
 	glasses =       /obj/item/clothing/glasses/night
-	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t60
+	//suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t60
 	belt =			/obj/item/storage/belt/military/assault
-	head = 			/obj/item/clothing/head/helmet/f13/power_armor/t60
+	//head = 			/obj/item/clothing/head/helmet/f13/power_armor/t60
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	id = 			/obj/item/card/id/dogtag
 	backpack_contents = list(
-		/obj/item/kitchen/knife/combat=1)
+		/obj/item/kitchen/knife/combat=1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=5,)
 
 /datum/job/bos/f13sentinel/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
@@ -138,6 +139,8 @@ Sentinel
 /datum/outfit/loadout/sentstand
 	name = "Shock Sentinel"
 	l_hand = /obj/item/gun/energy/laser/scatter
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t60
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t60
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc=3,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
@@ -145,6 +148,8 @@ Sentinel
 
 /datum/outfit/loadout/sentvet
 	name = "Veteran Sentinel"
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t60
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t60
 	backpack_contents = list(
 		/obj/item/gun/energy/ionrifle=1,
 		/obj/item/stock_parts/cell/ammo/mfc=3,
@@ -154,6 +159,8 @@ Sentinel
 
 /datum/outfit/loadout/sentheavy
 	name = "Heavy Sentinel"
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t60/tesla
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t60/tesla
 	backpack_contents = list(
 		/obj/item/minigunpack=1,
 		)
@@ -176,6 +183,7 @@ Head Scribe
 	supervisors = "the elder"
 	selection_color = "#7f8c8d"
 
+	department_head = list("Sentiel")
 	exp_requirements = 250
 	exp_type = EXP_TYPE_BROTHERHOOD
 
@@ -247,6 +255,7 @@ Knight-Captain
 
 	exp_requirements = 150
 	exp_type = EXP_TYPE_BROTHERHOOD
+	department_head = list("Sentiel")
 
 	loadout_options = list(
 	/datum/outfit/loadout/capstand, //AER9 and 10mm pistol
@@ -267,8 +276,6 @@ Knight-Captain
 	if(visualsOnly)
 		return
 	H.add_trait(TRAIT_CHEMWHIZ)
-
-
 
 
 /datum/outfit/job/bos/f13knightcap
@@ -293,6 +300,7 @@ Knight-Captain
 
 /datum/job/bos/f13knightcap/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
+	H.add_quirk("Master Gunsmith")
 
 /datum/outfit/loadout/capstand
 	name = "Knight-Captain"
@@ -339,6 +347,7 @@ Senior Paladin
 
 	exp_requirements = 100
 	exp_type = EXP_TYPE_BROTHERHOOD
+	department_head = list("Sentiel")
 
 	loadout_options = list(
 		/datum/outfit/loadout/spaladina, //M72 Gauss rifle and Glock
@@ -403,12 +412,14 @@ Paladin
 
 	exp_requirements = 90
 	exp_type = EXP_TYPE_BROTHERHOOD
+	department_head = list("Sentiel")
 
 	loadout_options = list(
 	/datum/outfit/loadout/paladina, //Carbine and aep7
 	/datum/outfit/loadout/paladinb, //rcw and n99
 	/datum/outfit/loadout/paladinc,
-	/datum/outfit/loadout/paladind
+	/datum/outfit/loadout/paladind,
+	/datum/outfit/loadout/paladin_medical //with MedPA and medibeam
 	)
 
 	outfit = /datum/outfit/job/bos/f13paladin
@@ -420,8 +431,8 @@ Paladin
 	name = "Paladin"
 	jobtype = /datum/job/bos/f13paladin
 	pa_wear = TRUE
-	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t45d
-	head = 			/obj/item/clothing/head/helmet/f13/power_armor/t45d
+	//suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
+	//head = /obj/item/clothing/head/helmet/f13/power_armor/t45d
 	uniform = 		/obj/item/clothing/under/f13/recon
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
 	belt = 			/obj/item/storage/belt/military
@@ -434,6 +445,8 @@ Paladin
 
 /datum/outfit/loadout/paladina
 	name = "Firesupport Junior Paladin"
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t45d
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/assault_carbine=1,
 		/obj/item/gun/energy/laser/pistol=1,
@@ -444,6 +457,8 @@ Paladin
 
 /datum/outfit/loadout/paladinb
 	name = "Frontline Junior Paladin"
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t45d
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/rcw=1,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
@@ -454,6 +469,8 @@ Paladin
 
 /datum/outfit/loadout/paladinc
 	name = "Firesupport Paladin"
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t45d
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/assault_carbine=1,
 		/obj/item/gun/energy/laser/pistol=1,
@@ -464,12 +481,26 @@ Paladin
 
 /datum/outfit/loadout/paladind
 	name = "Frontline Paladin"
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t45d
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/rcw=1,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
 		/obj/item/stock_parts/cell/ammo/ecp=2,
 		/obj/item/ammo_box/magazine/m10mm_adv=2,
 		/obj/item/clothing/accessory/bos/paladin=1
+		)
+/datum/outfit/loadout/paladin_medical
+	name = "Field Medic Paladin"
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t45d/medical
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d/medical
+	backpack_contents = list(
+		/obj/item/gun/ballistic/revolver/shotgunrevolver=1,
+		/obj/item/clothing/accessory/bos/paladin=1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
+		/obj/item/storage/box/slugshot=1,
+		/obj/item/reagent_containers/hypospray/combat=1,
+		/obj/item/gun/medbeam=1
 		)
 
 /*
@@ -490,6 +521,7 @@ Senior Scribe
 
 	exp_requirements = 60
 	exp_type = EXP_TYPE_BROTHERHOOD
+	department_head = list("Sentiel")
 
 	outfit = /datum/outfit/job/bos/f13seniorscribe
 
@@ -500,7 +532,7 @@ Senior Scribe
 	..()
 	if(visualsOnly)
 		return
-	H.add_trait(TRAIT_CHEMWHIZ)
+	H.add_trait(TRAIT_CHEMWHIZ, TRAIT_MEDICALEXPERT)
 
 /datum/outfit/job/bos/f13seniorscribe
 	name = "Senior Scribe"
@@ -545,6 +577,7 @@ Scribe
 	)
 
 	outfit = /datum/outfit/job/bos/f13scribe
+	department_head = list("Sentiel")
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
@@ -553,7 +586,7 @@ Scribe
 	..()
 	if(visualsOnly)
 		return
-	H.add_trait(TRAIT_CHEMWHIZ)
+	H.add_trait(TRAIT_CHEMWHIZ, TRAIT_MEDICALEXPERT)
 
 /datum/outfit/job/bos/f13scribe
 	name = "Scribe"
@@ -606,6 +639,7 @@ datum/job/bos/f13seniorknight
 
 	exp_requirements = 20
 	exp_type = EXP_TYPE_BROTHERHOOD
+	department_head = list("Sentiel")
 
 	outfit = /datum/outfit/job/bos/f13seniorknight
 
@@ -670,6 +704,7 @@ Knight
 
 	exp_requirements = 20
 	exp_type = EXP_TYPE_BROTHERHOOD
+	department_head = list("Sentiel")
 
 	loadout_options = list(
 	/datum/outfit/loadout/knighta, //AER9
@@ -756,6 +791,7 @@ Initiate
 	)
 
 	outfit = /datum/outfit/job/bos/f13initiate
+	department_head = list("Sentiel")
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
@@ -790,7 +826,7 @@ Initiate
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
 		/obj/item/book/granter/trait/chemistry=1,
-		/obj/item/book/granter/trait/field_surgery,
+		/obj/item/book/granter/trait/field_surgery=1,
 		/obj/item/clothing/accessory/bos/initiateS=1
 		)
 
@@ -831,6 +867,7 @@ Off-Duty
 	exp_type = EXP_TYPE_CREW
 
 	outfit = /datum/outfit/job/bos/f13offdutybos
+	department_head = list("Sentiel")
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)

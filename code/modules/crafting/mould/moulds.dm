@@ -2,6 +2,7 @@
 	name = "Mould"
 	desc = ""
 	icon_state = "mould"
+	complexity = 0
 
 	var/item_path
 	var/obj/item/stack/mould_sheet_type = /obj/item/stack/sheet/metal
@@ -76,7 +77,7 @@
 	sheet_amount = 3
 
 /obj/item/prefabs/mould/barrel/extended
-	name = "Long Barrel Mould"
+	name = "Sniper Barrel Mould"
 	item_path = /obj/item/prefabs/complex/barrel/extended
 	sheet_amount = 6
 
@@ -197,6 +198,11 @@
 	name = ".50MG Internal Magazine Loader Mould"
 	item_path = /obj/item/prefabs/complex/ammo_loader/m50MG
 	sheet_amount = 20
+
+/obj/item/prefabs/mould/antimateriel/double
+	name = ".50MG Double Internal Magazine Loader Mould"
+	item_path = /obj/item/prefabs/complex/ammo_loader/m50MG/double
+	sheet_amount = 30
 
 // Bolt
 

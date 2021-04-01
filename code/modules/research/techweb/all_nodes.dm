@@ -345,7 +345,7 @@
 	display_name = "Night Vision Technology"
 	description = "Allows seeing in the dark without actual light!"
 	prereq_ids = list("integrated_HUDs", "adv_engi", "emp_adv")
-	design_ids = list()
+	design_ids = list("nvgmesons", "night_visision_goggles", "health_hud_night")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 	export_price = 5000
 

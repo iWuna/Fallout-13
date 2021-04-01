@@ -31,6 +31,8 @@
 	icon_state = "emitter_d2"
 	energyProjType = list(/obj/item/ammo_casing/energy/laser/scatter/disabler/expensive)
 	complexity = 125
+	incompatible_tags = list("fdual", "triple")
+	tags = list("scatter")
 
 
 /obj/item/prefabs/complex/ebarrel/laser/strong
@@ -45,6 +47,8 @@
 	icon_state = "emitter_l3"
 	energyProjType = list(/obj/item/ammo_casing/energy/laser/scatter)
 	complexity = 100
+	incompatible_tags = list("fdual", "triple")
+	tags = list("scatter")
 
 
 /obj/item/prefabs/complex/ebarrel/plasma/weak
@@ -66,6 +70,8 @@
 	icon_state = "emitter_p3"
 	energyProjType = list(/obj/item/ammo_casing/energy/plasma/scatter)
 	complexity = 175
+	incompatible_tags = list("fdual", "triple")
+	tags = list("scatter")
 
 
 /obj/item/prefabs/complex/ebarrel/ion
@@ -98,8 +104,11 @@
 /obj/item/prefabs/complex/eburst/dual
 	name = "Dual Stream"
 	burst_mod = 1
-	burst_delay_mod = -0.5
+	burst_delay_mod = 1.5
 	complexity = 75
+	bullet_speed_mod = 0.1
+	// tags = list("dual")
+	// incompatible_tags = list("scatter")
 
 
 /obj/item/prefabs/complex/eburst/fast
@@ -109,6 +118,8 @@
 	dam_mod = -3
 	armorpen_mod = -3
 	complexity = 100
+	tags = list("fdual")
+	incompatible_tags = list("scatter")
 
 
 /obj/item/prefabs/complex/eburst/triple
@@ -118,6 +129,8 @@
 	dam_mod = -5
 	armorpen_mod = -5
 	complexity = 150
+	tags = list("triple")
+	incompatible_tags = list("scatter")
 
 
 /obj/item/prefabs/complex/ecell
@@ -159,28 +172,28 @@
 	name = "Energy Pistol Frame"
 	desc = "An unfinished energy gun."
 	icon_state = "pistolframe"
-	max_complexity = 125
+	max_complexity = 150
 
 
 /obj/item/prefabs/complex/energy/frame/hqpistol
 	name = "Advanced Energy Pistol Frame"
 	desc = "An unfinished energy gun."
 	icon_state = "pistolframe"
-	max_complexity = 175
+	max_complexity = 200
 
 
 /obj/item/prefabs/complex/energy/frame/rifle
 	name = "Energy Rifle Frame"
 	desc = "An unfinished energy gun."
 	icon_state = "gunframe"
-	max_complexity = 250
+	max_complexity = 300
 
 
 /obj/item/prefabs/complex/energy/frame/hqrifle
 	name = "Advanced Energy Rifle Frame"
 	desc = "An unfinished energy gun."
 	icon_state = "gunframe"
-	max_complexity = 325
+	max_complexity = 375
 
 
 // COMPONENTS
@@ -200,7 +213,7 @@
 	desc = "An energy weapon part, a craftsman might want to have this. Advanced model of its more common predecessor."
 	icon_state = "capacitor_array"
 	complexity = 50
-	armorpen_mod = 3
+	armorpen_mod = 7
 
 
 /obj/item/advanced_crafting_components/capacitor/reflex
@@ -208,7 +221,7 @@
 	desc = "An energy weapon part, a craftsman might want to have this. It has the highest efficiecy among other models."
 	icon_state = "capacitor_reflex"
 	complexity = 75
-	armorpen_mod = 6
+	armorpen_mod = 15
 
 
 /obj/item/advanced_crafting_components/lenses
@@ -216,6 +229,7 @@
 	desc = "An energy weapon part, a craftsman might want to have this. Common serial model of pre-war industry."
 	icon_state = "lense_focused"
 	complexity = 25
+	var/burst_delay_mod = -0.5
 	var/bullet_speed_mod = -0.1
 
 
@@ -224,6 +238,7 @@
 	desc = "An energy weapon part, a craftsman might want to have this. Has tiny fractures over the sides."
 	icon_state = "lense_crude"
 	complexity = 0
+	burst_delay_mod = 0.5
 	bullet_speed_mod = 0.1
 
 
@@ -232,7 +247,8 @@
 	desc = "An energy weapon part, a craftsman might want to have this. Array of reconfigurable microscopic pillars that polarize light beams coming throught it."
 	icon_state = "lense_metasurface"
 	bullet_speed_mod = -0.15
-	complexity = 50
+	burst_delay_mod = -1
+	complexity = 75
 
 /obj/item/advanced_crafting_components/conductors
 	name = "Conductor coil"

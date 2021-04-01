@@ -88,7 +88,7 @@
 /obj/item/cartridge/detective
 	name = "\improper D.E.T.E.C.T. cartridge"
 	icon_state = "cart-s"
-	access = CART_SECURITY | CART_MEDICAL | CART_MANIFEST
+	access = CART_SECURITY | CART_MEDICAL
 	bot_access_flags = SEC_BOT
 
 /obj/item/cartridge/janitor
@@ -141,37 +141,42 @@
 /obj/item/cartridge/head
 	name = "\improper Easy-Record DELUXE cartridge"
 	icon_state = "cart-h"
-	access = CART_MANIFEST | CART_STATUS_DISPLAY
+	access = CART_STATUS_DISPLAY
 
 /obj/item/cartridge/hop
 	name = "\improper HumanResources9001 cartridge"
 	icon_state = "cart-h"
-	access = CART_MANIFEST | CART_STATUS_DISPLAY | CART_JANITOR | CART_SECURITY | CART_NEWSCASTER | CART_QUARTERMASTER | CART_DRONEPHONE
+	access = CART_STATUS_DISPLAY | CART_JANITOR | CART_SECURITY | CART_NEWSCASTER | CART_QUARTERMASTER | CART_DRONEPHONE
 	bot_access_flags = MULE_BOT | CLEAN_BOT
 
 /obj/item/cartridge/hos
 	name = "\improper R.O.B.U.S.T. DELUXE cartridge"
 	icon_state = "cart-hos"
-	access = CART_MANIFEST | CART_STATUS_DISPLAY | CART_SECURITY
+	access = CART_STATUS_DISPLAY | CART_SECURITY
 	bot_access_flags = SEC_BOT
 
+/obj/item/cartridge/enclave
+	name = "\improper Big Brother cartridge"
+	icon_state = "cart-eye"
+	access = CART_STATUS_DISPLAY | CART_JANITOR | CART_SECURITY | CART_NEWSCASTER | CART_QUARTERMASTER | CART_DRONEPHONE | CART_MANIFEST
+	bot_access_flags = MULE_BOT | CLEAN_BOT
 
 /obj/item/cartridge/ce
 	name = "\improper Power-On DELUXE cartridge"
 	icon_state = "cart-ce"
-	access = CART_MANIFEST | CART_STATUS_DISPLAY | CART_ENGINE | CART_ATMOS | CART_DRONEPHONE
+	access = CART_STATUS_DISPLAY | CART_ENGINE | CART_ATMOS | CART_DRONEPHONE
 	bot_access_flags = FLOOR_BOT
 
 /obj/item/cartridge/cmo
 	name = "\improper Med-U DELUXE cartridge"
 	icon_state = "cart-cmo"
-	access = CART_MANIFEST | CART_STATUS_DISPLAY | CART_REAGENT_SCANNER | CART_MEDICAL
+	access = CART_STATUS_DISPLAY | CART_REAGENT_SCANNER | CART_MEDICAL
 	bot_access_flags = MED_BOT
 
 /obj/item/cartridge/rd
 	name = "\improper Signal Ace DELUXE cartridge"
 	icon_state = "cart-rd"
-	access = CART_MANIFEST | CART_STATUS_DISPLAY | CART_REAGENT_SCANNER | CART_ATMOS | CART_DRONEPHONE
+	access = CART_STATUS_DISPLAY | CART_REAGENT_SCANNER | CART_ATMOS | CART_DRONEPHONE
 	bot_access_flags = FLOOR_BOT | CLEAN_BOT | MED_BOT
 
 /obj/item/cartridge/rd/Initialize()
@@ -325,7 +330,7 @@ Code:
 				menu += "Name: [active1.fields["name"]] ID: [active1.fields["id"]]<br>"
 				menu += "Sex: [active1.fields["sex"]]<br>"
 				menu += "Age: [active1.fields["age"]]<br>"
-				menu += "Rank: [active1.fields["rank"]]<br>"
+				// menu += "Rank: [active1.fields["rank"]]<br>"
 				menu += "Fingerprint: [active1.fields["fingerprint"]]<br>"
 				menu += "Physical Status: [active1.fields["p_stat"]]<br>"
 				menu += "Mental Status: [active1.fields["m_stat"]]<br>"
@@ -369,7 +374,7 @@ Code:
 				menu += "Name: [active1.fields["name"]] ID: [active1.fields["id"]]<br>"
 				menu += "Sex: [active1.fields["sex"]]<br>"
 				menu += "Age: [active1.fields["age"]]<br>"
-				menu += "Rank: [active1.fields["rank"]]<br>"
+				// menu += "Rank: [active1.fields["rank"]]<br>"
 				menu += "Fingerprint: [active1.fields["fingerprint"]]<br>"
 				menu += "Physical Status: [active1.fields["p_stat"]]<br>"
 				menu += "Mental Status: [active1.fields["m_stat"]]<br>"

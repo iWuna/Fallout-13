@@ -47,3 +47,11 @@
 	new /obj/item/ammo_box/magazine/sniper_rounds/soporific(src)
 	new /obj/item/suppressor/specialoffer(src)
 
+/obj/item/storage/briefcase/deffbundle
+	name = "emergency briefcase"
+	desc = "Briefcase for holding hardly injured patient recovery tools."
+
+/obj/item/storage/briefcase/deffbundle/PopulateContents()
+	new /obj/item/stock_parts/cell/high(src)
+	new /obj/item/defibrillator/compact(src)
+	new /obj/item/screwdriver(src)

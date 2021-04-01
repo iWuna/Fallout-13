@@ -1471,7 +1471,7 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 		M.physiology.armor.laser -= 25
 		M.physiology.armor.energy -= 20
 	switch(current_cycle)
-		if(1 to 25)
+		if(6 to 25)
 			M.confused += 20
 			M.blur_eyes(20)
 			to_chat(M, "<span class='notice'>Your head is pounding. Med-X is hard on the body. </span>")
@@ -1636,6 +1636,16 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	reagent_state = SOLID
 	overdose_threshold = 30
 	addiction_threshold = 20
+
+/datum/reagent/medicine/mentat/on_mob_add(mob/living/L)
+	. = ..()
+	L.throw_alert("mentat", /obj/screen/alert/mentat)
+	L.special.adjust(intelligence=2, perception=2)
+
+/datum/reagent/medicine/mentat/on_mob_delete(mob/living/L)
+	. = ..()
+	L.clear_alert("mentat")
+	L.special.adjust(intelligence=-2, perception=-2)
 
 /datum/reagent/medicine/mentat/on_mob_life(mob/living/carbon/M)
 	M.adjustOxyLoss(-3*REM, 0)

@@ -36,7 +36,29 @@
 	var/contained = english_list(injected)
 	add_logs(user, M, "attempted to inject", src, "([contained])")
 
+	// if((has_port && user.has_trait(TRAIT_PA_WEAR)) && reagents.total_volume) //only skilled mobs can inject PA
+	// 	user.visible_message()
+	// 	if(!do_mob(user, M))
+
 	if(reagents.total_volume && (ignore_flags || M.can_inject(user, 1))) // Ignore flag should be checked first or there will be an error message.
+		var/port = FALSE
+		var/target_zone = user.zone_selected
+		if(ishuman(M))
+			var/mob/living/carbon/human/H = M
+			if(above_neck(target_zone))
+				if(H.head && istype(H.head, /obj/item/clothing))
+					var/obj/item/clothing/CH = H.head
+					if(CH.clothing_flags & THICKMATERIALPORT)
+						port = TRUE
+			else
+				if(H.wear_suit && istype(H.wear_suit, /obj/item/clothing))
+					var/obj/item/clothing/CS = H.wear_suit
+					if(CS.clothing_flags & THICKMATERIALPORT)
+						port = TRUE
+		if(port)
+			user.visible_message("<span class='danger'>[user] begins hunting for an injection port on [M]'s suit!</span>")
+			if(!do_mob(user, M, 90))
+				return
 		to_chat(M, "<span class='warning'>You feel a tiny prick!</span>")
 		to_chat(user, "<span class='notice'>You inject [M] with [src].</span>")
 

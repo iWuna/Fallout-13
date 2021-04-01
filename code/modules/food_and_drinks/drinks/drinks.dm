@@ -113,6 +113,10 @@
 		to_chat(user, "<span class='notice'>You heat [name] with [I]!</span>")
 	..()
 
+/obj/item/reagent_containers/food/drinks/bullet_act(obj/item/projectile/P)
+	..()
+	smash(src, null, TRUE)
+
 /obj/item/reagent_containers/food/drinks/throw_impact(atom/target, datum/thrownthing/throwinfo)
 	. = ..()
 	if(!.) //if the bottle wasn't caught

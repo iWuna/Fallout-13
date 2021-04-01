@@ -83,6 +83,10 @@
 	icon_state = "uncloak"
 	duration = 9
 
+/obj/effect/temp_visual/dir_setting/ninja/disrupt
+	icon_state = "stealthdisrupt"
+	duration = 9
+
 /obj/effect/temp_visual/dir_setting/ninja/cloak
 	icon_state = "cloak"
 

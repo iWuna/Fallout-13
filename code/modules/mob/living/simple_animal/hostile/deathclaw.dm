@@ -67,7 +67,7 @@
 	var/cloak_color = null
 	var/sitting = FALSE
 	var/lie = FALSE
-	
+
 
 /mob/living/simple_animal/hostile/deathclaw/playable/cloak/Initialize()
 	. = ..()
@@ -78,7 +78,7 @@
 /mob/living/simple_animal/hostile/deathclaw/playable/cloak/verb/sit()
 	set category = "IC"
 	set name = "* Sit"
-	
+
 	if(sitting)
 		icon_state = "deathclaw_[cloak_color]"
 		canmove = TRUE
@@ -92,7 +92,7 @@
 /mob/living/simple_animal/hostile/deathclaw/playable/cloak/verb/lay()
 	set category = "IC"
 	set name = "* Lay"
-	
+
 	if(lie)
 		icon_state = "deathclaw_[cloak_color]"
 		canmove = TRUE
@@ -118,6 +118,32 @@
 	armour_penetration = 45
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/deathclaw = 6,
 							/obj/item/stack/sheet/animalhide/deathclaw = 3)
+	ignore_stealth = TRUE
+
+/mob/living/simple_animal/hostile/deathclaw/power_armor
+	name = "Power Armored Deathclaw"
+	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. Someone had managed to put power armor on him."
+	icon_state = "combatclaw"
+	icon_living = "combatclaw"
+	icon_dead = "combatclaw_dead"
+	maxHealth = 2500
+	health = 2500
+	stat_attack = UNCONSCIOUS
+	melee_damage_lower = 90
+	melee_damage_upper = 150
+	armour_penetration = 60
+
+/mob/living/simple_animal/hostile/deathclaw/power_armor/maid
+	name = "Deathclaw Maid"
+	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. Someone managed to put a maid costume on her."
+	icon_state = "maidclaw"
+	icon_living = "maidclaw"
+	icon_dead = "maidclaw_ded"
+	maxHealth = 1000
+	health = 1000
+	speak = list("Семпай бака!","Я только помыла полы!","РЯЯЯЯЯЯ!","Костюм горничной - это её гордость!", "Я не Рем, я Рам!", "Я не Рам, я Рем", "Только не во внутрь!")
+	speak_chance = 60
+	faction = list("deathclaw", "city", "Wastelander", "Town")
 
 /mob/living/simple_animal/hostile/deathclaw/legendary
 	name = "legendary deathclaw"

@@ -415,6 +415,49 @@
 	..()
 	. = 1
 
+/datum/reagent/drug/cateye
+	name = "Cateye"
+	id = "cateye"
+	description = "A chemical compound that, when consumed, enhance user vision via a yellow tint in dark places."
+	reagent_state = LIQUID
+	color = "#f5e664"
+	overdose_threshold = 20
+	addiction_threshold = 100
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+
+/datum/reagent/drug/cateye/on_mob_add(mob/M)
+	..()
+	if(isliving(M))
+		var/mob/living/L = M
+		var/obj/item/organ/eyes/eyes = M.getorganslot(ORGAN_SLOT_EYES)
+		eyes.see_in_dark = 128
+		eyes.lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
+		M.add_client_colour(/datum/client_colour/cat_eye)
+		L.add_trait(TRAIT_CAT_EYES_NV, id)
+		M.update_sight()
+
+/datum/reagent/drug/cateye/on_mob_delete(mob/M)
+	if(isliving(M))
+		var/mob/living/L = M
+		var/obj/item/organ/eyes/eyes = M.getorganslot(ORGAN_SLOT_EYES)
+		eyes.see_in_dark = initial(eyes.see_in_dark)
+		eyes.lighting_alpha = initial(eyes.lighting_alpha)
+		M.remove_client_colour(/datum/client_colour/cat_eye)
+		L.remove_trait(TRAIT_CAT_EYES_NV, id)
+		M.update_sight()
+	..()
+
+/datum/reagent/drug/cateye/overdose_process(mob/living/M)
+	if(prob(15))
+		M.emote(pick("scream", "cry", "moan_p"))
+	if(prob(7))
+		M.adjust_eye_damage(rand(1,3))
+		M.blur_eyes(rand(10,20))
+		M.visible_message("<span class='danger'>Your eyes burns!</span>")
+	..()
+	M.adjustToxLoss(1, 0)
+	. = 1
+
 /datum/reagent/drug/turbo
 	name = "Turbo Inhalant"
 	id = "turbo"
@@ -422,7 +465,6 @@
 	reagent_state = LIQUID
 	color = "#FAFAFA"
 	overdose_threshold = 20
-	addiction_threshold = 10
 	metabolization_rate = 2 * REAGENTS_METABOLISM
 
 /datum/reagent/drug/turbo/on_mob_add(mob/M)

@@ -29,7 +29,7 @@
 	bullet_speed_mod = -0.2
 
 /obj/item/prefabs/complex/barrel/extended
-	name = "Extended Rifle Barrel"
+	name = "Sniper Barrel"
 	desc = ""
 	icon_state = "barrel"
 	complexity = 50

@@ -33,17 +33,17 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
-/*
+
 /datum/design/health_hud_night
 	name = "Night Vision Health Scanner HUD"
 	desc = "An advanced medical head-up display that allows doctors to find patients in complete darkness."
 	id = "health_hud_night"
 	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 600, MAT_GLASS = 600, MAT_URANIUM = 1000, MAT_SILVER = 350)
+	materials = list(MAT_METAL = 6000, MAT_GLASS = 6000, MAT_URANIUM = 5000, MAT_SILVER = 3500)
 	build_path = /obj/item/clothing/glasses/hud/health/night
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
-*/
+
 
 /datum/design/security_hud
 	name = "Security HUD"

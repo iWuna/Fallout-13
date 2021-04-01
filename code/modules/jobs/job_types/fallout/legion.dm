@@ -3,6 +3,8 @@
 /datum/job/CaesarsLegion
 	department_flag = LEGION
 	selection_color = "#ffeeee"
+	access = list(ACCESS_LEGION)
+	minimal_access = list(ACCESS_LEGION)
 
 	forbids = "The Legion forbids: Ghouls joining the Legion. Women in armed roles. Chems and drugs such as jet or alcohol. Reliance on technology. Lethally harming any servants of Caesar without proper reason."
 	enforces = "The Legion expects: Obeying orders of superiors. A roman style name. Wearing the uniform, unless acting as a nonlethal infiltrator."
@@ -50,6 +52,8 @@ Needs whitelist
 	title = "Legate"
 	faction = "Legion"
 	flag = F13LEGATE
+	access = list(ACCESS_LEGION_COMMAND, ACCESS_LEGION)
+	minimal_access = list(ACCESS_LEGION_COMMAND, ACCESS_LEGION)
 	head_announce = list("Security")
 	supervisors = "Caesar"
 	selection_color = "#ffdddd"
@@ -93,6 +97,9 @@ Centurion
 	title = "Legion Centurion"
 	flag = F13CENTURION
 	faction = "Legion"
+	department_head = list("Legate")
+	access = list(ACCESS_LEGION_COMMAND, ACCESS_LEGION)
+	minimal_access = list(ACCESS_LEGION_COMMAND, ACCESS_LEGION)
 	head_announce = list("Security")
 	total_positions = 1
 	spawn_positions = 1
@@ -171,6 +178,7 @@ Orator
 	title = "Legion Orator"
 	flag = F13ORATOR
 	faction = "Legion"
+	department_head = list("Legion Centurion")
 	total_positions = 1
 	spawn_positions = 1
 	description = "You are the the resonator of Caesar's better wills; a Legionnaire who has, perhaps through injury or advanced age, proven himself unable to fight effectively any longer. Instead of facing \"retirement\" in the Legion, one of your superiors took note of your studies and way with words, and you have been made the face and voice of the Conturbernae."
@@ -205,6 +213,7 @@ Priestess of Mars
 /datum/job/CaesarsLegion/f13priestess
 	title = "Priestess of Mars"
 	flag = F13PRIESTESS
+	department_head = list("Legion Centurion")
 	faction = "Legion"
 	total_positions = 1
 	spawn_positions = 1
@@ -323,6 +332,7 @@ Decanii
 /datum/job/CaesarsLegion/Legionnaire/f13decanvet
 	title = "Legion Veteran Decanus"
 	flag = F13DECANVET
+	department_head = list("Legion Centurion")
 	faction = "Legion"
 	total_positions = 1
 	spawn_positions = 1
@@ -372,6 +382,7 @@ Decanii
 /datum/job/CaesarsLegion/Legionnaire/f13decan
 	title = "Legion Prime Decanus"
 	flag = F13DECAN
+	department_head = list("Legion Centurion")
 	faction = "Legion"
 	total_positions = 1
 	spawn_positions = 1
@@ -420,6 +431,7 @@ Decanii
 /datum/job/CaesarsLegion/Legionnaire/f13decanrec
 	title = "Legion Recruit Decanus"
 	flag = F13DECANREC
+	department_head = list("Legion Centurion")
 	faction = "Legion"
 	total_positions = 1
 	spawn_positions = 1
@@ -473,6 +485,7 @@ Vexillarius
 	title = "Legion Vexillarius"
 	flag = F13VEXILLARIUS
 	faction = "Legion"
+	department_head = list("Legion Centurion")
 	total_positions = 1
 	spawn_positions = 1
 	description = "You answer directly to the Decani and the Centurion, acting as a standard bearer for your squad. You raise troop morale, relay orders from the Decanii and the Centurion, and rally men when ordered, however, you hold no actual authority over the troops and should instead only relay orders from your superiors."
@@ -540,6 +553,7 @@ Slavemaster
 
 datum/job/CaesarsLegion/Legionnaire/f13slavemaster
 	title = "Legion Slavemaster"
+	department_head = list("Legion Centurion")
 	flag = F13SLAVEMASTER
 	faction = "Legion"
 	total_positions = 2
@@ -583,6 +597,7 @@ Veteran Legionary
 
 /datum/job/CaesarsLegion/Legionnaire/f13vetlegionary
 	title = "Veteran Legionary"
+	department_head = list("Legion Centurion")
 	flag = F13VETLEGIONARY
 	faction = "Legion"
 	total_positions = 3
@@ -661,6 +676,7 @@ Prime Legionairy
 
 /datum/job/CaesarsLegion/Legionnaire/f13legionary
 	title = "Prime Legionary"
+	department_head = list("Legion Centurion")
 	flag = F13LEGIONARY
 	faction = "Legion"
 	total_positions = 3
@@ -740,6 +756,7 @@ Recruit Legionary
 
 /datum/job/CaesarsLegion/Legionnaire/f13recleg
 	title = "Recruit Legionary"
+	department_head = list("Legion Centurion")
 	flag = F13RECRUITLEG
 	faction = "Legion"
 	total_positions = 3
@@ -780,6 +797,7 @@ Venator
 */
 /datum/job/CaesarsLegion/Legionnaire/f13venator
 	title = "Legion Venator"
+	department_head = list("Legion Centurion")
 	flag = F13VENATOR
 	faction = "Legion"
 	total_positions = 1
@@ -840,6 +858,7 @@ Explorer
 
 /datum/job/CaesarsLegion/Legionnaire/f13explorer
 	title = "Legion Explorer"
+	department_head = list("Legion Centurion")
 	flag = F13EXPLORER
 	faction = "Legion"
 	total_positions = 2
@@ -901,6 +920,7 @@ Auxilia
 */
 /datum/job/CaesarsLegion/f13auxilia
 	title = "Auxilia"
+	department_head = list("Legion Centurion")
 	flag = F13AUXILIA
 	faction = "Legion"
 	head_announce = list("Security")
@@ -964,6 +984,7 @@ Auxilia
 		/obj/item/stack/sheet/mineral/wood/twentyfive=1,
 		/obj/item/stack/sheet/leather/twenty,
 		/obj/item/stack/sheet/cloth/twenty=1,
+		/obj/item/stack/sheet/plasteel/ten=1,
 		/obj/item/stack/sheet/prewar=1
 	)
 
@@ -1068,6 +1089,7 @@ Slave
 */
 /datum/job/CaesarsLegion/slave
 	title = "Legion Slave"
+	department_head = list("Legion Centurion")
 	flag = F13LEGIONSLAVE
 	faction = "Legion"
 	total_positions = 4

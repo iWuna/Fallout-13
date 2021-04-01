@@ -13,6 +13,7 @@
 	resistance_flags = NONE
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEHAIR
+	var/hud_type = null
 
 	dog_fashion = /datum/dog_fashion/head/helmet
 
@@ -816,10 +817,14 @@
 	desc = "A custom forged steel full helmet complete with abstract points and arches. The face is extremely intimidating, as it was meant to be. This particular one was ordered to be forged by Caesar, given to his second legate in exchange for his undying loyalty to Caesar."
 	icon_state = "leglegat"
 	item_state = "leglegat"
-	armor = list("melee" = 85, "bullet" = 60, "laser" = 40, "energy" = 40, "bomb" = 45, "bio" = 60, "rad" = 60, "fire" = 80, "acid" = 0)
+	armor = list("melee" = 75, "bullet" = 60, "laser" = 55, "energy" = 40, "bomb" = 45, "bio" = 60, "rad" = 60, "fire" = 80, "acid" = 0)
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
+
+/obj/item/clothing/head/helmet/f13/legion/legate/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/head/helmet/f13/legion/marsheaddress
 	name = "priestess' headdress"
@@ -878,14 +883,14 @@
 	desc = "An U.S Marine Corps helmet, used by the legendary Desert Rangers."
 	icon_state = "desert_ranger"
 	item_state = "desert_ranger"
-	armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 50, "bomb" = 39, "bio" = 60, "rad" = 60, "fire" = 40, "acid" = 0)
+	// armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 50, "bomb" = 39, "bio" = 60, "rad" = 60, "fire" = 40, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/eliteriot
 	name = "elite riot gear helmet"
 	desc = "An old combat helmet seen in the divide, repurposed for higher ranking Rangers."
 	icon_state = "elite_riot"
 	item_state = "elite_riot"
-	armor = list("melee" = 70, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 40, "acid" = 0)
+	// armor = list("melee" = 70, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 40, "acid" = 0)
 
 
 /obj/item/clothing/head/helmet/f13/rangercombat/eliteriot/reclaimed
@@ -893,7 +898,7 @@
 	desc = "A refurbished and personalized set of pre-unification desert ranger gear."
 	icon_state = "desert_ranger"
 	item_state = "desert_ranger"
-	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 0)
+	// armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 //Metal masks
@@ -970,7 +975,7 @@
 	slowdown = 0.1
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK|HIDEJUMPSUIT
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	clothing_flags = THICKMATERIAL
+	clothing_flags = THICKMATERIALPORT
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	item_flags = SLOWS_WHILE_IN_HAND
 	flash_protect = 2
@@ -987,6 +992,11 @@
 	light_color = LIGHT_COLOR_YELLOW
 	light_system = MOVABLE_LIGHT_DIRECTIONAL
 	actions_types = list(/datum/action/item_action/toggle_light)
+
+/obj/item/clothing/head/helmet/f13/power_armor/Initialize()
+	. = ..()
+	AddComponent(/datum/component/spraycan_paintable)
+	START_PROCESSING(SSobj, src)
 
 /obj/item/clothing/head/helmet/f13/power_armor/attack_self(mob/user)
 	on = !on
@@ -1012,6 +1022,7 @@
 /obj/item/clothing/head/helmet/f13/power_armor/emp_act(mob/living/carbon/human/owner, severity)
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
+		to_chat(loc, "<span class='warning'>Warning: an electromagnetic pulse detected, but was absorbed by the TESLA system.</span>")
 		return
 	if(emped == 0)
 		if(ismob(loc))
@@ -1042,6 +1053,27 @@
 	lighting_alpha = null
 	requires_training = FALSE
 
+
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/medical/equipped(mob/living/carbon/human/user, slot)
+	..()
+	if(hud_type && slot == SLOT_HEAD)
+		var/datum/atom_hud/H = GLOB.huds[hud_type]
+		H.add_hud_to(user)
+
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/medical/dropped(mob/living/carbon/human/user)
+	..()
+	if(hud_type && istype(user) && user.head == src)
+		var/datum/atom_hud/H = GLOB.huds[hud_type]
+		H.remove_hud_from(user)
+
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/medical /* Пока я писал код заново, проклял Феню несколько раз*/
+	name = "MP-47/A power helmet"
+	desc = "Prototype of a medical power helmet. It's pretty fresh inside and pleasant to breathe."
+	icon_state = "t45dhelmet"
+	item_state = "t45dhelmet"
+	armor = list("melee" = 65, "bullet" = 65, "laser" = 55, "energy" = 65, "bomb" = 65, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 100)
+	hud_type = DATA_HUD_MEDICAL_ADVANCED
+/*---------------------------------------------------------------КОНЕЦ КОДА МЕД ШЛЕМА, ДА Я БЫДЛО--------------------------------------------------------------------*/
 /obj/item/clothing/head/helmet/f13/power_armor/raiderpa_helm
 	name = "raider T-45b power helmet"
 	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm. This helmet seems to be heavily modified, heavy metal banding fused to the helmet"
@@ -1092,6 +1124,11 @@
 	armor = list("melee" = 90, "bullet" = 50, "laser" = 95, "energy" = 95, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 	light_color = COLOR_DARK_CYAN
 
+
+/obj/item/clothing/head/helmet/f13/power_armor/tesla/Initialize()
+	. = ..()
+	AddComponent(/datum/component/empprotection, EMP_PROTECT_SELF | EMP_PROTECT_WIRES | EMP_PROTECT_CONTENTS)
+
 /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	name = "T-51b power helmet"
 	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
@@ -1099,6 +1136,12 @@
 	item_state = "t51bhelmet"
 	darkness_view = 135 // Advanced NV
 	armor = list("melee" = 70, "bullet" = 65, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/power_armor/t51b/duster
+	name = "T-51b duster power helmet"
+	desc = "It's a T-51b duster power helmet, typically used by the Brotherhood. Dark sight behind the lense."
+	icon_state = "t51bhelmet_duster"
+	item_state = "t51bhelmet_duster"
 
 /obj/item/clothing/head/helmet/f13/power_armor/t51b/ultra
 	name = "Ultracite power helmet"
@@ -1108,6 +1151,20 @@
 	slowdown = 0
 	light_color = COLOR_DARK_CYAN
 
+/obj/item/clothing/head/helmet/f13/power_armor/x03
+	name = "Hellfire power helmet"
+	desc = "It's a X-03 power helmet with very light and fiery gaze, that scares anyone."
+	icon_state = "x03helmet"
+	item_state = "x03helmet"
+	darkness_view = 135 // Advanced NV
+	armor = list("melee" = 70, "bullet" = 65, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 100, "acid" = 0)
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	max_heat_protection_temperature = FIRE_IMMUNITY_SUIT_MAX_TEMP_PROTECT
+
+/obj/item/clothing/head/helmet/f13/power_armor/x03/alt
+	icon_state = "x03helmet_alt"
+	item_state = "x03helmet_alt"
+
 /obj/item/clothing/head/helmet/f13/power_armor/t60
 	name = "T-60a power helmet"
 	desc = "The T-60 powered helmet, equipped with targetting software suite, Friend-or-Foe identifiers, dynamic HuD, and an internal music player."
@@ -1116,12 +1173,33 @@
 	darkness_view = 145 // Advanced NV
 	armor = list("melee" = 75, "bullet" = 70, "laser" = 60, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
 
+/obj/item/clothing/head/helmet/f13/power_armor/t60/tesla
+	name = "T-60a power helmet"
+	desc = "The T-60 powered helmet, equipped with targetting software suite, Friend-or-Foe identifiers, dynamic HuD, and an internal music player. <br>There are three orange energy capacitors on the side."
+	icon_state = "t60helmet_tesla"
+	item_state = "t60helmet_tesla"
+	darkness_view = 145 // Advanced NV
+	armor = list("melee" = 60, "bullet" = 55, "laser" = 75, "energy" = 75, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
+
+/obj/item/clothing/head/helmet/f13/power_armor/t60/tesla/Initialize()
+	. = ..()
+	AddComponent(/datum/component/empprotection, EMP_PROTECT_SELF | EMP_PROTECT_WIRES | EMP_PROTECT_CONTENTS)
+
 /obj/item/clothing/head/helmet/f13/power_armor/t45d
 	name = "T-45d power helmet"
 	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
 	icon_state = "t45dhelmet"
 	item_state = "t45dhelmet"
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/medical
+	name = "MP-47/A power helmet"
+	desc = "Prototype of a medical power helmet. It's pretty fresh inside and pleasant to breathe."
+	icon_state = "t45dhelmet_med"
+	item_state = "t45dhelmet_med"
+	armor = list("melee" = 65, "bullet" = 65, "laser" = 55, "energy" = 65, "bomb" = 65, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 100)
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
 
 /obj/item/clothing/head/helmet/f13/power_armor/t45d/gunslinger
 	name = "Gunslinger T-51b Helm"
@@ -1129,7 +1207,33 @@
 	icon_state = "t51bgs"
 	item_state = "t51bgs"
 	slowdown = 0
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/outcast
+	name = "Outcast T-45d power helmet"
+	desc = "It's an outcast power armor helmet."
+	icon_state = "t45dhelmet_outcast"
+	item_state = "t45dhelmet_outcast"
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/military
+	name = "Military T-45d power helmet"
+	desc = "A military power armor helmet, that was popular in militia and army. MRE not included."
+	icon_state = "t45dhelmet_military"
+	item_state = "t45dhelmet_military"
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/foil
+	name = "Foil T-45d power helmet"
+	desc = "Very effective against aliens."
+	icon_state = "t45dhelmet_foil"
+	item_state = "t45dhelmet_foil"
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 15, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
+	darkness_view = 0 //No NV
+	slowdown = 0.2 //No servo
+	lighting_alpha = null
+	requires_training = FALSE
 
 /obj/item/clothing/head/helmet/f13/power_armor/midwest
 	name = "midwestern power helmet"

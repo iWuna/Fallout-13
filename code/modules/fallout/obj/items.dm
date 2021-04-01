@@ -22,9 +22,9 @@
 	if(iscarbon(loc))
 		var/mob/living/carbon/M = loc
 		if(M.health < M.maxHealth)
-			M.adjustBruteLoss(-2) //Heal that poor bastard
-			M.adjustFireLoss(-2)
-			M.adjustToxLoss(-2)
-			M.adjustOxyLoss(-2)
+			M.adjustBruteLoss(-1) //Heal that poor bastard
+			M.adjustFireLoss(-1)
+			M.adjustToxLoss(-1)
+			M.adjustOxyLoss(-1)
 			flick("one_ring_anim", src)
 			icon_state = initial(icon_state)

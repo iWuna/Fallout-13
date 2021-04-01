@@ -23,6 +23,7 @@
 	var/list/backpack_contents = list() // In the list(path=count,otherpath=count) format
 	var/list/implants = list()
 	var/accessory = null
+	var/list/whitelist = list()
 
 	var/can_be_admin_equipped = TRUE // Set to FALSE if your outfit requires runtime parameters
 	var/list/chameleon_extras //extra types for chameleon outfit changes, mostly guns

@@ -19,11 +19,11 @@ GLOBAL_LIST_INIT(disease_ability_singletons, list(
 	new /datum/disease_ability/symptom/visionloss(),
 	new /datum/disease_ability/symptom/viraladaptation(),
 	new /datum/disease_ability/symptom/vitiligo(),
-	new /datum/disease_ability/symptom/sensory_restoration(),
+	// new /datum/disease_ability/symptom/sensory_restoration(),
 	new /datum/disease_ability/symptom/itching(),
 	new /datum/disease_ability/symptom/weight_loss(),
-	new /datum/disease_ability/symptom/metabolism_heal(),
-	new /datum/disease_ability/symptom/coma_heal()
+	// new /datum/disease_ability/symptom/metabolism_heal(),
+	// new /datum/disease_ability/symptom/coma_heal()
 	))
 
 /datum/disease_ability
@@ -369,7 +369,7 @@ GLOBAL_LIST_INIT(disease_ability_singletons, list(
 	short_desc = "Cause victims to lose weight."
 	long_desc = "Cause victims to lose weight, and make it almost immpossible for them to gain nutrition from food. Reduced nutrition allows your infection to spread more easily from hosts, especially by sneezing."
 
-
+/*
 /datum/disease_ability/symptom/metabolism_heal
 	name = "Metabolic Boost"
 	symptoms = list(/datum/symptom/heal/metabolism)
@@ -386,3 +386,4 @@ GLOBAL_LIST_INIT(disease_ability_singletons, list(
 	required_total_points = 16
 	short_desc = "Cause victims to fall into a healing coma when hurt."
 	long_desc = "Cause victims to fall into a healing coma when hurt."
+*/

@@ -90,9 +90,15 @@
 		var/datum/job/J = L.GetJob()
 		if (J)
 			for (var/a in J.loadout_options) //Copy the options from the job
-				var/datum/outfit/o = a
-				loadout_options[initial(o.name)] = a
-				data_names.Add(list(list("name" = initial(o.name))))
+				var/datum/outfit/o = new a()
+				var/mob/M = parent
+				if(o.whitelist.len != 0)
+					if(M.ckey in o.whitelist)
+						loadout_options[initial(o.name)] = a
+						data_names.Add(list(list("name" = initial(o.name))))
+				else
+					loadout_options[initial(o.name)] = a
+					data_names.Add(list(list("name" = initial(o.name))))
 			return ..()
 
 	//If they don't have a job they cant use this

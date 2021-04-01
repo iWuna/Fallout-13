@@ -1,3 +1,4 @@
+/*
 /datum/symptom/heal
 	name = "Basic Healing"
 	desc = "Gives the host some useful reagents."
@@ -479,3 +480,4 @@
 		if(L.heal_damage(heal_amt/parts.len, heal_amt/parts.len))
 			M.update_damage_overlays()
 	return 1
+*/

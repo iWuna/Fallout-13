@@ -1,3 +1,17 @@
+GLOBAL_LIST_INIT(trait_name, list(
+	TRAIT_PA_WEAR 					= "Power Armor",
+	TRAIT_HARD_YARDS 				= "Trekking",
+	TRAIT_MEDICALEXPERT 			= "Field Surgery",
+	TRAIT_ADVANCED_SURGEON 			= "Brain Surgery",
+	TRAIT_GUNSMITH_ONE 				= "Basic Gunsmithing",
+	TRAIT_GUNSMITH_TWO 				= "Experienced Gunsmithing",
+	TRAIT_GUNSMITH_THREE 			= "Intermediate Gunsmithing",
+	TRAIT_GUNSMITH_FOUR 			= "Expert Gunsmithing",
+	TRAIT_CHEMWHIZ 					= "Chemistry",
+	TRAIT_CHEMWHIZ 					= "The Machine Spirits",
+	TRAIT_MASTER_GUNSMITH 			= "Master Gunsmithing"
+))
+
 /datum/granter_trait
 	var/name = ""
 	var/grant = ""
@@ -9,7 +23,7 @@
 
 /datum/granter_trait/spirit_teachings
 	name = "The Machine Spirits"
-	grant = TRAIT_MACHINE_SPIRITS
+	grant = TRAIT_CHEMWHIZ
 
 /datum/granter_trait/gunsmith
 	name = "Master Gunsmithing"

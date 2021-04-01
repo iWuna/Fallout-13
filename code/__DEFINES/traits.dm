@@ -77,6 +77,7 @@
 #define TRAIT_PSYCHO			"psycho"
 #define	TRAIT_LIFEGIVER			"lifegiver"
 #define TRAIT_UNDERPREPARED		"underprepared"
+#define TRAIT_CAT_EYES_NV		"night_vision_cat_eyes"
 
 #define TRAIT_WILDWASTELAND		"wild_wasteland"
 

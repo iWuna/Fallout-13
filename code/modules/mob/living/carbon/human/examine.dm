@@ -357,7 +357,7 @@
 		msg += ""
 	else
 		msg += "*---------*</span>"
-		msg += "\n[print_special()]\n"
+		msg += "\n[special.get_info()]\n"
 	to_chat(user, msg)
 	return msg
 

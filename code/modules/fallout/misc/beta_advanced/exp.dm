@@ -23,7 +23,7 @@
 	if(!XP)
 		return
 	XP *= 2
-	XP *= 0.5 + (owner.special_i / 10)
+	// XP *= 0.5 + (owner.special_i / 10)
 	current += XP
 	to_chat(owner, "<font color='blue'>Вы получили [XP] опыта! ([toNextLevel()] осталось до следующего уровня)</font>")
 	if(toNextLevel() > 0)

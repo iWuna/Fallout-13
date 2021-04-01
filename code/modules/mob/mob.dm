@@ -1,4 +1,5 @@
 /mob/Destroy()//This makes sure that mobs with clients/keys are not just deleted from the game.
+	qdel(special)
 	GLOB.mob_list -= src
 	GLOB.dead_mob_list -= src
 	GLOB.alive_mob_list -= src
@@ -19,6 +20,7 @@
 	return QDEL_HINT_IWILLGC
 
 /mob/Initialize()
+	special = new(src)
 	GLOB.mob_list += src
 	GLOB.mob_directory[tag] = src
 	if(stat == DEAD)

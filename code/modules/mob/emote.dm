@@ -1,4 +1,7 @@
 //The code execution of the emote datum is located at code/datums/emotes.dm
+/mob
+	var/emote_delay = 20
+
 /mob/proc/emote(act, m_type = null, message = null, intentional = FALSE)
 	act = lowertext(act)
 	var/param = message
@@ -11,7 +14,7 @@
 	E = E.emote_list[act]
 	if (emote_cd > world.time)
 		return
-	emote_cd = world.time + 20
+	emote_cd = world.time + emote_delay
 	if(!E)
 		to_chat(src, "<span class='notice'>Unusable emote '[act]'. Say *help for a list.</span>")
 		return

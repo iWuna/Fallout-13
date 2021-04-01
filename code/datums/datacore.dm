@@ -90,18 +90,18 @@
 		foundrecord.fields["rank"] = assignment
 
 /datum/datacore/proc/get_manifest(monochrome, OOC)
-	var/list/command = list()
-	var/list/bos = list()
-	var/list/den = list()
-	var/list/leg = list()
-	var/list/ncr = list()
-	var/list/vault = list()
-	var/list/flw = list()
-	var/list/tribe = list()
-	var/list/khan = list()
-	var/list/was = list()
-	var/list/encl = list()
-	var/list/misc = list()
+	var/list/command 		= list()
+	var/list/bos 			= list()
+	var/list/den 			= list()
+	var/list/leg 			= list()
+	var/list/ncr 			= list()
+	var/list/vault 			= list()
+	var/list/flw 			= list()
+	var/list/tribe 			= list()
+	var/list/khan 			= list()
+	var/list/was 			= list()
+	var/list/enclave 		= list()
+	var/list/misc 			= list()
 	var/dat = {"<meta charset=UTF-8>
 	<head><style>
 		.manifest {border-collapse:collapse;}
@@ -150,14 +150,11 @@
 		if(rank in GLOB.vault_positions)
 			vault[name] = rank
 			department = 1
-		if(rank in GLOB.wasteland_positions)
-			was[name] = rank
+		if(rank in GLOB.enclave_positions)
+			enclave[name] = rank
 			department = 1
 		if(!department && !(name in command))
 			misc[name] = rank
-		if(rank in GLOB.ankap_positions)
-			encl[name] = rank
-			department = 1
 	if(command.len > 0)
 		dat += "<tr><th colspan=3>Leaders</th></tr>"
 		for(var/name in command)
@@ -167,6 +164,11 @@
 		dat += "<tr><th colspan=3>Brotherhood of Steel</th></tr>"
 		for(var/name in bos)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[bos[name]]</td></tr>"
+			even = !even
+	if(enclave.len > 0)
+		dat += "<tr><th colspan=3>Enclave</th></tr>"
+		for(var/name in enclave)
+			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[enclave[name]]</td></tr>"
 			even = !even
 	if(den.len > 0)
 		dat += "<tr><th colspan=3>Oasis</th></tr>"

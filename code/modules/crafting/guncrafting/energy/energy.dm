@@ -302,6 +302,7 @@
 			G.spread += conductors.spread_mod
 		if(lens)
 			G.projectile_speed += lens.bullet_speed_mod
+			G.burst_delay += lens.burst_delay_mod
 		if(capacitor)
 			G.extra_penetration += capacitor.armorpen_mod
 		if(alloys)

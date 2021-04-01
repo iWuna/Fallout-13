@@ -177,7 +177,7 @@
 	icon_state = "beretta"
 	mag_type = /obj/item/ammo_box/magazine/m9mmds
 	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 2 
+	fire_delay = 2
 	can_suppress = FALSE
 	fire_sound = 'sound/f13weapons/ninemil.ogg'
 	can_attachments = TRUE
@@ -217,6 +217,15 @@
 /obj/item/gun/ballistic/automatic/pistol/ninemil/mafia
 	name = "mafia browning"
 	desc = "A mass produced pre-war Browning Hi-power 9mm pistol. This one is has been modified to better serve in street gunfights."
+	w_class = WEIGHT_CLASS_SMALL
+	fire_delay = 1.5
+	extra_damage = 5
+	extra_penetration = 10
+
+/obj/item/gun/ballistic/automatic/pistol/ninemil/zubenko
+	name = "Mafiozy browning"
+	desc = "Pink Tadjik's Browning Hi-power 9mm pistol. This one is has been modified by Shumilovsky Gorodok."
+	icon_state = "loveis"
 	w_class = WEIGHT_CLASS_SMALL
 	fire_delay = 1.5
 	extra_damage = 5

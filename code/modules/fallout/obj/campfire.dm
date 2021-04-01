@@ -10,6 +10,7 @@
 	var/fired = 0
 	var/fuel = 300
 	light_color = LIGHT_COLOR_FIRE
+	light_power = 1
 	var/burned = 0
 	machine_tool_behaviour = TOOL_CAMPFIRE
 	desc = "A warm, bright, and hopeful fire source - when it's burning, of course."
@@ -36,6 +37,7 @@
 		if(W.use(1))
 			user.visible_message("[user] has added fuel to [src].", "<span class='notice'>You have added fuel to [src].</span>")
 			fuel += 300
+			calc_light()
 	else if(fired && istype(P, /obj/item/reagent_containers/food/snacks))
 		if(!ishuman(user))
 			return
@@ -53,22 +55,32 @@
 /obj/structure/campfire/fire_act(exposed_temperature, exposed_volume)
 	fire()
 
+/obj/structure/campfire/proc/calc_light()
+	
+	if(fuel > 3000)
+		light_range = 8
+	else if(fuel > 2000)
+		light_range = 6
+	else if(fuel > 1200)
+		light_range = 4
+	else if(fuel > 600)
+		light_range = 2
+	else
+		light_range = 1
+	update_light()
+
 /obj/structure/campfire/Crossed(atom/movable/AM)
 	if(fired)
 		burn_process()
 
 /obj/structure/campfire/process()
 	if(fuel <= 0)
+		set_light_on(FALSE)
 		extinguish()
 		return
 	burn_process()
 	fuel--
-	if(fuel > 1500)
-		set_light(8)
-	else if(fuel > 300)
-		set_light(3)
-	else
-		set_light(1)
+	calc_light()
 //	var/turf/open/location = get_turf(src)//shity code detected
 //	if(istype(location))
 //		var/datum/gas_mixture/affected = location.air
@@ -79,6 +91,7 @@
 //	BeginAmbient('sound/effects/comfyfire.ogg', 20, 12)
 
 	playsound(src, 'sound/items/welder.ogg', 25, 1, -3)
+	set_light_on(TRUE)
 	START_PROCESSING(SSobj, src)
 	fired = 1
 	desc = "A warm, bright, and hopeful fire source."

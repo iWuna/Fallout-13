@@ -59,6 +59,26 @@
 	name = "CentCom ID Console (Computer Board)"
 	build_path = /obj/machinery/computer/card/centcom
 
+/obj/item/circuitboard/computer/card/ncr
+	name = "NCR ID Console (Computer Board)"
+	build_path = /obj/machinery/computer/card/ncr
+
+/obj/item/circuitboard/computer/card/legion
+	name = "Legion ID Console (Computer Board)"
+	build_path = /obj/machinery/computer/card/legion
+
+/obj/item/circuitboard/computer/card/bos
+	name = "Brotherhood ID Console (Computer Board)"
+	build_path = /obj/machinery/computer/card/bos
+
+/obj/item/circuitboard/computer/card/enclave
+	name = "Enclave ID Console (Computer Board)"
+	build_path = /obj/machinery/computer/card/enclave
+
+/obj/item/circuitboard/computer/card/town
+	name = "Town ID Console (Computer Board)"
+	build_path = /obj/machinery/computer/card/town
+
 /obj/item/circuitboard/computer/card/minor
 	name = "Department Management Console (Computer Board)"
 	build_path = /obj/machinery/computer/card/minor

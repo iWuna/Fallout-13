@@ -39,7 +39,7 @@
 			font_color = "blue"
 			prayer_type = "SPIRITUAL PRAYER"
 
-	msg = "<span class='adminnotice'>[icon2html(cross, GLOB.admins)]<b><font color=[font_color]>[prayer_type][deity ? " (to [deity])" : ""]: </font>[ADMIN_FULLMONTY(src)] [ADMIN_SC(src)] Удача: [src.special_l] Харизма: [src.special_c]:</b> [msg]</span>"
+	msg = "<span class='adminnotice'>[icon2html(cross, GLOB.admins)]<b><font color=[font_color]>[prayer_type][deity ? " (to [deity])" : ""]: </font>[ADMIN_FULLMONTY(src)] [ADMIN_SC(src)] [src.special.prayer_info()]:</b> [msg]</span>"
 
 	for(var/client/C in GLOB.admins)
 		if(C.prefs.chat_toggles & CHAT_PRAYER)

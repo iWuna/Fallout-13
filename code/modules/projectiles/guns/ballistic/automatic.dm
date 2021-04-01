@@ -1113,6 +1113,9 @@
 	zoom_out_amt = 13
 	can_attachments = TRUE
 
+/obj/item/gun/ballistic/automatic/bozar/handmade
+	burst_size = 1
+
 /obj/item/gun/ballistic/automatic/m72
 	name = "\improper M72 gauss rifle"
 	desc = "The M72 rifle is of German design. It uses an electromagnetic field to propel rounds at tremendous speed... and pierce almost any obstacle. Its range, accuracy and stopping power is almost unparalleled."

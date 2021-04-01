@@ -118,6 +118,17 @@
 	name = ".50MG Internal Magazine Loader"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/antimateriel
 	complexity = 80
+	dam_mod = -20
+	caliber_name = ".50"
+	tags = list("semiauto")
+	incompatible_tags = list("automatic","pistol","shotgun")
+	canpulloutmag = FALSE
+
+/obj/item/prefabs/complex/ammo_loader/m50MG/double
+	name = ".50MG Double Internal Magazine Loader"
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/antimateriel/double
+	complexity = 100
+	dam_mod = -30
 	caliber_name = ".50"
 	tags = list("semiauto")
 	incompatible_tags = list("automatic","pistol","shotgun")

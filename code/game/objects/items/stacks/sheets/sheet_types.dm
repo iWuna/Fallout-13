@@ -220,6 +220,9 @@ GLOBAL_LIST_INIT(plasteel_recipes, list ( \
 /obj/item/stack/sheet/plasteel/five
 	amount = 5
 
+/obj/item/stack/sheet/plasteel/ten
+	amount = 10
+
 /obj/item/stack/sheet/plasteel/fifty
 	amount = 50
 

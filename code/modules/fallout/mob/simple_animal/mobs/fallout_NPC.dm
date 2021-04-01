@@ -216,6 +216,10 @@
 	projectiletype = /obj/item/projectile/plasma/repeater
 	projectilesound = 'sound/f13weapons/plasmarifle.ogg'
 
+/mob/living/simple_animal/hostile/enclave/soldier/dornan
+	name = "enclave super soldier"
+	ignore_stealth = TRUE
+
 /mob/living/simple_animal/hostile/enclave/soldier_ca
 	name = "Enclave Footsoldier"
 	desc = "An Enclave soldier in Enclave Combat Armor, wielding an assault rifle."

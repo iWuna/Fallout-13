@@ -213,6 +213,11 @@ or something covering your eyes."
 	desc = "Whoa man, you're tripping balls! Careful you don't get addicted... if you aren't already."
 	icon_state = "high"
 
+/obj/screen/alert/mentat
+	name = "Smart"
+	desc = "You feel smarter and more attentive than usual (I: +2, P: +2)"
+	icon_state = "drugged"
+
 /obj/screen/alert/drunk
 	name = "Drunk"
 	desc = "All that alcohol you've been drinking is impairing your speech, motor skills, and mental cognition. Make sure to act like it."

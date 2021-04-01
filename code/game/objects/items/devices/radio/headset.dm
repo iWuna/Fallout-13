@@ -10,6 +10,7 @@
 	slot_flags = ITEM_SLOT_EARS
 	var/obj/item/encryptionkey/keyslot2 = null
 	dog_fashion = null
+	var/radiosound = 'sound/radio/headset/common.ogg'
 
 /obj/item/radio/headset/suicide_act(mob/living/carbon/user)
 	user.visible_message("<span class='suicide'>[user] begins putting \the [src]'s antenna up [user.p_their()] nose! It looks like [user.p_theyre()] trying to give [user.p_them()]self cancer!</span>")
@@ -32,7 +33,9 @@
 /obj/item/radio/headset/talk_into(mob/living/M, message, channel, list/spans,datum/language/language)
 	if (!listening)
 		return ITALICS | REDUCE_RANGE
-	return ..()
+	if(radiosound)
+		playsound(M, radiosound, rand(20, 30), 0, 0, SOUND_FALLOFF_EXPONENT)
+	. = ..()
 
 /obj/item/radio/headset/can_receive(freq, level, AIuser)
 	if(ishuman(src.loc))
@@ -233,6 +236,7 @@ obj/item/radio/headset/attackby(obj/item/W, mob/user, params)
 	desc = "This is used by your elite security force.\nTo access the security channel, use :s. To access the vault channel, use :v."
 	icon_state = "sec_headset"
 	keyslot = new /obj/item/encryptionkey/headset_vault_security
+	radiosound = 'sound/radio/headset/security.ogg'
 
 /obj/item/radio/headset/headset_vaultsec/ComponentInitialize()
 	. = ..()
@@ -249,6 +253,7 @@ obj/item/radio/headset/attackby(obj/item/W, mob/user, params)
 	desc = "This is used by the New California Republic.\nTo access the NCR channel, use :w."
 	icon_state = "mine_headset"
 	keyslot = new /obj/item/encryptionkey/headset_ncr
+	radiosound = 'sound/radio/headset/security.ogg'
 
 /obj/item/radio/headset/headset_ncr/ComponentInitialize()
 	. = ..()
@@ -259,6 +264,7 @@ obj/item/radio/headset/attackby(obj/item/W, mob/user, params)
 	desc = "This is used by Caesar's Legion.\nTo access the Legion channel, use :e."
 	icon_state = "sec_headset"
 	keyslot = new /obj/item/encryptionkey/headset_legion
+	radiosound = 'sound/radio/headset/security.ogg'
 
 /obj/item/radio/headset/headset_legion/ComponentInitialize()
 	. = ..()
@@ -269,6 +275,7 @@ obj/item/radio/headset/attackby(obj/item/W, mob/user, params)
 	desc = "This is used by the brotherhood of steel.\nTo access the BOS channel, use :q."
 	icon_state = "cent_headset"
 	keyslot = new /obj/item/encryptionkey/headset_bos
+	radiosound = 'sound/radio/headset/bos.mp3'
 
 /obj/item/radio/headset/headset_bos/ComponentInitialize()
 	. = ..()
@@ -279,6 +286,7 @@ obj/item/radio/headset/attackby(obj/item/W, mob/user, params)
 	desc = "This is used by the enclave.\nTo access the enclave channel, use :z."
 	icon_state = "sec_headset"
 	keyslot = new /obj/item/encryptionkey/headset_enclave
+	radiosound = 'sound/radio/headset/enclave.mp3'
 
 /obj/item/radio/headset/headset_enclave/ComponentInitialize()
 	. = ..()

@@ -167,6 +167,16 @@
 			return list(ACCESS_MAILSORTING, ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO, ACCESS_QM, ACCESS_VAULT)
 		if(7) //command
 			return list(ACCESS_HEADS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_CHANGE_IDS, ACCESS_AI_UPLOAD, ACCESS_TELEPORTER, ACCESS_EVA, ACCESS_GATEWAY, ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_HOP, ACCESS_CAPTAIN)
+		if(8) //ncr
+			return list(ACCESS_NCR, ACCESS_MEDICAL, ACCESS_SECURITY)
+		if(9) //legion
+			return list(ACCESS_LEGION, ACCESS_MEDICAL, ACCESS_SECURITY)
+		if(10) //bos
+			return list(ACCESS_ROBOTICS, ACCESS_SECURITY, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+		if(11) //enclave
+			return list(ACCESS_ENCLAVE, ACCESS_MEDICAL, ACCESS_SECURITY, ACCESS_ENGINE)
+		if(12) //town
+			return list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
 
 /proc/get_region_accesses_name(code)
 	switch(code)
@@ -186,6 +196,16 @@
 			return "Supply"
 		if(7) //command
 			return "Command"
+		if(8) //ncr
+			return "NCR"
+		if(9) //legion
+			return "Legion"
+		if(10)
+			return "BOS"
+		if(11)
+			return "Enclave"
+		if(12)
+			return "Kebab"
 
 /proc/get_access_desc(A)
 	switch(A)
@@ -325,8 +345,12 @@
 			return "BOS Access"
 		if(ACCESS_NCR)
 			return "NCR Access"
+		if(ACCESS_LEGION)
+			return "Legion Access"
 		if (ACCESS_NCROFFDUTY)
 			return "NCR Off-Duty Access"
+		if (ACCESS_ENCLAVE)
+			return "Enclave Access"
 
 /proc/get_centcom_access_desc(A)
 	switch(A)
@@ -350,15 +374,28 @@
 			return "Code Scotch"
 
 /proc/get_all_jobs()
-	return list("Centurion", "NCR Captain", "Overseer", "Sheriff",
-				"Sentinel", "Senior Paladin", "Paladin", "Knight-Captain", "Senior Knight", "Knight", "Head Scribe", "Senior Scribe", "Scribe", "Initiate",
-				"Veteran Decanus", "Vexillarius", "Decanus", "Veteran Legionnaire", "Prime Legionary",
-				"NCR Lieutenant", "NCR Sergeant", "NCR Heavy Trooper", "NCR Military Police", "NCR Trooper", "NCR Recruit",
-				"NCR Veteran Ranger", "NCR Patrol Ranger", "NCR Recon Ranger",
-				"NCR Scout", "NCR Scout Sergeant", "NCR Scout Lieutenant",
+	return list("Centurion", "NCR Captain", "Overseer",
+				"Legion Orator", "Priestess of Mars", "Legion Veteran Decanus", 
+				"Legion Prime Decanus", "Legion Recruit Decanus",
+				"Legion Vexillarius", "Legion Slavemaster",
+				"Veteran Legionary", "Recruit Legionary", "Legion Venator", "Legion Explorer",
+				"Auxilia",
+				"US Medic", "US Heavy Soldier", "US Private", "US Scientist", "US Engineer",
+				"Sentinel", "Senior Paladin", "Paladin", "Knight-Captain",
+				"Senior Knight", "Knight", "Head Scribe", "Senior Scribe",
+				"Scribe", "Initiate", "Off-Duty",
+				"Veteran Decanus", "Vexillarius", "Decanus", "Veteran Legionnaire",
+				"Prime Legionary", "Legion Slave",
+				"NCR Lieutenant", "NCR Sergeant", "NCR Heavy Trooper",
+				"NCR Military Police","NCR Corporal", "NCR Trooper", "NCR Recruit",
+				"NCR Veteran Ranger", "NCR Patrol Ranger", "NCR Recon Ranger", "NCR Scout Ranger",
+				"NCR Scout", "NCR Scout Sergeant", "NCR Scout Lieutenant", 
 				"Chief of Security", "Vault-tec Doctor", "Vault-tec Scientist",
 				"Vault-tec Security", "Vault-tec Engineer", "Vault Dweller", "Settler",
-				"Wastelander", "Raider", "Great Khan", "Preacher", "Chief Hunter", "Chief", "Shaman", "Villager", "Hunter")
+				"Sheriff", "Deputy", "Farmer", "Prospector", "Doctor",
+				"Preacher", "Barkeep", "Citizen", "Detective", "Shopkeeper",
+				"Wastelander", "Raider", "Great Khan", "Chief Hunter",
+				"Chief", "Shaman", "Villager", "Hunter")
 
 /proc/get_all_job_icons() //For all existing HUD icons
 	return get_all_jobs() + list("Prisoner")

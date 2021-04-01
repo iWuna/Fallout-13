@@ -105,6 +105,10 @@
 	desc = "An old sombrero worn by Vaqueros to keep off the harsh sun."
 	icon_state = "vaquerohat"
 	item_state = "vaquerohat"
+	flags_inv = 0
+	visor_flags_inv = HIDEEARS|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	armor = list("melee" = 10, "bullet" = 15, "laser" = 10, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/khan
@@ -230,6 +234,21 @@
 //Fallout 13 soft caps directory
 
 /obj/item/clothing/head/soft/f13
+
+/obj/item/clothing/head/soft/f13/dropped()
+	..()
+	icon_state = initial(icon_state)
+
+/obj/item/clothing/head/soft/f13/flip(mob/user)
+	if(!user.incapacitated())
+		src.flipped = !src.flipped
+		if(src.flipped)
+			icon_state = "[item_color]_flipped"
+			to_chat(user, "<span class='notice'>You flip the hat backwards.</span>")
+		else
+			icon_state = "[item_color]"
+			to_chat(user, "<span class='notice'>You flip the hat back in normal position.</span>")
+		usr.update_inv_head()	//so our mob-overlays update
 
 /obj/item/clothing/head/soft/f13/baseball
 	name = "baseball cap"
@@ -425,7 +444,9 @@
 	desc = "Why are there tricorns in the desert again?"
 	icon_state = "tricorn"
 	item_state = "dethat"
-	flags_inv = HIDEHAIR
+	flags_inv = 0
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	armor = list("melee" = 40, "bullet" = 30, "laser" = 20, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 30, "fire" = 80, "acid" = 0)
 
 /obj/item/clothing/head/f13/town/mayor
@@ -475,10 +496,17 @@
 	name = "Lucky Cowboy Hat"
 	desc = "With four-leaf clover"
 	icon_state = "snow_cowboy_hat"
-	armor = list("melee" = 60, "bullet" = 50, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
+	armor = list("melee" = 10, "bullet" = 16, "laser" = 15, "energy" = 5, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/head/f13/general
 	name = "White General Cap"
 	desc = "A cross is depicted above the cap."
 	icon_state = "white_cap"
 	item_state = "white_cap"
+
+/obj/item/clothing/head/f13/zubenkomp_hat
+	name = "True Mafiosy Hat"
+	desc = "With smell of Shumilovsky Gorodok"
+	icon_state = "hat_zubenkomp"
+	item_state = "hat_zubenkomp"
+	armor = list("melee" = 10, "bullet" = 16, "laser" = 15, "energy" = 5, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)

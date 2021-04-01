@@ -187,7 +187,7 @@
 	desc = "A wall made of densely packed snow blocks."
 	icon = 'icons/turf/walls/snow_wall.dmi'
 	icon_state = "snow"
-	hardness = 80
+	hardness = 20
 	sheet_type = /obj/item/stack/sheet/mineral/snow
 	canSmoothWith = null
 
@@ -196,7 +196,7 @@
 	to_chat(user, "You begin licking the [src].")
 	visible_message("[user] begins to lick the [src]")
 	if(do_after(user, 15, target=src))
-		if(prob(50))
+		if(prob(25))
 			C.Knockdown(50)
 			C.adjustFireLoss(5)
 			visible_message("<span class='danger'>[user] falis to lick the [src], [user.p_their()] tongue has frozen to the [src].</span>")

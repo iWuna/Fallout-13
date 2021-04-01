@@ -1395,7 +1395,7 @@
 				/obj/item/reagent_containers/food/snacks/grown/xander = 2,
 				/obj/item/reagent_containers/syringe = 1)
 	tools = list(TOOL_WORKBENCH)
-	time = 50
+	time = 25
 	category = CAT_MEDICAL
 	subcategory = CAT_MEDS
 
@@ -1407,7 +1407,7 @@
 				/obj/item/stack/sheet/leather = 2,
 				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 2)
 	tools = list(TOOL_WORKBENCH)
-	time = 80
+	time = 40
 	category = CAT_MEDICAL
 	subcategory = CAT_MEDS
 

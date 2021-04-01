@@ -11,7 +11,7 @@
 	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/toggle/labcoat/cmo
-	name = "chief medical officer's labcoat"
+	name = "lead practitioner's labcoat"
 	desc = "Bluer than the standard model."
 	icon_state = "labcoat_cmo"
 	item_state = "labcoat_cmo"

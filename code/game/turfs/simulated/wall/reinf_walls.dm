@@ -52,7 +52,7 @@
 
 /turf/closed/wall/r_wall/try_destroy(obj/item/I, mob/user, turf/T)
 	if(istype(I, /obj/item/pickaxe/drill/jackhammer))
-		if(user.special_s < 9)
+		if(!user.special.can_drill_rgirder)
 			to_chat(user, "<span class='warning'>You are too weak for for wall drilling!</span>")
 			return FALSE
 		to_chat(user, "<span class='notice'>You begin to smash though [src]...</span>")

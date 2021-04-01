@@ -3,7 +3,7 @@
   component.exports = {
     data: {
       filter: '',
-			tooltiptext(req_text, catalyst_text, tool_text){
+			tooltiptext(req_text, catalyst_text, tool_text, skill_text){
 				//This function is to get around the issue where you can't embed moustache variables within moustache statements
 				//It's also less cramped than the tooltip attribute of the button tag :P
 				let text = ""
@@ -15,6 +15,9 @@
 				}
 				if(tool_text){
 					text += "TOOLS: " + tool_text
+				}
+				if(skill_text){
+					text += "SKILLS: " + skill_text
 				}
 				return text
 			}
@@ -106,7 +109,7 @@
 				<ui-display>
 				{{#each data.can_craft}}
 					<ui-section label='{{name}}'>
-						<ui-button tooltip='{{tooltiptext(req_text, catalyst_text, tool_text)}}' tooltip-side='right' action='make' params='{"recipe": "{{ref}}"}' on-hover='hover' on-unhover='unhover' icon='gears'>
+						<ui-button tooltip='{{tooltiptext(req_text, catalyst_text, tool_text, skill_text)}}' tooltip-side='right' action='make' params='{"recipe": "{{ref}}"}' on-hover='hover' on-unhover='unhover' icon='gears'>
 							Craft
 						</ui-button>
 					</ui-section>
@@ -114,7 +117,7 @@
 				{{^data.display_craftable_only}}
 					{{#each data.cant_craft}}
 						<ui-section label='{{name}}'>
-							<ui-button tooltip='{{tooltiptext(req_text, catalyst_text, tool_text)}}' tooltip-side='right' state='disabled' on-hover='hover' on-unhover='unhover' icon='gears'>
+							<ui-button tooltip='{{tooltiptext(req_text, catalyst_text, tool_text, skill_text)}}' tooltip-side='right' state='disabled' on-hover='hover' on-unhover='unhover' icon='gears'>
 								Craft
 							</ui-button>
 						</ui-section>
@@ -137,6 +140,11 @@
 						{{#if tool_text}}
 							<ui-section label='Tools'>
 								{{tool_text}}
+							</ui-section>
+						{{/if}}
+						{{#if skill_text}}
+							<ui-section label='Skills'>
+								{{skill_text}}
 							</ui-section>
 						{{/if}}
 						<ui-section>
@@ -164,6 +172,11 @@
 									{{tool_text}}
 								</ui-section>
 							{{/if}}
+							{{#if skill_text}}
+								<ui-section label='Skills'>
+									{{skill_text}}
+								</ui-section>
+							{{/if}
 						</ui-display>
 					{{/each}}
 				{{/data.display_craftable_only}}

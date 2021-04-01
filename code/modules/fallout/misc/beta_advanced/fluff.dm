@@ -29,3 +29,36 @@
 	new /obj/item/gun/ballistic/automatic/marksman/servicerifle/r82(src)
 	new /obj/item/ammo_box/magazine/m556/rifle/extended(src)
 	new /obj/item/ammo_box/magazine/m556/rifle/extended(src)
+
+/obj/item/storage/briefcase/supermutant
+	name = "box of clothes"
+	desc = "old rusted box, oddly big"
+
+/obj/item/storage/briefcase/supermutant/PopulateContents()
+	new /obj/item/reagent_containers/pill/supermutant(src)
+	new /obj/item/clothing/under/hulk/hulk_vault13(src)
+	new /obj/item/clothing/suit/armor/hulk/hulk_armor(src)
+	new /obj/item/clothing/glasses/sunglasses/hulk_lili(src)
+	new /obj/item/clothing/head/helmet/hulk/metal(src)
+	new /obj/item/clothing/shoes/hulk_boots(src)
+	new /obj/item/storage/backpack/hulk(src)
+	new /obj/item/radio/headset/hulk(src)
+	new /obj/item/twohanded/sledgehammer(src)
+	new /obj/item/reagent_containers/hypospray/medipen/psycho(src)
+	new /obj/item/reagent_containers/hypospray/medipen/psycho(src)
+
+/obj/item/storage/briefcase/supermutant
+	name = "box of clothes"
+	desc = "old rusted box, oddly big"
+
+/obj/item/storage/briefcase/nightkin/PopulateContents()
+	new /obj/item/reagent_containers/pill/nightkin(src)
+	new /obj/item/clothing/under/hulk/hulk_vault13(src)
+	new /obj/item/clothing/suit/armor/hulk/night_armor(src)
+	new /obj/item/clothing/glasses/sunglasses/hulk_lili(src)
+	new /obj/item/clothing/head/helmet/hulk/metal(src)
+	new /obj/item/clothing/shoes/hulk_boots(src)
+	new /obj/item/storage/backpack/hulk(src)
+	new /obj/item/radio/headset/hulk(src)
+	new /obj/item/stealthboy/makeshift(src)
+	new /obj/item/claymore/machete(src)

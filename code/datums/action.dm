@@ -189,6 +189,19 @@
 	name = "Toggle Stealth Boy"
 
 
+/datum/action/item_action/horn
+	name = "Horn!"
+
+/datum/action/item_action/horn/Trigger()
+	if(target)
+		var/obj/item/megaphone/cornu/C = target
+		C.horn(usr)
+		
+/datum/action/item_action/toggle_stealth
+	name = "Toggle Stealth Suit Mk2"
+
+
+
 /datum/action/item_action/chainsword/swing
 	name = "Swing!"
 
@@ -209,6 +222,15 @@
 	if (target)
 		var/obj/item/pda/p = target
 		p.toggle_light()
+
+
+/datum/action/item_action/hubo/toggle_hood
+	name = "Toggle Hood"
+
+/datum/action/item_action/hubo/toggle_hood/Trigger()
+	if(target)
+		var/obj/item/clothing/suit/f13/hubologist/H = target
+		H.toggle_hood()
 
 /datum/action/item_action/toggle_hood
 	name = "Toggle Hood"

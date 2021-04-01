@@ -81,11 +81,12 @@
 	var/static/list/standard_outfit_options
 	if(!standard_outfit_options)
 		standard_outfit_options = list()
-		for(var/path in subtypesof(/datum/outfit/job))
+		var/outfits = subtypesof(/datum/outfit/job/bos) + subtypesof(/datum/outfit/job/den) + subtypesof(/datum/outfit/job/enclave) + subtypesof(/datum/outfit/job/followers) + subtypesof(/datum/outfit/job/CaesarsLegion) + subtypesof(/datum/outfit/job/ncr) + subtypesof(/datum/outfit/job/tribal) + subtypesof(/datum/outfit/job/vault) + subtypesof(/datum/outfit/job/wasteland)
+		for(var/path in outfits)
 			var/datum/outfit/O = path
 			if(initial(O.can_be_admin_equipped))
 				standard_outfit_options[initial(O.name)] = path
-		sortTim(standard_outfit_options, /proc/cmp_text_asc)
+		// sortTim(standard_outfit_options, /proc/cmp_text_asc)
 	outfit_options = standard_outfit_options
 
 /datum/action/chameleon_outfit/Trigger()
@@ -139,6 +140,8 @@
 	name = "Chameleon Change"
 	var/list/chameleon_blacklist = list() //This is a typecache
 	var/list/chameleon_list = list()
+	var/list/chameleon_menu = list()
+	
 	var/chameleon_type = null
 	var/chameleon_name = "Item"
 
@@ -163,27 +166,54 @@
 	..()
 
 /datum/action/item_action/chameleon/change/proc/initialize_disguises()
+	var/static/list/glob_list = list()
+	var/static/list/glob_menu = list()
+
 	if(button)
 		button.name = "Change [chameleon_name] Appearance"
 
 	chameleon_blacklist |= typecacheof(target.type)
-	for(var/V in typesof(chameleon_type))
-		if(ispath(V) && ispath(V, /obj/item))
-			var/obj/item/I = V
-			if(chameleon_blacklist[V] || (initial(I.item_flags) & ABSTRACT) || !initial(I.icon_state))
-				continue
-			var/chameleon_item_name = "[initial(I.name)] ([initial(I.icon_state)])"
-			chameleon_list[chameleon_item_name] = I
+	if(!glob_list[target.type])
+		for(var/V in typesof(chameleon_type))
+			if(ispath(V) && ispath(V, /obj/item))
+				var/obj/item/I = V
+				if(chameleon_blacklist[V] || (initial(I.item_flags) & ABSTRACT) || !initial(I.icon_state))
+					continue
+				var/chameleon_item_name = "[initial(I.name)] ([initial(I.icon_state)])"
+				chameleon_list[chameleon_item_name] = I
+				chameleon_menu[chameleon_item_name] = image(icon = initial(I.icon), icon_state=initial(I.icon_state))
+		chameleon_list = sortList(chameleon_list)
+		glob_list[target.type] = chameleon_list
+		glob_menu[target.type] = chameleon_menu
+	else
+		chameleon_list = glob_list[target.type]
+		chameleon_menu = glob_menu[target.type]
+	// chameleon_menu = sortList(chameleon_menu)
 
 
 /datum/action/item_action/chameleon/change/proc/select_look(mob/user)
-	var/obj/item/picked_item
-	var/picked_name
-	picked_name = input("Select [chameleon_name] to change into", "Chameleon [chameleon_name]", picked_name) as null|anything in chameleon_list
-	if(!picked_name)
+	var/list/initial_menu = list(
+		"Select from menu" = image(icon = target.icon, icon_state = target.icon_state),
+		"Select from list" = image(icon = 'icons/obj/bureaucracy.dmi', icon_state = "paper_words")
+	)
+	var/mode = show_radial_menu(owner, target, initial_menu, require_near = TRUE, tooltips = TRUE)
+	if(mode == "Select from list")
+		select_list(user)
+	else if(mode == "Select from menu")
+		select_radial(user)
+
+/datum/action/item_action/chameleon/change/proc/select_list(mob/user)
+	var/picked = ""
+	picked = input("Select [chameleon_name] to change into", "Chameleon [chameleon_name]", picked) as null|anything in chameleon_list
+	var/obj/item/picked_item = chameleon_list[picked]
+	if(!picked || !picked_item)
 		return
-	picked_item = chameleon_list[picked_name]
-	if(!picked_item)
+	update_look(user, picked_item)	
+
+/datum/action/item_action/chameleon/change/proc/select_radial(mob/user)
+	var/picked = show_radial_menu(owner, target, chameleon_menu, require_near = TRUE, tooltips = TRUE)
+	var/obj/item/picked_item = chameleon_list[picked]
+	if(!picked || !picked_item)
 		return
 	update_look(user, picked_item)
 

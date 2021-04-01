@@ -28,6 +28,8 @@
 			eye_color = HMN.eye_color
 		if(HMN.has_trait(TRAIT_NIGHT_VISION) && !lighting_alpha)
 			lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
+		if(HMN.has_trait(TRAIT_CAT_EYES_NV) && !lighting_alpha)
+			lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	M.update_tint()
 	owner.update_sight()
 

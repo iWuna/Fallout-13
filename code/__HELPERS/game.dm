@@ -503,6 +503,9 @@
 		[character.real_name]</span> ([rank]) has arrived at the station at \
 		<span class='name'>[A.name]</span>.</span>"
 	deadchat_broadcast(message, follow_target = character, message_type=DEADCHAT_ARRIVALRATTLE)
+
+	if(character.special.total() > 40)
+		message_admins("[key_name_admin(character.ckey)] имеет более 40 очков SPECIAL!!!")
 	if((!GLOB.announcement_systems.len) || (!character.mind))
 		return
 	if((character.mind.assigned_role == "Cyborg") || (character.mind.assigned_role == character.mind.special_role))

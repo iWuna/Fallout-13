@@ -47,6 +47,8 @@
 
 #define ishuman(A) (istype(A, /mob/living/carbon/human))
 
+#define isdeathclaw(A) (istype(A, /mob/living/simple_animal/hostile/deathclaw))
+
 //Human sub-species
 #define isabductor(A) (is_species(A, /datum/species/abductor))
 #define isgolem(A) (is_species(A, /datum/species/golem))
@@ -62,6 +64,7 @@
 //f13 edit
 #define isghoul(A) (is_species(A, /datum/species/ghoul))
 #define isstrigoi(A) (is_species(A, /datum/species/strigoi))
+#define issupermutant(A) (is_species(A, /datum/species/supermutant))
 
 //why arent catpeople a subspecies
 #define iscatperson(A) (ishumanbasic(A) && ( A.dna.features["ears"] == "Cat" || A.dna.features["tail_human"] == "Cat") )

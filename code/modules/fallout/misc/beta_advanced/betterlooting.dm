@@ -86,13 +86,12 @@
 	player.visible_message("[player] searching in [src] body.")
 
 	// 0 LUCK = 0.3. 10 LUCK = 1.2
-	var/modifer = 0.3 + (player.special_l * 0.05) + (player.special_l < 3 * 0.15)
-
+	// var/modifer = 0.3 + (player.special_l * 0.05) + (player.special_l < 3 * 0.15)
 
 	// DEATHCLAW = 1.3 MOLERAT = 0.67
-	modifer *= 0.6 + (XP * 0.04)
+	// modifer *= 0.6 + (XP * 0.04)
 
-	var/itemType = getLootObject(1 / modifer)
+	var/itemType = getLootObject(1 / 0.3)
 	if(itemType == null)
 		player.visible_message("<span class='notice'>Empty.</span>")
 		return

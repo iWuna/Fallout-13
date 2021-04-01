@@ -601,6 +601,7 @@
 	throwforce = 20
 	throw_speed = 2
 	throw_range = 4
+	armour_penetration = 50
 	materials = list(MAT_METAL=13000)
 	attack_verb = list("burned", "welded", "cauterized", "melted", "charred")
 	hitsound = "swing_hit"
@@ -1001,7 +1002,31 @@
 
 /obj/item/twohanded/sledgehammer/update_icon()
 	icon_state = "sledgehammer[wielded]"
+/*
+/obj/item/twohanded/sledgehammer/supermutant
+	name = "sledgehammer"
+	desc = "A heavy sledgehammer that lost most of its use besides caving in heads."
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "sledgehammer0"
+	force = 40
+	force_unwielded = 20
+	force_wielded = 50
+	throwforce = 35
+	species_exception = list(/datum/species/supermutant)
+	species_exclusively = list(/datum/species/supermutant)
 
+/obj/item/twohanded/sledgehammer/supermutant/equipped(mob/M, slot)
+	if(!issupermutant(M))
+		M.dropItemToGround(src, TRUE)
+		M.visible_message("<span class='warning'>[src] is too heavy for you</span>")
+		return
+	return ..()
+
+/obj/item/twohanded/sledgehammer/supermutant/mob_can_equip(mob/living/M, mob/living/equipper, slot, disable_warning, bypass_equip_delay_self)
+	if(!issupermutant(M))
+		return FALSE
+	return ..()
+*/
 /obj/item/twohanded/fireaxe/bmprsword  // DEM AXES MAN, marker -Agouri
 	name = "bumper sword"
 	icon_state = "bmprsword0"

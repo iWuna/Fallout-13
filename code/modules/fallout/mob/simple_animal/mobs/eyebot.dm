@@ -112,7 +112,7 @@
 /mob/living/simple_animal/pet/dog/eyebot/attackby(obj/item/O, mob/user, params)
 	if(!istype(O, /obj/item/multitool))
 		return ..()
-	if(user.special_i < 5)
+	if(user.special.can_program_eyebot)
 		to_chat(user,"<span class='notice'>You are too stupid to understand how it works.")
 		return
 	var/action = input(user, "Select action", "Reprogram eyebot") in list("Wipe", "Update")

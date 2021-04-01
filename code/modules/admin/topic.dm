@@ -775,8 +775,8 @@
 //анкап
 		counter = 0
 		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
-		dat += "<tr align='center' bgcolor='e6b740'><th colspan='[length(GLOB.ankap_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=encl;jobban4=[REF(M)]'>Enclave Positions</a></th></tr><tr align='center'>"
-		for(var/jobPos in GLOB.ankap_positions)
+		dat += "<tr align='center' bgcolor='e6b740'><th colspan='[length(GLOB.enclave_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=encl;jobban4=[REF(M)]'>Enclave Positions</a></th></tr><tr align='center'>"
+		for(var/jobPos in GLOB.enclave_positions)
 			if(!jobPos)
 				continue
 			if(jobban_isbanned(M, jobPos))

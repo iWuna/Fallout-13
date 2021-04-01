@@ -24,6 +24,8 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 	//if set to -1: No cooldown... probably a bad idea
 	//if set to 0: Not able to close "original" positions. You can only close positions that you have opened before
 	var/change_position_cooldown = 30
+	//Jobs you can open new positions for, null for any
+	var/list/whitelisted = null
 	//Jobs you cannot open new positions for
 	var/list/blacklisted = list(
 	"AI",
@@ -149,6 +151,8 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 
 //Check if you can't open a new position for a certain job
 /obj/machinery/computer/card/proc/job_blacklisted(jobtitle)
+	if(whitelisted)
+		return !(jobtitle in whitelisted)
 	return (jobtitle in blacklisted)
 
 
@@ -294,7 +298,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 			header += "<div align='center'><br>"
 			header += "<a href='?src=[REF(src)];choice=modify'>Remove [target_name]</a> || "
 			header += "<a href='?src=[REF(src)];choice=scan'>Remove [scan_name]</a> <br> "
-			header += "<a href='?src=[REF(src)];choice=mode;mode_target=1'>Access Wasteland Census</a> <br> "
+			// header += "<a href='?src=[REF(src)];choice=mode;mode_target=1'>Access Wasteland Census</a> <br> "
 			header += "<a href='?src=[REF(src)];choice=logout'>Log Out</a></div>"
 
 		header += "<hr>"
@@ -303,7 +307,8 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 		var/list/alljobs = list("Unassigned")
 		alljobs += (istype(src, /obj/machinery/computer/card/centcom)? get_all_centcom_jobs() : get_all_jobs()) + "Custom"
 		for(var/job in alljobs)
-			jobs_all += "<a href='?src=[REF(src)];choice=assign;assign_target=[job]'>[replacetext(job, " ", "&nbsp")]</a> " //make sure there isn't a line break in the middle of a job
+			if(!job_blacklisted(job))
+				jobs_all += "<a href='?src=[REF(src)];choice=assign;assign_target=[job]'>[replacetext(job, " ", "&nbsp")]</a> " //make sure there isn't a line break in the middle of a job
 
 
 		var/body
@@ -312,7 +317,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 
 			var/carddesc = text("")
 			var/jobs = text("")
-			if( authenticated == 2)
+			if( authenticated)
 				carddesc += {"<script type="text/javascript">
 									function markRed(){
 										var nameField = document.getElementById('namefield');
@@ -342,7 +347,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 				jobs += "<span id='alljobsslot'><a href='#' onclick='showAll()'>[target_rank]</a></span>" //CHECK THIS
 
 			else
-				carddesc += "<b>registered_name:</b> [target_owner]</span>"
+				carddesc += "<b>registered name:</b> [target_owner]</span>"
 				jobs += "<b>Assignment:</b> [target_rank] (<a href='?src=[REF(src)];choice=demote'>Demote</a>)</span>"
 
 			var/accesses = ""
@@ -357,12 +362,12 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 				accesses += "<div align='center'><b>Access</b></div>"
 				accesses += "<table style='width:100%'>"
 				accesses += "<tr>"
-				for(var/i = 1; i <= 7; i++)
+				for(var/i = 1; i <= 12; i++)
 					if(authenticated == 1 && !(i in region_access))
 						continue
 					accesses += "<td style='width:14%'><b>[get_region_accesses_name(i)]:</b></td>"
 				accesses += "</tr><tr>"
-				for(var/i = 1; i <= 7; i++)
+				for(var/i = 1; i <= 12; i++)
 					if(authenticated == 1 && !(i in region_access))
 						continue
 					accesses += "<td style='width:14%' valign='top'>"
@@ -377,10 +382,10 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 			body = "[carddesc]<br>[jobs]<br><br>[accesses]" //CHECK THIS
 
 		else
-			body = "<a href='?src=[REF(src)];choice=auth'>{Log in}</a> <br><hr>"
-			body += "<a href='?src=[REF(src)];choice=mode;mode_target=1'>Access Wasteland Census</a>"
-			if(!target_dept)
-				body += "<br><hr><a href = '?src=[REF(src)];choice=mode;mode_target=2'>Job Management</a>"
+			body = "<a href='?src=[REF(src)];choice=auth'>{Log in}</a> <br>"
+			// body += "<a href='?src=[REF(src)];choice=mode;mode_target=1'>Access Wasteland Census</a>"
+			// if(!target_dept)
+				// body += "<br><hr><a href = '?src=[REF(src)];choice=mode;mode_target=2'>Job Management</a>"
 
 		dat = "<tt>[header][body]<hr><br></tt>"
 	var/datum/browser/popup = new(user, "id_com", src.name, 900, 620)
@@ -428,6 +433,21 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 						if((ACCESS_CE in scan.access) && ((target_dept==5) || !target_dept))
 							region_access |= 5
 							get_subordinates("Chief Engineer")
+						if((ACCESS_NCR_COMMAND in scan.access) && ((target_dept==8) || !target_dept))
+							region_access |= 8
+							get_subordinates("NCR Captain")
+						if((ACCESS_LEGION_COMMAND in scan.access) && ((target_dept==9) || !target_dept))
+							region_access |= 9
+							get_subordinates("Centurion")
+						if((ACCESS_BOS_COMMAND in scan.access) && ((target_dept==10) || !target_dept))
+							region_access |= 10
+							get_subordinates("Sentiel")
+						if((ACCESS_ENCLAVE_COMMAND in scan.access) && ((target_dept==11) || !target_dept))
+							region_access |= 11
+							get_subordinates("US Commander")
+						if((ACCESS_TOWN_COMMAND in scan.access) && ((target_dept==12) || !target_dept))
+							region_access |= 12
+							get_subordinates("Mayor")
 						if(region_access)
 							authenticated = 1
 			else if ((!( authenticated ) && issilicon(usr)) && (!modify))
@@ -449,7 +469,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 							modify.access += access_type
 						playsound(src, "terminal_type", 50, 0)
 		if ("assign")
-			if (authenticated == 2)
+			if (authenticated)
 				var/t1 = href_list["assign_target"]
 				if(t1 == "Custom")
 					var/newJob = reject_bad_text(input("Enter a custom job assignment.", "Assignment", modify ? modify.assignment : "Unassigned"), MAX_NAME_LEN)
@@ -632,6 +652,52 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 	name = "\improper CentCom identification console"
 	circuit = /obj/item/circuitboard/computer/card/centcom
 	req_access = list(ACCESS_CENT_CAPTAIN)
+
+/obj/machinery/computer/card/ncr
+	name = "\improper NCR identification console"
+	circuit = /obj/item/circuitboard/computer/card/ncr
+	region_access = 8
+	req_one_access = list(ACCESS_NCR_COMMAND)
+	req_access = list(ACCESS_NCR_COMMAND)
+	whitelisted = list("NCR Lieutenant", "NCR Sergeant", "NCR Citizen", "NCR Veteran Ranger", "NCR Scout Ranger",
+	 "NCR Corporal", "NCR Trooper", "NCR Recruit", "NCR Administrator", "NCR Patrol Ranger")
+
+/obj/machinery/computer/card/legion
+	name = "\improper Legion identification console"
+	circuit = /obj/item/circuitboard/computer/card/legion
+	region_access = 9
+	req_one_access = list(ACCESS_LEGION_COMMAND)
+	req_access = list(ACCESS_LEGION_COMMAND)
+	whitelisted = list("Legion Orator", "Priestess of Mars", "Legion Veteran Decanus", 
+	"Legion Prime Decanus", "Legion Recruit Decanus", "Legion Vexillarius", "Legion Slavemaster",
+	"Veteran Legionary", "Prime Legionary", "Recruit Legionary", "Legion Venator", "Legion Explorer",
+	"Auxilia", "Legion Slave")
+
+/obj/machinery/computer/card/bos
+	name = "\improper Brotherhood identification console"
+	circuit = /obj/item/circuitboard/computer/card/bos
+	region_access = 10
+	req_one_access = list(ACCESS_BOS_COMMAND)
+	req_access = list(ACCESS_BOS_COMMAND)
+	whitelisted = list("Head Scribe", "Knight-Captain", "Senior Paladin",
+	"Paladin", "Senior Scribe", "Scribe", "Senior Knight", "Knight", "Initiate", "Off-Duty")
+
+/obj/machinery/computer/card/enclave
+	name = "\improper Enclave identification console"
+	circuit = /obj/item/circuitboard/computer/card/enclave
+	region_access = 11
+	req_one_access = list(ACCESS_ENCLAVE_COMMAND)
+	req_access = list(ACCESS_ENCLAVE_COMMAND)
+	whitelisted = list("US Medic", "US Heavy Soldier", "US Private", "US Scientist", "US Engineer")
+
+/obj/machinery/computer/card/town
+	name = "\improper Town identification console"
+	circuit = /obj/item/circuitboard/computer/card/town
+	region_access = 12
+	req_one_access = list(ACCESS_TOWN_COMMAND)
+	req_access = list(ACCESS_TOWN_COMMAND)
+	whitelisted = list("Sheriff", "Deputy", "Farmer", "Prospector", "Doctor",
+		"Preacher", "Barkeep", "Citizen", "Detective", "Shopkeeper")
 
 /obj/machinery/computer/card/minor
 	name = "department management console"

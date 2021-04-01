@@ -347,14 +347,14 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT
 
-/obj/item/gun/ballistic/shotgun/trench/hatchet	
+/obj/item/gun/ballistic/shotgun/trench/hatchet
 	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 100, "embedded_fall_chance" = 0)
 	force = 35
 	throwforce = 40
 	name = "lever action shotgun (with axe)"
 	desc = "A lever action hunting shotgun with a five-shell capacity underneath plus one in chamber. This one has an axe attached to it."
 	icon_state = "trenchgun-axe"
-	hitsound = 'sound/weapons/bladeslice.ogg'	
+	hitsound = 'sound/weapons/bladeslice.ogg'
 
 /obj/item/gun/ballistic/shotgun/hunting
 	name = "hunting shotgun"
@@ -387,6 +387,19 @@
 	sawn_desc = "Come with me if you want to live."
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+/*
+/obj/item/gun/ballistic/shotgun/riot/firecaster_supermutant
+	name = "Flamethrower Super"
+	desc = "Test"
+	icon_state = "riotshotgun"
+	item_state = "shotgunriot"
+	force = 0
+	burst_size = 1
+	mag_type = /obj/item/ammo_casing/shotgun/dragonsbreath
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+*/
+
 
 //Remington 700
 /obj/item/gun/ballistic/shotgun/remington

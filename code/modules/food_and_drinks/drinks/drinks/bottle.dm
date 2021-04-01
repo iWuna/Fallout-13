@@ -438,7 +438,11 @@
 	if(firestarter && active)
 		target.fire_act()
 		new /obj/effect/hotspot(get_turf(target))
+		explode()
 	..()
+
+/obj/item/reagent_containers/food/drinks/bottle/molotov/proc/explode()
+	explosion(src, 0, 0, 0, 0, 0, flame_range=rand(3,4))
 
 /obj/item/reagent_containers/food/drinks/bottle/molotov/attackby(obj/item/I, mob/user, params)
 	if(I.is_hot() && !active)
@@ -463,6 +467,7 @@
 					var/atom/A = target
 					SplashReagents(A)
 					A.fire_act()
+					explode()
 					visible_message("<span class='danger'>The molotov cocktail explodes!</span>")
 				qdel(src)
 

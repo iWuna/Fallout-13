@@ -706,7 +706,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Officer's uniform",			/obj/item/clothing/under/f13/navyofficer,							120),
 		new /datum/data/wasteland_equipment("Desert Battle Uniform",		/obj/item/clothing/under/f13/dbdu,									240),
 		new /datum/data/wasteland_equipment("Bodyguard's outfit",			/obj/item/clothing/under/f13/bodyguard,								300),
-		new /datum/data/wasteland_equipment("Advanced Armor and You",		/obj/item/book/granter/trait/pa_wear,								600)
+		new /datum/data/wasteland_equipment("Advanced Armor and You",		/obj/item/book/granter/trait/pa_wear,								600),
+		new /datum/data/wasteland_equipment("Gunsmithing for dummies",			/obj/item/book/granter/trait/gunsmith,							600),
 		)
 
 /obj/machinery/mineral/wasteland_vendor/general

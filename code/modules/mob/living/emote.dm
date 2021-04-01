@@ -307,7 +307,7 @@
 	if(. && ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if((!H.mind || !H.mind.miming) && !user.is_muzzled())
-			if(H.dna.species.id == "supermutant")
+			if(H.dna.species.id == "supermutant" || H.dna.species.id == "nightkin")
 				playsound(H, 'sound/voice/human/laugh_sm_1.ogg', 50, 0)
 			else
 				if(user.gender == FEMALE)

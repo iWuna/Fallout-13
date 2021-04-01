@@ -42,7 +42,7 @@
 			qdel(src)
 
 	else if(istype(W, /obj/item/pickaxe/drill/jackhammer))
-		if(user.special_s < 7)
+		if(!user.special.can_drill_girder)
 			to_chat(user, "<span class='warning'>You are too weak for for wall drilling!</span>")
 			return
 		to_chat(user, "<span class='notice'>You smash through the girder!</span>")
@@ -424,7 +424,7 @@
 			qdel(src)
 
 	else if(istype(W, /obj/item/pickaxe/drill/jackhammer))
-		if(user.special_s < 7)
+		if(!user.special.can_drill_girder)
 			to_chat(user, "<span class='warning'>You are too weak for for wall drilling!</span>")
 			return
 		to_chat(user, "<span class='notice'>Your jackhammer smashes through the girder!</span>")

@@ -102,6 +102,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["parallax"]			>> parallax
 	S["ambientocclusion"]	>> ambientocclusion
 	S["auto_fit_viewport"]	>> auto_fit_viewport
+	S["widescreenpref"]	    >> widescreenpref
 	S["menuoptions"]		>> menuoptions
 	S["enable_tips"]		>> enable_tips
 	S["tip_delay"]			>> tip_delay
@@ -113,31 +114,32 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		update_preferences(needs_update, S)		//needs_update = savefile_version if we need an update (positive integer)
 
 	//Sanitize
-	ooccolor		= sanitize_color(sanitize_hexcolor(ooccolor, 6, 1, initial(ooccolor)))
-	lastchangelog	= sanitize_text(lastchangelog, initial(lastchangelog))
-	UI_style		= sanitize_inlist(UI_style, GLOB.available_ui_styles, GLOB.available_ui_styles[1])
-	hotkeys			= sanitize_integer(hotkeys, 0, 1, initial(hotkeys))
-	chat_on_map		= sanitize_integer(chat_on_map, 0, 1, initial(chat_on_map)) //Runechat Stuff
-	max_chat_length = sanitize_integer(max_chat_length, 1, CHAT_MESSAGE_MAX_LENGTH, initial(max_chat_length))
+	ooccolor			= sanitize_color(sanitize_hexcolor(ooccolor, 6, 1, initial(ooccolor)))
+	lastchangelog		= sanitize_text(lastchangelog, initial(lastchangelog))
+	UI_style			= sanitize_inlist(UI_style, GLOB.available_ui_styles, GLOB.available_ui_styles[1])
+	hotkeys				= sanitize_integer(hotkeys, 0, 1, initial(hotkeys))
+	chat_on_map			= sanitize_integer(chat_on_map, 0, 1, initial(chat_on_map)) //Runechat Stuff
+	max_chat_length 	= sanitize_integer(max_chat_length, 1, CHAT_MESSAGE_MAX_LENGTH, initial(max_chat_length))
 	see_chat_non_mob	= sanitize_integer(see_chat_non_mob, 0, 1, initial(see_chat_non_mob)) //End of Runechat stuff
-	tgui_fancy		= sanitize_integer(tgui_fancy, 0, 1, initial(tgui_fancy))
-	tgui_lock		= sanitize_integer(tgui_lock, 0, 1, initial(tgui_lock))
-	buttons_locked	= sanitize_integer(buttons_locked, 0, 1, initial(buttons_locked))
+	tgui_fancy			= sanitize_integer(tgui_fancy, 0, 1, initial(tgui_fancy))
+	tgui_lock			= sanitize_integer(tgui_lock, 0, 1, initial(tgui_lock))
+	buttons_locked		= sanitize_integer(buttons_locked, 0, 1, initial(buttons_locked))
 	windowflashing		= sanitize_integer(windowflashing, 0, 1, initial(windowflashing))
-	default_slot	= sanitize_integer(default_slot, 1, max_save_slots, initial(default_slot))
-	toggles			= sanitize_integer(toggles, 0, 65535, initial(toggles))
-	clientfps		= sanitize_integer(clientfps, 0, 1000, 0)
-	parallax		= sanitize_integer(parallax, PARALLAX_INSANE, PARALLAX_DISABLE, null)
+	default_slot		= sanitize_integer(default_slot, 1, max_save_slots, initial(default_slot))
+	toggles				= sanitize_integer(toggles, 0, 65535, initial(toggles))
+	clientfps			= sanitize_integer(clientfps, 0, 1000, 0)
+	parallax			= sanitize_integer(parallax, PARALLAX_INSANE, PARALLAX_DISABLE, null)
 	ambientocclusion	= sanitize_integer(ambientocclusion, 0, 1, initial(ambientocclusion))
 	auto_fit_viewport	= sanitize_integer(auto_fit_viewport, 0, 1, initial(auto_fit_viewport))
-	ghost_form		= sanitize_inlist(ghost_form, GLOB.ghost_forms, initial(ghost_form))
-	ghost_orbit 	= sanitize_inlist(ghost_orbit, GLOB.ghost_orbits, initial(ghost_orbit))
-	ghost_accs		= sanitize_inlist(ghost_accs, GLOB.ghost_accs_options, GHOST_ACCS_DEFAULT_OPTION)
-	ghost_others	= sanitize_inlist(ghost_others, GLOB.ghost_others_options, GHOST_OTHERS_DEFAULT_OPTION)
-	menuoptions		= SANITIZE_LIST(menuoptions)
-	be_special		= SANITIZE_LIST(be_special)
-	pda_style		= sanitize_inlist(pda_style, GLOB.pda_styles, initial(pda_style))
-	pda_color		= sanitize_hexcolor(pda_color, 6, 1, initial(pda_color))
+	widescreenpref  	= sanitize_integer(widescreenpref, 0, 1, initial(widescreenpref))
+	ghost_form			= sanitize_inlist(ghost_form, GLOB.ghost_forms, initial(ghost_form))
+	ghost_orbit 		= sanitize_inlist(ghost_orbit, GLOB.ghost_orbits, initial(ghost_orbit))
+	ghost_accs			= sanitize_inlist(ghost_accs, GLOB.ghost_accs_options, GHOST_ACCS_DEFAULT_OPTION)
+	ghost_others		= sanitize_inlist(ghost_others, GLOB.ghost_others_options, GHOST_OTHERS_DEFAULT_OPTION)
+	menuoptions			= SANITIZE_LIST(menuoptions)
+	be_special			= SANITIZE_LIST(be_special)
+	pda_style			= sanitize_inlist(pda_style, GLOB.pda_styles, initial(pda_style))
+	pda_color			= sanitize_hexcolor(pda_color, 6, 1, initial(pda_color))
 
 	return 1
 
@@ -181,6 +183,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["parallax"], parallax)
 	WRITE_FILE(S["ambientocclusion"], ambientocclusion)
 	WRITE_FILE(S["auto_fit_viewport"], auto_fit_viewport)
+	WRITE_FILE(S["widescreenpref"], widescreenpref)
 	WRITE_FILE(S["menuoptions"], menuoptions)
 	WRITE_FILE(S["enable_tips"], enable_tips)
 	WRITE_FILE(S["tip_delay"], tip_delay)

@@ -208,11 +208,11 @@
 		to_chat(user, "<span class='userdanger'>You need both hands free to fire [src]!</span>")
 		return
 
-	if(user.special_s<2)
+	if(!user.special.can_use_guns)
 		to_chat(user, "<span class='userdanger'>You can't pull the trigger, you too weak!</span>")
 		return
 
-	if(istype(src, /obj/item/gun/energy) && user.special_i <= 3)
+	if(istype(src, /obj/item/gun/energy) && !user.special.can_use_eguns)
 		user.dropItemToGround(src, TRUE)
 		to_chat(user, "<span class='userdanger'>YOU CAN'T UNDERSTAND HOW GUN CAN SHOOT WITH LASER'S AND TRYING TO SHOOT FROM GUN THIS FORM YOU JUST DROP IT ON THE FLOOR!</span>")
 		return
@@ -318,8 +318,6 @@
 		randomized_gun_spread =	rand(0,spread)
 	if(user.has_trait(TRAIT_POOR_AIM)) //nice shootin' tex
 		bonus_spread += 60
-	if(user.special_s<3)
-		bonus_spread += 20
 	var/randomized_bonus_spread = rand(0, bonus_spread)
 
 	if(burst_size > 1)
@@ -571,7 +569,7 @@
 	gun_light.update_brightness()
 	to_chat(user, "<span class='notice'>You toggle the gunlight [gun_light.on ? "on":"off"].</span>")
 
-	if(user.special_l < 3)
+	if(user.special.unlucky)
 		switch(rand(1,5))
 			if(3)
 				to_chat(user,"When you tried turn on flashlight, you hear only click. Nothing happen. Try again.")
@@ -687,6 +685,11 @@
 	gun.zoom(L, FALSE)
 	..()
 
+/obj/item/gun/proc/rotate(old_dir, new_dir)
+	var/mob/holder = src.loc
+	if(istype(holder))
+		make_view(holder)
+
 /obj/item/gun/proc/zoom(mob/living/user, forced_zoom)
 	if(!user || !user.client)
 		return
@@ -700,26 +703,34 @@
 			zoomed = !zoomed
 
 	if(zoomed)
-		var/_x = 0
-		var/_y = 0
-		switch(user.dir)
-			if(NORTH)
-				_y = zoom_amt
-			if(EAST)
-				_x = zoom_amt
-			if(SOUTH)
-				_y = -zoom_amt
-			if(WEST)
-				_x = -zoom_amt
+		RegisterSignal(user, COMSIG_ATOM_DIR_CHANGE, .proc/rotate)
+	else
+		UnregisterSignal(user, COMSIG_ATOM_DIR_CHANGE)
 
-		user.client.change_view(zoom_out_amt)
-		user.client.pixel_x = world.icon_size*_x
-		user.client.pixel_y = world.icon_size*_y
+	if(zoomed)
+		make_view(user)
 	else
 		user.client.change_view(CONFIG_GET(string/default_view))
 		user.client.pixel_x = 0
 		user.client.pixel_y = 0
 	return zoomed
+
+/obj/item/gun/proc/make_view(mob/user)
+	var/_x = 0
+	var/_y = 0
+	switch(user.dir)
+		if(NORTH)
+			_y = zoom_amt
+		if(EAST)
+			_x = zoom_amt
+		if(SOUTH)
+			_y = -zoom_amt
+		if(WEST)
+			_x = -zoom_amt
+			
+	user.client.change_view(zoom_out_amt)
+	user.client.pixel_x = world.icon_size*_x
+	user.client.pixel_y = world.icon_size*_y
 
 //Proc, so that gun accessories/scopes/etc. can easily add zooming.
 /obj/item/gun/proc/build_zooming()
@@ -806,6 +817,28 @@
 	B.zoom(L, FALSE)
 	..()
 
+
+/obj/item/twohanded/binocs/proc/rotate(old_dir, new_dir)
+	var/mob/holder = src.loc
+	if(istype(holder))
+		make_view(holder)
+
+/obj/item/twohanded/binocs/proc/make_view(mob/user)
+	var/_x = 0
+	var/_y = 0
+	switch(user.dir)
+		if(NORTH)
+			_y = zoom_amt
+		if(EAST)
+			_x = zoom_amt
+		if(SOUTH)
+			_y = -zoom_amt
+		if(WEST)
+			_x = -zoom_amt
+	user.client.change_view(zoom_out_amt)
+	user.client.pixel_x = world.icon_size*_x
+	user.client.pixel_y = world.icon_size*_y
+
 /obj/item/twohanded/binocs/proc/zoom(mob/living/user, forced_zoom)
 	if(!user || !user.client)
 		return
@@ -819,21 +852,12 @@
 			zoomed = !zoomed /* WHAT!??? */
 
 	if(zoomed)
-		var/_x = 0
-		var/_y = 0
-		switch(user.dir)
-			if(NORTH)
-				_y = zoom_amt
-			if(EAST)
-				_x = zoom_amt
-			if(SOUTH)
-				_y = -zoom_amt
-			if(WEST)
-				_x = -zoom_amt
-
-		user.client.change_view(zoom_out_amt)
-		user.client.pixel_x = world.icon_size*_x
-		user.client.pixel_y = world.icon_size*_y
+		RegisterSignal(user, COMSIG_ATOM_DIR_CHANGE, .proc/rotate)
+	else
+		UnregisterSignal(user, COMSIG_ATOM_DIR_CHANGE)
+		
+	if(zoomed)
+		make_view(user)
 	else
 		user.client.change_view(CONFIG_GET(string/default_view))
 		user.client.pixel_x = 0

@@ -357,7 +357,7 @@
 				if("7.62")
 					gun_path = /obj/item/gun/ballistic/automatic/rangemaster
 				if(".50")
-					gun_path = /obj/item/gun/ballistic/automatic/bozar
+					gun_path = /obj/item/gun/ballistic/automatic/bozar/handmade
 				else
 					gun_path = /obj/item/gun/ballistic/shotgun/remington
 
@@ -399,8 +399,8 @@
 			G.extra_damage += 5
 		if(prob(7))
 			G.extra_penetration += 5
-		if(prob(7))
-			G.burst_size += 1
+		// if(prob(7))
+		// 	G.burst_size += 1
 		if(prob(7))
 			G.spread += -15
 		// Too much hitscan guns
@@ -469,6 +469,11 @@
 		G.zoom_amt = 10
 		G.zoom_out_amt = 13
 		G.build_zooming()
+	else
+		if(G.zoomable)
+			G.zoomable = FALSE
+			G.azoom.Remove(user)
+			G.azoom = null
 
 	var/obj/item/gun/ballistic/B = G
 	B.magazine = new B.mag_type(B)

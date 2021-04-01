@@ -541,6 +541,87 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20)
 
+
+//КОД СТЕЛС БРОНИ СТАРТУЕТ ТУТ
+/obj/item/clothing/suit/armor/f13/combat/stealth
+	name = "Stealth suit Mk II"
+	desc = "The prototype of the latest development of the Big MT, the stealth armor provides the owner with assistance to be faster and stealthily. Equipped with Artificial Intelligence."
+	icon_state = "stealth"
+	item_state = "stealth"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	flags_inv = HIDEJUMPSUIT|HIDENECK|HIDEEYES|HIDEEARS|HIDEFACE|HIDEMASK|HIDEGLOVES|HIDESHOES
+	clothing_flags = THICKMATERIAL
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 50, "bio" = 60, "rad" = 30, "fire" = 95, "acid" = 100)
+	var/active = FALSE
+	var/mob/living/target
+	actions_types = list(/datum/action/item_action/toggle_stealth)
+	//var/charge = 1000000
+	//var/charge_use = 1
+	//var/brain_loss = 1
+	//var/cooldown = 0
+ //заготовка под звуки надевания
+/obj/item/clothing/suit/armor/f13/combat/stealth/equipped(mob/user, slot)
+	. = ..()
+	if (slot == SLOT_WEAR_SUIT)
+		playsound(src, 'sound/f13effects/StealthSuitMk2.ogg', 50, 0)
+/*------------------------------------------------------------------------Е*ЛЯ С КОДОМ-----------------------------------------------------*/
+
+/obj/item/clothing/suit/armor/f13/combat/stealth/Destroy()
+	if(active)
+		STOP_PROCESSING(SSobj,src)
+	return ..()
+
+/obj/item/clothing/suit/armor/f13/combat/stealth/attack_self(mob/user)
+	if(!active)
+		Activate()
+	else
+		Deactivate()
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
+
+
+/obj/item/clothing/suit/armor/f13/combat/stealth/proc/Activate()
+	active = TRUE
+	new /obj/effect/temp_visual/dir_setting/ninja/cloak(get_turf(target), target.dir)
+	target.alpha = 200 - target.special.stealth_armor_mod
+	do_sparks(2, FALSE, target)
+	//charge -= 10 * charge_use
+	playsound(target, 'sound/effects/sparks4.ogg', 20, 1)
+	START_PROCESSING(SSobj, src)
+/obj/item/clothing/suit/armor/f13/combat/stealth/proc/Deactivate()
+	active = FALSE
+	new /obj/effect/temp_visual/dir_setting/ninja(get_turf(target), target.dir)
+	target.alpha = 255
+	do_sparks(2, FALSE, target)
+	playsound(target, 'sound/effects/phasein.ogg', 15, 1)
+	playsound(target, 'sound/effects/sparks2.ogg', 20, 1)
+	STOP_PROCESSING(SSobj, src)
+/obj/item/clothing/suit/armor/f13/combat/stealth/equipped(mob/user)
+	. = ..()
+	target = user
+	if (istype(loc, /obj/item/storage))
+		Deactivate()
+		target = null
+/obj/item/clothing/suit/armor/f13/combat/stealth/dropped(mob/user)
+	. = ..()
+	if(active && user != loc)
+		Deactivate()
+		target = null
+/obj/item/clothing/suit/armor/f13/combat/stealth/process()
+	if(active == TRUE)
+		//charge -= charge_use
+		//target.adjustBrainLoss(brain_loss)
+		if(active == FALSE)
+			Deactivate()
+			icon_state = initial(icon_state)// + "0"
+			STOP_PROCESSING(SSobj,src)
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+//КОД СТЕЛС БРОНИ КОНЧАЕТСЯ ТУТ
+
 /obj/item/clothing/suit/armor/f13/brahmin_leather_duster
 	name = "brahmin leather duster"
 	desc = "A duster fashioned with tanned brahmin hide. It appears to be more durable than a normal duster. The leather is laser resistant."
@@ -814,7 +895,7 @@
 	desc = "A heavily reinforced set of military grade armor, commonly seen in the Divide now repurposed and reissued to Chief Rangers."
 	icon_state = "elite_riot"
 	item_state = "elite_riot"
-	armor = list("melee" = 65, "bullet" = 60, "laser" = 60, "energy" = 60, "bomb" = 70, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 50)
+	// armor = list("melee" = 65, "bullet" = 60, "laser" = 60, "energy" = 60, "bomb" = 70, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 50)
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
 
@@ -823,7 +904,7 @@
 	desc = "A refurbished and personalized set of pre-unification desert ranger gear."
 	icon_state = "reclaimed_desert_ranger"
 	item_state = "reclaimed_desert_ranger"
-	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 30)
+	// armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 30)
 	icon = 'icons/fallout/clothing_w/suit.dmi'
 
 /obj/item/clothing/suit/armor/f13/chitinarmor
@@ -909,9 +990,10 @@
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	heat_protection = 1046
 	//flags_inv = HIDEJUMPSUIT
 	item_flags = SLOWS_WHILE_IN_HAND
-	clothing_flags = THICKMATERIAL
+	clothing_flags = THICKMATERIALPORT
 	equip_delay_self = 50
 	equip_delay_other = 60
 	strip_delay = 200
@@ -921,9 +1003,15 @@
 	flags_inv = HIDEJUMPSUIT|HIDENECK|HIDEEYES|HIDEEARS|HIDEFACE|HIDEMASK|HIDEGLOVES|HIDESHOES
 	var/traits = list(TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	var/hit_reflect_chance = 5 //Делаем рефлекты к ПА, по умолчанию 5 процентов.
-	block_chance = 10 //Делаем блок шансы, за неименим Порога Урона, по умолчанию 10% шанса.
+	var/footstep = 1 //Нужно для звука шагов
+	var/datum/component/mobhook //Тоже нужно для звука шагов
 
-/obj/item/clothing/suit/armor/f13/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
+/obj/item/clothing/suit/armor/f13/power_armor/Initialize()
+	. = ..()
+	AddComponent(/datum/component/spraycan_paintable)
+	START_PROCESSING(SSobj, src)
+
+/obj/item/clothing/suit/armor/f13/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1) //Проверка на навык ношения ПА
     var/mob/living/carbon/human/H = user
     if(src == H.wear_suit) //Suit is already equipped
         return TRUE
@@ -941,41 +1029,21 @@
         H.remove_trait(trait)
     return ..()
 
-/obj/item/clothing/suit/armor/f13/power_armor/IsReflect(def_zone)
+/obj/item/clothing/suit/armor/f13/power_armor/IsReflect(def_zone) //Код рефлекта для ПА
 	if(!(def_zone in list(BODY_ZONE_CHEST, BODY_ZONE_PRECISE_GROIN, BODY_ZONE_R_ARM, BODY_ZONE_L_ARM, BODY_ZONE_R_LEG, BODY_ZONE_L_LEG))) //If not shot where ablative is covering you, you don't get the reflection bonus!
 		return 0
 	if (prob(hit_reflect_chance))
 		return 1
 
-/*/obj/item/clothing/suit/armor/f13/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
-    var/mob/living/carbon/human/H = user
-    if(src == H.wear_suit) //Suit is already equipped
-        return TRUE
-    if (!H.has_trait(TRAIT_PA_WEAR) && slot == SLOT_WEAR_SUIT && requires_training)
-        to_chat(user, "<span class='warning'>You don't have the proper training to operate the power armor!</span>")
-        return 0
-    if(slot == SLOT_WEAR_SUIT)
-        H.add_trait(TRAIT_STUNIMMUNE)
-        H.add_trait(TRAIT_PUSHIMMUNE)
-        H.add_trait(TRAIT_IRONFIST)
-        return ..()
-
-/obj/item/clothing/suit/armor/f13/power_armor/dropped(mob/user)
-	var/mob/living/carbon/human/H = user
-	H.remove_trait(TRAIT_STUNIMMUNE)
-	H.remove_trait(TRAIT_PUSHIMMUNE)
-	H.remove_trait(TRAIT_IRONFIST)
-
-	return ..()
-	*/ //Вернуть после теста
-
-/obj/item/clothing/suit/armor/f13/power_armor/emp_act(mob/living/carbon/human/owner, severity)
+/obj/item/clothing/suit/armor/f13/power_armor/emp_act(mob/living/carbon/human/owner, severity) //Код применения ЕМП на ПА
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
+		to_chat(loc, "<span class='warning'>Warning: an electromagnetic pulse detected, but was absorbed by the TESLA system.</span>")
 		return
 	if(emped == 0)
 		if(ismob(loc))
 			to_chat(loc, "<span class='warning'>Warning: electromagnetic surge detected in armor. Rerouting power to emergency systems.</span>")
+			playsound(src, 'sound/f13effects/emp_PA.ogg', 80, 1)
 			slowdown += 15
 			armor = armor.modifyRating(melee = -20, bullet = -20, laser = -20)
 			emped = 1
@@ -984,7 +1052,34 @@
 				slowdown -= 15
 				armor = armor.modifyRating(melee = 20, bullet = 20, laser = 20)
 				emped = 0
+/* Звуки сервоприводов закоменчены, ибо режут слух, ну их нахуй.
+/obj/item/clothing/suit/armor/f13/power_armor/proc/on_mob_move() //Звук движения сервоприводов при ходьбе в ПА
+	var/mob/living/carbon/human/H = loc
+	if(!istype(H) || H.wear_suit != src)
+		return
+	if(footstep > 1)
+		playsound(src, 'sound/effects/servostep.ogg', 25, 1)
+		footstep = 0//Если закоментить строчку, на каждый шаг будет звук, а пока через шаг или два.
+	else
+		footstep++
+/obj/item/clothing/suit/armor/f13/power_armor/equipped(mob/user, slot)
+	. = ..()
+	if (slot == SLOT_WEAR_SUIT)
+		if (mobhook && mobhook.parent != user)
+			QDEL_NULL(mobhook)
+		if (!mobhook)
+			mobhook = user.AddComponent(/datum/component/redirect, list(COMSIG_MOVABLE_MOVED), CALLBACK(src, .proc/on_mob_move))
+	else
+		QDEL_NULL(mobhook)
 
+/obj/item/clothing/suit/armor/f13/power_armor/dropped()
+	. = ..()
+	QDEL_NULL(mobhook)
+
+/obj/item/clothing/suit/armor/f13/power_armor/Destroy()
+	QDEL_NULL(mobhook) // mobhook is not our component
+	return ..()
+*/
 /obj/item/clothing/suit/armor/f13/power_armor/t45b
 	name = "salvaged T-45b power armor"
 	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and stripped out servomotors. Bulky and slow, but almost as good as the real thing."
@@ -995,7 +1090,6 @@
 	slowdown = 1.35
 	traits = list()
 	hit_reflect_chance = 0 // Не настоящая ПА - не рефлектит
-	block_chance = 5 //Не ПА, но всё ещё ценная
 
 /obj/item/clothing/suit/armor/f13/power_armor/ncr
 	name = "salvaged NCR power armor"
@@ -1007,7 +1101,6 @@
 	slowdown = 1.35
 	traits = list()
 	hit_reflect_chance = 0 // Не настоящая ПА - не рефлектит
-	block_chance = 5 //Не ПА, но всё ещё ценная
 
 /obj/item/clothing/suit/armor/f13/power_armor/raiderpa
 	name = "raider T-45b power armor"
@@ -1020,7 +1113,6 @@
 	requires_training = FALSE
 	traits = list()
 	hit_reflect_chance = 0 // Не настоящая ПА - не рефлектит
-	block_chance = 5 //Не ПА, но всё ещё ценная
 
 /obj/item/clothing/suit/armor/f13/power_armor/hotrod
 	name = "hotrod T-45b power armor"
@@ -1032,7 +1124,6 @@
 	requires_training = FALSE
 	traits = list()
 	hit_reflect_chance = 0 // Не настоящая ПА - не рефлектит
-	block_chance = 5 //Не ПА, но всё ещё ценная
 
 /obj/item/clothing/suit/armor/f13/power_armor/excavator
 	name = "excavator power armor"
@@ -1051,6 +1142,42 @@
 	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/medical
+	name = "MP-47/A power armor"
+	desc = "The MP-47/A prototype medic power armor is a U.S. Army variant of T-45d power armor. It was designed to administer medical attention to the user as necessary during combat."
+	icon_state = "t45dpowerarmor_med"
+	item_state = "t45dpowerarmor_med"
+	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
+	armor = list("melee" = 65, "bullet" = 65, "laser" = 55, "energy" = 65, "bomb" = 65, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 100)
+	slowdown = 0.11
+	heat_protection = 2000
+	cold_protection = 2000
+
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/medical/equipped(mob/user, slot)
+	. = ..()
+	if (slot == SLOT_WEAR_SUIT)
+		playsound(src, 'sound/f13effects/MedPA.ogg', 50, 1)
+
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/medical/New() //Начало кода для хила от мед.брони
+	..()
+	START_PROCESSING(SSobj, src)
+
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/medical/Destroy()
+	STOP_PROCESSING(SSobj,src)
+	. = ..()
+
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/medical/process()
+	if(iscarbon(loc))
+		var/mob/living/carbon/M = loc
+		if(M.health < M.maxHealth)
+			new /obj/effect/temp_visual/heal(get_turf(M), "#80F5FF")
+			M.adjustBruteLoss(-3.5) //Heal that poor bastard
+			M.adjustFireLoss(-3.5)
+			M.adjustToxLoss(-3.5)
+			M.adjustOxyLoss(-3.5)
+
+//Конец кода для хила от мед.брони.
+
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/gunslinger
 	name = "Gunslinger T-51b"
 	desc = "What was once a suit of T-51 Power Armor is now an almost unrecognizable piece of art or garbage, depending on who you ask. Almost all of the external plating has either been removed or stripped to allow for maximum mobility, and overlapping underplates protect the user from small arms fire. Whoever designed this had a very specific purpose in mind: mobility and aesthetics over defense."
@@ -1060,6 +1187,32 @@
 	hit_reflect_chance = 50 //Щитспавнернская броня, осторожно при выдаче.
 	//flags_inv = HIDEJUMPSUIT|HIDENECK
 	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
+
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/outcast
+	name = "Outcast T-45d"
+	desc = "An outcast power armor, using by Outcasters."
+	icon_state = "t45dpowerarmor_outcast"
+	item_state = "t45dpowerarmor_outcast"
+	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
+
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/military
+	name = "Military T-45d"
+	desc = "A military power armor, that was popular in militia and army."
+	icon_state = "t45dpowerarmor_military"
+	item_state = "t45dpowerarmor_military"
+	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
+
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/foil
+	name = "Foil T-45d"
+	desc = "Very effective against aliens."
+	icon_state = "t45dpowerarmor_foil"
+	item_state = "t45dpowerarmor_foil"
+	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 15, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
+	requires_training = FALSE
+	slowdown = 1.35
+	traits = list()
+	hit_reflect_chance = 0 // хуета, а не ПА - не рефлектит
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
 	name = "sierra power armor"
@@ -1075,7 +1228,7 @@
 	item_state = "t45dkc"
 	slowdown = 0.16
 	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
-	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 95, "fire" = 90, "acid" = 100)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t60
 	name = "T-60a power armor"
@@ -1084,8 +1237,22 @@
 	item_state = "t60powerarmor"
 	slowdown = 0.16
 	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
-	armor = list("melee" = 75, "bullet" = 70, "laser" = 60, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
+	armor = list("melee" = 75, "bullet" = 70, "laser" = 60, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 100)
 	hit_reflect_chance = 20
+
+/obj/item/clothing/suit/armor/f13/power_armor/t60/tesla
+	name = "T-60a tesla power armor"
+	desc = "The T-60 series of power armor was designed to eventually replace the T-51b as the pinnacle of powered armor technology in the U.S. military arsenal, jury-rigged with a Tesla device that is capable of dispersing a large percentage of the damage done by directed-energy attacks."
+	icon_state = "t60powerarmor_tesla"
+	item_state = "t60powerarmor_tesla"
+	slowdown = 0.16
+	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 75, "energy" = 75, "bomb" = 85, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 100)
+	hit_reflect_chance = 30
+
+/obj/item/clothing/suit/armor/f13/power_armor/t60/tesla/Initialize()
+	. = ..()
+	AddComponent(/datum/component/empprotection, EMP_PROTECT_SELF | EMP_PROTECT_WIRES | EMP_PROTECT_CONTENTS)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b
 	name = "T-51b power armor"
@@ -1094,8 +1261,14 @@
 	item_state = "t51bpowerarmor"
 	slowdown = 0.15 //+0.1 from helmet = total 0.25
 	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
-	armor = list("melee" = 70, "bullet" = 75, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 70, "bullet" = 75, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 	hit_reflect_chance = 15
+
+/obj/item/clothing/suit/armor/f13/power_armor/t51b/duster
+	name = "T-51b duster power armor"
+	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer and covered by dusty cape."
+	icon_state = "t51bpowerarmor_duster"
+	item_state = "t51bpowerarmor_duster"
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b/ultra
 	name = "Ultracite power armor"
@@ -1105,6 +1278,20 @@
 	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	slowdown = 0
 	hit_reflect_chance = 10
+
+/obj/item/clothing/suit/armor/f13/power_armor/x03
+	name = "Hellfire power armor"
+	desc = "A BRUTAL set of X-03 Power Armor only for hotty boys."
+	icon_state = "x03powerarmor"
+	item_state = "x03powerarmor"
+	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
+	armor = list("melee" = 70, "bullet" = 75, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 100, "acid" = 100)
+	hit_reflect_chance = 15
+	max_heat_protection_temperature = FIRE_IMMUNITY_SUIT_MAX_TEMP_PROTECT
+
+/obj/item/clothing/suit/armor/f13/power_armor/x03/alt
+	icon_state = "x03powerarmor_alt"
+	item_state = "x03powerarmor_alt"
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "advanced power armor"
@@ -1133,6 +1320,10 @@
 	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	armor = list("melee" = 35, "bullet" = 35, "laser" = 95, "energy" = 95, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 	hit_reflect_chance = 50 //Что не зарефлектит, то зарезистит
+
+/obj/item/clothing/suit/armor/f13/power_armor/tesla/Initialize()
+	. = ..()
+	AddComponent(/datum/component/empprotection, EMP_PROTECT_SELF | EMP_PROTECT_WIRES | EMP_PROTECT_CONTENTS)
 
 /obj/item/clothing/suit/armor/f13/power_armor/midwest
 	name = "midwestern power armor"
@@ -1256,7 +1447,12 @@
 	desc = "The armor appears to be a full suit of heavy gauge steel and offers full body protection. It also has a cloak in excellent condition, but the armor itself bears numerous battle scars and the helmet is missing half of the left horn. The Legate's suit appears originally crafted, in contrast to other Legion armor which consists of repurposed pre-War sports equipment."
 	icon_state = "leglegat"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list("melee" = 85, "bullet" = 60, "laser" = 40, "energy" = 40, "bomb" = 45, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+	armor = list("melee" = 75, "bullet" = 60, "laser" = 55, "energy" = 40, "bomb" = 45, "bio" = 60, "rad" = 60, "fire" = 80, "acid" = 0)
+
+/obj/item/clothing/suit/armor/f13/legion/legate/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 
 /obj/item/clothing/suit/armor/f13/roma
 	name = "roma legion armor"

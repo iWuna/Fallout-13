@@ -28,8 +28,8 @@ Commander
 
 	outfit = /datum/outfit/job/enclave/f13uscommander
 
-	access = list(ACCESS_ENCLAVE)
-	minimal_access = list(ACCESS_ENCLAVE)
+	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_COMMAND)
+	minimal_access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_COMMAND)
 
 	exp_requirements = 5500
 	exp_type = EXP_TYPE_NCR
@@ -50,6 +50,9 @@ Commander
 	suit = /obj/item/clothing/suit/f13/autumn
 	back = /obj/item/storage/backpack/trekker
 	pa_wear = TRUE
+	backpack_contents = list(
+		/obj/item/flashlight/flare/emergency = 3
+	)
 /*
 Medic
 */
@@ -65,6 +68,7 @@ Medic
 
 	outfit = /datum/outfit/job/enclave/f13usmedic
 
+	department_head = list("US Commander")
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
 
@@ -88,6 +92,7 @@ Medic
 	ears = /obj/item/radio/headset/headset_enclave
 	back = /obj/item/storage/backpack/trekker
 	pa_wear = FALSE
+	l_pocket = /obj/item/healthanalyzer/advanced
 	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
 
 /datum/outfit/loadout/enclave_medic_1
@@ -145,6 +150,15 @@ HEAVY!
 	head = /obj/item/clothing/head/helmet/f13/power_armor/advanced
 	back = /obj/item/minigunpackbal
 
+/datum/outfit/loadout/enclave_heavy_3
+	name = "Pyro Heavy"
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/x03
+	head = /obj/item/clothing/head/helmet/f13/power_armor/x03
+	suit_store = /obj/item/gun/ballistic/automatic/shotgun/bulldog
+	backpack_contents = list(
+			/obj/item/ammo_box/magazine/m12g/dragon = 2
+		)
+	whitelist = list("dosiozborn", "vanotyan", "fiaskin")
 
 /datum/job/enclave/f13usheavy
 	title = "US Heavy Soldier"
@@ -158,6 +172,7 @@ HEAVY!
 
 	outfit = /datum/outfit/job/enclave/f13usheavy
 
+	department_head = list("US Commander")
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
 
@@ -166,7 +181,8 @@ HEAVY!
 
 	loadout_options = list(
 		/datum/outfit/loadout/enclave_heavy_1,
-		/datum/outfit/loadout/enclave_heavy_2
+		/datum/outfit/loadout/enclave_heavy_2,
+		/datum/outfit/loadout/enclave_heavy_3
 	)
 
 /datum/outfit/job/enclave/f13usheavy
@@ -195,6 +211,7 @@ Private
 
 	outfit = /datum/outfit/job/enclave/f13usprivate
 
+	department_head = list("US Commander")
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
 
@@ -259,6 +276,7 @@ Scientist
 
 	outfit = /datum/outfit/job/enclave/f13usscientist
 
+	department_head = list("US Commander")
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
 
@@ -295,6 +313,7 @@ Engineer
 
 	outfit = /datum/outfit/job/enclave/f13usengineer
 
+	department_head = list("US Commander")
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
 

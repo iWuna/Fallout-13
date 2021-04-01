@@ -65,6 +65,7 @@
 	var/on = FALSE				//determines if the turret is on
 
 	var/list/faction = list("turret") // Same faction mobs will never be shot at, no matter the other settings
+	var/list/authorisations = list()
 
 	var/datum/effect_system/spark_spread/spark_system	//the spark system, used for generating... sparks?
 
@@ -78,6 +79,7 @@
 	var/mob/remote_controller
 
 	var/shootnonfaction = TRUE //If it shoots at people that don't have the same faction
+	var/shotunauthorised = FALSE
 
 /obj/machinery/porta_turret/Initialize()
 	. = ..()
@@ -165,6 +167,25 @@
 	var/dat
 	dat += "Status: <a href='?src=[REF(src)];power=1'>[on ? "On" : "Off"]</a><br>"
 	dat += "Behaviour controls are [locked ? "locked" : "unlocked"]<br>"
+	var/factions_str = ""
+	for(var/f in faction)
+		if(f == "turret")
+			continue
+		if(factions_str)
+			factions_str += ", [f]"
+		else
+			factions_str += f
+	if(!factions_str)
+		factions_str = "Empty"
+
+	var/auth_str = ""
+	for(var/a in authorisations)
+		if(auth_str)
+			auth_str += ", [a]"
+		else
+			auth_str += a
+	if(!auth_str)
+		auth_str = "Empty"
 
 	if(!locked)
 		dat += "Check for Weapon Authorization: <A href='?src=[REF(src)];operation=authweapon'>[auth_weapons ? "Yes" : "No"]</A><BR>"
@@ -173,6 +194,21 @@
 		dat += "Neutralize All Non-Security and Non-Command Personnel: <A href='?src=[REF(src)];operation=shootall'>[stun_all ? "Yes" : "No"]</A><BR>"
 		dat += "Neutralize All Unidentified Life Signs: <A href='?src=[REF(src)];operation=checkxenos'>[check_anomalies ? "Yes" : "No"]</A><BR>"
 		dat += "Neutralize All Non-Loyalty Implanted Personnel: <A href='?src=[REF(src)];operation=checkloyal'>[shoot_unloyal ? "Yes" : "No"]</A><BR>"
+		dat += "Neutralize All Unregistered Factions: <A href='?src=[REF(src)];operation=shootnonfaction'>[shootnonfaction ? "Yes" : "No"]</A><BR>"
+		dat += "<HR>"
+		dat += "Registered Factions: [factions_str]<BR>"
+		dat += "<A href='?src=[REF(src)];operation=addfaction'>Add Faction</A><BR>"
+		dat += "<A href='?src=[REF(src)];operation=purgefaction'>Purge Factions</A><BR>"
+		dat += "<HR>"
+		dat += "Neutralize All Unauthorised Personnel: <A href='?src=[REF(src)];operation=shotunauthorised'>[shotunauthorised ? "Yes" : "No"]</A><BR>"
+		dat += "Authorised personnel: [auth_str]<BR>"
+		if(ishuman(user))
+			var/mob/living/carbon/CB= user
+			if(!(CB.dna.real_name in authorisations))
+				dat += "<A href='?src=[REF(src)];operation=addauth'>Authorise</A><BR>"
+			else
+				dat += "<A href='?src=[REF(src)];operation=remauth'>Unauthorise</A><BR>"
+			dat += "<A href='?src=[REF(src)];operation=purgeauth'>Purge Authorisations</A><BR>"
 	if(issilicon(user))
 		if(!manual_control)
 			var/mob/living/silicon/S = user
@@ -182,7 +218,7 @@
 			dat += "Warning! Remote control protocol enabled.<br>"
 
 
-	var/datum/browser/popup = new(user, "autosec", "Automatic Portable Turret Installation", 300, 300)
+	var/datum/browser/popup = new(user, "autosec", "Automatic Portable Turret Installation", 400, 450)
 	popup.set_content(dat)
 	popup.open()
 
@@ -214,6 +250,31 @@
 				check_anomalies = !check_anomalies
 			if("checkloyal")
 				shoot_unloyal = !shoot_unloyal
+			if("shotunauthorised")
+				shotunauthorised = !shotunauthorised
+			if("addauth")
+				var/mob/living/carbon/M = usr
+				if(istype(usr))
+					authorisations += M.dna.real_name
+					usr << "You imprint your DNA inside the [src]."
+			if("remauth")
+				var/mob/living/carbon/M = usr
+				if(istype(usr))
+					authorisations -= M.dna.real_name
+					usr << "You unauthorise from the [src]."
+			if("purgeauth")
+				authorisations = list()
+				usr << "You hard reset turret authorisation settings."
+			if("shootnonfaction")
+				shootnonfaction = !shootnonfaction
+			if("addfaction")
+				var/factiontoadd = stripped_input(usr, "What faction would you like to add? Valid faction tags are: Vault, BOS, Den, NCR, Legion, Wastelander, capitalization matters and must be put in exactly that and separately.", "Turret Faction Control" , null , 10)
+				if(faction)
+					faction += factiontoadd
+					usr << "You add the [factiontoadd] to the list of factions."
+			if("purgefaction")
+				faction = list("turret")
+				usr << "You hard reset turret faction settings."
 			if("manual")
 				if(issilicon(usr) && !manual_control)
 					give_control(usr)
@@ -401,6 +462,10 @@
 			//if the target is a human and not in our faction, analyze threat level
 			if(ishuman(C) && shootnonfaction)
 				if(!in_faction(C))
+					targets += C
+			if(ishuman(C) && shotunauthorised)
+				var/mob/living/carbon/CB = C
+				if(!(CB.dna.real_name in authorisations))
 					targets += C
 
 			else if(check_anomalies) //non humans who are not simple animals (xenos etc)
@@ -656,7 +721,7 @@
 	AddComponent(/datum/component/empprotection, EMP_PROTECT_SELF | EMP_PROTECT_WIRES)
 
 #define ROLE_ENCLAVE			"Enclave"
-#define ACCESS_ENCLAVE		131
+
 
 /obj/machinery/porta_turret/enclave
 	stun_projectile = /obj/item/projectile/bullet/syndicate_turret
@@ -672,6 +737,11 @@
 	has_cover = 0
 	scan_range = 8
 	req_access = list(ACCESS_ENCLAVE)
+
+/obj/machinery/porta_turret/enclave/Initialize()
+	. = ..()
+	locked = TRUE
+	on = TRUE
 
 /obj/machinery/porta_turret/enclave/setup()
 	return
@@ -1093,5 +1163,6 @@
 			user << "You disable the shooting of non faction members. Now only normal settings may apply."
 		if(safety2 == "Add A Faction")
 			var/factiontoadd = stripped_input(user, "What faction would you like to add? Valid faction tags are: Vault, BOS, Den, NCR, Legion, Wastelander, capitalization matters and must be put in exactly that and separately.", "Turret Faction Control" , null , 10)
-			faction += factiontoadd
-			user << "You add the [factiontoadd] to the list of factions."
+			if(faction)
+				faction += factiontoadd
+				user << "You add the [factiontoadd] to the list of factions."

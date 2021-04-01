@@ -92,11 +92,18 @@
 #define ACCESS_MEDICAL_F13	129	//general medical access
 #define ACCESS_COMMAND		130	//general command access
 #define ACCESS_TRIBE		131	//general tribe access
-#define ACCESS_NCROFFDUTY			132 //general NCR access
+#define ACCESS_ENCLAVE		132
+#define ACCESS_NCROFFDUTY	133 //general NCR access
+
+#define ACCESS_NCR_COMMAND		160 // high rank officers with access to id console
+#define ACCESS_LEGION_COMMAND	161
+#define ACCESS_BOS_COMMAND		162
+#define ACCESS_ENCLAVE_COMMAND	163
+#define ACCESS_TOWN_COMMAND		164
 
 	//The Syndicate
-#define ACCESS_SYNDICATE 150//General Syndicate Access. Includes Syndicate mechs and ruins.
-#define ACCESS_SYNDICATE_LEADER 151//Nuke Op Leader Access
+#define ACCESS_SYNDICATE 170//General Syndicate Access. Includes Syndicate mechs and ruins.
+#define ACCESS_SYNDICATE_LEADER 171//Nuke Op Leader Access
 
 	//Away Missions or Ruins
 	/*For generic away-mission/ruin access. Why would normal crew have access to a long-abandoned derelict

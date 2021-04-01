@@ -171,6 +171,13 @@
 			.["other"][I.type] += 1
 	
 
+/datum/personal_crafting/proc/check_traits(mob/user, datum/crafting_recipe/R)
+	var/mob/living/L = user
+	for(var/trait in R.traits)
+		if(!L.has_trait(trait))
+			return FALSE
+	return TRUE
+
 /datum/personal_crafting/proc/check_tools(mob/user, datum/crafting_recipe/R, list/contents)
 	if(!R.tools.len)
 		return TRUE
@@ -206,6 +213,8 @@
 	var/list/contents = get_surroundings(user)
 	var/send_feedback = 1
 	if(check_contents(R, contents))
+		if(!check_traits(user, R))
+			return ", missing tool."
 		if(check_tools(user, R, contents))
 			if(do_after(user, scale_a_i(R.time, user), target = user))
 				contents = get_surroundings(user)
@@ -213,6 +222,8 @@
 					return ", missing component."
 				if(!check_tools(user, R, contents))
 					return ", missing tool."
+				if(!check_traits(user, R))
+					return ", missing skill."
 				var/list/parts = del_reqs(R, user)
 				var/atom/movable/I = new R.result (get_turf(user.loc))
 				I.CheckParts(parts, R)
@@ -465,6 +476,7 @@
 	data["ref"] = "[REF(R)]"
 	var/req_text = ""
 	var/tool_text = ""
+	var/skill_text = ""
 	var/catalyst_text = ""
 
 	for(var/a in R.reqs)
@@ -488,6 +500,16 @@
 		else
 			tool_text += " [a],"
 	tool_text = replacetext(tool_text,",","",-1)
+
+	if(R.traits.len != 0)
+		tool_text += "\nSKILLS:"
+	for(var/a in R.traits)
+		var/name = GLOB.trait_name[a]
+		tool_text += " [name],"
+	tool_text = replacetext(tool_text,",","",-1)
+	skill_text = replacetext(skill_text,",","",-1)
+	
+	data["skill_text"] = skill_text
 	data["tool_text"] = tool_text
 
 	return data

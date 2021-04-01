@@ -27,7 +27,7 @@
 			if(user in loot_players)
 				to_chat(user, "<span class='notice'>You already have looted [src].</span>")
 				return
-			for(var/i=0, i < rand(1, 1 + user.special_l), i++)
+			for(var/i=0, i < rand(1, 1 + user.special.trash_items_mod), i++)
 				var/itemtype = pickweight(GLOB.trash_list)
 				if(itemtype)
 					to_chat(user, "<span class='notice'>You scavenge through the filthy [src].</span>")
@@ -51,7 +51,7 @@
 			if(user in loot_players)
 				to_chat(user, "<span class='notice'>You already have looted [src].</span>")
 				return
-			for(var/i=0, i < rand(3, 3 + user.special_l), i++)
+			for(var/i=0, i < rand(3, 3 + user.special.trash_items_mod), i++)
 				var/itemtype = pickweight(GLOB.trash_list)
 				if(itemtype)
 					to_chat(user, "<span class='notice'>You scavenge through the filthy [src] with the [S].</span>")

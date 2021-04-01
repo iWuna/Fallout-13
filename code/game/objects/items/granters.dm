@@ -264,7 +264,7 @@
 	desc = "A rare issue of Guns and Bullets following up Part 1, going further indepth into weapon mechanics, allowing the reader to craft Tier 3 firearms. It's barely holding up, and looks like only one person can study the knowledge from it."
 	icon_state = "gab2"
 	oneuse = FALSE
-	tool_behaviour = list(TOOL_GUNTIER1, TOOL_GUNTIER2)
+	tool_behaviour = TOOL_GUNTIER2
 	trait = /datum/granter_trait/gunsmith_two
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
 
@@ -273,7 +273,7 @@
 	desc = "A rare issue of Guns and Bullets following up Part 2, explaining difficult ballistics theory and weapon mechanics, allowing the reader to craft Tier 4 firearms. It's barely holding up, and looks like only one person can study the knowledge from it."
 	icon_state = "gab3"
 	oneuse = FALSE
-	tool_behaviour = list(TOOL_GUNTIER1, TOOL_GUNTIER2, TOOL_GUNTIER3)
+	tool_behaviour = TOOL_GUNTIER3
 	trait = /datum/granter_trait/gunsmith_three
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
 
@@ -282,7 +282,7 @@
 	desc = "An extremely rare issue of Guns and Bullets, showing some design flaws of weapons and how to rectify them, allowing the reader to craft Tier 5 firearms. It's barely holding up, and looks like only one person can study the knowledge from it."
 	icon_state = "gab4"
 	oneuse = FALSE
-	tool_behaviour = list(TOOL_GUNTIER1, TOOL_GUNTIER2, TOOL_GUNTIER3, TOOL_GUNTIER4)
+	tool_behaviour = TOOL_GUNTIER4
 	trait = /datum/granter_trait/gunsmith_four
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
 

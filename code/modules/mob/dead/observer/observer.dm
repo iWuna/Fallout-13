@@ -61,6 +61,7 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 	var/datum/spawners_menu/spawners_menu
 
 /mob/dead/observer/Initialize()
+	special = new(src)
 	set_invisibility(GLOB.observer_default_invisibility)
 
 	verbs += list(
@@ -154,6 +155,7 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 	addtimer(CALLBACK(src, /atom/proc/update_atom_colour), 10)
 
 /mob/dead/observer/Destroy()
+	qdel(special)
 	GLOB.ghost_images_default -= ghostimage_default
 	QDEL_NULL(ghostimage_default)
 

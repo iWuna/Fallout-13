@@ -11,6 +11,7 @@
 	var/lust = 0
 	var/multiorgasms = 0
 	var/refactory_period = 0
+	var/memcount = 0
 //end of lewd
 
 /mob/living/Initialize()
@@ -768,7 +769,7 @@
 	if(what.item_flags & NODROP)
 		to_chat(src, "<span class='warning'>You can't remove \the [what.name], it appears to be stuck!</span>")
 		return
-	if(src.special_a < 8)
+	if(src.special.strip_visible)
 		who.visible_message("<span class='danger'>[src] tries to remove [who]'s [what.name].</span>", \
 						"<span class='userdanger'>[src] tries to remove [who]'s [what.name].</span>")
 
@@ -805,7 +806,7 @@
 			to_chat(src, "<span class='warning'>\The [what.name] doesn't fit in that place!</span>")
 			return
 
-		if(src.special_a < 8)
+		if(src.special.strip_visible)
 			visible_message("<span class='notice'>[src] tries to put [what] on [who].</span>")
 		if(do_mob(src, who, what.equip_delay_other))
 			if(what && Adjacent(who) && what.mob_can_equip(who, src, final_where, TRUE, TRUE))

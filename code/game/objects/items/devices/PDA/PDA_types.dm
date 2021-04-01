@@ -108,6 +108,9 @@
 	default_cartridge = /obj/item/cartridge/cmo
 	icon_state = "pda-cmo"
 
+/obj/item/pda/heads/cmo/fa
+	name = "lead practitioner Pip-Boy 3000"
+
 /obj/item/pda/heads/rd
 	name = "research director Pip-Boy 3000"
 	default_cartridge = /obj/item/cartridge/rd
@@ -137,10 +140,16 @@
 	icon_state = "pda-miner"
 
 /obj/item/pda/syndicate
-	default_cartridge = /obj/item/cartridge/virus/syndicate
+	default_cartridge = /obj/item/cartridge/virus/clown
 	icon_state = "pda-syndi"
 	name = "military Pip-Boy 3000"
 	owner = "John Doe"
+	hidden = 1
+
+/obj/item/pda/enclave
+	default_cartridge = /obj/item/cartridge/enclave
+	icon_state = "pda-warden"
+	name = "Pip-Boy 3000 Mark IV"
 	hidden = 1
 
 /obj/item/pda/chaplain

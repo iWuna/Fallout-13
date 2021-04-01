@@ -45,7 +45,7 @@
 			log_admin("[key_name(src)] has attempted to advertise in OOC: [msg]")
 			message_admins("[key_name_admin(src)] попытался рекламировать: [msg]")
 			return
-		var/static/regex/slurs = regex("андрейгей|опух|onyx|инфинити|infinity|libeb|лубеб|лабеб|lifeweb|лайфвеб|нигeр|салоед|салохуйка|каклошвайн|nigger|черномазый|нигер|ниггер|pedo|loli|shota|desert rose|негр", "i")
+		var/static/regex/slurs = regex("витон|андрейгей|опух|onyx|инфинити|infinity|libeb|лубеб|лабеб|lifeweb|лайфвеб|салоед|каклошвайн|desert rose", "i")
 		if(findtext(msg, slurs))
 			to_chat(src, "<B>Slurs are not allowed.</B>")
 			to_chat(src, "<img style='max-height: 200px' src=\"https://media.discordapp.net/attachments/436187285919236096/782277547370479666/89149bf1-32d4-4585-8d5d-cbf31608ab6e.png\">")
