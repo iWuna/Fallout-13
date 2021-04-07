@@ -361,3 +361,8 @@
 	icon_state = "omnilaser"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
 	light_color = LIGHT_COLOR_BLUE
+
+/obj/item/projectile/beam/laser/pewpew //Gatling Laser Projectile
+	name = "pewpew"
+	damage = 45
+	armour_penetration = 100

@@ -376,6 +376,68 @@
 	tastes = list("cake" = 1, "crab" = 5)
 	filling_color = "#406618"
 
+//Junk food from trash//
+
+/obj/item/reagent_containers/food/snacks/f13/bubblegum/trash
+	bonus_reagents = list("radium" = 8, "vitamin" = 1)
+
+/obj/item/reagent_containers/food/snacks/f13/bubblegum/large/trash
+	bonus_reagents = list("radium" = 14, "vitamin" = 2)
+
+/obj/item/reagent_containers/food/snacks/f13/cram/trash
+	bonus_reagents = list("radium" = 8, "vitamin" = 5)
+
+/obj/item/reagent_containers/food/snacks/f13/cram/large/trash
+	bonus_reagents = list("radium" = 8, "vitamin" = 10)
+
+/obj/item/reagent_containers/food/snacks/f13/yumyum/trash
+	bonus_reagents = list("radium" = 8, "vitamin" = 2)
+
+/obj/item/reagent_containers/food/snacks/f13/fancylads/trash
+	bonus_reagents = list("radium" = 8, "vitamin" = 1)
+
+/obj/item/reagent_containers/food/snacks/f13/sugarbombs/trash
+	bonus_reagents = list("radium" = 8, "vitamin" = 2)
+
+/obj/item/reagent_containers/food/snacks/f13/crisps/trash
+	bonus_reagents = list("radium" = 8, "vitamin" = 1)
+
+/obj/item/reagent_containers/food/snacks/f13/steak
+	bonus_reagents = list("radium" = 8, "vitamin" = 5)
+
+/obj/item/reagent_containers/food/snacks/f13/specialapples/trash
+	bonus_reagents = list("radium" = 8, "vitamin" = 2)
+
+/obj/item/reagent_containers/food/snacks/f13/dandyapples/trash
+	bonus_reagents = list("radium" = 8, "vitamin" = 2)
+
+/obj/item/reagent_containers/food/snacks/f13/blamco/trash
+	bonus_reagents = list("radium" = 8, "vitamin" = 2)
+
+/obj/item/reagent_containers/food/snacks/f13/blamco/large/trash
+	bonus_reagents = list("radium" = 16, "vitamin" = 4)
+
+/obj/item/reagent_containers/food/snacks/f13/mechanic/trash
+	bonus_reagents = list("radium" = 8, "vitamin" = 3)
+
+/obj/item/reagent_containers/food/snacks/f13/instamash/trash
+	bonus_reagents = list("radium" = 8, "vitamin" = 2)
+
+/obj/item/reagent_containers/food/snacks/f13/porknbeans/trash
+	bonus_reagents = list("radium" = 8, "vitamin" = 2)
+
+/obj/item/reagent_containers/food/snacks/f13/borscht/trash
+	bonus_reagents = list("radium" = 8, "vitamin" = 3)
+
+/obj/item/reagent_containers/food/snacks/f13/dog/trash
+	bonus_reagents = list("radium" = 8, "vitamin" = 3)
+
+/obj/item/reagent_containers/food/snacks/f13/mre/trash
+	bonus_reagents = list("silver_sulfadiazine" = 10, "tricordrazine" = 10, "vitamin" = 2, "radium" = 5)
+
+/obj/item/reagent_containers/food/snacks/f13/galette/trash
+	bonus_reagents = list("sodiumchloride" = 2, "sugar" = 2, "tricordrazine" = 2, "radium" = 5)
+
 //Grownable
 /*
 /obj/item/reagent_containers/food/snacks/grown/broc

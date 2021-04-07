@@ -56,7 +56,7 @@
 	fire()
 
 /obj/structure/campfire/proc/calc_light()
-	
+
 	if(fuel > 3000)
 		light_range = 8
 	else if(fuel > 2000)
@@ -100,6 +100,11 @@
 	update_icon()
 	burned = 0
 	burn_process()
+
+/obj/structure/campfire/bullet_act(obj/item/projectile/P)
+	if(istype(P, /obj/item/projectile/beam/laser))
+		fire()
+	..()
 
 /obj/structure/campfire/proc/burn_process()
 	var/turf/location = get_turf(src)

@@ -41,6 +41,11 @@
 		light() //honk
 	..()
 
+/obj/item/candle/bullet_act(obj/item/projectile/P)
+	if(istype(P, /obj/item/projectile/beam/laser) || !src.lit)
+		light()
+	..()
+
 /obj/item/candle/proc/light(show_message)
 	if(!src.lit)
 		src.lit = TRUE

@@ -628,3 +628,215 @@
 	if(prob(50))
 		M.emote(pick("twitch","scream","laugh"))
 	..()
+
+//хайль гидра
+
+/datum/reagent/drug/hydra
+	name = "Hydra"
+	id = "hydra"
+	description = "A powerful drug that heals damaged bones and other."
+	color = "#C8A5DC"
+	reagent_state = SOLID
+	overdose_threshold = 40
+	addiction_threshold = 25
+
+/datum/reagent/drug/hydra/on_mob_add(mob/living/L)
+	var/power = 3 * L.special._intelligence
+	L.adjustToxLoss(-0.5 * power, 0)
+	L.adjustOxyLoss(-1.4 * power, 0)
+	L.adjustBruteLoss(-1.2 * power, 0)
+	L.adjustFireLoss(-1.3 * power, 0)
+	..()
+
+/datum/reagent/drug/hydra/on_mob_delete(mob/living/L)
+	. = ..()
+
+/datum/reagent/drug/hydra/on_mob_life(mob/living/carbon/M)
+	if(prob(5))
+		to_chat(M, "<span class='notice'>You don't feel any pain!</span>")
+	..()
+	. = 1
+
+/datum/reagent/drug/hydra/overdose_process(mob/living/M)
+	if(prob(33))
+		M.Dizzy(2)
+		M.Jitter(2)
+		M.adjustBrainLoss(2*REM)
+	..()
+
+/datum/reagent/drug/hydra/addiction_act_stage1(mob/living/M)
+	if(prob(33))
+		M.Jitter(2)
+	..()
+
+/datum/reagent/drug/hydra/addiction_act_stage2(mob/living/M)
+	if(prob(33))
+		. = 1
+		M.Dizzy(3)
+		M.Jitter(3)
+	..()
+
+/datum/reagent/drug/hydra/addiction_act_stage3(mob/living/M)
+	if(prob(33))
+		M.adjustToxLoss(1*REM, 0)
+		M.adjustBrainLoss(2*REM)
+		. = 1
+		M.Dizzy(4)
+		M.Jitter(4)
+	..()
+
+/datum/reagent/drug/hydra/addiction_act_stage4(mob/living/M)
+	if(prob(33))
+		M.drop_all_held_items()
+		M.adjustToxLoss(1.5*REM, 0)
+		M.adjustBrainLoss(3*REM)
+		. = 1
+		M.Dizzy(5)
+		M.Jitter(5)
+	..()
+
+// READY-STEADY
+
+/datum/reagent/drug/steady
+	name = "Steady"
+	id = "steady"
+	description = "A combat drug made from unknown chemicals, it provides the user with a steady aim that makes it impossible to miss in sharpshooting, perfect for snipers lining themselves up for the perfect shot. Due to the potency and untested nature of the drug, however, it is also highly addictive"
+	color = "#C8A5DC"
+	reagent_state = LIQUID
+	overdose_threshold = 60
+	addiction_threshold = 35
+
+/datum/reagent/drug/steady/on_mob_add(mob/living/L)
+	. = ..()
+	L.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/view_range(null))
+
+/datum/reagent/drug/steady/on_mob_delete(mob/living/L)
+	. = ..()
+	L.mind.RemoveSpell(/obj/effect/proc_holder/spell/targeted/view_range)
+	L.client.change_view(CONFIG_GET(string/default_view))
+
+/datum/reagent/drug/hydra/on_mob_life(mob/living/carbon/M)
+	if(prob(5))
+		to_chat(M, "<span class='notice'>You feel way more powerful and athletic!</span>")
+	..()
+	. = 1
+
+/datum/reagent/drug/steady/overdose_process(mob/living/M)
+	if(prob(33))
+		M.Dizzy(2)
+		M.Jitter(2)
+		M.adjustBrainLoss(2*REM)
+	..()
+
+/datum/reagent/drug/steady/addiction_act_stage1(mob/living/M)
+	if(prob(33))
+		M.Jitter(2)
+	..()
+
+/datum/reagent/drug/steady/addiction_act_stage2(mob/living/M)
+	if(prob(33))
+		. = 1
+		M.Dizzy(3)
+		M.Jitter(3)
+	..()
+
+/datum/reagent/drug/steady/addiction_act_stage3(mob/living/M)
+	if(prob(33))
+		M.adjustToxLoss(1*REM, 0)
+		M.adjustBrainLoss(2*REM)
+		. = 1
+		M.Dizzy(4)
+		M.Jitter(4)
+	..()
+
+/datum/reagent/drug/steady/addiction_act_stage4(mob/living/M)
+	if(prob(33))
+		M.drop_all_held_items()
+		M.adjustToxLoss(2*REM, 0)
+		M.adjustBrainLoss(4*REM)
+		. = 1
+		M.Dizzy(5)
+		M.Jitter(5)
+	..()
+
+//РИКОШЕТ. НЕ ПРОБИЛ. ЕСТЬ ПРОБИТИЕ.
+
+/datum/reagent/drug/rebound
+	name = "rebound jija"
+	id = "rebound"
+	description = "A chemical compound that, when inhaled, vastly increases the user's reflexes and slows their perception of time. Carries a risk of addiction and extreme nausea and toxin damage if overdosed."
+	reagent_state = LIQUID
+	color = "#FAFAFA"
+	overdose_threshold = 20
+	metabolization_rate = 3 * REAGENTS_METABOLISM
+
+/datum/reagent/drug/rebound/on_mob_add(mob/M)
+	..()
+	if(isliving(M))
+		var/mob/living/L = M
+		L.add_trait(TRAIT_IGNORESLOWDOWN, id)
+
+/datum/reagent/drug/rebound/on_mob_delete(mob/M)
+	if(isliving(M))
+		var/mob/living/L = M
+		L.remove_trait(TRAIT_IGNORESLOWDOWN, id)
+	..()
+
+/datum/reagent/drug/rebound/on_mob_life(mob/living/carbon/M)
+	var/high_message = pick("You feel hyper.", "You feel like you need to go faster.", "You feel like you can run the world.")
+	if(prob(5))
+		to_chat(M, "<span class='notice'>[high_message]</span>")
+	M.Jitter(2)
+	M.set_drugginess(25)
+	if(prob(5))
+		M.emote(pick("twitch", "shiver"))
+	..()
+	. = 1
+
+/datum/reagent/drug/rebound/overdose_process(mob/living/M)
+	if(M.canmove && !ismovableatom(M.loc))
+		for(var/i in 1 to 4)
+			step(M, pick(GLOB.cardinals))
+	if(prob(20))
+		M.emote("laugh")
+	if(prob(33))
+		M.visible_message("<span class='danger'>[M]'s hands flip out and flail everywhere!</span>")
+		M.drop_all_held_items()
+	..()
+	M.adjustToxLoss(3, 0)
+	. = 1
+
+/datum/reagent/drug/rebound/addiction_act_stage1(mob/living/M)
+	M.Jitter(5)
+	if(prob(20))
+		M.emote(pick("twitch","drool","moan"))
+	..()
+
+/datum/reagent/drug/rebound/addiction_act_stage2(mob/living/M)
+	M.Jitter(20)
+	M.Dizzy(20)
+	if(prob(30))
+		M.emote(pick("twitch","drool","moan"))
+	..()
+
+/datum/reagent/drug/rebound/addiction_act_stage3(mob/living/M)
+	if(M.canmove && !ismovableatom(M.loc))
+		for(var/i = 0, i < 4, i++)
+			step(M, pick(GLOB.cardinals))
+	M.Jitter(15)
+	M.Dizzy(15)
+	if(prob(40))
+		M.emote(pick("twitch","drool","moan"))
+	..()
+
+/datum/reagent/drug/rebound/addiction_act_stage4(mob/living/carbon/human/M)
+	if(M.canmove && !ismovableatom(M.loc))
+		for(var/i = 0, i < 8, i++)
+			step(M, pick(GLOB.cardinals))
+	M.Jitter(20)
+	M.Dizzy(20)
+	M.adjustToxLoss(6, 0)
+	if(prob(50))
+		M.emote(pick("twitch","drool","moan"))
+	..()
+	. = 1

@@ -1668,7 +1668,7 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 		M.set_blurriness(0)
 	else if(eyes.eye_damage > 0)
 		M.adjust_eye_damage(-1)
-	M.adjustBrainLoss(-2*REM)
+	M.adjustBrainLoss(-1*REM)
 	if (prob(5))
 		to_chat(M, "<span class='notice'>You feel way more intelligent!</span>")
 	..()
@@ -1730,5 +1730,100 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	if(ishuman(M) && prob(5))
 		var/mob/living/carbon/human/H = M
 		H.vomit(10)
+	M.adjustBrainLoss(-4*REM)
+	..()
+	. = 1
+
+/datum/reagent/medicine/buffout
+	name = "Buffout Powder"
+	id = "buffout"
+	description = "A powerful drug that heals and increases the perception and intelligence of the user."
+	color = "#C8A5DC"
+	reagent_state = SOLID
+	overdose_threshold = 80
+	addiction_threshold = 30
+
+/datum/reagent/medicine/buffout/on_mob_add(mob/living/L)
+	. = ..()
+	L.throw_alert("buffout", /obj/screen/alert/buffout)
+	L.special.adjust(strength=2, agility=2, endurance=3)
+
+/datum/reagent/medicine/buffout/on_mob_delete(mob/living/L)
+	. = ..()
+	L.clear_alert("buffout")
+	L.special.adjust(strength=-2, agility=-2, endurance=-3)
+
+/datum/reagent/medicine/buffout/on_mob_life(mob/living/carbon/M)
+	if(prob(5))
+		to_chat(M, "<span class='notice'>You feel way more powerful and athletic!</span>")
+	..()
+	. = 1
+
+/datum/reagent/medicine/buffout/overdose_process(mob/living/M)
+	if(prob(33))
+		M.Dizzy(2)
+		M.Jitter(2)
+		M.adjustBrainLoss(2*REM)
+	..()
+
+/datum/reagent/medicine/buffout/addiction_act_stage1(mob/living/M)
+	if(prob(33))
+		M.Jitter(2)
+	..()
+
+/datum/reagent/medicine/buffout/addiction_act_stage2(mob/living/M)
+	if(prob(33))
+		. = 1
+		M.Dizzy(3)
+		M.Jitter(3)
+	..()
+
+/datum/reagent/medicine/buffout/addiction_act_stage3(mob/living/M)
+	if(prob(33))
+		M.adjustToxLoss(1*REM, 0)
+		M.adjustBrainLoss(2*REM)
+		. = 1
+		M.Dizzy(4)
+		M.Jitter(4)
+		M.special.adjust(strength=-2, agility=-2, endurance=-3)
+	..()
+
+/datum/reagent/medicine/buffout/addiction_act_stage4(mob/living/M)
+	if(prob(33))
+		M.drop_all_held_items()
+		M.adjustToxLoss(2*REM, 0)
+		M.adjustBrainLoss(4*REM)
+		. = 1
+		M.Dizzy(5)
+		M.Jitter(5)
+		M.special.adjust(strength=-4, agility=-4, endurance=-5)
+	..()
+
+//костыль для саквояжа//
+
+/datum/reagent/medicine/suckuaiage
+	name = "Doctor's Suitcase instruments"
+	id = "medcase"
+	description = null
+	reagent_state = SOLID
+	color = "#FAFAFA"
+	overdose_threshold = 50
+	metabolization_rate = 2 * REAGENTS_METABOLISM
+
+/datum/reagent/medicine/suckuaiage/on_mob_add(mob/living/M)
+	var/power = 3 * M.special._intelligence
+	M.adjustToxLoss(-3 * power, 0)
+	M.adjustOxyLoss(-4 * power, 0)
+	M.adjustBruteLoss(-4 * power, 0)
+	M.adjustFireLoss(-4 * power, 0)
+	..()
+
+/datum/reagent/medicine/suckuaiage/on_mob_delete(mob/living/M)
+	..()
+
+/datum/reagent/medicine/suckuaiage/on_mob_life(mob/living/carbon/M)
+	var/high_message = pick("Your wounds feel much better.", "Your wounds heal very quickly.", "You feel like you're ready to fight again.")
+	if(prob(5))
+		to_chat(M, "<span class='notice'>[high_message]</span>")
 	..()
 	. = 1

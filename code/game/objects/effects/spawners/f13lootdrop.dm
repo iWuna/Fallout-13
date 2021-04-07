@@ -454,6 +454,7 @@
 				/obj/item/reagent_containers/hypospray/combat,
 				/obj/item/clothing/glasses/hud/health/night,
 				///obj/item/disk/surgery/revival
+				/obj/item/reagent_containers/pill/patch/medcase
 				)
 
 /obj/effect/spawner/lootdrop/f13/medical/vault/meds  //no drugs, didn't add
@@ -483,7 +484,8 @@
 				/obj/item/reagent_containers/hypospray/medipen/stimpak,
 				/obj/item/reagent_containers/medspray/styptic,
 				/obj/item/reagent_containers/medspray/silver_sulf,
-				/obj/item/reagent_containers/medspray/sterilizine
+				/obj/item/reagent_containers/medspray/sterilizine,
+				/obj/item/reagent_containers/pill/patch/medcase
 				)
 
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug //remove equipment, has nothing on it
@@ -495,6 +497,10 @@
 				/obj/item/reagent_containers/pill/patch/turbo,
 				/obj/item/reagent_containers/pill/patch/healingpowder,
 				/obj/item/reagent_containers/pill/stimulant,
+				/obj/item/reagent_containers/pill/patch/steady,
+				/obj/item/reagent_containers/pill/patch/hydra,
+				/obj/item/reagent_containers/pill/patch/rebound,
+				/obj/item/storage/pill_bottle/chem_tin/buffout,
 				/obj/item/storage/pill_bottle/chem_tin/cateye,
 				/obj/item/reagent_containers/syringe/medx
 				)
@@ -972,7 +978,8 @@
 				/obj/item/gun/ballistic/automatic/bozar,
 				/obj/item/gun/energy/gammagun,
 				/obj/item/gun/ballistic/automatic/p90,
-				/obj/item/gun/energy/tesla_cannon
+				/obj/item/gun/energy/tesla_cannon,
+				/obj/item/gun/energy/laser/pistol/pewpew
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/unique //UNIQUE GUN

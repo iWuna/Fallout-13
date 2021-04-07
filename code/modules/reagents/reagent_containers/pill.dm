@@ -205,3 +205,9 @@
 	desc = "Таблетка содержащая токсин, инициирующий процесс мутации."
 	icon_state = "pill18"
 	list_reagents = list("nightkinmutationtoxin" = 5)
+
+/obj/item/reagent_containers/pill/buffout
+	name = "Buffout"
+	desc = "Highly advanced steroids. While in effect, they increase strength and reflexes. Very addictive."
+	icon_state = "buffout_pill"
+	list_reagents = list("buffout" = 10)

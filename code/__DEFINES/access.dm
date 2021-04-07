@@ -64,7 +64,7 @@
 #define ACCESS_WEAPONS 66 //Weapon authorization for secbots
 #define ACCESS_NETWORK 67 //NTnet diagnostics/monitoring software
 #define ACCESS_CLONING 68 //Cloning room and clone pod ejection
-
+#define ACCESS_CLADMEN 69
 	//BEGIN CENTCOM ACCESS
 	/*Should leave plenty of room if we need to add more access levels.
 	Mostly for admin fun times.*/

@@ -115,7 +115,7 @@
 	employer = "Школа гулей"
 	employer_icon = "employer_00.png"
 	need_message = "Листы бумаги - 20 шт."
-	target_items = list(/obj/item/weapon/paper = 20)
+	target_items = list(/obj/item/paper = 20)
 	caps_reward = 78
 
 /datum/bounty_quest/faction/wasteland/qst_10
@@ -123,7 +123,7 @@
 	employer = "Беженцы"
 	employer_icon = "employer_08.png"
 	need_message = "Кукуруза - 10 шт."
-	target_items = list(/obj/item/weapon/reagent_containers/food/snacks/grown/corn = 10)
+	target_items = list(/obj/item/reagent_containers/food/snacks/grown/corn = 10)
 	caps_reward = 59
 
 /datum/bounty_quest/faction/wasteland/qst_11
@@ -131,7 +131,7 @@
 	employer = "Беженцы"
 	employer_icon = "employer_08.png"
 	need_message = "Кукуруза - 30 шт."
-	target_items = list(/obj/item/weapon/reagent_containers/food/snacks/grown/corn = 30)
+	target_items = list(/obj/item/reagent_containers/food/snacks/grown/corn = 30)
 	caps_reward = 204
 
 /datum/bounty_quest/faction/wasteland/qst_12
@@ -139,7 +139,7 @@
 	employer = "Беженцы"
 	employer_icon = "employer_08.png"
 	need_message = "Морковка - 10 шт."
-	target_items = list(/obj/item/weapon/reagent_containers/food/snacks/grown/carrot = 10)
+	target_items = list(/obj/item/reagent_containers/food/snacks/grown/carrot = 10)
 	caps_reward = 75
 
 /datum/bounty_quest/faction/wasteland/qst_13
@@ -147,7 +147,7 @@
 	employer = "Беженцы"
 	employer_icon = "employer_00.png"
 	need_message = "Морковка - 30 шт."
-	target_items = list(/obj/item/weapon/reagent_containers/food/snacks/grown/carrot = 30)
+	target_items = list(/obj/item/reagent_containers/food/snacks/grown/carrot = 30)
 	caps_reward = 302
 
 /datum/bounty_quest/faction/wasteland/qst_14
@@ -155,7 +155,7 @@
 	employer = "Приют Юный Рейдер"
 	employer_icon = "employer_00.png"
 	need_message = "Лист Канабиса - 10 шт."
-	target_items = list(/obj/item/weapon/reagent_containers/food/snacks/grown/cannabis = 10)
+	target_items = list(/obj/item/reagent_containers/food/snacks/grown/cannabis = 10)
 	caps_reward = 302
 
 /datum/bounty_quest/faction/wasteland/qst_15
@@ -163,7 +163,7 @@
 	employer = "Приют Юный Рейдер"
 	employer_icon = "employer_00.png"
 	need_message = "Лист Канабиса - 30 шт."
-	target_items = list(/obj/item/weapon/reagent_containers/food/snacks/grown/cannabis = 30)
+	target_items = list(/obj/item/reagent_containers/food/snacks/grown/cannabis = 30)
 	caps_reward = 1203
 
 /datum/bounty_quest/faction/wasteland/qst_16
@@ -171,7 +171,7 @@
 	employer = "Приют Юный Рейдер"
 	employer_icon = "employer_00.png"
 	need_message = "Лист Табака - 10 шт."
-	target_items = list(/obj/item/weapon/reagent_containers/food/snacks/grown/tobacco = 10)
+	target_items = list(/obj/item/reagent_containers/food/snacks/grown/tobacco = 10)
 	caps_reward = 167
 
 /datum/bounty_quest/faction/wasteland/qst_17
@@ -187,7 +187,7 @@
 	employer = "Мусорщики"
 	employer_icon = "employer_00.png"
 	need_message = "Осколки стекла - 10 шт."
-	target_items = list(/obj/item/weapon/shard = 10)
+	target_items = list(/obj/item/shard = 10)
 	caps_reward = 91
 
 /datum/bounty_quest/faction/wasteland/qst_19
@@ -195,7 +195,7 @@
 	employer = "Врачи Наварро"
 	employer_icon = "employer_00.png"
 	need_message = "Скорпионы - 2 шт."
-	target_items = list(/mob/living/simple_animal/hostile/poison/rad_scorpion/black  = 2)
+	target_items = list(/mob/living/simple_animal/hostile/radscorpion  = 2)
 	caps_reward = 152
 
 /datum/bounty_quest/faction/wasteland/qst_20

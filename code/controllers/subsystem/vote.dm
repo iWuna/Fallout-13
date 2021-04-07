@@ -16,6 +16,7 @@ SUBSYSTEM_DEF(vote)
 	var/list/voting = list()
 	var/list/generated_actions = list()
 	var/vote_sound = 'sound/f13/mysterious_stranger.ogg'
+	var/vote_sound_end = 'sound/f13/stranger_vanish.ogg'
 	var/min_restart_time = 180 MINUTES
 	var/min_transfer_time = 180 MINUTES
 
@@ -147,6 +148,8 @@ SUBSYSTEM_DEF(vote)
 		SSshuttle.emergency.request()
 		log_admin("Crew transfer shuttle called by players vote.")
 		message_admins("<span class='adminnotice'>Crew transfer shuttle called by players vote.</span>")
+
+	world << sound(vote_sound_end, repeat = 0, wait = 0, volume = 85, channel = 12)
 
 	return .
 

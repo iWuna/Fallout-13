@@ -366,8 +366,6 @@ Raider
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
 		/obj/item/ammo_box/magazine/m10mm_adv=2)
 
-/obj/item/stealthboy/makeshift
-
 /datum/job/wasteland/f13wastelander
 	title = "Wastelander"
 	flag = F13WASTELANDER
@@ -504,8 +502,6 @@ Raider
 	l_hand = /obj/item/shield/legion/buckler
 	backpack_contents = list(
         /obj/item/claymore/machete/reinforced=1)
-
-
 
 /datum/outfit/loadout/slave
 	name = "NCR Citizen"

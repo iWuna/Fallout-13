@@ -277,3 +277,12 @@
 /obj/item/storage/pill_bottle/chem_tin/cateye/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/cateye(src)
+
+/obj/item/storage/pill_bottle/chem_tin/buffout
+	name = "Buffout"
+	icon_state = "pill_canister_buffout"
+	desc = "Contains pills used to increase Strength, Agility and Endurance."
+
+/obj/item/storage/pill_bottle/chem_tin/buffout/PopulateContents()
+	for(var/i in 1 to 5)
+		new /obj/item/reagent_containers/pill/buffout(src)

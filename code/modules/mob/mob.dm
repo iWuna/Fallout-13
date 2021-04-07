@@ -887,7 +887,7 @@
 /mob/proc/update_mouse_pointer()
 	if (!client)
 		return
-	client.mouse_pointer_icon = initial(client.mouse_pointer_icon)
+	client.mouse_pointer_icon = 'icons/misc/cursors.dmi'
 	if (ismecha(loc))
 		var/obj/mecha/M = loc
 		if(M.mouse_pointer)

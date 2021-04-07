@@ -33,6 +33,7 @@
 	var/mouseControlObject = null
 	var/middragtime = 0
 	var/atom/middragatom
+	mouse_pointer_icon = 'icons/misc/cursors.dmi'
 
 /client/MouseDown(object, location, control, params)
 	if (mouse_down_icon)

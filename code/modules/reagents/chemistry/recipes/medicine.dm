@@ -282,3 +282,10 @@
 	required_reagents = list("phenol" = 1, "antitoxin" = 1, "acetone" = 1)
 	required_temp = 255
 
+/datum/chemical_reaction/buffout
+	name = "Buffout"
+	id = "buffout"
+	results = list("buffout" = 2)
+	required_reagents = list("jet" = 1, "ephedrine" = 1, "morphine" = 4)
+	required_catalysts = list("mercury" = 1)
+	required_temp = 360

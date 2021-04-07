@@ -136,8 +136,9 @@
 #define EVENTCOVEN		(1<<6)
 #define F13LOCUSTCAPTAIN	(1<<7)
 #define F13LOCUST		(1<<8)
+#define F13COUREER		(1<<9)
 
-#define ENCLAVE			(1<<9)
+#define ENCLAVE			(1<<8)
 
 #define F13USCOMMANDER	(1<<0)
 #define F13USMEDIC		(1<<1)

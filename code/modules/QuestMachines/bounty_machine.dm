@@ -9,7 +9,7 @@
 	icon = 'icons/fallout/machines/terminals.dmi'
 	icon_state = "bounty"
 	anchored = 1
-	density = 0
+	density = 1
 	verb_say = "beeps"
 	verb_ask = "beeps"
 	verb_exclaim = "beeps"
@@ -125,7 +125,7 @@
 		qdel(Itm)
 
 	// 2. Spawn reward
-	var/obj/item/stack/caps/C = new /obj/item/stack/caps
+	var/obj/item/stack/f13Cash/bottle_cap/C = new /obj/item/stack/f13Cash/bottle_cap
 	C.add(current_quest.caps_reward - 1)
 	C.forceMove(connected_pod.loc)
 

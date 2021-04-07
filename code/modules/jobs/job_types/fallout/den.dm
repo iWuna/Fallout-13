@@ -347,7 +347,7 @@ Mayor
 	l_hand = /obj/item/nullrod
 	r_hand = /obj/item/gun/energy/laser/plasma/pistol
 	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/ec = 3,	
+		/obj/item/stock_parts/cell/ammo/ec = 3,
 		)
 
 /datum/job/den/f13preacher/after_spawn(mob/living/H, mob/M)
@@ -444,7 +444,7 @@ Mayor
 	selection_color = "#dcba97"
 	exp_requirements = 12
 	exp_type = EXP_TYPE_CREW
-	
+
 	department_head = list("Mayor")
 	outfit = /datum/outfit/job/den/f13barkeep
 
@@ -759,3 +759,58 @@ Mayor
 
 /datum/job/den/f13shopkeeper/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Master Gunsmith")
+
+/*--------------------------------------------------------------*/
+
+/datum/job/wasteland/f13coureer
+	title = "Courier"
+	flag = F13COUREER
+	faction = "Town"
+	total_positions = 1
+	spawn_positions = 1
+	description = "As coureer, your buisiness just delivery parcels."
+	supervisors = "Oregon Express"
+	selection_color = "#dcba97"
+	outfit = /datum/outfit/job/wasteland/f13coureer
+	department_head = list("Sheriff")
+	access = list(ACCESS_CLADMEN)
+	minimal_access = list(ACCESS_CLADMEN)
+	exp_requirements = 1000
+	exp_type = EXP_TYPE_CREW
+
+/datum/outfit/job/wasteland/f13coureer
+	name = "Courier"
+	jobtype = /datum/job/wasteland/f13coureer
+	ears = /obj/item/radio/headset/headset_den
+	uniform = /obj/item/clothing/under/f13/lumberjack
+	shoes =  /obj/item/clothing/shoes/laceup
+
+/datum/outfit/job/wasteland/f13coureer/pre_equip(mob/living/carbon/human/H)
+	..()
+	r_hand = pick(
+		/obj/item/claymore/machete/pipe,
+		/obj/item/switchblade,
+		/obj/item/kitchen/knife)
+	uniform = pick(
+		/obj/item/clothing/under/f13/brahminm,
+		/obj/item/clothing/under/f13/machinist,
+		/obj/item/clothing/under/f13/lumberjack,
+		/obj/item/clothing/under/f13/roving)
+	suit = pick(
+		/obj/item/clothing/suit/armor/f13/kit,
+		/obj/item/clothing/suit/armor/f13/leatherarmor)
+	l_pocket = 	/obj/item/reagent_containers/food/drinks/flask
+	r_pocket = /obj/item/flashlight/flare
+	belt = 	/obj/item/kitchen/knife/combat/survival
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
+		/obj/item/reagent_containers/pill/radx=1,
+		/obj/item/storage/bag/money/small/wastelander=1)
+	suit_store = pick(
+	/obj/item/gun/ballistic/revolver/detective,
+	/obj/item/gun/ballistic/shotgun/remington,
+	/obj/item/gun/ballistic/revolver/zipgun,
+	/obj/item/gun/ballistic/revolver/pipe_rifle)
+	id = /obj/item/card/id/silver
+
+/*--------------------------------------------------------------*/

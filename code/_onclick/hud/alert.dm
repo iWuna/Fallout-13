@@ -218,6 +218,11 @@ or something covering your eyes."
 	desc = "You feel smarter and more attentive than usual (I: +2, P: +2)"
 	icon_state = "drugged"
 
+/obj/screen/alert/buffout
+	name = "Athletic"
+	desc = "You feel stronger and more athletic than usual (P: +2, A: +2, E: +3)"
+	icon_state = "drugged"
+
 /obj/screen/alert/drunk
 	name = "Drunk"
 	desc = "All that alcohol you've been drinking is impairing your speech, motor skills, and mental cognition. Make sure to act like it."

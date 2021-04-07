@@ -496,3 +496,20 @@
 	ammo_x_offset = 3
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
+
+/obj/item/gun/energy/laser/pistol/pewpew
+	name = "\improper pew-pew"
+	desc = "A basic energy-based laser gun that fires concentrated beams of light."
+	icon_state = "pewpew"
+	item_state = "laser-pistol"
+	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
+	w_class = WEIGHT_CLASS_NORMAL
+	fire_delay = 1
+	burst_delay = 4
+	can_scope = TRUE
+	scopestate = "AEP7_scope"
+	scope_x_offset = 7
+	scope_y_offset = 22
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/pewpew)
+	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	slot_flags = ITEM_SLOT_BELT

@@ -84,7 +84,16 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	boozepwr = 25
 	taste_description = "piss water"
 	glass_name = "glass of beer"
-	glass_desc = "A freezing pint of beer."
+	glass_desc = "A freezing pint of beer. S: +1 C: +1 I: -1"
+
+/datum/reagent/consumable/ethanol/beer/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=1, charisma=1, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/beer/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-1, charisma=-1, intelligence=1)
+	..()
+
 
 /datum/reagent/consumable/ethanol/arnold_palmer
 	name = "Arnold Palmer"
@@ -144,14 +153,23 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/whiskey
 	name = "Whiskey"
 	id = "whiskey"
-	description = "A superb and well-aged single-malt whiskey. Damn."
+	description = "A superb and well-aged single-malt whiskey. Damn. S: +1 C: +1 I: -1"
 	color = "#664300" // rgb: 102, 67, 0
 	boozepwr = 75
 	taste_description = "molasses"
 	glass_icon_state = "whiskeyglass"
 	glass_name = "glass of whiskey"
-	glass_desc = "The silky, smokey whiskey goodness inside the glass makes the drink look very classy."
+	glass_desc = "The silky, smokey whiskey goodness inside the glass makes the drink look very classy. S: +1 C: +1 I: -1"
 	shot_glass_icon_state = "shotglassbrown"
+
+/datum/reagent/consumable/ethanol/whiskey/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=1, charisma=1, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/whiskey/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-1, charisma=-1, intelligence=1)
+	..()
+
 
 /datum/reagent/consumable/ethanol/brave_bull
 	name = "Brave Bull"
@@ -257,7 +275,15 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "an alcoholic christmas tree"
 	glass_icon_state = "ginvodkaglass"
 	glass_name = "glass of gin"
-	glass_desc = "A crystal clear glass of Griffeater gin."
+	glass_desc = "A crystal clear glass of Griffeater gin. S: +1 A: +1 I: -1"
+
+/datum/reagent/consumable/ethanol/gin/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=1, agility=1, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/gin/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-1, agility=-1, intelligence=1)
+	..()
 
 /datum/reagent/consumable/ethanol/rum
 	name = "Rum"
@@ -268,8 +294,16 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "spiked butterscotch"
 	glass_icon_state = "rumglass"
 	glass_name = "glass of rum"
-	glass_desc = "Now you want to Pray for a pirate suit, don't you?"
+	glass_desc = "Now you want to Pray for a pirate suit, don't you? S: +1 A: +1 I: -1"
 	shot_glass_icon_state = "shotglassbrown"
+
+/datum/reagent/consumable/ethanol/rum/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=1, agility=1, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/rum/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-1, agility=-1, intelligence=1)
+	..()
 
 /datum/reagent/consumable/ethanol/tequila
 	name = "Tequila"
@@ -280,8 +314,16 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "paint stripper"
 	glass_icon_state = "tequilaglass"
 	glass_name = "glass of tequila"
-	glass_desc = "Now all that's missing is the weird colored shades!"
+	glass_desc = "Now all that's missing is the weird colored shades! S: +2 C: +1 I: -2"
 	shot_glass_icon_state = "shotglassgold"
+
+/datum/reagent/consumable/ethanol/tequila/on_mob_life(mob/living/carbon/M)
+	M.special.adjust(strength=2, charisma=1, intelligence=-2)
+	..()
+
+/datum/reagent/consumable/ethanol/tequila/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-2, charisma=-1, intelligence=2)
+	..()
 
 /datum/reagent/consumable/ethanol/vermouth
 	name = "Champagne"
@@ -292,8 +334,16 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "fizzy alcohol"
 	glass_icon_state = "patronglass"
 	glass_name = "glass of champagne"
-	glass_desc = "Classical party fizz!"
+	glass_desc = "Classical party fizz! C: +2 A: +2 I: -1"
 	shot_glass_icon_state = "shotglassclear"
+
+/datum/reagent/consumable/ethanol/vermouth/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(charisma=2, agility=2, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/vermouth/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(charisma=-2, agility=-2, intelligence=1)
+	..()
 
 /datum/reagent/consumable/ethanol/jack_rose
 	name = "Jack Rose"
@@ -340,8 +390,16 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "bitter sweetness"
 	glass_icon_state = "wineglass"
 	glass_name = "glass of wine"
-	glass_desc = "A very classy looking drink."
+	glass_desc = "A very classy looking drink. S: +1 C: +1 I: -1"
 	shot_glass_icon_state = "shotglassred"
+
+/datum/reagent/consumable/ethanol/wine/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=1, charisma=1, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/wine/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-1, charisma=-1, intelligence=1)
+	..()
 
 /datum/reagent/consumable/ethanol/lizardwine
 	name = "Lizard wine"
@@ -371,8 +429,16 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "angry and irish"
 	glass_icon_state = "cognacglass"
 	glass_name = "glass of cognac"
-	glass_desc = "Damn, you feel like some kind of French aristocrat just by holding this."
+	glass_desc = "Damn, you feel like some kind of French aristocrat just by holding this. S: +1 C: +1 I: -1"
 	shot_glass_icon_state = "shotglassbrown"
+
+/datum/reagent/consumable/ethanol/cognac/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=1, charisma=1, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/cognac/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-1, charisma=-1, intelligence=1)
+	..()
 
 /datum/reagent/consumable/ethanol/absinthe
 	name = "Absinthe"
@@ -383,12 +449,20 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "death and licorice"
 	glass_icon_state = "absinthe"
 	glass_name = "glass of absinthe"
-	glass_desc = "It's as strong as it smells."
+	glass_desc = "It's as strong as it smells. P: +1 C: +1 I: -1"
 	shot_glass_icon_state = "shotglassgreen"
 
 /datum/reagent/consumable/ethanol/absinthe/on_mob_life(mob/living/carbon/M)
 	if(prob(10) && !M.has_trait(TRAIT_ALCOHOL_TOLERANCE))
 		M.hallucination += 4 //Reference to the urban myth
+	..()
+
+/datum/reagent/consumable/ethanol/absinthe/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(perception=1, charisma=1, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/absinthe/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(perception=-1, charisma=-1, intelligence=1)
 	..()
 
 /datum/reagent/consumable/ethanol/hooch
@@ -400,8 +474,15 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "pure resignation"
 	glass_icon_state = "glass_brown2"
 	glass_name = "Hooch"
-	glass_desc = "You've really hit rock bottom now... your liver packed its bags and left last night."
+	glass_desc = "You've really hit rock bottom now... your liver packed its bags and left last night. S: +2 C: +2 I: -2"
 
+/datum/reagent/consumable/ethanol/hooch/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=2, charisma=2, intelligence=-2)
+	..()
+
+/datum/reagent/consumable/ethanol/hooch/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-2, charisma=-2, intelligence=2)
+	..()
 
 /datum/reagent/consumable/ethanol/ale
 	name = "Ale"
@@ -412,7 +493,15 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "hearty barley ale"
 	glass_icon_state = "aleglass"
 	glass_name = "glass of ale"
-	glass_desc = "A freezing pint of delicious Ale."
+	glass_desc = "A freezing pint of delicious Ale. S: +1 C: +1 I: -1"
+
+/datum/reagent/consumable/ethanol/ale/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=1, charisma=1, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/ale/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-1, charisma=-1, intelligence=1)
+	..()
 
 /datum/reagent/consumable/ethanol/goldschlager
 	name = "Goldschlager"
@@ -424,8 +513,16 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "burning cinnamon"
 	glass_icon_state = "goldschlagerglass"
 	glass_name = "glass of goldschlager"
-	glass_desc = "An extremely sweet glittering beverage."
+	glass_desc = "An extremely sweet glittering beverage. S: +1 C: +1 I: -1"
 	shot_glass_icon_state = "shotglassgold"
+
+/datum/reagent/consumable/ethanol/goldschlager/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=1, charisma=1, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/goldschlager/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-1, charisma=-1, intelligence=1)
+	..()
 
 /datum/reagent/consumable/ethanol/patron
 	name = "Patron"
@@ -437,8 +534,16 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "smooth tequila"
 	glass_icon_state = "patronglass"
 	glass_name = "glass of patron"
-	glass_desc = "Drinking patron in the bar, Boss of the World."
+	glass_desc = "Drinking patron in the bar, Boss of the World. S: +1 C: +1 I: -1"
 	shot_glass_icon_state = "shotglassclear"
+
+/datum/reagent/consumable/ethanol/patron/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=1, charisma=1, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/patron/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-1, charisma=-1, intelligence=1)
+	..()
 
 /datum/reagent/consumable/ethanol/gintonic
 	name = "Gin and Tonic"
@@ -450,7 +555,15 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "bittersweet tonic and vibrant herbal zest"
 	glass_icon_state = "gintonicglass"
 	glass_name = "Gin and Tonic"
-	glass_desc = "A mild but still great cocktail. Drink up, like a true Englishman."
+	glass_desc = "A mild but still great cocktail. Drink up, like a true Englishman. S: +1 C: +1 I: -1"
+
+/datum/reagent/consumable/ethanol/gintonic/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=1, charisma=1, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/gintonic/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-1, charisma=-1, intelligence=1)
+	..()
 
 /datum/reagent/consumable/ethanol/rum_coke
 	name = "Rum and Nuka"
@@ -462,7 +575,16 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	color = "#3E1B00"
 	glass_icon_state = "whiskeycolaglass"
 	glass_name = "Rum and Nuka"
-	glass_desc = "The classic go-to of fratboys."
+	glass_desc = "The classic go-to of fratboys. S: +1 I: -1"
+
+/datum/reagent/consumable/ethanol/rum_coke/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=1, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/rum_coke/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-1, intelligence=1)
+	..()
+
 
 /datum/reagent/consumable/ethanol/cuba_libre
 	name = "Nuka Libre"
@@ -474,7 +596,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "a refreshing marriage of citrus and rum"
 	glass_icon_state = "cubalibreglass"
 	glass_name = "Nuka Libre"
-	glass_desc = "A classic mix of rum, Nuka-Cola, and lime."
+	glass_desc = "A classic mix of rum, Nuka-Cola, and lime. S: +1 C: +1 I: -1"
 
 /datum/reagent/consumable/ethanol/cuba_libre/on_mob_life(mob/living/carbon/M)
 	if(M.mind && M.mind.has_antag_datum(/datum/antagonist/rev)) //Cuba Libre, the traditional drink of revolutions! Heals revolutionaries.
@@ -485,17 +607,33 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		. = 1
 	return ..() || .
 
+/datum/reagent/consumable/ethanol/cuba_libre/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=1, charisma=1, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/cuba_libre/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-1, charisma=-1, intelligence=1)
+	..()
+
 /datum/reagent/consumable/ethanol/whiskey_cola
 	name = "Whiskey Nuka"
 	id = "whiskeycola"
-	description = "Whiskey, mixed with Nuka-Cola. Surprisingly refreshing."
+	description = "Whiskey, mixed with Nuka-Cola. Surprisingly refreshing. S: +1 C: +1 I: -1"
 	color = "#3E1B00" // rgb: 62, 27, 0
 	boozepwr = 70
 	quality = DRINK_NICE
 	taste_description = "Nuka Cola"
 	glass_icon_state = "whiskeycolaglass"
 	glass_name = "whiskey cola"
-	glass_desc = "An innocent-looking mixture of Nuka-Cola and Whiskey."
+	glass_desc = "An innocent-looking mixture of Nuka-Cola and Whiskey. S: +1 C: +1 I: -1"
+
+/datum/reagent/consumable/ethanol/whiskey_cola/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=1, charisma=1, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/whiskey_cola/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-1, charisma=-1, intelligence=1)
+	..()
 
 /datum/reagent/consumable/ethanol/martini
 	name = "Classic Martini"
@@ -507,7 +645,15 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "a drinkable ice cube infused with an evergreen forest"
 	glass_icon_state = "martiniglass"
 	glass_name = "Classic Martini"
-	glass_desc = "Damn, the bartender even stirred it, not shook it."
+	glass_desc = "Damn, the bartender even stirred it, not shook it. S: +2 E: +3 I: -1"
+
+/datum/reagent/consumable/ethanol/martini/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=2, endurance=3, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/martini/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-2, endurance=-3, intelligence=1)
+	..()
 
 /datum/reagent/consumable/ethanol/vodkamartini
 	name = "Vodka Martini"
@@ -519,7 +665,15 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "a blank slate, with the mildest hint of sweet greenery"
 	glass_icon_state = "martiniglass"
 	glass_name = "Vodka martini"
-	glass_desc ="A bastardisation of the classic martini. Still great."
+	glass_desc ="A bastardisation of the classic martini. Still great. S: +2 E: +3 I: -1"
+
+/datum/reagent/consumable/ethanol/vodkamartini/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=2, endurance=3, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/vodkamartini/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-2, endurance=-3, intelligence=1)
+	..()
 
 /datum/reagent/consumable/ethanol/white_russian
 	name = "White Russian"
@@ -531,7 +685,15 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "sweet coffee liqueur and cream"
 	glass_icon_state = "whiterussianglass"
 	glass_name = "White Russian"
-	glass_desc = "A very nice looking drink. But that's just, like, your opinion, man."
+	glass_desc = "A very nice looking drink. But that's just, like, your opinion, man. S: +1 C: +1 I: -1"
+
+/datum/reagent/consumable/ethanol/white_russian/on_mob_add(mob/living/carbon/M)
+	M.special.adjust(strength=1, charisma=1, intelligence=-1)
+	..()
+
+/datum/reagent/consumable/ethanol/white_russian/on_mob_delete(mob/living/carbon/M)
+	M.special.adjust(strength=-1, charisma=-1, intelligence=1)
+	..()
 
 /datum/reagent/consumable/ethanol/screwdrivercocktail
 	name = "Screwdriver"
@@ -692,7 +854,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_name = "Black Russian"
 	glass_desc = "For the lactose-intolerant. Still as classy as a White Russian."
 
-
 /datum/reagent/consumable/ethanol/manhattan
 	name = "Manhattan"
 	id = "manhattan"
@@ -777,7 +938,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_name = "vodka and tonic"
 	glass_desc = "For when a gin and tonic isn't Russian enough."
 
-
 /datum/reagent/consumable/ethanol/ginfizz
 	name = "Gin Fizz"
 	id = "ginfizz"
@@ -789,7 +949,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_icon_state = "ginfizzglass"
 	glass_name = "gin fizz"
 	glass_desc = "Refreshingly lemony, deliciously dry."
-
 
 /datum/reagent/consumable/ethanol/bahama_mama
 	name = "Bahama Mama"

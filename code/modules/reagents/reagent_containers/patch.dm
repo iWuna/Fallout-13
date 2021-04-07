@@ -76,15 +76,44 @@
 	self_delay = 0
 
 /obj/item/reagent_containers/pill/patch/voodoo
-    name = "Voodoo"
-    desc = "A tribal concoction, made from the left-over byproducts of various critters. It imbues the user with greater agility and a sense of invincibility."
-    list_reagents = list("ephedrine" = 5, "coffee" = 30, "mine_salve" = 5)
-    icon_state = "Voodoo"
-    self_delay = 0
+	name = "Voodoo"
+	desc = "A tribal concoction, made from the left-over byproducts of various critters. It imbues the user with greater agility and a sense of invincibility."
+	list_reagents = list("ephedrine" = 5, "coffee" = 30, "mine_salve" = 5)
+	icon_state = "Voodoo"
+	self_delay = 0
 
 /obj/item/reagent_containers/pill/patch/coyotechew
-    name = "coyote tobacco chew"
-    desc = "Nicotiana attenuata, colloquially known as coyote tobacco. The plant is native to and grows wild in the southwestern United States and Mexico."
-    list_reagents = list("salbutamol" = 0.15, "nicotine" = 0.24, "antihol" = 5)
-    icon_state = "bandaid_chew"
-    self_delay = 30
+	name = "coyote tobacco chew"
+	desc = "Nicotiana attenuata, colloquially known as coyote tobacco. The plant is native to and grows wild in the southwestern United States and Mexico."
+	list_reagents = list("salbutamol" = 0.15, "nicotine" = 0.24, "antihol" = 5)
+	icon_state = "bandaid_chew"
+	self_delay = 30
+
+/obj/item/reagent_containers/pill/patch/medcase
+	name = "Doctor's Suitcase"
+	desc = "A field surgery kit that will help heal some wounds."
+	list_reagents = list("medcase" = 10)
+	icon_state = "suckuaiage"
+	self_delay = 100
+
+/obj/item/reagent_containers/pill/patch/steady
+	name = "Steady"
+	desc = "A combat drug made from unknown chemicals, it provides the user with a steady aim that makes it impossible to miss in sharpshooting, perfect for snipers lining themselves up for the perfect shot. Due to the potency and untested nature of the drug, however, it is also highly addictive"
+	list_reagents = list("steady" = 20)
+	icon_state = "steady"
+	volume = 5
+	self_delay = 40
+
+/obj/item/reagent_containers/pill/patch/hydra
+	name = "Hydra"
+	desc = "Hydra is a drug developed from antivenom. Due to the Legion's disapproval of using modern medicine, some Legionaries attempted to develop a different means to help them heal damaged limbs. To do that, they combined cave fungus, nightstalker blood and the poison from a radscorpion poison gland with antivenom before use. This resulted in the development of Hydra, a curative agent that both anesthetizes and restores crippled limbs over time."
+	list_reagents = list("hydra" = 20, "legion_medx" = 5)
+	icon_state = "hydra"
+	self_delay = 20
+
+/obj/item/reagent_containers/pill/patch/rebound
+	name = "Rebound"
+	desc = "Rebound appears as a metal hip flask filled with liquid, and a pair of glass vials of pre-War drugs taped to the side, which flows up through tubes into the mouth of the flask. A needle on the top administers the drug cocktail, causing a steady rush of energy rather than an instant energy rush."
+	list_reagents = list("rebound" = 20)
+	icon_state = "rebound"
+	self_delay = 40

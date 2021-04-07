@@ -40,11 +40,14 @@
 
 	XP = 15
 
-/mob/living/simple_animal/hostile/ghoul/Initialize()
+	var/multiple_sprites = TRUE
+
+/mob/living/simple_animal/hostile/ghoul/New()
 	. = ..()
-	icon_state = initial(icon_state) + "-[rand(1,10)]"
-	icon_living = icon_state
-	icon_dead = icon_living + "_d"
+	if(multiple_sprites)
+		icon_state = initial(icon_state) + "-[rand(1,10)]"
+		icon_living = icon_state
+		icon_dead = icon_living + "_d"
 
 /mob/living/simple_animal/hostile/ghoul/reaver/Aggro()
 	..()
@@ -63,6 +66,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 15
 	melee_damage_upper = 15
+	multiple_sprites = FALSE
 
 /mob/living/simple_animal/hostile/ghoul/frozenreaver
 	name = "frozen ghoul reaver"
@@ -77,6 +81,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 15
 	melee_damage_upper = 15
+	multiple_sprites = FALSE
 
 /mob/living/simple_animal/hostile/ghoul/glowing
 	name = "glowing ghoul"
@@ -135,6 +140,7 @@
 	harm_intent_damage = 10
 	melee_damage_lower = 20
 	melee_damage_upper = 20
+	multiple_sprites = FALSE
 
 /mob/living/simple_animal/hostile/ghoul/frozen/Initialize()
 	. = ..()
@@ -163,6 +169,7 @@
 	harm_intent_damage = 10
 	melee_damage_lower = 20
 	melee_damage_upper = 20
+	multiple_sprites = FALSE
 
 /mob/living/simple_animal/hostile/ghoul/hot/Initialize()
 	. = ..()
@@ -180,7 +187,7 @@
 /mob/living/simple_animal/hostile/ghoul/soldier
 	name = "Ghoul Soldier"
 	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
-	icon = 'icons/mob/wastemobs.dmi'
+	icon = 'icons/mob/ghouls.dmi'
 	icon_state = "soldier_ghoul"
 	icon_living = "soldier_ghoul"
 	icon_dead = "soldier_ghoul_d"
@@ -188,10 +195,17 @@
 	maxHealth = 90
 	health = 90
 
+/mob/living/simple_animal/hostile/ghoul/soldier/New()
+	. = ..()
+	if(multiple_sprites)
+		icon_state = initial(icon_state) + "-[rand(1,10)]"
+		icon_living = icon_state
+		icon_dead = icon_living + "_d"
+
 /mob/living/simple_animal/hostile/ghoul/soldier/armored
 	name = "Armored Ghoul Soldier"
 	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
-	icon = 'icons/mob/wastemobs.dmi'
+	icon = 'icons/mob/ghouls.dmi'
 	icon_state = "soldier_ghoul_a"
 	icon_living = "soldier_ghoul_a"
 	icon_dead = "soldier_ghoul_a_d"
@@ -202,7 +216,7 @@
 /mob/living/simple_animal/hostile/ghoul/scorched
 	name = "Scorched Ghoul Soldier"
 	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
-	icon = 'icons/mob/wastemobs.dmi'
+	icon = 'icons/mob/ghouls.dmi'
 	icon_state = "scorched_m"
 	icon_living = "scorched_m"
 	icon_dead = "scorched_m_d"
@@ -224,11 +238,17 @@
 	attacktext = "punches"
 	attack_sound = "punch"
 
+/mob/living/simple_animal/hostile/ghoul/scorched/New()
+	. = ..()
+	if(multiple_sprites)
+		icon_state = initial(icon_state) + "-[rand(1,5)]"
+		icon_living = icon_state
+		icon_dead = icon_living + "_d"
 
 /mob/living/simple_animal/hostile/ghoul/scorched/ranged
 	name = "Ranged Ghoul Solder"
 	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
-	icon = 'icons/mob/wastemobs.dmi'
+	icon = 'icons/mob/ghouls.dmi'
 	icon_state = "scorched_r"
 	icon_living = "scorched_r"
 	icon_dead = "scorched_r_d"
