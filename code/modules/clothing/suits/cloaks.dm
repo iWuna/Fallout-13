@@ -8,6 +8,7 @@
 	item_state = "cloak"
 	w_class = WEIGHT_CLASS_SMALL
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	flags_inv = HIDESUITSTORAGE //теперь плащи будут скрывать то что у вас в suit_storage.
 
 /obj/item/clothing/neck/cloak/grey
 	name = "grey cloak"

@@ -39,7 +39,7 @@
 		"copper",
 		"mercury",
 		"radium",
-		"water",
+		"h2o",
 		"ethanol",
 		"sugar",
 		"sacid",
@@ -425,7 +425,7 @@
 	working_state = null
 	nopower_state = null
 	dispensable_reagents = list(
-		"water",
+		"rad_water",
 		"ice",
 		"coffee",
 		"cream",
@@ -508,7 +508,7 @@
 		"eznutriment",
 		"left4zednutriment",
 		"robustharvestnutriment",
-		"water",
+//		"water",
 		"plantbgone",
 		"weedkiller",
 		"pestkiller",

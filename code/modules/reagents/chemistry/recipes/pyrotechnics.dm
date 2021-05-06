@@ -47,7 +47,7 @@
 /datum/chemical_reaction/reagent_explosion/potassium_explosion
 	name = "Explosion"
 	id = "potassium_explosion"
-	required_reagents = list("water" = 1, "potassium" = 1)
+	required_reagents = list("h2o" = 1, "potassium" = 1)
 	strengthdiv = 10
 
 /datum/chemical_reaction/reagent_explosion/potassium_explosion/holyboom
@@ -333,7 +333,7 @@
 	name = "cryostylane"
 	id = "cryostylane"
 	results = list("cryostylane" = 3)
-	required_reagents = list("water" = 1, "stable_plasma" = 1, "nitrogen" = 1)
+	required_reagents = list("h2o" = 1, "stable_plasma" = 1, "nitrogen" = 1)
 
 /datum/chemical_reaction/cryostylane/on_reaction(datum/reagents/holder, created_volume)
 	holder.chem_temp = 20 // cools the fuck down
@@ -387,7 +387,7 @@
 /datum/chemical_reaction/reagent_explosion/teslium_lightning
 	name = "Teslium Destabilization"
 	id = "teslium_lightning"
-	required_reagents = list("teslium" = 1, "water" = 1)
+	required_reagents = list("teslium" = 1, "h2o" = 1)
 	strengthdiv = 100
 	modifier = -100
 	mix_message = "<span class='boldannounce'>The teslium starts to spark as electricity arcs away from it!</span>"

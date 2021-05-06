@@ -19,6 +19,27 @@
 	description = "<span class='boldwarning'>I'm starving!</span>\n"
 	mood_change = -15
 
+//HYDRATION - by Woona
+/datum/mood_event/hydration/full
+	description = "<span class='warning'><B>I'm over hydrated!</B></span>\n" //muh fatshaming
+	mood_change = -8
+
+/datum/mood_event/hydration/med
+	description = "<span class='nicegreen'>My belly feels round and full.</span>\n"
+	mood_change = 6
+
+/datum/mood_event/hydration/low_med
+	description = "<span class='nicegreen'>I have recently had some water.</span>\n"
+	mood_change = 3
+
+/datum/mood_event/hydration/low
+	description = "<span class='warning'>I'm getting a bit thirsty.</span>\n"
+	mood_change = -8
+
+/datum/mood_event/hydration/very_low
+	description = "<span class='boldwarning'>I'm thirsty!</span>\n"
+	mood_change = -15
+
 //Disgust
 /datum/mood_event/disgust/gross
 	description = "<span class='warning'>I saw something gross.</span>\n"

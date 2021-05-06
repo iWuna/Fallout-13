@@ -556,6 +556,11 @@
 	if(S.has_reagent("water", 1))
 		adjustWater(round(S.get_reagent_amount("water") * 1))
 
+	if(S.has_reagent("rad_water", 1))
+		adjustWater(round(S.get_reagent_amount("rad_water") * 1))
+		adjustToxic(round(S.get_reagent_amount("rad_water") * 1.5))
+		adjustWeeds(-rand(1,4))
+
 	// Holy water. Mostly the same as water, it also heals the plant a little with the power of the spirits~
 	if(S.has_reagent("holywater", 1))
 		adjustWater(round(S.get_reagent_amount("holywater") * 1))

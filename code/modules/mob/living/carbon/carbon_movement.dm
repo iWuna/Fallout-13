@@ -51,7 +51,12 @@
 	if(. && mob_has_gravity()) //floating is easy
 		if(has_trait(TRAIT_NOHUNGER))
 			nutrition = NUTRITION_LEVEL_FED - 1	//just less than feeling vigorous
+			hydration = HYDRATION_LEVEL_MED - 1	 //Переработать позже под трейт уменбшающий жажду, пока так.
 		else if(nutrition && stat != DEAD)
 			nutrition -= HUNGER_FACTOR/10
 			if(m_intent == MOVE_INTENT_RUN)
 				nutrition -= HUNGER_FACTOR/10
+		else if(hydration && stat != DEAD)
+			hydration -= HUNGER_FACTOR/10
+			if(m_intent == MOVE_INTENT_RUN)
+				hydration -= HYDRATION_FACTOR/5

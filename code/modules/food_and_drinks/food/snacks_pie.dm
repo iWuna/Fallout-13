@@ -26,7 +26,7 @@
 	foodtype = GRAIN | DAIRY | SUGAR
 	var/stunning = FALSE //why are banana cream pies being used for combat.
 
-/obj/item/reagent_containers/food/snacks/pie/cream/throw_impact(atom/hit_atom)
+/obj/item/reagent_containers/food/snacks/pie/cream/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	. = ..()
 	if(!.) //if we're not being caught
 		splat(hit_atom)

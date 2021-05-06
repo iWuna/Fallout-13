@@ -1,4 +1,3 @@
-
 /datum/chemical_reaction/sterilizine
 	name = "Sterilizine"
 	id = "sterilizine"
@@ -9,7 +8,7 @@
 	name = "Industrial Lube"
 	id = "lube"
 	results = list("lube" = 4)
-	required_reagents = list("water" = 1, "silicon" = 1, "oxygen" = 1)
+	required_reagents = list("h2o" = 1, "silicon" = 1, "oxygen" = 1)
 
 /datum/chemical_reaction/impedrezene
 	name = "Impedrezene"
@@ -33,7 +32,7 @@
 	name = "Sodium Chloride"
 	id = "sodiumchloride"
 	results = list("sodiumchloride" = 3)
-	required_reagents = list("water" = 1, "sodium" = 1, "chlorine" = 1)
+	required_reagents = list("h2o" = 1, "sodium" = 1, "chlorine" = 1)
 
 /datum/chemical_reaction/plasmasolidification
 	name = "Solid Plasma"
@@ -120,6 +119,12 @@
 	results = list("mulligan" = 1)
 	required_reagents = list("slime_toxin" = 1, "stablemutationtoxin" = 1)
 
+/datum/chemical_reaction/water
+	name = "Water"
+	id = "water"
+	results = list("water" = 1)
+	required_reagents = list("hydrogen" = 2, "oxygen" = 1)
+	required_temp = 380
 
 ////////////////////////////////// VIROLOGY //////////////////////////////////////////
 
@@ -127,7 +132,7 @@
 	name = "Virus Food"
 	id = "virusfood"
 	results = list("virusfood" = 15)
-	required_reagents = list("water" = 5, "milk" = 5)
+	required_reagents = list("h2o" = 5, "milk" = 5)
 
 /datum/chemical_reaction/virus_food_FEV_solution
 	name = "stable mutationic agar"
@@ -338,7 +343,7 @@
 /datum/chemical_reaction/foam
 	name = "Foam"
 	id = "foam"
-	required_reagents = list("fluorosurfactant" = 1, "water" = 1)
+	required_reagents = list("fluorosurfactant" = 1, "h2o" = 1)
 	mob_react = FALSE
 
 /datum/chemical_reaction/foam/on_reaction(datum/reagents/holder, created_volume)
@@ -430,13 +435,13 @@
 	name = "Space cleaner"
 	id = "cleaner"
 	results = list("cleaner" = 2)
-	required_reagents = list("ammonia" = 1, "water" = 1)
+	required_reagents = list("ammonia" = 1, "h2o" = 1)
 
 /datum/chemical_reaction/plantbgone
 	name = "Plant-B-Gone"
 	id = "plantbgone"
 	results = list("plantbgone" = 5)
-	required_reagents = list("toxin" = 1, "water" = 4)
+	required_reagents = list("toxin" = 1, "h2o" = 4)
 
 /datum/chemical_reaction/weedkiller
 	name = "Weed Killer"
@@ -480,7 +485,7 @@
 	name = "phenol"
 	id = "phenol"
 	results = list("phenol" = 3)
-	required_reagents = list("water" = 1, "chlorine" = 1, "oil" = 1)
+	required_reagents = list("h2o" = 1, "chlorine" = 1, "oil" = 1)
 
 /datum/chemical_reaction/ash
 	name = "Ash"
@@ -550,7 +555,7 @@
 	name = "lye"
 	id = "lye"
 	results = list("lye" = 2)
-	required_reagents = list("ash" = 1, "water" = 1, "carbon" = 1)
+	required_reagents = list("ash" = 1, "h2o" = 1, "carbon" = 1)
 
 /datum/chemical_reaction/royal_bee_jelly
 	name = "royal bee jelly"
@@ -581,4 +586,5 @@
 	name = "pax"
 	id = "pax"
 	results = list("pax" = 3)
-	required_reagents  = list("mindbreaker" = 1, "synaptizine" = 1, "water" = 1)
+	required_reagents  = list("mindbreaker" = 1, "synaptizine" = 1, "h2o" = 1)
+

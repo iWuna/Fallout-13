@@ -1,0 +1,6 @@
+{
+    "map_name": "MultiZ Wasteland Debug",
+    "map_path": "map_files/multiz",
+    "map_file": "multiz_wasteland.dmm",
+	"traits": [{"Up": 1}, {"Up": 1, "Down": -1}, {"Down": -1}]
+	}

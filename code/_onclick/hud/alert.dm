@@ -167,6 +167,24 @@
 	desc = "You're severely malnourished. The hunger pains make moving around a chore."
 	icon_state = "starving"
 
+/obj/screen/alert/hydrated
+	name = "Well hydrated"
+	desc = "Ah, you're full!"
+	icon_state = "water_full"
+	screen_loc = ui_alert2
+
+/obj/screen/alert/thirst
+	name = "Thirst"
+	desc = "Some water would be good right about now."
+	icon_state = "water_1"
+	screen_loc = ui_alert2
+
+/obj/screen/alert/very_thirsty
+	name = "Very Thirsty"
+	desc = "You're severely malnourished. The thirst pains make moving around a chore."
+	icon_state = "water_2"
+	screen_loc = ui_alert2
+
 /obj/screen/alert/gross
 	name = "Grossed out."
 	desc = "That was kind of gross..."

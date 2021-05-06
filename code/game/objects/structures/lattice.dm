@@ -86,6 +86,7 @@
 	number_of_rods = 2
 	smooth = SMOOTH_TRUE
 	canSmoothWith = null
+	obj_flags = CAN_BE_HIT | BLOCK_Z_FALL
 
 /obj/structure/lattice/catwalk/Initialize()
 	. = ..()

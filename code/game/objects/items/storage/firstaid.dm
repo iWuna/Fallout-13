@@ -286,3 +286,24 @@
 /obj/item/storage/pill_bottle/chem_tin/buffout/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/buffout(src)
+
+/obj/item/storage/firstaid/wallmounted
+	name = "wallmounted medkit"
+	desc = "A box full of useful meds."
+	icon_state = "wallmed"
+	anchored = TRUE
+
+/obj/item/storage/firstaid/wallmounted/PopulateContents()
+	if(empty)
+		return
+	if(prob(50))
+		new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
+		new /obj/item/stack/f13Cash/random/bottle_cap/low(src)
+	if(prob(15))
+		new /obj/item/reagent_containers/hypospray/medipen/psycho(src)
+	if(prob(25))
+		new /obj/item/reagent_containers/pill/patch/steady(src)
+	if(prob(30))
+		new /obj/item/reagent_containers/pill/patch/hydra
+	if(prob(20))
+		new /obj/item/stack/f13Cash/random/bottle_cap/low(src)

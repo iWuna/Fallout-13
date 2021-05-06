@@ -60,8 +60,20 @@
     cooked_type = /obj/item/reagent_containers/food/snacks/meat/steak/squirrel
     slice_path = null
 
+/obj/item/reagent_containers/food/snacks/meat/slab/stalker
+	name = "nightstalker meat"
+	desc = "Eww.<br>It does not taste too bad actually."
+	list_reagents = list("nutriment" = 6, "vitamin" = 4)
+	bitesize = 4 //Average animal
+	filling_color = "#FA8072"
+	cooked_type = /obj/item/reagent_containers/food/snacks/meat/steak/stalker
+	slice_path = null
 
 //WASTELAND STEAKS
+
+/obj/item/reagent_containers/food/snacks/meat/steak/stalker
+	name = "nightstalker steak"
+	desc = "A delicious steak made of finest nightstalker meat.<br>Tastes like dog and snake!"
 
 /obj/item/reagent_containers/food/snacks/meat/steak/gecko
 	name = "gecko steak"

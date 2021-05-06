@@ -79,7 +79,7 @@
 	unwrapped			= 2
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/condom/filled/throw_impact(atom/hit_atom)
+/obj/item/condom/filled/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	. = ..()
 	if(!.) //if we're not being caught
 		splat(hit_atom)

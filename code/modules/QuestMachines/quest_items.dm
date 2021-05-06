@@ -127,26 +127,15 @@
 	/obj/item/gun/energy/laser/plasma/pistol
 	)
 
-/obj/item/parcel/prepared/New()
-	..()
-	prepared = TRUE
-	icon_state = pick("bigbox1", "longbox1", "smallbox1")
-
-	fuckup_chance = rand(50,70)
-
-	for(var/mob/living/L in GLOB.alive_mob_list)
-		if((L in GLOB.player_list))
-			for_who = L.mind
-			faction = L.faction
-
-
 /obj/item/parcel/New()
 	..()
 	icon_state = pick("bigbox", "longbox", "smallbox")
 
-	for(var/mob/living/L in GLOB.alive_mob_list)
-		if((L in GLOB.player_list))
-			for_who = L.mind
+	for(var/mob/living/player in GLOB.player_list)
+		if(player.stat != DEAD && !isanimal(player) && ishuman(player))
+			for_who = player
+
+	message_admins("посылка для [for_who] создана.")
 
 /obj/item/parcel/attackby(obj/item/I, mob/user, params)
 	..()
@@ -164,21 +153,21 @@
 				if(icon_state == "smallbox")
 					icon_state = "smallbox1"
 					item_state = "smallbox"
-				desc = "Посылка явно содержащая в себе что-то ценное, предназначена для [for_who.name] из [user.faction[3]]."
+				desc = "Посылка явно содержащая в себе что-то ценное, предназначена для [for_who.name]."
 				qdel(I)
 				prepared = TRUE
 				fuckup_chance = rand(50,70)
 	else
-		if(istype(I, /obj/item/kitchen/knife) | istype(I, /obj/item/claymore/machete))
+		if(istype(I, /obj/item/kitchen/knife) | istype(I, /obj/item/claymore/machete) | istype(I, /obj/item/switchblade))
 			if (!isturf(src.loc) || !(locate(/obj/structure/table) in src.loc) && !(locate(/obj/structure/table/optable) in src.loc))
 				to_chat(user, "<span class='warning'>Вы должны делать это на столе.</span>")
 				return FALSE
-			if(user.mind == for_who)
+			if(user == for_who)
 				if(do_after(user, 30, target = src))
 					var/obj/item/booty = pick(possible_item)
 					booty = new booty(loc)
 					new /obj/item/mark(loc)
-					to_chat(user, "<span class='notice'>Вы нашли [booty] внутри [src].</span>")
+					to_chat(user, "<span class='notice'>Вы нашли [booty] внутри посылки.</span>")
 					qdel(src)
 			else
 				if(do_after(user, 50, target = src))

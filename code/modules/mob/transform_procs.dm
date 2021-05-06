@@ -446,6 +446,7 @@
 		for(var/i=1,i<=number,i++)
 			var/mob/living/simple_animal/slime/M = new/mob/living/simple_animal/slime(loc)
 			M.nutrition = round(nutrition/number)
+			M.hydration = round(hydration/number)
 			step_away(M,src)
 			babies += M
 		new_slime = pick(babies)

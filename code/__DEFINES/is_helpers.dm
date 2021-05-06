@@ -13,7 +13,17 @@
 //Turfs
 //#define isturf(A) (istype(A, /turf)) This is actually a byond built-in. Added here for completeness sake.
 
+#define isgroundlessturf(A) (is_type_in_typecache(A, GLOB.turfs_without_ground))
+
 #define isopenturf(A) (istype(A, /turf/open))
+
+GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
+	/turf/open/space,
+	/turf/open/chasm,
+	/turf/open/lava,
+	/turf/open/water,
+	/turf/open/openspace
+	)))
 
 #define isindestructiblefloor(A) (istype(A, /turf/open/indestructible))
 
@@ -166,6 +176,8 @@
 #define islock(A) istype(A, /obj/item/lock_construct)
 
 #define isorgan(A) (istype(A, /obj/item/organ))
+
+#define isopenspace(A) (istype(A, /turf/open/openspace))
 
 GLOBAL_LIST_INIT(pointed_types, typecacheof(list(
 	/obj/item/pen,

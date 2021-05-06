@@ -55,7 +55,7 @@
 	name = "Select Loadout"
 	desc = "Activate this item to select your additional loadout equipment. It will vanish once you're done."
 	icon = 'icons/effects/landmarks_static.dmi'
-	icon_state = "loadout"
+	icon_state = "loadout_better"
 	item_flags = NODROP
 
 /obj/item/loadout_token/attack_self(var/mob/user)
@@ -123,7 +123,7 @@
 
 /obj/item/storage/box/large
 	icon = 'icons/effects/landmarks_static.dmi'
-	icon_state = "loadout"
+	icon_state = "loadout_better"
 
 /obj/item/storage/box/large/ComponentInitialize() //same storage as a backpack, to allow it to hold loadout items
 	. = ..()

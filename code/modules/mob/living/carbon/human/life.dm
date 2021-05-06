@@ -25,6 +25,7 @@
 
 	if(stat != DEAD)
 		handle_arousal()
+		handle_hydration()
 
 	if(..()) //not dead
 		handle_active_genes()
@@ -45,6 +46,20 @@
 	if(stat != DEAD)
 		return 1
 
+//HYDRATION - by Woona
+
+/mob/living/carbon/human/proc/handle_hydration(mob/living/carbon/human/H)
+	switch(hydration)
+		if(NUTRITION_LEVEL_VERY_LOV to HYDRATION_LEVEL_LOW)
+			if(prob(15))
+				to_chat(H, "<span class='info'>Maybe you should find some water?</span>")
+				adjustStaminaLoss(rand(2,8))
+		if(NUTRITION_LEVEL_VERY_LOV to 0)
+			if(prob(15))
+				to_chat(H, "<span class='danger'>You're really need water!</span>")
+				adjustStaminaLoss(rand(5,10))
+				//adjustToxLoss(rand(1,15))
+			adjustStaminaLoss(rand(5,10))
 
 /mob/living/carbon/human/calculate_affecting_pressure(pressure)
 	if (wear_suit && head && istype(wear_suit, /obj/item/clothing) && istype(head, /obj/item/clothing))
@@ -265,7 +280,6 @@
 			if(lastpuke >= 50) // about 25 second delay I guess
 				vomit(20, toxic = TRUE)
 				lastpuke = 0
-
 
 /mob/living/carbon/human/has_smoke_protection()
 	if(wear_mask)

@@ -1014,6 +1014,23 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		hunger_rate *= H.physiology.hunger_mod
 		H.nutrition = max(0, H.nutrition - hunger_rate)
 
+	if (H.hydration > 0 && H.stat != DEAD && !H.has_trait(TRAIT_NOHUNGER))
+		// THEY THIRST
+		var/thirst_rate = HYDRATION_FACTOR
+		GET_COMPONENT_FROM(mood, /datum/component/mood, H)
+		if(mood && mood.sanity > SANITY_DISTURBED)
+			thirst_rate *= max(0.5, 1 - 0.002 * mood.sanity) //0.85 to 0.75
+
+		if(H.satiety > 0)
+			H.satiety--
+		if(H.satiety < 0)
+			H.satiety++
+			if(prob(round(-H.satiety/40)))
+				H.Jitter(5)
+			thirst_rate = 3 * HYDRATION_FACTOR
+		thirst_rate *= H.physiology.hunger_mod
+		H.hydration = max(0, H.hydration - thirst_rate)
+
 
 	if (H.nutrition > NUTRITION_LEVEL_FULL)
 		if(H.overeatduration < 600) //capped so people don't take forever to unfat
@@ -1057,6 +1074,26 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(0 to NUTRITION_LEVEL_STARVING)
 			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "nutrition", /datum/mood_event/nutrition/starving)
 			H.throw_alert("nutrition", /obj/screen/alert/starving)
+
+	switch(H.hydration)
+		if(HYDRATION_LEVEL_FULL to INFINITY)
+			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "hydration", /datum/mood_event/hydration/full)
+			H.throw_alert("hydration", /obj/screen/alert/hydrated)
+		if(HYDRATION_LEVEL_MED to HYDRATION_LEVEL_FULL)
+			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "hydration", /datum/mood_event/hydration/med)
+			H.clear_alert("hydration")
+		if( HYDRATION_LEVEL_LOW_MED to HYDRATION_LEVEL_MED)
+			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "hydration", /datum/mood_event/hydration/low_med)
+			H.clear_alert("hydration")
+		if(HYDRATION_LEVEL_LOW to HYDRATION_LEVEL_LOW_MED)
+			SEND_SIGNAL(H, COMSIG_CLEAR_MOOD_EVENT, "hydration")
+			H.clear_alert("hydration")
+		if(NUTRITION_LEVEL_VERY_LOV to HYDRATION_LEVEL_LOW)
+			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "hydration", /datum/mood_event/hydration/low)
+			H.throw_alert("hydration", /obj/screen/alert/thirst)
+		if(0 to NUTRITION_LEVEL_VERY_LOV)
+			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "hydration", /datum/mood_event/hydration/very_low)
+			H.throw_alert("hydration", /obj/screen/alert/very_thirsty)
 
 /datum/species/proc/update_health_hud(mob/living/carbon/human/H)
 	return 0

@@ -35,6 +35,52 @@
 	var/list/affected_dynamic_lights
 	///Highest-intensity light affecting us, which determines our visibility.
 	var/affecting_dynamic_lumi = 0
+	var/can_be_z_moved = TRUE
+
+	var/zfalling = FALSE
+
+/atom/movable/proc/can_zFall(turf/source, levels = 1, turf/target, direction)
+	if(!direction)
+		direction = DOWN
+	if(!source)
+		source = get_turf(src)
+		if(!source)
+			return FALSE
+	if(!target)
+		target = get_step_multiz(source, direction)
+		if(!target)
+			return FALSE
+	return !(movement_type & FLYING) && has_gravity(source) && !throwing
+
+/atom/movable/proc/onZImpact(turf/T, levels)
+	var/atom/highest = T
+	for(var/i in T.contents)
+		var/atom/A = i
+		if(!A.density)
+			continue
+		if(isobj(A) || ismob(A))
+			if(A.layer > highest.layer)
+				highest = A
+	INVOKE_ASYNC(src, .proc/SpinAnimation, 5, 2)
+	return TRUE
+
+//For physical constraints to travelling up/down.
+/atom/movable/proc/can_zTravel(turf/destination, direction)
+	var/turf/T = get_turf(src)
+	if(!T)
+		return FALSE
+	if(!direction)
+		if(!destination)
+			return FALSE
+		direction = get_dir(T, destination)
+	if(direction != UP && direction != DOWN)
+		return FALSE
+	if(!destination)
+		destination = get_step_multiz(src, direction)
+		if(!destination)
+			return FALSE
+	return T.zPassOut(src, direction, destination) && destination.zPassIn(src, direction, T)
+
 
 /atom/movable/Initialize(mapload)
 	. = ..()
@@ -463,7 +509,7 @@
 /atom/movable/proc/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	set waitfor = 0
 	SEND_SIGNAL(src, COMSIG_MOVABLE_IMPACT, hit_atom, throwingdatum)
-	return hit_atom.hitby(src)
+	return hit_atom.hitby(src, throwingdatum=throwingdatum)
 
 /atom/movable/hitby(atom/movable/AM, skipcatch, hitpush = TRUE, blocked)
 	if(!anchored && hitpush)

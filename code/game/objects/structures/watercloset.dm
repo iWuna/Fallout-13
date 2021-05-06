@@ -454,8 +454,10 @@
 	desc = "A sink used for washing one's hands and face."
 	anchored = TRUE
 	var/busy = FALSE 	//Something's being washed at the moment
-	var/dispensedreagent = "water" // for whenever plumbing happens
+	var/dispensedreagent = "rad_water" // for whenever plumbing happens
 
+/obj/structure/sink/safe
+	dispensedreagent = "water"
 
 /obj/structure/sink/attack_hand(mob/living/user)
 	. = ..()
@@ -573,12 +575,12 @@
 	name = "kitchen sink"
 	icon_state = "sink_alt"
 
-
 /obj/structure/sink/puddle	//splishy splashy ^_^
 	name = "puddle"
 	desc = "A puddle used for washing one's hands and face."
 	icon_state = "puddle"
 	resistance_flags = UNACIDABLE
+
 /obj/structure/sink/well
 	name = "well"
 	desc = "A well used for washing one's hands and face."

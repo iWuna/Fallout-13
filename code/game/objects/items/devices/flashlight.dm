@@ -30,7 +30,7 @@
 	if (on)
 		playsound(src, 'sound/items/flashlight_off.ogg', 25, 1)
 	else
-		playsound(src, 'sound/items/flashlight_on.ogg', 25, 1) 
+		playsound(src, 'sound/items/flashlight_on.ogg', 25, 1)
 
 /obj/item/flashlight/proc/update_brightness(mob/user)
 	if(on)
@@ -513,11 +513,7 @@
 	. = ..()
 	if(.)
 		user.visible_message("<span class='notice'>[user] cracks and shakes [src].</span>", "<span class='notice'>You crack and shake [src], turning it on!</span>")
-		activate()
 
-/obj/item/flashlight/glowstick/proc/activate()
-	if(!on)
-		on = TRUE
 		START_PROCESSING(SSobj, src)
 
 /obj/item/flashlight/glowstick/red

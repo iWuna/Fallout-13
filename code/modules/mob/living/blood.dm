@@ -35,6 +35,7 @@
 		//Blood regeneration if there is some space
 		if(blood_volume < BLOOD_VOLUME_NORMAL && !has_trait(TRAIT_NOHUNGER))
 			var/nutrition_ratio = 0
+			var/hydration_ratio = 0
 			switch(nutrition)
 				if(0 to NUTRITION_LEVEL_STARVING)
 					nutrition_ratio = 0.2
@@ -46,10 +47,23 @@
 					nutrition_ratio = 0.8
 				else
 					nutrition_ratio = 1
+			switch(hydration)
+				if(0 to NUTRITION_LEVEL_VERY_LOV)
+					hydration_ratio = 0.3
+				if(NUTRITION_LEVEL_VERY_LOV to HYDRATION_LEVEL_LOW)
+					hydration_ratio = 0.5
+				if(HYDRATION_LEVEL_LOW to HYDRATION_LEVEL_LOW_MED)
+					hydration_ratio = 0.7
+				if(HYDRATION_LEVEL_LOW_MED to HYDRATION_LEVEL_MED)
+					hydration_ratio = 0.9
+				else
+					nutrition_ratio = 1
+					hydration_ratio = 1
 			if(satiety > 80)
 				nutrition_ratio *= 1.25
 			nutrition = max(0, nutrition - nutrition_ratio * HUNGER_FACTOR)
-			blood_volume = min(BLOOD_VOLUME_NORMAL, blood_volume + 0.5 * nutrition_ratio)
+			hydration = max(0, hydration - hydration_ratio * HYDRATION_FACTOR)
+			blood_volume = min(BLOOD_VOLUME_NORMAL, blood_volume + 0.5 * nutrition_ratio * hydration_ratio)
 
 		//Effects of bloodloss
 		var/word = pick("dizzy","woozy","faint")

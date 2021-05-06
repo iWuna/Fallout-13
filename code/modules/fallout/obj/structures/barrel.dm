@@ -113,7 +113,7 @@ obj/structure/reagent_dispensers/barrel/explosive/bullet_act(obj/item/projectile
 	desc = "An old barrel. Oddly enough, it stands undamaged after all this time.<br>You wonder if there is anything left in it."
 	icon_state = "one_b"
 	tank_volume = 500
-	reagent_id = "water"
+	reagent_id = "rad_water"
 //	self_weight = 200
 
 /obj/structure/reagent_dispensers/barrel/two
@@ -130,7 +130,7 @@ obj/structure/reagent_dispensers/barrel/explosive/bullet_act(obj/item/projectile
 	desc = "Ancient containers with something inside of them. Or are they empty? Actually, how would you know that..."
 	icon_state = "three_b"
 	tank_volume = 1500
-	reagent_id = "water"
+	reagent_id = "rad_water"
 	anchored = 1
 //	self_weight = 600
 
@@ -142,3 +142,22 @@ obj/structure/reagent_dispensers/barrel/explosive/bullet_act(obj/item/projectile
 	reagent_id = "radium"
 	anchored = 1
 //	self_weight = 60
+
+/obj/structure/reagent_dispensers/barrel/cleanwater
+	name = "water barrel"
+	desc = "A barrel full of fresh water."
+	tank_volume = 400
+	reagent_id = "water"
+
+/obj/structure/reagent_dispensers/barrel/water
+	name = "water barrel"
+	desc = "A barrel full of water."
+	icon_state = "one_b"
+	tank_volume = 800
+	reagent_id = "rad_water"
+
+/obj/structure/reagent_dispensers/barrel/chemwater
+	name = "water barrel"
+	desc = "A barrel full of chemical water."
+	tank_volume = 800
+	reagent_id = "h2o"

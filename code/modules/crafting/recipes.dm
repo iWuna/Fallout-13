@@ -2349,15 +2349,15 @@
 	subcategory = CAT_AMMO_FIVE
 
 /datum/crafting_recipe/voodoo
-    name = "Voodoo"
-    result = /obj/item/reagent_containers/pill/patch/voodoo
-    time = 20
-    reqs = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 2,
-                /obj/item/reagent_containers/food/snacks/grown/feracactus = 2,
-                /obj/item/reagent_containers/food/snacks/grown/yucca = 1)
-    tools = list(TOOL_WORKBENCH)
-    category = CAT_PRIMAL
-    subcategory = CAT_TRIBAL
+	name = "Voodoo"
+	result = /obj/item/reagent_containers/pill/patch/voodoo
+	time = 20
+	reqs = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 2,
+				/obj/item/reagent_containers/food/snacks/grown/feracactus = 2,
+				/obj/item/reagent_containers/food/snacks/grown/yucca = 1)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_PRIMAL
+	subcategory = CAT_TRIBAL
 
 /datum/crafting_recipe/coyotechew
 	name = "Coyote Tobacco Chew"
@@ -2423,101 +2423,101 @@
 //tools
 
 /datum/crafting_recipe/crudewire
-    name = "Crude Cutters"
-    result = /obj/item/wirecutters/crude
-    time = 80
-    reqs = list(/obj/item/stack/rods = 2)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
+	name = "Crude Cutters"
+	result = /obj/item/wirecutters/crude
+	time = 80
+	reqs = list(/obj/item/stack/rods = 2)
+	category = CAT_ASSEM
+	subcategory = CAT_TOOLS
 
 /datum/crafting_recipe/crudeweld
-    name = "Crude Welder"
-    result = /obj/item/weldingtool/crude
-    time = 80
-    reqs = list(/obj/item/stack/sheet/metal = 2,
+	name = "Crude Welder"
+	result = /obj/item/weldingtool/crude
+	time = 80
+	reqs = list(/obj/item/stack/sheet/metal = 2,
 				/obj/item/stack/rods = 2)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
+	category = CAT_ASSEM
+	subcategory = CAT_TOOLS
 
 /datum/crafting_recipe/crudewrench
-    name = "Crude Wrench"
-    result = /obj/item/wrench/crude
-    time = 80
-    reqs = list(/obj/item/stack/rods = 2)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
+	name = "Crude Wrench"
+	result = /obj/item/wrench/crude
+	time = 80
+	reqs = list(/obj/item/stack/rods = 2)
+	category = CAT_ASSEM
+	subcategory = CAT_TOOLS
 
 /datum/crafting_recipe/crudebar
-    name = "Crude Crowbar"
-    result = /obj/item/crowbar/crude
-    time = 80
-    reqs = list(/obj/item/stack/rods = 1,
+	name = "Crude Crowbar"
+	result = /obj/item/crowbar/crude
+	time = 80
+	reqs = list(/obj/item/stack/rods = 1,
 				/obj/item/stack/sheet/metal = 1)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
+	category = CAT_ASSEM
+	subcategory = CAT_TOOLS
 
 /datum/crafting_recipe/crudescrew
-    name = "Crude Screwdriver"
-    result = /obj/item/screwdriver/crude
-    time = 80
-    reqs = list(/obj/item/stack/sheet/metal = 2)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
+	name = "Crude Screwdriver"
+	result = /obj/item/screwdriver/crude
+	time = 80
+	reqs = list(/obj/item/stack/sheet/metal = 2)
+	category = CAT_ASSEM
+	subcategory = CAT_TOOLS
 
 /datum/crafting_recipe/basicvolt
-    name = "Crude Voltage Scanner"
-    result = /obj/item/multitool/basic
-    time = 80
-    reqs = list(/obj/item/stack/sheet/metal = 2,
+	name = "Crude Voltage Scanner"
+	result = /obj/item/multitool/basic
+	time = 80
+	reqs = list(/obj/item/stack/sheet/metal = 2,
 				/obj/item/stack/sheet/glass = 1)
-    tools = list(TOOL_WORKBENCH)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_ASSEM
+	subcategory = CAT_TOOLS
 
 /datum/crafting_recipe/basicwire
-    name = "Basic Cutters"
-    result = /obj/item/wirecutters/basic
-    time = 80
-    reqs = list(/obj/item/stack/sheet/metal = 4)
-    tools = list(TOOL_WORKBENCH)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
+	name = "Basic Cutters"
+	result = /obj/item/wirecutters/basic
+	time = 80
+	reqs = list(/obj/item/stack/sheet/metal = 4)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_ASSEM
+	subcategory = CAT_TOOLS
 
 /datum/crafting_recipe/basicweld
-    name = "Basic Welder"
-    result = /obj/item/weldingtool/basic
-    time = 80
-    reqs = list(/obj/item/stack/sheet/metal = 5)
-    tools = list(TOOL_WORKBENCH)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
+	name = "Basic Welder"
+	result = /obj/item/weldingtool/basic
+	time = 80
+	reqs = list(/obj/item/stack/sheet/metal = 5)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_ASSEM
+	subcategory = CAT_TOOLS
 
 /datum/crafting_recipe/basicwrench
-    name = "Basic Wrench"
-    result = /obj/item/wrench/basic
-    time = 80
-    reqs = list(/obj/item/stack/sheet/metal = 3)
-    tools = list(TOOL_WORKBENCH)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
+	name = "Basic Wrench"
+	result = /obj/item/wrench/basic
+	time = 80
+	reqs = list(/obj/item/stack/sheet/metal = 3)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_ASSEM
+	subcategory = CAT_TOOLS
 
 /datum/crafting_recipe/basicbar
-    name = "Basic Crowbar"
-    result = /obj/item/crowbar/basic
-    time = 80
-    reqs = list(/obj/item/stack/sheet/metal = 1)
-    tools = list(TOOL_WORKBENCH)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
+	name = "Basic Crowbar"
+	result = /obj/item/crowbar/basic
+	time = 80
+	reqs = list(/obj/item/stack/sheet/metal = 1)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_ASSEM
+	subcategory = CAT_TOOLS
 
 /datum/crafting_recipe/basicscrew
-    name = "Basic Screwdriver"
-    result = /obj/item/screwdriver/basic
-    time = 80
-    reqs = list(/obj/item/stack/sheet/metal = 5)
-    tools = list(TOOL_WORKBENCH)
-    category = CAT_ASSEM
-    subcategory = CAT_TOOLS
+	name = "Basic Screwdriver"
+	result = /obj/item/screwdriver/basic
+	time = 80
+	reqs = list(/obj/item/stack/sheet/metal = 5)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_ASSEM
+	subcategory = CAT_TOOLS
 
 //forge making
 
@@ -2553,7 +2553,6 @@
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 3,
 				/obj/item/stack/sheet/cloth = 2)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2564,7 +2563,6 @@
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 3,
 				/obj/item/stack/sheet/cloth = 2)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2575,7 +2573,6 @@
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/cloth = 2)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2586,7 +2583,6 @@
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 2,
 				/obj/item/stack/sheet/cloth = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2597,7 +2593,6 @@
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 2,
 				/obj/item/stack/sheet/cloth = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2608,7 +2603,6 @@
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/cloth = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2619,7 +2613,6 @@
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 4,
 				/obj/item/stack/sheet/cloth = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2630,7 +2623,6 @@
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 4,
 				/obj/item/stack/sheet/cloth = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2640,7 +2632,6 @@
 	result = /obj/item/throwing_star/throwingknife
 	reqs = list(/obj/item/stack/sheet/metal = 1,
 				/obj/item/stack/sheet/cloth = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	time = 300
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
@@ -2651,7 +2642,6 @@
 	result = /obj/item/kitchen/knife/bowie
 	reqs = list(/obj/item/stack/sheet/metal = 4,
 				/obj/item/stack/sheet/mineral/wood = 2)
-	traits = list(TRAIT_TECHNOPHOBE)
 	time = 300
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
@@ -2663,7 +2653,6 @@
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/mineral/wood = 2)
-	traits = list(TRAIT_TECHNOPHOBE)
 	time = 300
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
@@ -2677,7 +2666,6 @@
 	result = /obj/item/twohanded/fireaxe/bmprsword
 	reqs = list(/obj/item/stack/sheet/metal = 25,
 				/obj/item/stack/sheet/cloth = 2)
-	traits = list(TRAIT_TECHNOPHOBE)
 	time = 600
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
@@ -2688,7 +2676,6 @@
 	result = /obj/item/katana/scrap
 	reqs = list(/obj/item/stack/sheet/metal = 20,
 				/obj/item/stack/sheet/cloth = 2)
-	traits = list(TRAIT_TECHNOPHOBE)
 	time = 1000
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
@@ -2701,7 +2688,6 @@
 				/obj/item/stack/sheet/cloth = 2,
 				/obj/item/stack/sheet/mineral/wood = 2,
 				/obj/item/stack/sheet/bone = 2)
-	traits = list(TRAIT_TECHNOPHOBE)
 	time = 1000
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
@@ -2712,7 +2698,6 @@
 	result = /obj/item/claymore/machete/gladius
 	reqs = list(/obj/item/stack/sheet/metal = 20,
 				/obj/item/stack/sheet/cloth = 2)
-	traits = list(TRAIT_TECHNOPHOBE)
 	time = 600
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
@@ -2723,7 +2708,6 @@
 	result = /obj/item/claymore/machete/reinforced
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/sheet/cloth = 2)
-	traits = list(TRAIT_TECHNOPHOBE)
 	time = 600
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
@@ -2734,7 +2718,6 @@
 	result = /obj/item/claymore
 	reqs = list(/obj/item/stack/sheet/metal = 15,
 				/obj/item/stack/sheet/cloth = 2)
-	traits = list(TRAIT_TECHNOPHOBE)
 	time = 600
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
@@ -2749,7 +2732,6 @@
 	time = 400
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/sheet/mineral/wood = 2)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2760,7 +2742,6 @@
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/sheet/mineral/wood = 4)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2771,7 +2752,6 @@
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 2,
 				/obj/item/stack/sheet/mineral/wood = 3)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2781,7 +2761,6 @@
 	result = /obj/item/throwing_star/spear/harpoon
 	time = 400
 	reqs = list(/obj/item/stack/sheet/metal = 5)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2791,7 +2770,6 @@
 	result = /obj/item/twohanded/pitchfork
 	time = 400
 	reqs = list(/obj/item/stack/sheet/metal = 3)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2802,7 +2780,6 @@
 	time = 400
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/sheet/mineral/wood = 4)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2815,7 +2792,6 @@
 	time = 1000
 	reqs = list(/obj/item/stack/sheet/metal = 30,
 				/obj/item/stack/sheet/mineral/wood = 5)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2825,7 +2801,6 @@
 	result = /obj/item/claymore/machete/pipe
 	time = 50
 	reqs = list(/obj/item/stack/sheet/metal = 5)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2835,7 +2810,6 @@
 	result = /obj/item/claymore/machete/golf/teniron
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 10)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2846,7 +2820,6 @@
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/mineral/wood = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2859,7 +2832,6 @@
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/mineral/wood = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2870,7 +2842,6 @@
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/mineral/wood = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2881,7 +2852,6 @@
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/mineral/wood = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2892,7 +2862,6 @@
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/mineral/wood = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2903,7 +2872,6 @@
 	time = 300
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/mineral/wood = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2915,7 +2883,6 @@
 	result = /obj/item/melee/unarmed/brass/spiked
 	time = 50
 	reqs = list(/obj/item/stack/sheet/metal = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2925,7 +2892,6 @@
 	result = /obj/item/melee/unarmed/sappers
 	time = 100
 	reqs = list(/obj/item/stack/sheet/metal = 5)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2935,7 +2901,6 @@
 	result = /obj/item/melee/unarmed/maceglove
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 20)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEWEAPON
@@ -2948,7 +2913,6 @@
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/cloth = 3)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -2959,7 +2923,6 @@
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 1,
 				/obj/item/stack/sheet/cloth = 6)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -2970,7 +2933,6 @@
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/sheet/cloth = 2)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -2981,7 +2943,6 @@
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/sheet/cloth = 2)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -2991,7 +2952,6 @@
 	result = /obj/item/clothing/head/f13/pot
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -3002,7 +2962,6 @@
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 4,
 				/obj/item/stack/sheet/cloth = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -3013,7 +2972,6 @@
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/sheet/cloth = 5)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -3024,7 +2982,6 @@
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/cloth = 2)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -3035,7 +2992,6 @@
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 30,
 				/obj/item/stack/sheet/cloth = 5)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -3046,7 +3002,6 @@
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/sheet/cloth = 2)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -3059,7 +3014,6 @@
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 20,
 				/obj/item/stack/sheet/cloth = 5)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -3070,7 +3024,6 @@
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/sheet/cloth = 5)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -3081,7 +3034,6 @@
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 30,
 				/obj/item/stack/sheet/cloth = 10)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -3092,7 +3044,6 @@
 	time = 1000
 	reqs = list(/obj/item/stack/sheet/metal = 90,
 				/obj/item/stack/sheet/cloth = 3)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -3103,7 +3054,6 @@
 	time = 500
 	reqs = list(/obj/item/stack/sheet/metal = 30,
 				/obj/item/stack/sheet/cloth = 3)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -3116,7 +3066,6 @@
 	time = 100
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/cloth = 5)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -3129,7 +3078,6 @@
 	time = 100
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/cloth = 5)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEARMOR
@@ -3141,7 +3089,6 @@
 	result = /obj/item/kitchen/fork
 	time = 100
 	reqs = list(/obj/item/stack/sheet/metal = 5)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEMISC
@@ -3151,7 +3098,6 @@
 	result = /obj/item/reagent_containers/glass/bowl
 	time = 100
 	reqs = list(/obj/item/stack/sheet/glass = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEMISC
@@ -3161,7 +3107,6 @@
 	result = /obj/item/reagent_containers/food/drinks/drinkingglass
 	time = 100
 	reqs = list(/obj/item/stack/sheet/glass = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEMISC
@@ -3171,7 +3116,6 @@
 	result = /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass
 	time = 100
 	reqs = list(/obj/item/stack/sheet/glass = 1)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEMISC
@@ -3181,7 +3125,6 @@
 	result = /obj/item/crafting/igniter
 	time = 100
 	reqs = list(/obj/item/stack/sheet/metal = 5)
-	traits = list(TRAIT_TECHNOPHOBE)
 	tools = list(TOOL_FORGE)
 	category = CAT_FORGE
 	subcategory = CAT_FORGEMISC
@@ -3308,7 +3251,7 @@
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/stack/crafting/metalparts = 3,
-				/datum/reagent/blackpowder = 60, 
+				/datum/reagent/blackpowder = 60,
 				/obj/item/blueprint/weapon/mg34/limited = 1
 				)
 	tools = list(TOOL_WORKBENCH)
@@ -3337,7 +3280,7 @@
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/obj/item/stack/crafting/metalparts = 3,
-				/datum/reagent/blackpowder = 10, 
+				/datum/reagent/blackpowder = 10,
 				/obj/item/blueprint/weapon/kar98/limited = 1
 				)
 	tools = list(TOOL_WORKBENCH)
@@ -3420,7 +3363,7 @@
 	result = /obj/item/gun/ballistic/automatic/smg10mm
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/receiver = 1,
-				/datum/reagent/blackpowder = 30, 
+				/datum/reagent/blackpowder = 30,
 				/obj/item/blueprint/weapon/smg10mm/limited = 1
 				)
 	tools = list(TOOL_WORKBENCH)
@@ -3435,7 +3378,7 @@
 	result = /obj/item/gun/ballistic/automatic/greasegun
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/receiver = 1,
-				/datum/reagent/blackpowder = 30, 
+				/datum/reagent/blackpowder = 30,
 				)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/grease_gun)
 	time = 120
@@ -3447,7 +3390,7 @@
 	result = /obj/item/gun/ballistic/automatic/greasegun
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/receiver = 1,
-				/datum/reagent/blackpowder = 30, 
+				/datum/reagent/blackpowder = 30,
 				/obj/item/blueprint/weapon/grease_gun/limited = 1
 				)
 	tools = list(TOOL_WORKBENCH)
@@ -3636,7 +3579,7 @@
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/datum/reagent/blackpowder = 30,
 				/obj/item/stack/sheet/mineral/wood = 5,
-				/obj/item/stack/crafting/goodparts = 5, 
+				/obj/item/stack/crafting/goodparts = 5,
 				/obj/item/blueprint/weapon/sniper/limited = 1
 				)
 	tools = list(TOOL_WORKBENCH)
@@ -3700,7 +3643,7 @@
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30,
 				/obj/item/stack/sheet/mineral/wood = 5,
-				/obj/item/stack/crafting/goodparts = 5, 
+				/obj/item/stack/crafting/goodparts = 5,
 				/obj/item/blueprint/weapon/deagle/limited = 1
 				)
 	tools = list(TOOL_WORKBENCH)
@@ -3747,7 +3690,7 @@
 				/obj/item/advanced_crafting_components/lenses = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/stack/crafting/goodparts = 3,
-				/obj/item/stack/crafting/electronicparts = 3, 
+				/obj/item/stack/crafting/electronicparts = 3,
 				/obj/item/blueprint/weapon/AER9/limited = 1
 				)
 	tools = list(TOOL_WORKBENCH)
@@ -3778,7 +3721,7 @@
 				/obj/item/advanced_crafting_components/conductors = 2,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/stack/crafting/metalparts = 3,
-				/obj/item/stack/crafting/electronicparts = 3, 
+				/obj/item/stack/crafting/electronicparts = 3,
 				/obj/item/blueprint/weapon/plasmarifle/limited = 1
 				)
 	tools = list(TOOL_WORKBENCH)
@@ -3827,7 +3770,7 @@
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30,
-				/obj/item/stack/crafting/goodparts = 5, 
+				/obj/item/stack/crafting/goodparts = 5,
 				/obj/item/blueprint/weapon/AM_rifle/limited = 1
 				)
 	tools = list(TOOL_WORKBENCH)
@@ -3894,7 +3837,7 @@
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30,
-				/obj/item/stack/crafting/goodparts = 5, 
+				/obj/item/stack/crafting/goodparts = 5,
 				/obj/item/blueprint/weapon/rangemaster/limited = 1
 				)
 	tools = list(TOOL_WORKBENCH)
@@ -3911,8 +3854,8 @@
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30,
-				/obj/item/stack/crafting/goodparts = 5, 
-				
+				/obj/item/stack/crafting/goodparts = 5,
+
 				)
 	tools = list(TOOL_WORKBENCH, /obj/item/blueprint/weapon/bozar)
 	time = 120
@@ -3927,7 +3870,7 @@
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/datum/reagent/blackpowder = 30,
-				/obj/item/stack/crafting/goodparts = 5, 
+				/obj/item/stack/crafting/goodparts = 5,
 				/obj/item/blueprint/weapon/bozar/limited = 1
 				)
 	tools = list(TOOL_WORKBENCH)
@@ -3936,7 +3879,7 @@
 	subcategory = CAT_BPWEAPON_ONEUSE
 
 //BP copy
-/datum/crafting_recipe/bpcopy	
+/datum/crafting_recipe/bpcopy
 	result = /obj/item/blueprint/weapon/marksmanrifle/limited
 	name = "Marksman Rifle blueprint"
 	reqs = list(/obj/item/paper = 1)
@@ -3955,7 +3898,7 @@
 	result = /obj/item/blueprint/weapon/uzi/limited
 	name = "UZI blueprint"
 	tools = list(TOOL_AWORKBENCH, TOOL_GUNTIER3, /obj/item/blueprint/weapon/uzi)
-	
+
 /datum/crafting_recipe/bpcopy/smg10mm
 	result = /obj/item/blueprint/weapon/smg10mm/limited
 	name = "10mm SMG blueprint"
@@ -4128,16 +4071,16 @@
 	category = CAT_EXPERIMENTAL
 	subcategory = CAT_WEAPONS
 	time = 30
- 
-/datum/crafting_recipe/ultrarifle	
+
+/datum/crafting_recipe/ultrarifle
 	name = "Ultracite Laser Rifle"
-	result = /obj/item/gun/energy/laser/ultra_rifle	
+	result = /obj/item/gun/energy/laser/ultra_rifle
 	reqs = list(/obj/item/gun/energy/laser/aer9/ = 1, /obj/item/advanced_crafting_components/flux = 1, /obj/item/advanced_crafting_components/lenses = 1, /obj/item/advanced_crafting_components/ultra = 1)
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_EXPERIMENTAL
 	subcategory = CAT_UNREFIENED
 	time = 30
- 
+
 /datum/crafting_recipe/ultraneedle
 	name = "Ultracite Needle Pistol"
 	result = /obj/item/gun/ballistic/revolver/needler/ultra
@@ -4146,7 +4089,7 @@
 	category = CAT_EXPERIMENTAL
 	subcategory = CAT_UNREFIENED
 	time = 30
- 
+
 /datum/crafting_recipe/heavyneedle
 	name = "Ultracite Needle Rifle"
 	result = /obj/item/gun/ballistic/shotgun/remington/ultraneedle
@@ -4155,7 +4098,7 @@
 	category = CAT_EXPERIMENTAL
 	subcategory = CAT_UNREFIENED
 	time = 45
- 
+
 /datum/crafting_recipe/ultrat51bhead
 	name = "Ultracite T51b Helmet"
 	result = /obj/item/clothing/head/helmet/f13/power_armor/t51b/ultra
@@ -4164,7 +4107,7 @@
 	category = CAT_EXPERIMENTAL
 	subcategory = CAT_UNREFIENED
 	time = 30
- 
+
 /datum/crafting_recipe/ultrat51b
 	name = "Ultracite T51b"
 	result = /obj/item/clothing/suit/armor/f13/power_armor/t51b/ultra
@@ -4174,3 +4117,38 @@
 	subcategory = CAT_UNREFIENED
 	time = 30
 */
+
+// эээто кооотики наркооотики
+
+/datum/crafting_recipe/hydra
+	name = "Hydra"
+	result = /obj/item/reagent_containers/pill/patch/hydra
+	time = 120
+	reqs = list(/obj/item/reagent_containers/food/snacks/meat/slab/stalker = 1,
+				/obj/item/reagent_containers/food/snacks/grown/fungus = 2,
+				/obj/item/reagent_containers/food/snacks/meat/slab/radscorpion_meat = 2)
+	tools = list(/obj/structure/campfire)
+	category = CAT_MEDICAL
+	subcategory = CAT_DRUGS
+
+/datum/crafting_recipe/steady
+	name = "Steady"
+	result = /obj/item/reagent_containers/pill/patch/steady
+	time = 120
+	reqs = list(/obj/item/reagent_containers/pill/mentat = 3,
+				/obj/item/reagent_containers/food/snacks/grown/horsenettle = 4,
+				/obj/item/reagent_containers/syringe/medx = 2)
+	tools = list(/obj/structure/campfire)
+	category = CAT_MEDICAL
+	subcategory = CAT_DRUGS
+
+/datum/crafting_recipe/rebound
+	name = "Rebound"
+	result = /obj/item/reagent_containers/pill/patch/rebound
+	time = 120
+	reqs = list(/obj/item/reagent_containers/pill/morphine = 3,
+				/obj/item/reagent_containers/food/drinks/flask/det = 1,
+				/obj/item/reagent_containers/pill/patch/jet = 2)
+	tools = list(/obj/structure/campfire)
+	category = CAT_MEDICAL
+	subcategory = CAT_DRUGS

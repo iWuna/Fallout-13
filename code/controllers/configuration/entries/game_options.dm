@@ -176,6 +176,24 @@
 
 /datum/config_entry/flag/emojis
 
+/datum/config_entry/keyed_list/multiplicative_movespeed
+	key_mode = KEY_MODE_TYPE
+	value_mode = VALUE_MODE_NUM
+	config_entry_value = list(			//DEFAULTS
+	/mob/living/simple_animal = 1,
+	/mob/living/silicon/pai = 1,
+	/mob/living/carbon/alien/humanoid/hunter = -1,
+	/mob/living/carbon/alien/humanoid/royal/praetorian = 1,
+	/mob/living/carbon/alien/humanoid/royal/queen = 3
+	)
+
+/////////////////////////////////////////////////Outdated move delay
+/datum/config_entry/number/outdated_movedelay
+	deprecated_by = /datum/config_entry/keyed_list/multiplicative_movespeed
+	abstract_type = /datum/config_entry/number/outdated_movedelay
+	integer = FALSE
+	var/movedelay_type
+
 /datum/config_entry/number/run_delay	//Used for modifying movement speed for mobs.
 	var/static/value_cache = 0
 

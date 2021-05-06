@@ -1,5 +1,3 @@
-
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////// DRINKS BELOW, Beer is up there though, along with cola. Cap'n Pete's Cuban Spiced Rum////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -13,6 +11,7 @@
 	glass_icon_state = "glass_orange"
 	glass_name = "glass of orange juice"
 	glass_desc = "Vitamins! Yay!"
+	hydration_factor = 3 * REAGENTS_METABOLISM
 
 /datum/reagent/consumable/orangejuice/on_mob_life(mob/living/carbon/M)
 	if(M.getOxyLoss() && prob(30))
@@ -61,6 +60,7 @@
 	glass_icon_state = "carrotjuice"
 	glass_name = "glass of  carrot juice"
 	glass_desc = "It's just like a carrot but without crunching."
+	hydration_factor = 3 * REAGENTS_METABOLISM
 
 /datum/reagent/consumable/carrotjuice/on_mob_life(mob/living/carbon/M)
 	M.adjust_blurriness(-1)
@@ -130,6 +130,7 @@
 	glass_icon_state = "glass_red"
 	glass_name = "glass of watermelon juice"
 	glass_desc = "A glass of watermelon juice."
+	hydration_factor = 4 * REAGENTS_METABOLISM
 
 /datum/reagent/consumable/lemonjuice
 	name = "Lemon Juice"
@@ -399,6 +400,7 @@
 	glass_icon_state = "teaglass"
 	glass_name = "glass of tea"
 	glass_desc = "Drinking it from here would not seem right."
+	hydration_factor = 3 * REAGENTS_METABOLISM
 
 /datum/reagent/consumable/tea/on_mob_life(mob/living/carbon/M)
 	M.dizziness = max(0,M.dizziness-2)
@@ -420,6 +422,7 @@
 	glass_icon_state = "lemonpitcher"
 	glass_name = "pitcher of lemonade"
 	glass_desc = "This drink leaves you feeling nostalgic for some reason."
+	hydration_factor = 4 * REAGENTS_METABOLISM
 
 /datum/reagent/consumable/icecoffee
 	name = "Iced Coffee"
@@ -471,6 +474,7 @@
 	glass_icon_state  = "glass_brown"
 	glass_name = "glass of Space Cola"
 	glass_desc = "A glass of refreshing Space Cola."
+	hydration_factor = 3 * REAGENTS_METABOLISM
 
 /datum/reagent/consumable/space_cola/on_mob_life(mob/living/carbon/M)
 	M.drowsyness = max(0,M.drowsyness-5)
@@ -486,6 +490,7 @@
 	glass_icon_state = "nukacolaglass"
 	glass_name = "Nuka Cola"
 	glass_desc = "Don't cry, Don't raise your eye, It's only nuclear wasteland."
+	hydration_factor = 3 * REAGENTS_METABOLISM
 
 /datum/reagent/consumable/nuka_cola/on_mob_life(mob/living/carbon/M)
 	M.drowsyness = 0
@@ -503,6 +508,7 @@
 	glass_icon_state = "sunsetglass"
 	glass_name = "glass of Sunset Sarsaparilla"
 	glass_desc = "Beverage of the West Coast."
+	hydration_factor = 2 * REAGENTS_METABOLISM
 
 /datum/reagent/consumable/sunset/on_mob_life(mob/living/carbon/M)
 	M.drowsyness = 0
@@ -1189,6 +1195,7 @@
 	description = "A soothing herbal rememedy steeped from the Agave Plant. Inhibits increased healing of burns and sores."
 	color = "#FFFF91"
 	nutriment_factor = 0
+	hydration_factor = 1 * REAGENTS_METABOLISM
 	taste_description = "bitterness"
 	glass_icon_state = "tea"
 	glass_name = "Agave Tea"
@@ -1213,30 +1220,7 @@
 	description = "A soothing herbal rememedy steeped from the Broc Flower. Increases the clearance and flow of airways."
 	color = "#FF6347"
 	nutriment_factor = 0
-	taste_description = "bitterness"
-	glass_icon_state = "tea"
-	glass_name = "Broc Tea"
-	glass_desc = "A soothing herbal rememedy steeped from the Broc Flower. Increases the clearance and flow of airways."
-
-/datum/reagent/consumable/broctea/on_mob_life(mob/living/carbon/M)
-	M.adjustOxyLoss(-4*REM, 0)
-	M.nutrition = max(M.nutrition - 3, 0)
-	M.dizziness = max(0,M.dizziness-2)
-	M.drowsyness = max(0,M.drowsyness-1)
-	M.jitteriness = max(0,M.jitteriness-3)
-	M.AdjustSleeping(-20, FALSE)
-	if(M.getToxLoss() && prob(20))
-		M.adjustToxLoss(-1, 0)
-	M.adjust_bodytemperature(20 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
-	..()
-	. = 1
-
-/datum/reagent/consumable/broctea
-	name = "Broc Tea"
-	id = "broctea"
-	description = "A soothing herbal rememedy steeped from the Broc Flower. Increases the clearance and flow of airways."
-	color = "#FF6347"
-	nutriment_factor = 0
+	hydration_factor = 2 * REAGENTS_METABOLISM
 	taste_description = "bitterness"
 	glass_icon_state = "tea"
 	glass_name = "Broc Tea"
@@ -1261,37 +1245,9 @@
 	description = "A smokey herbal rememedy steeped from coyote tobacco stems. Natural caffeines keep the drinker alert and awake while numbing the senses."
 	color = "#008000"
 	nutriment_factor = 0
+	hydration_factor = 1 * REAGENTS_METABOLISM
 	taste_description = "smoke"
 	glass_icon_state = "coyotetea"
-	glass_name = "Coyote Tea"
-	glass_desc = "A smokey herbal rememedy steeped from coyote tobacco stems. Natural caffeines keep the drinker alert and awake while numbing the senses."
-
-/datum/reagent/consumable/coyotetea/on_mob_life(mob/living/carbon/M)
-	if(prob(10))
-		var/smoke_message = pick("You feel relaxed.", "You feel calmed.","You feel alert.","You feel rugged.")
-		to_chat(M, "<span class='notice'>[smoke_message]</span>")
-	M.AdjustStun(-40, 0)
-	M.AdjustKnockdown(-40, 0)
-	M.AdjustUnconscious(-40, 0)
-	M.adjustStaminaLoss(-1*REM, 0)
-	M.dizziness = max(0,M.dizziness-2)
-	M.drowsyness = max(0,M.drowsyness-1)
-	M.jitteriness = max(0,M.jitteriness-3)
-	M.AdjustSleeping(-20, FALSE)
-	if(M.getToxLoss() && prob(20))
-		M.adjustToxLoss(-1, 0)
-	M.adjust_bodytemperature(20 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
-	..()
-	. = 1
-
-/datum/reagent/consumable/coyotetea
-	name = "Coyote Tea"
-	id = "coyotetea"
-	description = "A smokey herbal rememedy steeped from coyote tobacco stems. Natural caffeines keep the drinker alert and awake while numbing the senses."
-	color = "#008000"
-	nutriment_factor = 0
-	taste_description = "smoke"
-	glass_icon_state = "chocolateglass"
 	glass_name = "Coyote Tea"
 	glass_desc = "A smokey herbal rememedy steeped from coyote tobacco stems. Natural caffeines keep the drinker alert and awake while numbing the senses."
 

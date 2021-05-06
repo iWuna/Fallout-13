@@ -43,6 +43,10 @@
 	var/lying_prev = 0
 	var/canmove = 1
 
+	//MOVEMENT SPEED
+	var/list/movespeed_modification				//Lazy list, see mob_movespeed.dm
+	var/cached_multiplicative_slowdown
+
 	var/name_archive //For admin things like possession
 
 	var/bodytemperature = BODYTEMP_NORMAL	//310.15K / 98.6F
@@ -50,6 +54,7 @@
 	var/dizziness = 0//Carbon
 	var/jitteriness = 0//Carbon
 	var/nutrition = NUTRITION_LEVEL_START_MIN // randomised in Initialize
+	var/hydration = HYDRATION_LEVEL_START_MIN // randomised in Initialize
 	var/satiety = 0//Carbon
 
 	var/overeatduration = 0		// How long this guy is overeating //Carbon
@@ -128,3 +133,5 @@
 	var/typing_indicator_timerid
 	/// Current state of our typing indicator. Used for cut overlay, DO NOT RUNTIME ASSIGN OTHER THAN FROM SHOW/CLEAR. Used to absolutely ensure we do not get stuck overlays.
 	var/typing_indicator_current
+
+	vis_flags = VIS_INHERIT_PLANE //when this be added to vis_contents of something it inherit something.plane, important for visualisation of mob in openspace.

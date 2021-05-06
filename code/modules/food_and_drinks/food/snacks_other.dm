@@ -464,8 +464,8 @@
 	head.color = C
 	add_overlay(head)
 
-/obj/item/reagent_containers/food/snacks/lollipop/throw_impact(atom/A)
-	..(A)
+/obj/item/reagent_containers/food/snacks/lollipop/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
+	..(hit_atom)
 	throw_speed = 1
 	throwforce = 0
 
@@ -584,7 +584,7 @@
 	tastes = list("sickly fat" = 1)
 	foodtype = MEAT | JUNKFOOD | GROSS
 
-/obj/item/reagent_containers/food/snacks/crunchymutfruit	
+/obj/item/reagent_containers/food/snacks/crunchymutfruit
 	name = "Crunchy Mutfruit"
 	desc = "A juicy mutfruit with a crispy exterior layer."
 	icon_state = "scotchegg"

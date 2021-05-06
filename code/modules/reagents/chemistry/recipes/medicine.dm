@@ -22,13 +22,13 @@
 	name = "inacusiate"
 	id = "inacusiate"
 	results = list("inacusiate" = 2)
-	required_reagents = list("water" = 1, "carbon" = 1, "charcoal" = 1)
+	required_reagents = list("h2o" = 1, "carbon" = 1, "charcoal" = 1)
 
 /datum/chemical_reaction/synaptizine
 	name = "Synaptizine"
 	id = "synaptizine"
 	results = list("synaptizine" = 3)
-	required_reagents = list("sugar" = 1, "lithium" = 1, "water" = 1)
+	required_reagents = list("sugar" = 1, "lithium" = 1, "h2o" = 1)
 
 /datum/chemical_reaction/charcoal
 	name = "Charcoal"
@@ -48,13 +48,13 @@
 	name = "Saline-Glucose Solution"
 	id = "salglu_solution"
 	results = list("salglu_solution" = 3)
-	required_reagents = list("sodiumchloride" = 1, "water" = 1, "sugar" = 1)
+	required_reagents = list("sodiumchloride" = 1, "h2o" = 1, "sugar" = 1)
 
 /datum/chemical_reaction/mine_salve
 	name = "Miner's Salve"
 	id = "mine_salve"
 	results = list("mine_salve" = 3)
-	required_reagents = list("oil" = 1, "water" = 1, "iron" = 1)
+	required_reagents = list("oil" = 1, "h2o" = 1, "iron" = 1)
 
 /datum/chemical_reaction/mine_salve2
 	name = "Miner's Salve"
@@ -162,7 +162,7 @@
 	name = "Mannitol"
 	id = "mannitol"
 	results = list("mannitol" = 3)
-	required_reagents = list("sugar" = 1, "hydrogen" = 1, "water" = 1)
+	required_reagents = list("sugar" = 1, "hydrogen" = 1, "h2o" = 1)
 	mix_message = "The solution slightly bubbles, becoming thicker."
 
 /datum/chemical_reaction/mutadone

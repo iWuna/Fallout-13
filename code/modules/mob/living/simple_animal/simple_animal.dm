@@ -341,7 +341,6 @@
 		health = 0
 		icon_state = icon_dead
 		density = FALSE
-		lying = 1
 		..()
 
 /mob/living/simple_animal/proc/CanAttack(atom/the_target)
@@ -515,7 +514,7 @@
 		if(istype(held_item, /obj/item/twohanded))
 			var/obj/item/twohanded/T = held_item
 			if(T.wielded == 1)
-				to_chat(usr, "<span class='warning'>Your other hand is too busy holding the [T.name].</span>")
+				to_chat(usr, "<span class='warning'>Your other hand is too busy holding [T].</span>")
 				return
 	var/oindex = active_hand_index
 	active_hand_index = hand_index

@@ -13,11 +13,44 @@
 	taste_description = "generic food"
 	taste_mult = 4
 	var/nutriment_factor = 1 * REAGENTS_METABOLISM
+	var/hydration_factor = 2 * REAGENTS_METABOLISM
 	var/quality = 0	//affects mood, typically higher for mixed drinks with more complex recipes
+
+	//измнения SPECIAL//
+	var/pos_Strength = 0
+	var/pos_Perception = 0
+	var/pos_Endurance = 0
+	var/pos_Charisma = 0
+	var/pos_Intelligence = 0
+	var/pos_Agility = 0
+	var/pos_Luck = 0
+	var/neg_Strength = 0
+	var/neg_Perception = 0
+	var/neg_Endurance = 0
+	var/neg_Charisma = 0
+	var/neg_Intelligence = 0
+	var/neg_Agility = 0
+	var/neg_Luck = 0
+
+	var/can_affect = FALSE
+	var/affected = FALSE
+
+/datum/reagent/consumable/on_mob_add(mob/living/carbon/M)
+	if(!affected && can_affect)
+		M.special.adjust(strength=pos_Strength, perception=pos_Perception, endurance=pos_Endurance, charisma=pos_Charisma, intelligence=pos_Intelligence, agility=pos_Agility, luck=pos_Luck)
+		affected = TRUE
+	..()
+
+/datum/reagent/consumable/on_mob_delete(mob/living/carbon/M)
+	if(affected && can_affect)
+		M.special.adjust(strength=neg_Strength, perception=neg_Perception, endurance=neg_Endurance, charisma=neg_Charisma, intelligence=neg_Intelligence, agility=neg_Agility, luck=neg_Luck)
+		affected = FALSE
+	..()
 
 /datum/reagent/consumable/on_mob_life(mob/living/carbon/M)
 	current_cycle++
 	M.nutrition += nutriment_factor
+	M.hydration += hydration_factor
 	holder.remove_reagent(src.id, metabolization_rate)
 
 
