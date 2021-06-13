@@ -66,6 +66,13 @@
 	icon_state = "nuclearbomb_base"
 	anchored = TRUE //stops it being moved
 
+/obj/machinery/nuclearbomb/selfdestruct/Fallout1
+	name = "Nuclear Bomb"
+	desc = "It looks like an ordinary Chinese atomic bomb. The most common bomb. It’s more a miracle that it didn’t explode . Hieroglyphs can be seen on the side: 仇恨. 美国. 大 玉棒."
+	icon = 'icons/obj/fallout/fallout_nuke.dmi'
+	icon_state = "nuclearbomb_base"
+	anchored = TRUE
+
 /obj/machinery/nuclearbomb/syndicate
 	//ui_style = "syndicate" // actually the nuke op bomb is a stole nt bomb
 

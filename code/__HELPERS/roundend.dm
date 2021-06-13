@@ -89,26 +89,26 @@
 			largest_leader = G.leader
 
 	var/discordmsg = ""
-	discordmsg += "\[-------------ROUND END-------------]\n"
-	discordmsg += "Round Number: [GLOB.round_id]\n"
-	discordmsg += "Duration: [DisplayTimeText(world.time - SSticker.round_start_time)]\n"
-	discordmsg += "Players: [GLOB.player_list.len]\n"
-	discordmsg += "Survivors: [num_survivors]\n"
-	discordmsg += "Escapees: [num_escapees]\n"
-	discordmsg += "Integrity: [station_integrity]\n"
+	discordmsg += "\[-------------ФИНАЛ-------------]\n"
+	discordmsg += "Номер Раунда: [GLOB.round_id]\n"
+	discordmsg += "Длительность: [DisplayTimeText(world.time - SSticker.round_start_time)]\n"
+	discordmsg += "Игроков: [GLOB.player_list.len]\n"
+	discordmsg += "Выжили: [num_survivors]\n"
+	discordmsg += "Покинули Область: [num_escapees]\n"
+	discordmsg += "Целостность: [station_integrity]\n"
 	discordmsg += "Trading Protectrons profits: [GLOB.vendor_cash]\n"
 	if(largest_gang)
-		discordmsg += "Largest Gang: [largest_gang.name] - [largest_gang.members.len] members, lead by [largest_leader.real_name]!\n"
-	discordmsg += "Gamemode: [SSticker.mode.name]\n"
+		discordmsg += "Самой большой оказалась банда [largest_gang.name], в которой насчитывалось [largest_gang.members.len] игроков, а лидером был [largest_leader.real_name]!\n"
+	discordmsg += "Режим: [SSticker.mode.name]\n"
 	discordsendmsg("ooc", discordmsg)
 	discordmsg = ""
 	var/list/ded = SSblackbox.first_death
 	if(ded)
-		discordmsg += "First Death: [ded["name"]], [ded["role"]], at [ded["area"]]\n"
-		var/last_words = ded["last_words"] ? "Their last words were: \"[ded["last_words"]]\"\n" : "They had no last words.\n"
+		discordmsg += "Первым поглотила пустошь [ded["name"]] в роли [ded["role"]] где-то в [ded["area"]]\n"
+		var/last_words = ded["last_words"] ? "Последними словами были \"[ded["last_words"]]\"\n" : "Без последнего слова\n"
 		discordmsg += "[last_words]\n"
 	else
-		discordmsg += "Nobody died!\n"
+		discordmsg += "Никто не умер!\n"
 	discordmsg += "--------------------------------------\n"
 	discordsendmsg("ooc", discordmsg)
 	
@@ -197,9 +197,9 @@
 /datum/controller/subsystem/ticker/proc/declare_completion()
 	set waitfor = FALSE
 
-	to_chat(world, "<BR><BR><BR><span class='big bold'>The round has ended.</span>")
+	to_chat(world, "<BR><BR><BR><span class='big bold'>Раунд окончен.</span>")
 	if(LAZYLEN(GLOB.round_end_notifiees))
-		send2irc("Notice", "[GLOB.round_end_notifiees.Join(", ")] the round has ended.")
+		send2irc("Notice", "[GLOB.round_end_notifiees.Join(", ")] раунд был окончен.")
 
 	for(var/I in round_end_events)
 		var/datum/callback/cb = I
@@ -269,11 +269,11 @@
 /datum/controller/subsystem/ticker/proc/standard_reboot()
 	if(ready_for_reboot)
 		if(mode.station_was_nuked)
-			Reboot("Station destroyed by Nuclear Device.", "nuke")
+			Reboot("Данный регион пустоши был уничтожен ядерной бомбой...", "nuke")
 		else
-			Reboot("Round ended.", "proper completion")
+			Reboot("Раунд окончен.", "proper completion")
 	else
-		CRASH("Attempted standard reboot without ticker roundend completion")
+		CRASH("Попытка стандартной перезагрузки без завершения цикла тикера")
 
 //Common part of the report
 /datum/controller/subsystem/ticker/proc/build_roundend_report()
@@ -315,26 +315,26 @@
 			largest_gang_number = G.members.len
 			largest_gang = G
 			largest_leader = G.leader
-
-	parts += "[GLOB.TAB]Shift Duration: <B>[DisplayTimeText(world.time - SSticker.round_start_time)]</B>"
-	parts += "[GLOB.TAB]Wasteland Integrity: <B>[mode.station_was_nuked ? "<span class='redtext'>Destroyed</span>" : "[popcount["station_integrity"]]%"]</B>"
-	parts += "[GLOB.TAB]Trading Protectrons Profits: <B>[GLOB.vendor_cash]</B>"
+	parts += "<meta charset=UTF-8>"
+	parts += "[GLOB.TAB]Раунд длился <B>[DisplayTimeText(world.time - SSticker.round_start_time)]</B>"
+	parts += "[GLOB.TAB]Целостность данного региона <B>[mode.station_was_nuked ? "<span class='redtext'>никакая</span>" : "[popcount["station_integrity"]] процентов"]</B>"
+	parts += "[GLOB.TAB]Торговые Роботы получили крышки в размере <B>[GLOB.vendor_cash]</B>"
 	if(largest_gang)
-		parts += "[GLOB.TAB]Largest Gang: <B>[largest_gang.name]</B> - [largest_gang.members.len] members, lead by <B>[largest_leader.real_name]!</B>"
+		parts += "[GLOB.TAB]Самой большой оказалась банда <B>[largest_gang.name]</B>, в которой насчитывалось [largest_gang.members.len] человек, а лидером был <B>[largest_leader.real_name]!</B>"
 	var/total_players = GLOB.joined_player_list.len
 	if(total_players)
-		parts+= "[GLOB.TAB]Total Population: <B>[total_players]</B>"
+		parts+= "[GLOB.TAB]Всего на пустошах было человек <B>[total_players]</B>"
 		if(station_evacuated)
-			parts += "<BR>[GLOB.TAB]Evacuation Rate: <B>[popcount[POPCOUNT_ESCAPEES]] ([PERCENT(popcount[POPCOUNT_ESCAPEES]/total_players)]%)</B>"
-			parts += "[GLOB.TAB](on train): <B>[popcount[POPCOUNT_SHUTTLE_ESCAPEES]] ([PERCENT(popcount[POPCOUNT_SHUTTLE_ESCAPEES]/total_players)]%)</B>"
-		parts += "[GLOB.TAB]Survival Rate: <B>[popcount[POPCOUNT_SURVIVORS]] ([PERCENT(popcount[POPCOUNT_SURVIVORS]/total_players)]%)</B>"
+			parts += "<BR>[GLOB.TAB]Из них данный регион покинуло <B>[popcount[POPCOUNT_ESCAPEES]] ([PERCENT(popcount[POPCOUNT_ESCAPEES]/total_players)]%)</B>"
+			parts += "[GLOB.TAB](на поезде): <B>[popcount[POPCOUNT_SHUTTLE_ESCAPEES]] ([PERCENT(popcount[POPCOUNT_SHUTTLE_ESCAPEES]/total_players)]%)</B>"
+		parts += "[GLOB.TAB]Выжило всего <B>[popcount[POPCOUNT_SURVIVORS]] ([PERCENT(popcount[POPCOUNT_SURVIVORS]/total_players)]%)</B>"
 		if(SSblackbox.first_death)
 			var/list/ded = SSblackbox.first_death
 			if(ded.len)
-				parts += "[GLOB.TAB]First Death: <b>[ded["name"]], [ded["role"]], at [ded["area"]]. Damage taken: [ded["damage"]].[ded["last_words"] ? " Their last words were: \"[ded["last_words"]]\"" : ""]</b>"
-			//ignore this comment, it fixes the broken sytax parsing caused by the " above
+				parts += "[GLOB.TAB]Первым поглотила пустошь <b>[ded["name"]] в роли [ded["role"]] где-то в [ded["area"]]. Полученый урон [ded["damage"]].[ded["last_words"] ? " Последними словами были: \"[ded["last_words"]]\"" : ""]</b>"
+			//этот коммент чинит синтаксис текста, ибо это говнокод американцев " above
 			else
-				parts += "[GLOB.TAB]<i>Nobody died this shift!</i>"
+				parts += "[GLOB.TAB]<i>Никто не умер на пустошах!</i>"
 	return parts.Join("<br>")
 
 /client/proc/roundend_report_file()
@@ -367,17 +367,17 @@
 			if(EMERGENCY_ESCAPED_OR_ENDGAMED)
 				if(!M.onCentCom() && !M.onSyndieBase())
 					parts += "<div class='panel stationborder'>"
-					parts += "<span class='marooned'>You managed to survive, but were marooned on [station_name()]...</span>"
+					parts += "<span class='marooned'>Вы осталсь в данном регионе под названием [station_name()]...</span>"
 				else
 					parts += "<div class='panel greenborder'>"
-					parts += "<span class='greentext'>You managed to survive the events on [station_name()] as [M.real_name].</span>"
+					parts += "<span class='greentext'>Вам удалось пережить всё что происходило в [station_name()] как [M.real_name].</span>"
 			else
 				parts += "<div class='panel greenborder'>"
-				parts += "<span class='greentext'>You managed to survive the events on [station_name()] as [M.real_name].</span>"
+				parts += "<span class='greentext'>Вам удалось пережить всё что происходило в [station_name()] как [M.real_name].</span>"
 
 		else
 			parts += "<div class='panel redborder'>"
-			parts += "<span class='redtext'>You did not survive the events on [station_name()]...</span>"
+			parts += "<span class='redtext'>Вас поглотила пустошь в [station_name()]...</span>"
 	else
 		parts += "<div class='panel stationborder'>"
 	parts += "<br>"
@@ -401,25 +401,25 @@
 	for (var/i in GLOB.ai_list)
 		var/mob/living/silicon/ai/aiPlayer = i
 		if(aiPlayer.mind)
-			parts += "<b>[aiPlayer.name]</b> (Played by: <b>[aiPlayer.mind.key]</b>)'s laws [aiPlayer.stat != DEAD ? "at the end of the round" : "when it was <span class='redtext'>deactivated</span>"] were:"
+			parts += "<b>[aiPlayer.name]</b> (Игрок: <b>[aiPlayer.mind.key]</b>) соблюдал законы и [aiPlayer.stat != DEAD ? "смог дожить до конца раунда" : "был <span class='redtext'>деактивирован</span>"] с законами:"
 			parts += aiPlayer.laws.get_law_list(include_zeroth=TRUE)
 
-		parts += "<b>Total law changes: [aiPlayer.law_change_counter]</b>"
+		parts += "<b>Всего законы были изменены [aiPlayer.law_change_counter] раз</b>"
 
 		if (aiPlayer.connected_robots.len)
 			var/borg_num = aiPlayer.connected_robots.len
-			var/robolist = "<br><b>[aiPlayer.real_name]</b>'s minions were: "
+			var/robolist = "<br><b>[aiPlayer.real_name]</b>'s имел в своём подчинений следующих помошников: "
 			for(var/mob/living/silicon/robot/robo in aiPlayer.connected_robots)
 				borg_num--
 				if(robo.mind)
-					robolist += "<b>[robo.name]</b> (Played by: <b>[robo.mind.key]</b>)[robo.stat == DEAD ? " <span class='redtext'>(Deactivated)</span>" : ""][borg_num ?", ":""]<br>"
+					robolist += "<b>[robo.name]</b> (Игрок: <b>[robo.mind.key]</b>)[robo.stat == DEAD ? " <span class='redtext'>(Деактивирован)</span>" : ""][borg_num ?", ":""]<br>"
 			parts += "[robolist]"
 		if(!borg_spacer)
 			borg_spacer = TRUE
 
 	for (var/mob/living/silicon/robot/robo in GLOB.silicon_mobs)
 		if (!robo.connected_ai && robo.mind)
-			parts += "[borg_spacer?"<br>":""]<b>[robo.name]</b> (Played by: <b>[robo.mind.key]</b>) [(robo.stat != DEAD)? "<span class='greentext'>survived</span> as an AI-less borg!" : "was <span class='redtext'>unable to survive</span> the rigors of being a cyborg without an AI."] Its laws were:"
+			parts += "[borg_spacer?"<br>":""]<b>[robo.name]</b> (Игрок: <b>[robo.mind.key]</b>) [(robo.stat != DEAD)? "<span class='greentext'>выжил</span> в качестве марионетки ИИ!" : "не смог <span class='redtext'>выжить</span> без ИИ."] Законы:"
 
 			if(robo) //How the hell do we lose robo between here and the world messages directly above this?
 				parts += robo.laws.get_law_list(include_zeroth=TRUE)
@@ -443,7 +443,7 @@
 /datum/controller/subsystem/ticker/proc/medal_report()
 	if(GLOB.commendations.len)
 		var/list/parts = list()
-		parts += "<span class='header'>Medal Commendations:</span>"
+		parts += "<span class='header'>Медаль Получили:</span>"
 		for (var/com in GLOB.commendations)
 			parts += com
 		return "<div class='panel stationborder'>[parts.Join("<br>")]</div>"
@@ -503,7 +503,7 @@
 	var/datum/action/report/R = new
 	C.player_details.player_actions += R
 	R.Grant(C.mob)
-	to_chat(C,"<a href='?src=[REF(R)];report=1'>Show roundend report again</a>")
+	to_chat(C,"<a href='?src=[REF(R)];report=1'>Показать конец раунда снова</a>")
 
 /datum/action/report
 	name = "Show roundend report"
@@ -531,17 +531,17 @@
 	var/text = "<b>[ply.key]</b> was <b>[ply.name]</b>[jobtext] and"
 	if(ply.current)
 		if(ply.current.stat == DEAD)
-			text += " <span class='redtext'>died</span>"
+			text += " <span class='redtext'>погиб</span>"
 		else
-			text += " <span class='greentext'>survived</span>"
+			text += " <span class='greentext'>выжил</span>"
 		if(fleecheck)
 			var/turf/T = get_turf(ply.current)
 			if(!T || !is_station_level(T.z))
-				text += " while <span class='redtext'>fleeing the station</span>"
+				text += " <span class='redtext'>покинув область</span>"
 		if(ply.current.real_name != ply.name)
 			text += " as <b>[ply.current.real_name]</b>"
 	else
-		text += " <span class='redtext'>had their body destroyed</span>"
+		text += " и вместе с этим <span class='redtext'>тело было уничтожено</span>"
 	return text
 
 /proc/printplayerlist(list/players,fleecheck)
@@ -559,9 +559,9 @@
 	var/count = 1
 	for(var/datum/objective/objective in ply.objectives)
 		if(objective.check_completion())
-			objective_parts += "<b>Objective #[count]</b>: [objective.explanation_text] <span class='greentext'>Success!</span>"
+			objective_parts += "<b>Задачи #[count]</b>: [objective.explanation_text] <span class='greentext'>Выполнил!</span>"
 		else
-			objective_parts += "<b>Objective #[count]</b>: [objective.explanation_text] <span class='redtext'>Fail.</span>"
+			objective_parts += "<b>Задачи #[count]</b>: [objective.explanation_text] <span class='redtext'>Не смог выполнить.</span>"
 		count++
 	return objective_parts.Join("<br>")
 

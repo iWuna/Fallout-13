@@ -8,7 +8,7 @@
 	opacity = 0
 
 	var/fired = 0
-	var/fuel = 300
+	var/fuel = 3000
 	light_color = LIGHT_COLOR_FIRE
 	light_power = 1
 	var/burned = 0
@@ -81,14 +81,8 @@
 	burn_process()
 	fuel--
 	calc_light()
-//	var/turf/open/location = get_turf(src)//shity code detected
-//	if(istype(location))
-//		var/datum/gas_mixture/affected = location.air
-//		affected.temperature *= 1.01
 
 /obj/structure/campfire/proc/fire(mob/living/user)
-
-//	BeginAmbient('sound/effects/comfyfire.ogg', 20, 12)
 
 	playsound(src, 'sound/items/welder.ogg', 25, 1, -3)
 	set_light_on(TRUE)
@@ -122,22 +116,9 @@
 /obj/structure/campfire/update_icon()
 	if(fired)
 		icon_state = "[initial(icon_state)]-lit"
-//		overlays = list(image(icon,icon_state = "campfire_o"))
 	else
 		icon_state = initial(icon_state)
-//		overlays.Cut()
 	..()
-
-/*/obj/structure/campfire/extinguish()
-	name = "burned campfire"
-	desc = "It has burned to ashes..."
-	icon_state = initial(icon_state)
-	fired = 0
-	burned = 1
-	set_light(0)
-//	StopAmbient()
-	STOP_PROCESSING(SSobj, src)
-	update_icon()*/
 
 /obj/structure/campfire/infinity
 	fired = 1
@@ -149,6 +130,7 @@
 	desc = "A campfire made out of an old steel drum. You're not going to fall into the fire, but you feel like a hobo using it. Which you are."
 	icon_state = "drumfire"
 	density = 1
+	fuel = 10000
 
 /obj/structure/campfire/stove
 	name = "pot belly stove"

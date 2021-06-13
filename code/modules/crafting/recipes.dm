@@ -1607,7 +1607,7 @@
 
 /datum/crafting_recipe/headset
 	name = "radio headset"
-	result = /obj/item/radio/headset
+	result = /obj/item/radio/headset/makeshift
 	reqs = list(/obj/item/stack/sheet/metal = 1,
 				/obj/item/stack/crafting/electronicparts = 1)
 	tools = list(TOOL_WORKBENCH)

@@ -226,3 +226,24 @@
 	icon = 'icons/fallout/turfs/walls/superstore.dmi'
 	icon_state = "supermart0"
 	icon_type_smooth = "supermart"
+
+/turf/closed/indestructible/black //Чернота
+	name = ""
+	desc = ""
+	icon = 'icons/turf/none.dmi'
+	icon_state = "black"
+
+/turf/closed/indestructible/black/opacity //Чернота прозрачная
+	opacity = 0
+	smooth = SMOOTH_TRUE
+
+/turf/closed/indestructible/none //Пустота
+	name = ""
+	desc = ""
+	icon = 'icons/turf/none.dmi'
+	icon_state = "none"
+
+
+/turf/closed/indestructible/none/opacity //Пустота прозрачная
+	opacity = 0
+	smooth = SMOOTH_TRUE

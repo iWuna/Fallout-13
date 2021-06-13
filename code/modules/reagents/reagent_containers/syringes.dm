@@ -251,6 +251,20 @@
 /obj/item/reagent_containers/syringe/lethal/execution
 	list_reagents = list("plasma" = 15, "formaldehyde" = 15, "cyanide" = 10, "facid" = 10)
 
+/obj/item/reagent_containers/syringe/lethal/blackpowder
+	name = "Black Powder injection syringe"
+	desc = "Шприц со 100 юнитами пороха. Вколи и подожги."
+	amount_per_transfer_from_this = 100
+	volume = 100
+	list_reagents = list("blackpowder" = 100)
+
+/obj/item/reagent_containers/syringe/lethal/blackpowder/pizdec
+	name = "Black Powder injection syringe"
+	desc = "Шприц с 1000 юнитами пороха. Вколи и подожги. Не забудь спрятаться."
+	amount_per_transfer_from_this = 1000
+	volume = 1000
+	list_reagents = list("blackpowder" = 1000)
+
 /obj/item/reagent_containers/syringe/mulligan
 	name = "Mulligan"
 	desc = "A syringe used to completely change the users identity."

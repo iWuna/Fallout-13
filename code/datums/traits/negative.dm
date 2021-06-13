@@ -1,12 +1,12 @@
 //predominantly negative traits
 
 /datum/quirk/blooddeficiency
-	name = "Acute Blood Deficiency"
-	desc = "Your body can't produce enough blood to sustain itself."
+	name = "Кровеносная Недостаточность"
+	desc = "Ваше тело не может вырабатывать достаточно крови"
 	value = -2
-	gain_text = "<span class='danger'>You feel your vigor slowly fading away.</span>"
-	lose_text = "<span class='notice'>You feel vigorous again.</span>"
-	medical_record_text = "Patient requires regular treatment for blood loss due to low production of blood."
+	gain_text = "<span class='danger'>Вы чувствуете, как ваша силы со временем исчезают.</span>"
+	lose_text = "<span class='notice'>Вы снова чувствуете себя бодрым.</span>"
+	medical_record_text = "Пациенту требуется регулярное лечение кровопотери из-за низкого кроветворения."
 
 /datum/quirk/blooddeficiency/on_process()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -38,12 +38,12 @@
 	medical_record_text = "Patient has abnormal sleep study results and is difficult to wake up."
 */
 /datum/quirk/brainproblems
-	name = "Brain Tumor"
-	desc = "You have a little friend in your brain that is slowly destroying it. Better bring some mannitol!"
+	name = "Шизофрения"
+	desc = "В вашем мозгу есть маленький друг, который медленно его разрушает. Маннитол лучшее средство для лечения."
 	value = -3
-	gain_text = "<span class='danger'>You feel smooth.</span>"
-	lose_text = "<span class='notice'>You feel wrinkled again.</span>"
-	medical_record_text = "Patient has a tumor in their brain that is slowly driving them to brain death."
+	gain_text = "<span class='danger'>Моя голова АДСКИ болит.</span>"
+	lose_text = "<span class='notice'>Моя голова больше не болит.</span>"
+	medical_record_text = "У пациента опухоль в мозгу, которая медленно ведет к смерти мозга."
 
 /datum/quirk/brainproblems/on_process()
 	quirk_holder.adjustBrainLoss(0.2)
@@ -71,31 +71,31 @@
 
 
 /datum/quirk/nonviolent
-	name = "Pacifist"
-	desc = "The thought of violence makes you sick. So much so, in fact, that you can't hurt anyone."
+	name = "Пацифист"
+	desc = "Мысль о насилии вызывает тошноту. Настолько, что вы не можете нанести урон любому существу."
 	value = -3
 	mob_trait = TRAIT_PACIFISM
-	gain_text = "<span class='danger'>You feel repulsed by the thought of violence!</span>"
-	lose_text = "<span class='notice'>You think you can defend yourself again.</span>"
-	medical_record_text = "Patient is unusually pacifistic and cannot bring themselves to cause physical harm."
+	gain_text = "<span class='danger'>Вас отталкивает мысль о насилии!</span>"
+	lose_text = "<span class='notice'>Я снова могу защитить себя.</span>"
+	medical_record_text = "Пациент необычайно миролюбив и не может заставить себя причинить физический вред."
 
 /datum/quirk/nonviolent/on_process()
 	if(quirk_holder.mind && LAZYLEN(quirk_holder.mind.antag_datums))
-		to_chat(quirk_holder, "<span class='boldannounce'>Your antagonistic nature has caused you to renounce your pacifism.</span>")
+		to_chat(quirk_holder, "<span class='boldannounce'>Ваша антагонистическая натура заставила вас отказаться от пацифизма.</span>")
 		qdel(src)
 
 
 
 /datum/quirk/poor_aim
-	name = "Poor Aim"
-	desc = "You're terrible with guns and can't line up a straight shot to save your life. Dual-wielding is right out."
+	name = "Криворукий"
+	desc = "Вы плохо обращаетесь с оружием и не можете выстрелить так, чтобы пуля попала в цель"
 	value = -1
 	mob_trait = TRAIT_POOR_AIM
-	medical_record_text = "Patient possesses a strong tremor in both hands."
+	medical_record_text = "У больного сильный тремор в обеих руках."
 
 /datum/quirk/cannotmed
-	name = "Traditionalist"
-	desc = "You sure in only one truth. Traditional medicine is cooler than normal one."
+	name = "Традиционалист"
+	desc = "Вы уверены только в одной истине. Традиционная медицина круче обычной."
 	value = -3
 	mob_trait = TRAIT_MEDEBIL
 	locked = FALSE
@@ -129,12 +129,12 @@
 
 
 /datum/quirk/social_anxiety
-	name = "Social Anxiety"
-	desc = "Talking to people is very difficult for you, and you often stutter or even lock up."
+	name = "Асоциальный"
+	desc = "Вам очень трудно разговаривать с людьми, вы часто заикаетесь"
 	value = -2
-	gain_text = "<span class='danger'>You start worrying about what you're saying.</span>"
-	lose_text = "<span class='notice'>You feel easier about talking again.</span>" //if only it were that easy!
-	medical_record_text = "Patient is usually anxious in social encounters and prefers to avoid them."
+	gain_text = "<span class='danger'>Не могу сосредоточиться когда говорю.</span>"
+	lose_text = "<span class='notice'>Теперь могу говорить нормально.</span>" //if only it were that easy!
+	medical_record_text = "Пациент обычно обеспокоен социальными контактами и предпочитает их избегать."
 	var/dumb_thing = TRUE
 
 /datum/quirk/social_anxiety/on_process()
@@ -146,10 +146,10 @@
 	if(prob(2 + nearby_people))
 		H.stuttering = max(3, H.stuttering)
 	else if(prob(min(3, nearby_people)) && !H.silent)
-		to_chat(H, "<span class='danger'>You retreat into yourself. You <i>really</i> don't feel up to talking.</span>")
+		to_chat(H, "<span class='danger'>Не хочу говорить, хочу <i>сейчас</i> уйти в себя.</span>")
 		H.silent = max(10, H.silent)
 	else if(prob(0.5) && dumb_thing)
-		to_chat(H, "<span class='userdanger'>You think of a dumb thing you said a long time ago and scream internally.</span>")
+		to_chat(H, "<span class='userdanger'>Вы думаете о глупости, которую вы сказали много лет назад.</span>")
 		dumb_thing = FALSE //only once per life
 		if(prob(1))
 			new/obj/item/reagent_containers/food/snacks/pastatomato(get_turf(H)) //now that's what I call spaghetti code
@@ -170,12 +170,12 @@
 */
 
 /datum/quirk/wild_wasteland
-	name = "Wild Wasteland"
-	desc = "Shit happens around you. (admin license to make your life spicy)."
+	name = "Дикая Пустошь"
+	desc = "В вашей жизни произошло странное и теперь около вас творится пиздец."
 	value = 0
 	mob_trait = TRAIT_WILDWASTELAND
-	gain_text = "<span class='danger'>You feel yourself more intresting for gods.</span>"
-	lose_text = "<span class='danger'>You feel less intresting for gods.</span>"
+	gain_text = "<span class='danger'>Чуствую себя странно.</span>"
+	lose_text = "<span class='danger'>Теперь я спокоен.</span>"
 
 /datum/quirk/wild_wasteland/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
@@ -184,8 +184,76 @@
 	message_admins("Расчехляем щитспавнилки, [key_name(usr)] берет перк ДИКАЯ ПУСТОШЬ, НУ-КА ПАМАЦАЕМ!")
 
 /datum/quirk/mute
-	name = "Mute"
-	desc = "You have entirely lost the ability to speak. How unfortunate!"
+	name = "Молчаливый"
+	desc = "Вы не умеете разговаривать"
 	value = -1
 	mob_trait = TRAIT_MUTE
 
+/datum/quirk/nearsighted //t. errorage
+	name = "Близорукость"
+	desc = "У вас проблемы со зрением, из-за чего у вас появляется пара очков для глаз без рецепта."
+	value = -1
+	gain_text = "<span class='danger'>Глаза болят.</span>"
+	lose_text = "<span class='notice'>Начинаю нормально видеть.</span>"
+	medical_record_text = "Пациенту требуются очки по рецепту, чтобы противодействовать близорукости."
+
+/datum/quirk/nearsighted/add()
+	quirk_holder.become_nearsighted(ROUNDSTART_TRAIT)
+
+/datum/quirk/nearsighted/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	var/obj/item/clothing/glasses/regular/glasses = new(get_turf(H))
+	H.put_in_hands(glasses)
+	H.equip_to_slot_if_possible(glasses, SLOT_GLASSES)
+	H.regenerate_icons() //this is to remove the inhand icon, which persists even if it's not in their hands
+
+/datum/quirk/monochromatic
+	name = "Монохромность"
+	desc = "У вас полный дальтонизм и воспринимаете почти весь мир в черно-белых тонах."
+	value = -1
+	medical_record_text = "Пациент страдает ахроматопсией и видит весь мир в чёрно-белых оттенках."
+
+/datum/quirk/monochromatic/add()
+	quirk_holder.add_client_colour(/datum/client_colour/monochrome)
+
+/datum/quirk/monochromatic/post_add()
+	if(quirk_holder.mind.assigned_role == "Detective") //Добавить сюда шерифа
+		to_chat(quirk_holder, "<span class='boldannounce'>Жизнь была прекрасна... Закат освещает прекрасный летний вечер, в воздухе висит запах свежескошенной травы с газонов, где-то смеются и кричат дети. Дом за рекой... где тебя ждут красавица-жена и чудесная маленькая дочка. Настоящий воздушный замок, ставший реальностью. Вот только если бы воздушные замки не разрушались так быстро, пока на них не смотрят.</span>")
+		quirk_holder.playsound_local(quirk_holder, 'sound/ambience/ambidet1.ogg', 50, FALSE)
+
+/datum/quirk/monochromatic/remove()
+	if(quirk_holder)
+		quirk_holder.remove_client_colour(/datum/client_colour/monochrome)
+
+/datum/quirk/prosthetic_limb
+	name = "Протез"
+	desc = "Ваша конечность была заменена на протез."
+	value = -1
+	var/slot_string = "limb"
+
+/datum/quirk/prosthetic_limb/on_spawn()
+	var/limb_slot = pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
+	var/mob/living/carbon/human/H = quirk_holder
+	var/obj/item/bodypart/old_part = H.get_bodypart(limb_slot)
+	var/obj/item/bodypart/prosthetic
+	switch(limb_slot)
+		if(BODY_ZONE_L_ARM)
+			prosthetic = new/obj/item/bodypart/l_arm/robot/surplus(quirk_holder)
+			slot_string = "left arm"
+		if(BODY_ZONE_R_ARM)
+			prosthetic = new/obj/item/bodypart/r_arm/robot/surplus(quirk_holder)
+			slot_string = "right arm"
+		if(BODY_ZONE_L_LEG)
+			prosthetic = new/obj/item/bodypart/l_leg/robot/surplus(quirk_holder)
+			slot_string = "left leg"
+		if(BODY_ZONE_R_LEG)
+			prosthetic = new/obj/item/bodypart/r_leg/robot/surplus(quirk_holder)
+			slot_string = "right leg"
+	prosthetic.replace_limb(H)
+	qdel(old_part)
+	H.regenerate_icons()
+
+/datum/quirk/prosthetic_limb/post_add()
+	to_chat(quirk_holder, "<span class='boldannounce'>К вашему телу была приделана ''Rob'co [slot_string] surplus'' вместо старой конечности, \
+	используйте провода и сварку вместо мазей и бинтов соответственно. Также протез соединён с кровеносной системой, так что \
+	рекомендуется устранять поломку конечности как можно быстрее.</span>")

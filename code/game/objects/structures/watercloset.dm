@@ -454,7 +454,7 @@
 	desc = "A sink used for washing one's hands and face."
 	anchored = TRUE
 	var/busy = FALSE 	//Something's being washed at the moment
-	var/dispensedreagent = "rad_water" // for whenever plumbing happens
+	var/dispensedreagent = "water"
 
 /obj/structure/sink/safe
 	dispensedreagent = "water"

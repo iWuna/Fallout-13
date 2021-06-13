@@ -1,3 +1,4 @@
+//Добавить предметов
 /datum/gang_item
 	var/name
 	var/item_path
@@ -199,43 +200,54 @@
 /datum/gang_item/equipment
 	category = "Purchase Equipment:"
 
-/datum/gang_item/equipment/spraycan
-	name = "Spraycan"
-	id = "spraycan"
-	cost = 10
-	item_path = /obj/item/toy/crayon/spraycan
-
-/datum/gang_item/equipment/mentats
-	name = "Mentats"
-	id = "mentats"
-	cost = 30
-	item_path = /obj/item/storage/pill_bottle/chem_tin/mentats
-
-/datum/gang_item/equipment/fixer
-	name = "Fixer"
-	id = "fixer"
-	cost = 100
-	item_path = /obj/item/storage/pill_bottle/chem_tin/fixer
-
 /datum/gang_item/equipment/emp
-	name = "EMP Grenade"
+	name = "ЭМИ Граната"
 	id = "EMP"
 	cost = 95
 	item_path = /obj/item/grenade/empgrenade
 
-/datum/gang_item/equipment/necklace
-	name = "Gold Necklace"
-	id = "necklace"
-	cost = 150
-	item_path = /obj/item/clothing/neck/necklace/dope
-
 /datum/gang_item/equipment/c4
-	name = "C4 Explosive"
+	name = "С4 Взрывчатка"
 	id = "c4"
-	cost = 200
+	cost = 1000
 	item_path = /obj/item/grenade/plastic/c4
 
-
+/datum/gang_item/equipment/gluon
+	name = "Глюонная Граната"
+	id = "gluon"
+	cost = 200
+	item_path = /obj/item/grenade/gluon
 ///////////////////
 //EQUIPMENT
 ///////////////////
+
+/datum/gang_item/equipment/pip_boy
+	name = "Пип-Бой"
+	id = "pip_boy"
+	cost = 400
+	item_path = /obj/item/pda/clear
+
+/datum/gang_item/equipment/combat_injector
+	name = "Военнный Иньектор"
+	id = "cumboy_in"
+	cost = 500
+	item_path = /obj/item/reagent_containers/hypospray/combat
+
+/datum/gang_item/equipment/bola
+	name = "Бола"
+	id = "bola_gang"
+	cost = 200
+	item_path = /obj/item/restraints/legcuffs/bola
+
+/datum/gang_item/equipment/toolbox
+	name = "Ящик с инструментами"
+	id = "toolbox_gang"
+	cost = 100
+	item_path = /obj/item/storage/toolbox/mechanical
+
+/datum/gang_item/equipment/frag
+	name = "Осколочная Граната"
+	id = "frag_gang"
+	cost = 400
+	item_path = /obj/item/grenade/syndieminibomb/concussion/frag
+

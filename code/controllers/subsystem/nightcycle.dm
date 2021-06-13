@@ -123,13 +123,13 @@ SUBSYSTEM_DEF(nightcycle)
 /datum/time_of_day/sunrise
 	name = "SUNRISE"
 	color = "#ffd1b3"
-	sunPower = 0.3
+	sunPower = 0.1
 	duration = 2250
 
 /datum/time_of_day/morning
 	name = "MORNING"
 	color = "#fff2e6"
-	sunPower = 0.5
+	sunPower = 0.4
 	duration = 2250
 
 /datum/time_of_day/daytime
@@ -141,19 +141,19 @@ SUBSYSTEM_DEF(nightcycle)
 /datum/time_of_day/afternoon
 	name = "AFTERNOON"
 	color = "#fff2e6"
-	sunPower = 0.5
+	sunPower = 0.4
 	duration = 2250
 
 /datum/time_of_day/sunset
 	name = "SUNSET"
 	color = "#ffcccc"
-	sunPower = 0.3
+	sunPower = 0.1
 	duration = 2250
 
 /datum/time_of_day/night
 	name = "NIGHTTIME"
-	color = "#171718"
-	sunPower = 0.3
+	color = "#27283d"
+	sunPower = 0.1
 	duration = 9000
 
 #undef CYCLE_SUNRISE

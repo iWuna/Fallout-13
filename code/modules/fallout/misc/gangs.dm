@@ -32,9 +32,14 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 	var/round_start = FALSE //Is this gang a round-start gang?
 	var/boss_item_list
 	var/list/boss_items = list(
-		/datum/gang_item/equipment/spraycan,
+		/datum/gang_item/equipment/pip_boy,
+		/datum/gang_item/equipment/combat_injector,
+		/datum/gang_item/equipment/bola,
 		/datum/gang_item/equipment/emp,
-		/datum/gang_item/equipment/necklace,
+		/datum/gang_item/equipment/toolbox,
+		/datum/gang_item/equipment/frag,
+		/datum/gang_item/equipment/c4,
+		/datum/gang_item/equipment/gluon,
 
 		/datum/gang_item/weapon/shuriken,
 		/datum/gang_item/weapon/switchblade,
@@ -56,11 +61,12 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 	color = "#b07f43"
 	round_start = TRUE
 	boss_items = list(
-		/datum/gang_item/equipment/spraycan,
-		/datum/gang_item/equipment/mentats,
-		/datum/gang_item/equipment/fixer,
+		/datum/gang_item/equipment/pip_boy,
+		/datum/gang_item/equipment/combat_injector,
+		/datum/gang_item/equipment/bola,
 		/datum/gang_item/equipment/emp,
-		/datum/gang_item/equipment/necklace,
+		/datum/gang_item/equipment/toolbox,
+		/datum/gang_item/equipment/frag,
 		/datum/gang_item/equipment/c4,
 
 		/datum/gang_item/weapon/shuriken,
@@ -101,7 +107,7 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 	if(!round_start)
 		new_leader.verbs |= /mob/living/proc/setcolor
 	new_leader.verbs |= /mob/living/proc/leavegang
-	to_chat(new_leader, "<span class='notice'>You have become a new leader of the [name]! You can now invite and remove members at will. You have also received a Gangtool device that allows you to buy a special gear for you and your gang.</span>")
+	to_chat(new_leader, "<span class='notice'>Вы стали новым лидером [name]! Теперь вы можете управлять её участниками по своему желанию. Вы также получили устройство Gangtool, которое позволяет вам покупать специальное снаряжение для вас и вашей банды.</span>")
 
 	var/obj/item/device/gangtool/gangtool = new(new_leader)
 	gangtool.gang = new_leader.gang
@@ -130,9 +136,9 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 	if(!round_start)
 		old_leader.verbs -= /mob/living/proc/setcolor
 	old_leader.verbs |= /mob/living/proc/assumeleader
-	to_chat(old_leader, "<span class='warning'>You are no longer the leader of the [name]!</span>")
+	to_chat(old_leader, "<span class='warning'>Теперь ты не лидер [name]!</span>")
 	if(assigned_tool)
-		assigned_tool.audible_message("<span class='warning'>With a change of the [name] leadership, [assigned_tool] ceases to function and self-destructs!</span>")
+		assigned_tool.audible_message("<span class='warning'>[name] сменила своего владельца, [assigned_tool] самоуничтожается!</span>")
 		qdel(assigned_tool)
 
 /datum/gang/proc/add_member(mob/living/carbon/new_member)
@@ -141,9 +147,9 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 	new_member.verbs -= /mob/living/proc/creategang
 	new_member.verbs |= /mob/living/proc/leavegang
 	new_member.verbs |= /mob/living/proc/assumeleader
-	to_chat(new_member, "<span class='notice'>You are now a member of the [name]! Everyone can recognize your gang membership now.</span>")
+	to_chat(new_member, "<span class='notice'>Теперь вы участник [name]!</span>")
 	if(welcome_text)
-		to_chat(new_member, "<span class='notice'>Welcome text: </span><span class='purple'>[welcome_text]</span>")
+		to_chat(new_member, "<span class='notice'>Текст приветствия: </span><span class='purple'>[welcome_text]</span>")
 
 /datum/gang/proc/remove_member(mob/living/carbon/member)
 	members -= member
@@ -152,7 +158,7 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 	member.verbs -= /mob/living/proc/leavegang
 	member.verbs -= /mob/living/proc/assumeleader
 	member.verbs |= /mob/living/proc/creategang
-	to_chat(member, "<span class='warning'>You are no longer a member of the [name]!</span>")
+	to_chat(member, "<span class='warning'>Вы больше не являетесь членом [name]!</span>")
 
 	if(!members.len && !round_start)
 		GLOB.gang_names -= lowertext(name)
@@ -161,7 +167,7 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 
 /mob/living/proc/invitegang()
 	set name = "Invite To Gang"
-	set desc = "Invite others to your gang. Only independent raiders in view can be offered to join!"
+	set desc = "Пригласите других в свою банду. Только независимые рейдеры могут быть приглашены!"
 	set category = "Gang"
 
 	var/list/possible_targets = list()
@@ -180,16 +186,16 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 		return
 
 	var/mob/living/carbon/C
-	C = input("Choose who to invite to your gang!", "Gang invitation") as null|mob in possible_targets
+	C = input("Выбери, кого пригласить в свою банду!", "Gang invitation") as null|mob in possible_targets
 	if(!C)
 		return
 
 	var/datum/gang/G = gang
-	if(alert(C, "[src] invites you to join the [G.name].", "Gang invitation", "Yes", "No") == "No")
-		visible_message(C, "<span class='warning'>[C.name] refused an offer to join the [G.name]!</span>")
+	if(alert(C, "[src] приглашает вас в [G.name].", "Gang invitation", "Yes", "No") == "No")
+		visible_message(C, "<span class='warning'>[C.name] отказался от предложения присоединиться к [G.name]!</span>")
 		return
 	else
-		visible_message(C, "<span class='notice'>[C.name] accepted an offer to join the [G.name]!</span>")
+		visible_message(C, "<span class='notice'>[C.name] принял приглашение присоедениться к [G.name]!</span>")
 
 	G.add_member(C)
 	C.gang = G
@@ -198,12 +204,12 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 	set name = "Create Gang"
 	set category = "Gang"
 
-	var/input = input(src, "Enter the name of your new gang!", "Gang name") as text|null
+	var/input = input(src, "Введите название своей новой банды!", "Gang name") as text|null
 	if(!input)
 		return
 	input = copytext(sanitize(input), 1, 30)
 	if(lowertext(input) in GLOB.gang_names)
-		to_chat(src, "<span class='notice'>This gang name is already taken!</span>")
+		to_chat(src, "<span class='notice'>Это название банды уже занято!</span>")
 		return
 	GLOB.gang_names |= lowertext(input)
 
@@ -211,7 +217,7 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 	G.name = input
 	GLOB.all_gangs |= G
 	gang = G
-	to_chat(src, "<span class='notice'>You have created [G.name]!</span>")
+	to_chat(src, "<span class='notice'>Вы создали [G.name]!</span>")
 
 	G.add_member(src)
 	G.add_leader(src)
@@ -222,9 +228,9 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 
 	var/datum/gang/G = gang
 	if(!G)
-		to_chat(src, "You are already not in any gang!")
+		to_chat(src, "Вы не состоите ни в одной банде!")
 		return
-	if(alert("Are you sure you want to leave [G.name]?", "Leave gang", "Yes", "No") == "No")
+	if(alert("Вы точно хотите покинуть [G.name]?", "Leave gang", "Yes", "No") == "No")
 		return
 
 	if(G.leader == src)
@@ -233,14 +239,14 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 
 /mob/living/proc/assumeleader()
 	set name = "Assume Leadership"
-	set desc = "Become a new gang leader if the old one is missing or dead."
+	set desc = "Станьте новым лидером банды, если прошлый лидер пропал или мертв."
 	set category = "Gang"
 
 	var/datum/gang/G = gang
 	if(G && G.leader)
 		var/mob/living/L = G.leader
 		if(L.stat != DEAD && L.client)
-			to_chat(src, "<span class='warning'>Gang leader is still alive and well!</span>")
+			to_chat(src, "<span class='warning'>Прошлый лидер ещё живой.</span>")
 			return
 		else
 			G.remove_leader(L)
@@ -250,7 +256,7 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 
 /mob/living/proc/transferleader()
 	set name = "Transfer Leadership"
-	set desc = "Transfer your leader position to a different gang member in view."
+	set desc = "Передайте лидерку другому члену банды в поле зрения."
 	set category = "Gang"
 
 	var/list/possible_targets = list()
@@ -267,18 +273,18 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 	var/datum/gang/G = gang
 	if(G && G.leader == src)
 		var/mob/living/carbon/new_leader
-		new_leader = input(src, "Choose a new gang leader of the [G.name]!", "Transfer Gang Leadership") as null|mob in possible_targets
+		new_leader = input(src, "Выберите нового лидера банды [G.name]!", "Transfer Gang Leadership") as null|mob in possible_targets
 		if(!new_leader || new_leader == src)
 			return
 		var/mob/living/H = new_leader
-		to_chat(src, "<span class='notice'>You have transferred gang leadership of the [G.name] to [H.real_name]!</span>")
-		to_chat(H, "<span class='notice'>You have received gang leadership of the [G.name] from [src.real_name]!</span>")
+		to_chat(src, "<span class='notice'>Вы передали [G.name] в руки [H.real_name]!</span>")
+		to_chat(H, "<span class='notice'>Вы получили [G.name] от [src.real_name]!</span>")
 		G.remove_leader(src)
 		G.add_leader(H)
 
 /mob/living/proc/removemember()
 	set name = "Remove Member"
-	set desc = "Remove an alive gang member from the gang in view."
+	set desc = "Убрать члена банды в поле зрения из банды."
 	set category = "Gang"
 
 	var/list/possible_targets = list()
@@ -295,32 +301,32 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 	var/datum/gang/G = gang
 	if(G && G.leader == src)
 		var/mob/living/carbon/kicked_member
-		kicked_member = input(src, "Choose a gang member to remove from [G.name]!", "Gang member removal") as null|mob in possible_targets
+		kicked_member = input(src, "Выберите члена банды, из которого хотите уволить [G.name]!", "Gang member removal") as null|mob in possible_targets
 		if(!kicked_member || kicked_member == src)
 			return
 
 		var/mob/living/H = kicked_member
-		to_chat(src, "<span class='notice'>You have removed [H.real_name] from the [G.name]!</span>")
-		to_chat(H, "<span class='warning'>You have been kicked from the [G.name] by [src.real_name]!</span>")
+		to_chat(src, "<span class='notice'>Вы уволили [H.real_name] из [G.name]!</span>")
+		to_chat(H, "<span class='warning'>[src.real_name] выгнал тебя из [G.name]!</span>")
 		G.remove_member(H)
 
 /mob/living/proc/setwelcome()
 	set name = "Set Welcome Text"
-	set desc = "Set a welcome text that will show to all new members of the gang upon joining."
+	set desc = "Установите приветственный текст, который будет отображаться для всех новых членов банды при вступлении в неё."
 	set category = "Gang"
 
 	var/datum/gang/G = gang
-	var/input = input(src, "Set a welcome text for a new gang members!", "Welcome text", G.welcome_text) as text|null
+	var/input = input(src, "Установите приветственный текст для новых членов банды!", "Welcome text", G.welcome_text) as text|null
 	if(!input)
 		return
 	input = copytext(sanitize(input), 1, 300)
 	G.welcome_text = input
 
-	to_chat(src, "<span class='notice'>You have set a welcome text for a new gang members!</span>")
+	to_chat(src, "<span class='notice'>Вы установили приветственный текст для новых членов банды!</span>")
 
 /mob/living/proc/setcolor()
 	set name = "Choose Gang Color"
-	set desc = "Set a color of your gang that will be visible on the gang members upon examine."
+	set desc = "Установите цвет вашей банды, который будет виден членам банды при осмотре."
 	set category = "Gang"
 
 	var/datum/gang/G = gang
@@ -329,4 +335,4 @@ GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 		return
 	G.color = sanitize_color(picked_color)
 
-	to_chat(src, "<span class='notice'>You have chosen a new gang color!</span>")
+	to_chat(src, "<span class='notice'>Вы выбрали новый цвет банды!</span>")

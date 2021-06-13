@@ -18,9 +18,9 @@
 
 /obj/item/radio/headset/examine(mob/user)
 	..()
-	to_chat(user, "<span class='notice'>To speak on the general radio frequency, use ; before speaking.</span>")
+	to_chat(user, "<span class='notice'>Что бы говорить в радио, поставьте перед вводимым текстом символ <b>;</b></span>")
 	if (command)
-		to_chat(user, "<span class='notice'>Alt-click to toggle the high-volume mode.</span>")
+		to_chat(user, "<span class='notice'>Alt-click включает громкий режим.</span>")
 
 /obj/item/radio/headset/Initialize()
 	. = ..()
@@ -210,6 +210,26 @@ obj/item/radio/headset/attackby(obj/item/W, mob/user, params)
 	keyslot = new /obj/item/encryptionkey/headset_service
 
 //FALLOUT
+/obj/item/radio/headset/makeshift
+	name = "\proper the radio headset"
+	desc = "An updated, modular makeshift intercom that fits over the head. Takes encryption keys."
+	icon_state = "make_headset"
+
+/obj/item/radio/headset/makeshift/broken
+	name = "\proper the radio headset"
+	desc = "An updated, modular makeshift intercom that fits over the head. Takes encryption keys."
+	icon_state = "make_headset"
+
+/obj/item/radio/headset/makeshift/broken/ComponentInitialize()
+	on = FALSE //Отключает наушник
+	frequency = FREQ_SIGNALER //Переключает на канал сигналера
+	emped = rand(1337,1488) //Даёт емп заряд
+	broadcasting = FALSE //Отключает передачу звука
+	listening = FALSE //Отключает получение звука
+	freqlock = TRUE //Блокирует на одной частоте
+	
+
+
 /obj/item/radio/headset/headset_overseer
 	name = "\proper the overseer's radio headset"
 	desc = "This is used by the vault overseer.\nChannels are as follows: :v - vault, :c - command, :s - security, :e - engineering, :m - medical, :n - science."

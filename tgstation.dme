@@ -2579,7 +2579,7 @@
 #include "code\modules\QuestMachines\bounty_pod.dm"
 #include "code\modules\QuestMachines\bounty_quests.dm"
 #include "code\modules\QuestMachines\coureer.dm"
-#include "code\modules\QuestMachines\quest_items.dm"
+#include "code\modules\QuestMachines\parcel.dm"
 #include "code\modules\QuestMachines\quests\coureer.dm"
 #include "code\modules\reagents\chem_splash.dm"
 #include "code\modules\reagents\reagent_containers.dm"

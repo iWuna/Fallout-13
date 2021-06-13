@@ -10,7 +10,7 @@
 	name = "Gangtool device"
 	desc = "A device that allows you to contact underground suppliers for special gear. Suppliers are only willing to talk to the leaders of the gangs."
 	icon = 'icons/obj/device.dmi'
-	icon_state = "gangtool-red"
+	icon_state = "gangtool-f13"
 	item_state = "radio"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/devices_righthand.dmi'
@@ -25,13 +25,13 @@
 /obj/item/device/gangtool/attack_self(mob/user)
 	var/datum/gang/GA = user.gang
 	if(!GA || GA.leader != user || GA != gang)
-		to_chat(user, "<span class='warning'>Underground suppliers refuse to talk with you!</span>")
+		to_chat(user, "<span class='warning'>Не включается.</span>")
 		return
 
 	var/dat
 	dat += "Gang Name: <B>[gang.name]</B><br>"
 	dat += "Your Influence: <B>[gang.influence]</B><br>"
-	dat += "You can gain influence by doing various tasks, or by bribing underground suppliers by using valid currency on the Gangtool device.<br>"
+	dat += "Вы можете получить покупить предметы, используя действительную валюту на этом устроистве.<br>"
 	dat += "<hr>"
 
 	dat += "<br>"
@@ -62,16 +62,16 @@
 		dat += "<br>"
 	dat += "<br>"
 
-	dat += "<a href='?src=\ref[src];choice=refresh'>Refresh</a><br>"
+	dat += "<a href='?src=\ref[src];choice=refresh'>Обновить</a><br>"
 
-	var/datum/browser/popup = new(user, "gangtool", "Welcome to GangTool v3.6", 350, 625)
+	var/datum/browser/popup = new(user, "gangtool", "Добро пожаловать в GandTool", 350, 625)
 	popup.set_content(dat)
 	popup.open()
 
 /obj/item/device/gangtool/Topic(href, href_list)
 	var/datum/gang/GA = usr.gang
 	if(!GA || GA.leader != usr)
-		to_chat(usr, "<span class='warning'>Underground suppliers refuse to talk with you!</span>")
+		to_chat(usr, "<span class='warning'>Не включается.</span>")
 		return
 
 	add_fingerprint(usr)

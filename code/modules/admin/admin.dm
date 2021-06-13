@@ -897,19 +897,13 @@
 		var/string
 		if(logout && CONFIG_GET(flag/announce_admin_logout))
 			string = pick(
-				"Педаль съебалась: [key_name(src)]")
+				"Администратор вышел: [key_name(src)]")
 		else if(!logout && CONFIG_GET(flag/announce_admin_login) && (prefs.toggles & ANNOUNCE_LOGIN))
-			if(ckey == "iWuna")
+			if(ckey == "Сикей") //Сюда вписать любой сикей
 				string = pick(
-					"ГЭНГ БЭНГ БЭНГ, ВУНА В ЗДАНИИ")
-			if(ckey == "VanoTyan")
-				string = pick(
-					"Ванотян хуй жрал")
-			if(ckey == "Kerststf")
-				string = pick(
-					"Вечер в хату, Чифир в здании")
+					"Смешные слова") //Сюда вписать любое смешное слово, повторить три строки для получения нужного эффекта
 			else
 				string = pick(
-					"Педаль зашла: [key_name(src)]")
+					"Администратор зашёл: [key_name(src)]")
 		if(string)
 			message_admins("[string]")

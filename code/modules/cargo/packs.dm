@@ -1135,7 +1135,7 @@
 
 /datum/supply_pack/organic/hydroponics/hydrotank
 	name = "Hydroponics Backpack Crate"
-	desc = "Bring on the flood with this high-capacity backpack crate. Contains 500 units of life-giving H2O. Requires hydroponics access to open."
+	desc = "Bring on the flood with this high-capacity backpack crate. Contains 500 units of life-giving water. Requires hydroponics access to open."
 	cost = 1000
 	access = ACCESS_HYDROPONICS
 	contains = list(/obj/item/watertank)

@@ -10,7 +10,7 @@
 
 A friendly reminder to anyone who would like to create personal edition of a game to host a server while keeping the code base private - a source code is licensed under **/TG/ Station 13** terms, and thus rendering your project closed-source will likely cause considerable sanctions on their behalf. Honestly, we tried it ourselves - it didn't work, and **Byond administration officially** disabled one of our servers for violation of licensing terms - don't repeat our mistakes.
 
-Дружеское напоминание для любого кто захочет использовать наш код для собственной разработки, не делайте вашу разработку закрытой - исходный код лицензирован под **/TG/ Station 13** правилам, ведение закрытой азработки при использовании этого кода, может привести к санкциям со стороны /TG/ и **администрации BYOND**. Мы сами с этим однажды столкнулись, и администрация официально отключили один из наших серверов за нарушение лицензий - не повторяйте наших ошибок.
+Дружеское напоминание для любого кто захочет использовать наш код для собственной разработки, не делайте вашу разработку закрытой - исходный код лицензирован под **/TG/ Station 13** правилам, ведение закрытой разработки при использовании этого кода, может привести к санкциям со стороны /TG/ и **администрации BYOND**. Мы сами с этим однажды столкнулись, и администрация официально отключила один из наших серверов за нарушение лицензий - не повторяйте наших ошибок.
 
 **Please carefully read the following statement**
 

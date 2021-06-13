@@ -777,9 +777,9 @@ Recruit
 		/obj/item/clothing/suit/jacket/leather=1,
 		/obj/item/clothing/head/collectable/tophat=1,
 		/obj/item/clothing/shoes/f13/fancy=1,
-		/obj/item/stack/f13Cash/ncr=1,
 		/obj/item/clothing/glasses/monocle=1,
-		/obj/item/staff/stick=1)
+		/obj/item/staff/stick=1,
+		/obj/item/stack/f13Cash/ncr=500)
 
 /datum/outfit/loadout/sharecropper
 	name = "Sharecropper"

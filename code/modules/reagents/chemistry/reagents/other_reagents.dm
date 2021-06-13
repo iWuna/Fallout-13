@@ -111,7 +111,7 @@
 	if(istype(data))
 		src.data |= data.Copy()
 
-/datum/reagent/water
+/datum/reagent/water //Обычная вода
 	name = "Water"
 	id = "water"
 	description = "An ubiquitous chemical substance that is composed of hydrogen and oxygen."
@@ -126,40 +126,6 @@
 
 /datum/reagent/water/on_mob_life(mob/living/carbon/M)
 	M.hydration += hydration_factor
-
-/datum/reagent/rad_water
-	name = "Water"
-	id = "rad_water"
-	description = "An ubiquitous chemical substance that is composed of hydrogen and oxygen."
-	color = "#83A965"
-	taste_description = "water with... lead?"
-	var/cooling_temperature = 2
-	var/hydration_factor = 1.5 * REAGENTS_METABOLISM
-	glass_icon_state = "glass_clear"
-	glass_name = "glass of water"
-	glass_desc = "The father of all refreshments. But this one are radiated."
-	shot_glass_icon_state = "shotglassclear"
-
-/datum/reagent/rad_water/on_mob_life(mob/living/carbon/M)
-	M.hydration += hydration_factor
-	M.adjustToxLoss(0.5)
-
-/datum/reagent/chem_water
-	name = "H2O"
-	id = "h2o"
-	description = "An ubiquitous chemical substance that is composed of hydrogen and oxygen."
-	color = "#83A965"
-	taste_description = "water with... what?"
-	var/cooling_temperature = 2
-	var/hydration_factor = 0.1 * REAGENTS_METABOLISM
-	glass_icon_state = "glass_clear"
-	glass_name = "glass of water"
-	glass_desc = "The father of all refreshments. But this one are chemical created and useless as drink."
-	shot_glass_icon_state = "shotglassclear"
-
-/datum/reagent/chem_water/on_mob_life(mob/living/carbon/M)
-	M.hydration += hydration_factor
-	M.adjustToxLoss(0.1)
 
 /*
  *	Water reaction to turf
@@ -821,6 +787,13 @@
 				GG = new/obj/effect/decal/cleanable/greenglow(T)
 			GG.reagents.add_reagent("radium", reac_volume)
 
+/datum/reagent/radium/waste
+	name = "Rad Waste"
+	id = "rad_waste"
+	description = "Radioactive waste is similar in composition to radium. It is extremely radioactive."
+	reagent_state = SOLID
+	color = "#cde6bd"
+	taste_description = "metallic taste"
 /datum/reagent/space_cleaner/sterilizine
 	name = "Sterilizine"
 	id = "sterilizine"
@@ -1109,7 +1082,7 @@
 	color = "#9E6B38" // rgb: 158, 107, 56
 	taste_description = "metal"
 
-/datum/reagent/foaming_agent// Metal foaming agent. This is lithium hydride. Add other recipes (e.g. LiH + H2O -> LiOH + H2) eventually.
+/datum/reagent/foaming_agent// Metal foaming agent. This is lithium hydride. Add other recipes (e.g. LiH + water -> LiOH + H2) eventually.
 	name = "Foaming agent"
 	id = "foaming_agent"
 	description = "An agent that yields metallic foam when mixed with light metal and a strong acid."

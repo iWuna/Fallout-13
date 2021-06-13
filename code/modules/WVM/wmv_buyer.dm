@@ -14,14 +14,24 @@
 	var/expected_price = 0
 	var/list/prize_list = list()  //if you add something to this, please, for the love of god, sort it by price/type. use tabs and not spaces.
 
-	var/list/goods_list = list( /obj/item/stack/ore/diamond = 20,
+	var/list/goods_list = list( /obj/item/stack/ore/diamond = 20, //Непеработанная руда начало
 								/obj/item/stack/ore/gold = 5,
 								/obj/item/stack/ore/silver = 2,
-								/obj/item/stack/ore/iron = 1,
+								/obj/item/stack/ore/titanium = 5,
+								/obj/item/stack/ore/plasma = 5,
+								/obj/item/stack/ore/iron = 1, //Непеработанная руда конец
+								/obj/item/stack/ore/bluespace_crystal = 10, //Блюспейс кристалы отчасти и руда и не руда
 								/obj/item/stack/sheet/leather = 7,
-								/obj/item/reagent_containers/pill/patch/jet = 5,
-								/obj/item/reagent_containers/hypospray/medipen/psycho = 15,
-								/obj/item/reagent_containers/syringe/medx = 15
+								/obj/item/reagent_containers/pill/patch/jet = 5, //Винт
+								/obj/item/reagent_containers/hypospray/medipen/psycho = 15, //Психо
+								/obj/item/reagent_containers/syringe/medx = 15, //Мед-икс
+								/obj/item/reagent_containers/pill/patch/rebound = 20, //Ребаунд
+								/obj/item/reagent_containers/pill/patch/hydra = 15, //Гидра
+								/obj/item/reagent_containers/pill/patch/steady = 20, //Стреди
+								/obj/item/reagent_containers/pill/patch/turbo = 15, // Турбо
+								/obj/item/reagent_containers/pill/patch/medcase = 100 //Мед кейс
+
+
 								)
 
 /obj/machinery/mineral/wasteland_trader/general
@@ -44,18 +54,18 @@
 	. = ..()
 	var/dat
 	dat +="<div class='statusDisplay'>"
-	dat += "<b>Bottle caps stored:</b> [stored_caps]. <A href='?src=[REF(src)];choice=eject'>Eject caps</A><br>"
+	dat += "<b>Всего крышек в автомате:</b> [stored_caps]. <A href='?src=[REF(src)];choice=eject'>Eject caps</A><br>"
 	dat += "</div>"
 	dat += "<br>"
 	dat +="<div class='statusDisplay'>"
-	dat += "<b>Accepted goods and prices:</b><br>"
-	dat += "Iron ore : 1 caps<br>"
-	dat += "Silver : 2 caps<br>"
-	dat += "Gold : 5 caps<br>"
-	dat += "Diamond : 20 caps<br>"
-	dat += "Leather : 7 caps<br>"
-	dat += "Jet/Psycho/MedX : 5-15 caps<br>"
-	dat += ""
+	dat += "<b>К продаже принимается:</b><br>"
+	dat += "Непеработанная руда<br>"
+	dat += "Мед Препараты<br>"
+	dat += "Наркотики<br>"
+	dat += "<b>К продаже НЕ принимается:</b>"
+	dat += "Распространёные мед препараты<br>"
+	dat += "Самодельные наркотики<br>"
+	dat += "Переработанная руда<br>"
 	dat += "</div>"
 
 	var/datum/browser/popup = new(user, "tradingvendor", "Trading point", 400, 500)

@@ -2,20 +2,20 @@
 //MAKE SURE THESE DO NOT MAJORLY IMPACT GAMEPLAY. those should be positive or negative traits.
 
 /datum/quirk/no_taste
-	name = "Ageusia"
-	desc = "You can't taste anything! Toxic food will still poison you."
+	name = "Агевзия"
+	desc = "Вы не чуствуете вкус еды или реагентов."
 	value = 0
 	mob_trait = TRAIT_AGEUSIA
-	gain_text = "<span class='notice'>You can't taste anything!</span>"
-	lose_text = "<span class='notice'>You can taste again!</span>"
-	medical_record_text = "Patient suffers from ageusia and is incapable of tasting food or reagents."
+	gain_text = "<span class='notice'>Не чуствую язык.</span>"
+	lose_text = "<span class='notice'>Чуствую язык снова.</span>"
+	medical_record_text = "Пациент страдает агевзией и не может пробовать пищу или реагенты."
 
 /datum/quirk/pineapple_liker
-	name = "Ananas Affinity"
-	desc = "You find yourself greatly enjoying fruits of the ananas genus. You can't seem to ever get enough of their sweet goodness!"
+	name = "Ананасовый Любитель"
+	desc = "Вы очень наслаждаетесь ананасами или продуктами из ананасов."
 	value = 0
-	gain_text = "<span class='notice'>You feel an intense craving for pineapple.</span>"
-	lose_text = "<span class='notice'>Your feelings towards pineapples seem to return to a lukewarm state.</span>"
+	gain_text = "<span class='notice'>Хочу сьесть ананас.</span>"
+	lose_text = "<span class='notice'>Не чуствую такой привязаности а ананасам.</span>"
 
 /datum/quirk/pineapple_liker/add()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -29,11 +29,11 @@
 		species.liked_food &= ~PINEAPPLE
 
 /datum/quirk/pineapple_hater
-	name = "Ananas Aversion"
-	desc = "You find yourself greatly detesting fruits of the ananas genus. Serious, how the hell can anyone say these things are good? And what kind of madman would even dare putting it on a pizza!?"
+	name = "Ананасовый Ненавистник"
+	desc = "Ананас зло. Блядь вы реально думаете что ананас вкусный?"
 	value = 0
-	gain_text = "<span class='notice'>You find yourself pondering what kind of idiot actually enjoys pineapples...</span>"
-	lose_text = "<span class='notice'>Your feelings towards pineapples seem to return to a lukewarm state.</span>"
+	gain_text = "<span class='notice'>Ненавижу ананас.</span>"
+	lose_text = "<span class='notice'>Не думаю что ананасы такие уж и плохие.</span>"
 
 /datum/quirk/pineapple_hater/add()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -47,11 +47,11 @@
 		species.disliked_food &= ~PINEAPPLE
 
 /datum/quirk/deviant_tastes
-	name = "Deviant Tastes"
-	desc = "You dislike food that most people enjoy, and find delicious what they don't."
+	name = "Девиантные Вкусы"
+	desc = "Вы не любите пищу, которая нравится большинству людей, и находите вкусной то, что им не нравится."
 	value = 0
-	gain_text = "<span class='notice'>You start craving something that tastes strange.</span>"
-	lose_text = "<span class='notice'>You feel like eating normal food again.</span>"
+	gain_text = "<span class='notice'>Странная еда мне нравится больше чем нормальная.</span>"
+	lose_text = "<span class='notice'>Теперь я люблю нормальную еду.</span>"
 
 /datum/quirk/deviant_tastes/add()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -67,47 +67,15 @@
 		species.liked_food = initial(species.liked_food)
 		species.disliked_food = initial(species.disliked_food)
 
-/datum/quirk/prosthetic_limb
-	name = "Prosthetic Limb"
-	desc = "An accident caused you to lose one of your limbs. Because of this, you now have a random prosthetic!"
-	value = 0
-	var/slot_string = "limb"
-
-/datum/quirk/prosthetic_limb/on_spawn()
-	var/limb_slot = pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
-	var/mob/living/carbon/human/H = quirk_holder
-	var/obj/item/bodypart/old_part = H.get_bodypart(limb_slot)
-	var/obj/item/bodypart/prosthetic
-	switch(limb_slot)
-		if(BODY_ZONE_L_ARM)
-			prosthetic = new/obj/item/bodypart/l_arm/robot/surplus(quirk_holder)
-			slot_string = "left arm"
-		if(BODY_ZONE_R_ARM)
-			prosthetic = new/obj/item/bodypart/r_arm/robot/surplus(quirk_holder)
-			slot_string = "right arm"
-		if(BODY_ZONE_L_LEG)
-			prosthetic = new/obj/item/bodypart/l_leg/robot/surplus(quirk_holder)
-			slot_string = "left leg"
-		if(BODY_ZONE_R_LEG)
-			prosthetic = new/obj/item/bodypart/r_leg/robot/surplus(quirk_holder)
-			slot_string = "right leg"
-	prosthetic.replace_limb(H)
-	qdel(old_part)
-	H.regenerate_icons()
-
-/datum/quirk/prosthetic_limb/post_add()
-	to_chat(quirk_holder, "<span class='boldannounce'>Your [slot_string] has been replaced with a surplus prosthetic. It is fragile and will easily come apart under duress. Additionally, \
-	you need to use a welding tool and cables to repair it, instead of bruise packs and ointment.</span>")
-
 /datum/quirk/family_heirloom
-	name = "Family Heirloom"
-	desc = "You are the current owner of an heirloom, passed down for generations. You have to keep it safe!"
+	name = "Семейная Реликвия"
+	desc = "Вы - нынешний владелец семейной реликвии, передаваемой из поколения в поколение. Вы должны сохранить реликвию в бзопасности!"
 	value = 0
 	mood_quirk = TRUE
 	var/obj/item/heirloom
 	var/where
 
-/datum/quirk/family_heirloom/on_spawn()
+/datum/quirk/family_heirloom/on_spawn() //Добавить к каждой проффессии реликвию
 	var/mob/living/carbon/human/H = quirk_holder
 	var/obj/item/heirloom_type
 	switch(quirk_holder.mind.assigned_role)
@@ -132,18 +100,18 @@
 		/obj/item/dice/d20)
 	heirloom = new heirloom_type(get_turf(quirk_holder))
 	var/list/slots = list(
-		"in your left pocket" = SLOT_L_STORE,
-		"in your right pocket" = SLOT_R_STORE,
-		"in your backpack" = SLOT_IN_BACKPACK
+		"в левом кармане" = SLOT_L_STORE,
+		"в правом кармане" = SLOT_R_STORE,
+		"в сумке" = SLOT_IN_BACKPACK
 	)
-	where = H.equip_in_one_of_slots(heirloom, slots, FALSE) || "at your feet"
+	where = H.equip_in_one_of_slots(heirloom, slots, FALSE) || "под тобой"
 
 /datum/quirk/family_heirloom/post_add()
-	if(where == "in your backpack")
+	if(where == "в сумке")
 		var/mob/living/carbon/human/H = quirk_holder
 		SEND_SIGNAL(H.back, COMSIG_TRY_STORAGE_SHOW, H)
 
-	to_chat(quirk_holder, "<span class='boldnotice'>There is a precious family [heirloom.name] [where], passed down from generation to generation. Keep it safe!</span>")
+	to_chat(quirk_holder, "<span class='boldnotice'>[heirloom.name], являющиеся семейной реликвией, сейчас лежит [where]. Сохраните её в безопасности!</span>")
 	var/list/family_name = splittext(quirk_holder.real_name, " ")
 	heirloom.name = "\improper [family_name[family_name.len]] family [heirloom.name]"
 
@@ -160,39 +128,3 @@
 
 /datum/quirk/family_heirloom/on_clone(data)
 	heirloom = data
-
-/datum/quirk/nearsighted //t. errorage
-	name = "Nearsighted"
-	desc = "You are nearsighted without prescription glasses, but spawn with a pair."
-	value = 0
-	gain_text = "<span class='danger'>Things far away from you start looking blurry.</span>"
-	lose_text = "<span class='notice'>You start seeing faraway things normally again.</span>"
-	medical_record_text = "Patient requires prescription glasses in order to counteract nearsightedness."
-
-/datum/quirk/nearsighted/add()
-	quirk_holder.become_nearsighted(ROUNDSTART_TRAIT)
-
-/datum/quirk/nearsighted/on_spawn()
-	var/mob/living/carbon/human/H = quirk_holder
-	var/obj/item/clothing/glasses/regular/glasses = new(get_turf(H))
-	H.put_in_hands(glasses)
-	H.equip_to_slot_if_possible(glasses, SLOT_GLASSES)
-	H.regenerate_icons() //this is to remove the inhand icon, which persists even if it's not in their hands
-
-/datum/quirk/monochromatic
-	name = "Monochromacy"
-	desc = "You suffer from full colorblindness, and perceive nearly the entire world in blacks and whites."
-	value = 0
-	medical_record_text = "Patient is afflicted with almost complete color blindness."
-
-/datum/quirk/monochromatic/add()
-	quirk_holder.add_client_colour(/datum/client_colour/monochrome)
-
-/datum/quirk/monochromatic/post_add()
-	if(quirk_holder.mind.assigned_role == "Detective")
-		to_chat(quirk_holder, "<span class='boldannounce'>Mmm. Nothing's ever clear on this station. It's all shades of gray...</span>")
-		quirk_holder.playsound_local(quirk_holder, 'sound/ambience/ambidet1.ogg', 50, FALSE)
-
-/datum/quirk/monochromatic/remove()
-	if(quirk_holder)
-		quirk_holder.remove_client_colour(/datum/client_colour/monochrome)

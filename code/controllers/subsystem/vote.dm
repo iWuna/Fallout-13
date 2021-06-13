@@ -17,8 +17,8 @@ SUBSYSTEM_DEF(vote)
 	var/list/generated_actions = list()
 	var/vote_sound = 'sound/f13/mysterious_stranger.ogg'
 	var/vote_sound_end = 'sound/f13/stranger_vanish.ogg'
-	var/min_restart_time = 180 MINUTES
-	var/min_transfer_time = 180 MINUTES
+	var/min_restart_time = 90 MINUTES
+	var/min_transfer_time = 90 MINUTES
 
 /datum/controller/subsystem/vote/fire()	//called by master_controller
 	if(mode)

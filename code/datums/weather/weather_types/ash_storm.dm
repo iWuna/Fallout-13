@@ -108,3 +108,15 @@
 	aesthetic = TRUE
 
 	probability = 8
+
+/datum/weather/ash_storm/sandstorm/proc/is_sandstorm_immune(atom/L)
+	while (L && !isturf(L))
+		if(ismecha(L))														//Если твоя кукла в мехе
+			return TRUE														//Значит тебе ничего не наносится
+		L = L.loc															//Иначе
+	return FALSE															//Пососи
+
+/datum/weather/ash_storm/sandstorm/weather_act(mob/living/L)
+	if(is_sandstorm_immune(L))
+		return
+	L.adjustStaminaLoss(0.1) //Прогулки под бурей каждый тик дают слабость

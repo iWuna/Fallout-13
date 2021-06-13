@@ -68,13 +68,13 @@
 	name = "Chloral Hydrate"
 	id = "chloralhydrate"
 	results = list("chloralhydrate" = 1)
-	required_reagents = list("ethanol" = 1, "chlorine" = 3, "h2o" = 1)
+	required_reagents = list("ethanol" = 1, "chlorine" = 3, "water" = 1)
 
 /datum/chemical_reaction/mutetoxin //i'll just fit this in here snugly between other unfun chemicals :v
 	name = "Mute Toxin"
 	id = "mutetoxin"
 	results = list("mutetoxin" = 2)
-	required_reagents = list("uranium" = 2, "h2o" = 1, "carbon" = 1)
+	required_reagents = list("uranium" = 2, "water" = 1, "carbon" = 1)
 
 /datum/chemical_reaction/zombiepowder
 	name = "Zombie Powder"

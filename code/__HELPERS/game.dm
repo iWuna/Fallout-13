@@ -499,13 +499,20 @@
 	if(!SSticker.IsRoundInProgress() || QDELETED(character))
 		return
 	var/area/A = get_area(character)
-	var/message = "<span class='game deadsay'><span class='name'>\
-		[character.real_name]</span> ([rank]) has arrived at the station at \
-		<span class='name'>[A.name]</span>.</span>"
-	deadchat_broadcast(message, follow_target = character, message_type=DEADCHAT_ARRIVALRATTLE)
+//	var/message = "<span class='game deadsay'>Вот тут и начинается история <span class='name'>\
+//		[character.real_name]</span>... \
+//		.</span>"
+//	deadchat_broadcast(message, follow_target = character, message_type=DEADCHAT_ARRIVALRATTLE)
+	message_admins("<span class='name'>\
+		[character.real_name]</span> ([rank]) вошёл на пустошь как \
+		<span class='name'>[A.name]</span>.")
 
 	if(character.special.total() > 40)
 		message_admins("[key_name_admin(character.ckey)] имеет более 40 очков SPECIAL!!!")
+		character.adjustBrainLoss(50)
+		character.adjustCloneLoss(50)
+		character.adjustStaminaLoss(100)
+		to_chat(src, "<font color='red'>Die.</font>")
 	if((!GLOB.announcement_systems.len) || (!character.mind))
 		return
 	if((character.mind.assigned_role == "Cyborg") || (character.mind.assigned_role == character.mind.special_role))

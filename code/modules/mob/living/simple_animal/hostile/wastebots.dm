@@ -145,7 +145,7 @@
 	name = "liberator"
 	desc = "A small pre-War droned used by the People's Liberation Army."
 	icon_state = "liberator"
-	icon_living = "leberator"
+	icon_living = "liberator"
 	icon_dead = "liberator_d"
 	icon_gib = "liberator_g"
 	health = 80
@@ -173,7 +173,7 @@
 	name = "liberator"
 	desc = "A small pre-War droned used by the People's Liberation Army."
 	icon_state = "liberator_y"
-	icon_living = "leberator_y"
+	icon_living = "liberator_y"
 	icon_dead = "liberator_y_d"
 	health = 80
 	maxHealth = 80
@@ -431,8 +431,8 @@
 /mob/living/simple_animal/hostile/handy/assaultron
 	name = "assaultron"
 	desc = "A deadly close combat robot developed by RobCo in a vaguely feminine, yet ominous chassis."
-	icon_state = "assaultron"
-	icon_living = "assaultron"
+	icon_state = "asstron"
+	icon_living = "asstron"
 	gender = FEMALE //Pffffffffffffffffffffff
 	icon_dead = "gib7"
 	health = 450
