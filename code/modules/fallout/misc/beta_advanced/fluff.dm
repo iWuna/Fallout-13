@@ -16,7 +16,6 @@
 	desc = "A captured set of T-45d power armor, it's been heavily modified and decorated with the head of a bear and intricate gold trimming. A two headed bear is scorched into the breastplate."
 	icon_state = "sierra"
 	item_state = "sierra"
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 
 /obj/item/storage/briefcase/mixanoff
 	name = "коробочка говна нахуй"
