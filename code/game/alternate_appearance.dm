@@ -168,7 +168,7 @@ GLOBAL_LIST_EMPTY(active_alternate_appearances)
 		return TRUE
 	return FALSE
 
-datum/atom_hud/alternate_appearance/basic/onePerson
+/datum/atom_hud/alternate_appearance/basic/onePerson
 	var/mob/seer
 
 /datum/atom_hud/alternate_appearance/basic/onePerson/mobShouldSee(mob/M)
@@ -183,7 +183,7 @@ datum/atom_hud/alternate_appearance/basic/onePerson
 
 
 /datum/atom_hud/alternate_appearance/basic/landmines/ordinary/mobShouldSee(mob/M)
-	if (M.special.mines_normal)
+	if (M.special?.mines_normal)
 		return TRUE
 	return FALSE
 
@@ -196,7 +196,7 @@ datum/atom_hud/alternate_appearance/basic/onePerson
 
 
 /datum/atom_hud/alternate_appearance/basic/landmines/large/mobShouldSee(mob/M)
-	if (M.special.mines_visible)
+	if (M.special?.mines_visible)
 		return TRUE
 	return FALSE
 
@@ -208,7 +208,7 @@ datum/atom_hud/alternate_appearance/basic/onePerson
 			add_hud_to(mob)
 
 /datum/atom_hud/alternate_appearance/basic/landmines/small/mobShouldSee(mob/M)
-	if (M.special.mines_hidden)
+	if (M.special?.mines_hidden)
 		return TRUE
 	return FALSE
 

@@ -432,10 +432,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		B_sizes = L.Copy()
 	var/static/min_D
 	if(!min_D)
-		min_D = CONFIG_GET(keyed_number_list/penis_min_inches_prefs)
+		min_D = CONFIG_GET(number/penis_min_inches_prefs)
 	var/static/max_D
 	if(!max_D)
-		max_D = CONFIG_GET(keyed_number_list/penis_max_inches_prefs)
+		max_D = CONFIG_GET(number/penis_max_inches_prefs)
 	var/static/safe_visibilities
 	if(!safe_visibilities)
 		var/list/L = CONFIG_GET(keyed_flag_list/safe_visibility_toggles)

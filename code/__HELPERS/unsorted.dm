@@ -1203,7 +1203,7 @@ B --><-- A
 	return closest_atom
 
 
-proc/pick_closest_path(value, list/matches = get_fancy_list_of_atom_types())
+/proc/pick_closest_path(value, list/matches = get_fancy_list_of_atom_types())
 	if (value == FALSE) //nothing should be calling us with a number, so this is safe
 		value = input("Enter type to find (blank for all, cancel to cancel)", "Search for type") as null|text
 		if (isnull(value))
@@ -1608,7 +1608,7 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 		return 0
 
 //Macro for creating a list and populating it with a type. Requires hierarchies to be organized. Missing the logic for restrictions.
-proc/childtypesof()
+/proc/childtypesof()
 	var/types[] = list()
 	. = list()
 	for(var/type in args)
@@ -1618,7 +1618,7 @@ proc/childtypesof()
 		. += types
 
 //In which we let it just generate new instances.
-proc/newchildtypesof()
+/proc/newchildtypesof()
 	var/prevtypes[]
 	. = list()
 	for(var/a in args)

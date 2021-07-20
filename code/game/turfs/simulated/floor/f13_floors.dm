@@ -112,10 +112,10 @@
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "housewood1"
 
-	New()
-		..()
-		if(icon_state == "housewood1")
-			icon_state = "housewood[rand(1,3)]"
+/turf/open/floor/wood/f13/New()
+	..()
+	if(icon_state == "housewood1")
+		icon_state = "housewood[rand(1,3)]"
 
 /turf/open/floor/wood/f13/carpet
 	icon_state = "carpet"

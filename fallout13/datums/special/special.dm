@@ -109,7 +109,7 @@
 
 	update_strength()
 	update_perception()
-	update_endurance(initial=TRUE)
+	update_endurance()
 	update_charisma()
 	update_intelligence()
 	update_agility()
@@ -130,18 +130,18 @@
 	holder = null
 	. = ..()
 	
-proc/scale_agility(time, mob/user)
+/proc/scale_agility(time, mob/user)
 	var/agility = user.special._agility
 	return scale_special(time, agility)
 
 
-proc/scale_a_i(time, mob/user) // agility, intellect
+/proc/scale_a_i(time, mob/user) // agility, intellect
 	var/t = scale_special(time, user.special._agility, 10)
 	t = scale_special(t, user.special._intelligence)
 	return t
 	
 
-proc/scale_special(time, value, coeff=5)
+/proc/scale_special(time, value, coeff=5)
 	if(value >= 5)
 		return time *(1 - (value - 5)/coeff)
 	else if(value <= 5)

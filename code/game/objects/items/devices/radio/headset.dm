@@ -46,7 +46,7 @@
 		return ..(freq, level)
 	return FALSE
 
-obj/item/radio/headset/attackby(obj/item/W, mob/user, params)
+/obj/item/radio/headset/attackby(obj/item/W, mob/user, params)
 	if (user.a_intent == INTENT_HARM)
 		visible_message("<span class='warning'>[user] attempts to destroy the [src]</span>")
 		if (do_after(user,50, target = src))

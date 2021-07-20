@@ -78,14 +78,14 @@
 /obj/vertibird/proc/ejectTurf()
 	return locate(src.x, src.y + 6, src.z)
 
-obj/vertibird/proc/getLocationsHTML()
+/obj/vertibird/proc/getLocationsHTML()
 	var/html
 	for(var/I = 1 to vertibirdLandZone.len)
 		var/obj/landmark/vertibird/mark = vertibirdLandZone[I]
 		html += "<a href='?src=\ref[src];fly=true;x=[mark.x];y=[mark.y];z=[mark.z];name=[mark.name]'>[mark.name]</a><br>"
 	return html
 
-obj/vertibird/proc/flew(targetX, targetY, targetZ)
+/obj/vertibird/proc/flew(targetX, targetY, targetZ)
 
 	x = targetX
 	y = targetY
@@ -102,17 +102,17 @@ obj/vertibird/proc/flew(targetX, targetY, targetZ)
 		if(src.icon_state == "vb-slow")
 			src.icon_state = "vb-static"
 
-obj/vertibird/proc/beginFly()
+/obj/vertibird/proc/beginFly()
 	var/datum/browser/popup = new(usr, "vending", (name))
 	popup.set_content(getLocationsHTML())
 	popup.open()
 
-obj/vertibird/proc/flyGlobal()
+/obj/vertibird/proc/flyGlobal()
 	to_chat(world, "<font size='3' color='orange'>The ever increasing roar of an aircraft tearing through the skies above enters your ears.</font>")
 	sound_to_playing_players("sound/f13machines/vertibird_global.ogg", 50, 0)
 
 
-obj/vertibird/proc/fly(targetX, targetY, targetZ, name="")
+/obj/vertibird/proc/fly(targetX, targetY, targetZ, name="")
 	if(inFly)
 		return
 

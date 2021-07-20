@@ -335,11 +335,9 @@
 	for(var/obj/item/organ/O in internal_organs)
 		if(istype(O, /obj/item/organ/genital))
 			organCheck = TRUE
-			if(/obj/item/organ/genital/penis)
-				//dna.features["has_cock"] = TRUE
+			if(istype(O, /obj/item/organ/genital/penis))
 				willyCheck = TRUE
-			if(/obj/item/organ/genital/breasts)
-				//dna.features["has_breasts"] = TRUE//Goddamnit get in there.
+			if(istype(O, /obj/item/organ/genital/breasts))
 				breastCheck = TRUE
 	if(organCheck == FALSE)
 		if(ishuman(src) && dna.species.id == "human")

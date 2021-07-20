@@ -6,7 +6,7 @@
 mob/var/under_object
 /obj/structure/var/can_crawled = 0
 
-proc/get_crawled_object(var/turf/T)
+/proc/get_crawled_object(var/turf/T)
 	for(var/obj/structure/S in T)
 		if(S.can_crawled)
 			return S

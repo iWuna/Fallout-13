@@ -144,7 +144,7 @@ GLOBAL_LIST_EMPTY(donators)
 	ShowPanel(user)
 	return
 
-proc/load_donator(ckey)
+/proc/load_donator(ckey)
 	if(!SSdbcore.IsConnected())
 		return 0
 
@@ -156,7 +156,7 @@ proc/load_donator(ckey)
 	qdel(query_donators)
 	return 1
 
-proc/check_donations(ckey)
+/proc/check_donations(ckey)
 	if (!GLOB.donators[ckey]) //If it doesn't exist yet
 		return 0
 	var/datum/donator/D = GLOB.donators[ckey]
