@@ -388,8 +388,7 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 			if(source)
 				var/obj/screen/alert/notify_action/A = O.throw_alert("[REF(source)]_notify_action", /obj/screen/alert/notify_action)
 				if(A)
-					if(O.client.prefs && O.client.prefs.UI_style)
-						A.icon = ui_style2icon(O.client.prefs.UI_style)
+					A.icon = 'icons/mob/screen_fallout.dmi'
 					A.desc = message
 					A.action = action
 					A.target = source

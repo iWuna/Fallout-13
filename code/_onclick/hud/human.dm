@@ -3,7 +3,8 @@
 
 /obj/screen/human/toggle
 	name = "toggle"
-	icon_state = "toggle"
+	icon = 'icons/mob/screen_64.dmi'
+	icon_state = "toggle_off"
 
 /obj/screen/human/toggle/Click()
 
@@ -15,23 +16,15 @@
 			targetmob = M
 
 	if(usr.hud_used.inventory_shown && targetmob.hud_used)
+		icon_state = "toggle_off"
 		usr.hud_used.inventory_shown = FALSE
 		usr.client.screen -= targetmob.hud_used.toggleable_inventory
 	else
+		icon_state = "toggle_on"
 		usr.hud_used.inventory_shown = TRUE
 		usr.client.screen += targetmob.hud_used.toggleable_inventory
 
 	targetmob.hud_used.hidden_inventory_update(usr)
-
-/obj/screen/human/equip
-	name = "equip"
-	icon_state = "act_equip"
-
-/obj/screen/human/equip/Click()
-	if(ismecha(usr.loc)) // stops inventory actions in a mech
-		return 1
-	var/mob/living/carbon/human/H = usr
-	H.quick_equip()
 
 /obj/screen/devil
 	invisibility = INVISIBILITY_ABSTRACT
@@ -88,6 +81,9 @@
 /datum/hud/human/New(mob/living/carbon/human/owner)
 	..()
 	owner.overlay_fullscreen("see_through_darkness", /obj/screen/fullscreen/see_through_darkness)
+	owner.overlay_fullscreen("hud_back_south", /obj/screen/fullscreen/hud_back)
+	owner.overlay_fullscreen("hud_back_north", /obj/screen/fullscreen/hud_back/north)
+	owner.overlay_fullscreen("hud_back_east", /obj/screen/fullscreen/hud_back/east)
 
 	var/widescreen_layout = FALSE
 	if(owner.client?.prefs?.widescreenpref)
@@ -147,16 +143,8 @@
 
 	build_hand_slots()
 
-	using = new /obj/screen/swap_hand()
-	using.icon = ui_style
-	using.icon_state = "swap_1"
-	using.screen_loc = ui_swaphand_position(owner,1)
-	static_inventory += using
-
-	using = new /obj/screen/swap_hand()
-	using.icon = ui_style
-	using.icon_state = "swap_2"
-	using.screen_loc = ui_swaphand_position(owner,2)
+	using = new /obj/screen/swap_hand/human()
+	using.screen_loc = "CENTER-1:18,SOUTH+1:5"
 	static_inventory += using
 
 	inv_box = new /obj/screen/inventory()
@@ -194,7 +182,7 @@
 	inv_box = new /obj/screen/inventory()
 	inv_box.name = "storage1"
 	inv_box.icon = ui_style
-	inv_box.icon_state = "pocket"
+	inv_box.icon_state = "pocket_l"
 	inv_box.screen_loc = ui_storage1
 	inv_box.slot_id = SLOT_L_STORE
 	static_inventory += inv_box
@@ -202,7 +190,7 @@
 	inv_box = new /obj/screen/inventory()
 	inv_box.name = "storage2"
 	inv_box.icon = ui_style
-	inv_box.icon_state = "pocket"
+	inv_box.icon_state = "pocket_r"
 	inv_box.screen_loc = ui_storage2
 	inv_box.slot_id = SLOT_R_STORE
 	static_inventory += inv_box
@@ -217,17 +205,11 @@
 
 	using = new /obj/screen/resist()
 	using.icon = ui_style
-	using.screen_loc = ui_pull_resist
+	using.screen_loc = ui_resist
 	hotkeybuttons += using
 
 	using = new /obj/screen/human/toggle()
-	using.icon = ui_style
 	using.screen_loc = ui_inventory
-	static_inventory += using
-
-	using = new /obj/screen/human/equip()
-	using.icon = ui_style
-	using.screen_loc = ui_equip_position(mymob)
 	static_inventory += using
 
 	inv_box = new /obj/screen/inventory()
@@ -304,7 +286,7 @@
 	pull_icon = new /obj/screen/pull()
 	pull_icon.icon = ui_style
 	pull_icon.update_icon(mymob)
-	pull_icon.screen_loc = ui_pull_resist
+	pull_icon.screen_loc = ui_pull
 	static_inventory += pull_icon
 
 	lingchemdisplay = new /obj/screen/ling/chems()
@@ -317,7 +299,6 @@
 	infodisplay += devilsouldisplay
 
 	zone_select =  new /obj/screen/zone_sel()
-	zone_select.icon = ui_style
 	zone_select.update_icon(mymob)
 	static_inventory += zone_select
 

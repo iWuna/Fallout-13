@@ -40,7 +40,7 @@
 
 
 	zone_select = new /obj/screen/zone_sel()
-	zone_select.icon = ui_style
+	zone_select.icon_state = "zone_sel_bg"
 	zone_select.update_icon(mymob)
 	static_inventory += zone_select
 

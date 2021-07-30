@@ -87,7 +87,7 @@
 	pull_icon = new /obj/screen/pull()
 	pull_icon.icon = ui_style
 	pull_icon.update_icon(mymob)
-	pull_icon.screen_loc = ui_pull_resist
+	pull_icon.screen_loc = ui_pull
 	static_inventory += pull_icon
 
 	lingchemdisplay = new /obj/screen/ling/chems()
@@ -98,7 +98,7 @@
 
 
 	zone_select = new /obj/screen/zone_sel()
-	zone_select.icon = ui_style
+	zone_select.icon_state = "zone_sel_bg"
 	zone_select.update_icon(mymob)
 	static_inventory += zone_select
 
@@ -106,7 +106,7 @@
 
 	using = new /obj/screen/resist()
 	using.icon = ui_style
-	using.screen_loc = ui_pull_resist
+	using.screen_loc = ui_resist
 	hotkeybuttons += using
 
 	for(var/obj/screen/inventory/inv in (static_inventory + toggleable_inventory))
