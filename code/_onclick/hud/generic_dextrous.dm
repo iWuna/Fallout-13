@@ -5,7 +5,7 @@
 
 	using = new /obj/screen/drop()
 	using.icon = ui_style
-	using.screen_loc = ui_drop
+	using.screen_loc = ui_drop_throw
 	static_inventory += using
 
 	pull_icon = new /obj/screen/pull()

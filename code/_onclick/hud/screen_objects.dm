@@ -318,7 +318,7 @@
 
 /obj/screen/mov_intent
 	name = "run/walk toggle"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen_fallout.dmi'
 	icon_state = "running"
 
 /obj/screen/mov_intent/Click()
@@ -338,7 +338,7 @@
 
 /obj/screen/pull
 	name = "stop pulling"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen_fallout.dmi'
 	icon_state = "pull"
 
 /obj/screen/pull/Click()
@@ -356,7 +356,7 @@
 
 /obj/screen/resist
 	name = "resist"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen_fallout.dmi'
 	icon_state = "act_resist"
 	layer = HUD_LAYER
 	plane = HUD_PLANE
@@ -393,7 +393,7 @@
 
 /obj/screen/throw_catch
 	name = "throw/catch"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen_fallout.dmi'
 	icon_state = "act_throw_off"
 
 /obj/screen/throw_catch/Click()

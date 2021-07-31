@@ -11,7 +11,6 @@
 	var/processing = FALSE
 	var/obj/screen/movable/action_button/button = null
 	var/buttontooltipstyle = ""
-	var/transparent_when_unavailable = TRUE
 
 	var/button_icon = 'icons/mob/actions/backgrounds.dmi' //This is the file for the BACKGROUND icon
 	var/background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND //And this is the state for the background icon
@@ -128,9 +127,9 @@
 			ApplyIcon(button, force)
 
 		if(!IsAvailable())
-			button.color = transparent_when_unavailable ? rgb(128,0,0,128) : rgb(128,0,0)
+			button.icon_state = "template_disabled"
 		else
-			button.color = rgb(255,255,255,255)
+			button.icon_state = "template"
 			return 1
 
 /datum/action/proc/ApplyIcon(obj/screen/movable/action_button/current_button, force = FALSE)
@@ -619,7 +618,6 @@
 
 /datum/action/cooldown
 	check_flags = 0
-	transparent_when_unavailable = FALSE
 	var/cooldown_time = 0
 	var/next_use_time = 0
 

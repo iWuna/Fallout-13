@@ -1,5 +1,5 @@
 /obj/screen/human
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen_fallout.dmi'
 
 /obj/screen/human/toggle
 	name = "toggle"
