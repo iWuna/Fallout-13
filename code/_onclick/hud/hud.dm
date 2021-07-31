@@ -3,20 +3,6 @@
 	Used to show and hide huds for all the different mob types,
 	including inventories and item quick actions.
 */
-
-// The default UI style is the first one in the list
-GLOBAL_LIST_INIT(available_ui_styles, list(
-	"Midnight" = 'icons/mob/screen_midnight.dmi',
-	"Retro" = 'icons/mob/screen_retro.dmi',
-	"Plasmafire" = 'icons/mob/screen_plasmafire.dmi',
-	"Slimecore" = 'icons/mob/screen_slimecore.dmi',
-	"Operative" = 'icons/mob/screen_operative.dmi',
-	"Clockwork" = 'icons/mob/screen_clockwork.dmi'
-))
-
-/proc/ui_style2icon(ui_style)
-	return GLOB.available_ui_styles[ui_style] || GLOB.available_ui_styles[GLOB.available_ui_styles[1]]
-
 /datum/hud
 	var/mob/mymob
 
@@ -66,7 +52,7 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 
 	if (!ui_style)
 		// will fall back to the default if any of these are null
-		ui_style = ui_style2icon(owner.client && owner.client.prefs && owner.client.prefs.UI_style)
+		ui_style = 'icons/mob/screen_fallout.dmi'
 
 	hide_actions_toggle = new
 	hide_actions_toggle.InitialiseIcon(src)
@@ -229,19 +215,6 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	if(!mymob)
 		return
 
-/datum/hud/proc/update_ui_style(new_ui_style)
-	// do nothing if overridden by a subtype or already on that style
-	if (initial(ui_style) || ui_style == new_ui_style)
-		return
-
-	for(var/atom/item in static_inventory + toggleable_inventory + hotkeybuttons + infodisplay + screenoverlays + inv_slots)
-		if (item.icon == ui_style)
-			item.icon = new_ui_style
-
-	ui_style = new_ui_style
-	build_hand_slots()
-	hide_actions_toggle.InitialiseIcon(src)
-
 //Triggered when F12 is pressed (Unless someone changed something in the DMF)
 /mob/verb/button_pressed_F12()
 	set name = "F12"
@@ -280,8 +253,6 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	for(var/obj/screen/swap_hand/SH in static_inventory)
 		SH.screen_loc = ui_swaphand_position(mymob,!(i % 2) ? 2: 1)
 		i++
-	for(var/obj/screen/human/equip/E in static_inventory)
-		E.screen_loc = ui_equip_position(mymob)
 
 	if(ismob(mymob) && mymob.hud_used == src)
 		show_hud(hud_version)

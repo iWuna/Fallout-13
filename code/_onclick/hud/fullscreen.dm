@@ -184,3 +184,44 @@
 	layer = LIGHTING_LAYER
 	blend_mode = BLEND_ADD
 	show_when_dead = TRUE
+
+/obj/screen/fullscreen/hud_back
+	icon = 'icons/mob/screen_fallout480.dmi'
+	icon_state = "full"
+	layer = 20
+	show_when_dead = TRUE
+	var/ws_diff = "-2"
+	var/snap_x = "CENTER-7"
+	var/snap_y = "SOUTH"
+
+/obj/screen/fullscreen/hud_back/north
+	dir = NORTH
+	snap_y = "NORTH-14"
+
+/obj/screen/fullscreen/hud_back/east
+	dir = EAST
+	ws_diff = "-4"
+	snap_x = "EAST-14"
+
+/obj/screen/fullscreen/hud_back/update_for_view(client_view)
+	view = client_view
+	if(client_view == CONFIG_GET(string/default_view_square))
+		icon = 'icons/mob/screen_fallout480.dmi'
+		icon_state = "full"
+		screen_loc = "[snap_x],[snap_y]"
+	else if(client_view == CONFIG_GET(string/default_view))
+		icon = 'icons/mob/screen_fallout608_480.dmi'
+		icon_state = "full"
+		screen_loc = "[snap_x][ws_diff],[snap_y]"
+	else
+		icon = 'icons/mob/screen_fallout480.dmi'
+		icon_state = "panels_only"
+		screen_loc = "[snap_x],[snap_y]"
+
+/obj/screen/fullscreen/hud_back/should_show_to(mob/living/mymob)
+	. = ..()
+	if(!.)
+		return
+	
+	if(mymob.hud_used?.hud_version != HUD_STYLE_STANDARD)
+		return FALSE

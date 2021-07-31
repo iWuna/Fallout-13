@@ -201,11 +201,10 @@
 	var/col = ((number - 1)%(AB_MAX_COLUMNS)) + 1
 
 	var/coord_col = "+[col-1]"
-	var/coord_col_offset = 4 + 2 * col
 
 	var/coord_row = "[row ? -row : "+0"]"
 
-	return "WEST[coord_col]:[coord_col_offset],NORTH[coord_row]:-6"
+	return "WEST[coord_col]:0,NORTH[coord_row]:-16"
 
 /datum/hud/proc/SetButtonCoords(obj/screen/button,number)
 	var/row = round((number-1)/AB_MAX_COLUMNS)

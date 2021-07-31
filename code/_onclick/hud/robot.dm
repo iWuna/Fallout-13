@@ -174,7 +174,8 @@
 	hotkeybuttons += pull_icon
 
 
-	zone_select = new /obj/screen/zone_sel/robot()
+	zone_select = new /obj/screen/zone_sel()
+	zone_select.icon_state = "zone_sel_bg"
 	zone_select.update_icon(mymob)
 	static_inventory += zone_select
 

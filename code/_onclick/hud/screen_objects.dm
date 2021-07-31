@@ -60,9 +60,21 @@
 		M.swap_hand()
 	return 1
 
+/obj/screen/swap_hand/human
+	icon = 'icons/mob/screen_fallout.dmi'
+	icon_state = "swap"
+
+/obj/screen/swap_hand/human/Click()
+	. = ..()
+	var/mob/living/carbon/human/H = usr
+	icon_state = initial(icon_state)
+	if(H.active_hand_index == 2)
+		icon_state += "_on"
+
+
 /obj/screen/craft
 	name = "crafting menu"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen_fallout.dmi'
 	icon_state = "craft"
 	screen_loc = ui_crafting
 
@@ -74,7 +86,7 @@
 
 /obj/screen/area_creator
 	name = "create new area"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen_fallout.dmi'
 	icon_state = "area_edit"
 	screen_loc = ui_building
 
@@ -89,7 +101,7 @@
 
 /obj/screen/language_menu
 	name = "language menu"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen_fallout.dmi'
 	icon_state = "talk_wheel"
 	screen_loc = ui_language_menu
 
@@ -198,7 +210,7 @@
 
 /obj/screen/drop
 	name = "drop"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen_fallout.dmi'
 	icon_state = "act_drop"
 	layer = HUD_LAYER
 	plane = HUD_PLANE
@@ -206,9 +218,11 @@
 /obj/screen/drop/Click()
 	if(usr.stat == CONSCIOUS)
 		usr.dropItemToGround(usr.get_active_held_item())
+		flick("act_drop_on", src)
 
 /obj/screen/act_intent
 	name = "intent"
+	icon = 'icons/mob/screen_64.dmi'
 	icon_state = "help"
 	screen_loc = ui_acti
 
@@ -220,16 +234,16 @@
 		var/_x = text2num(params2list(params)["icon-x"])
 		var/_y = text2num(params2list(params)["icon-y"])
 
-		if(_x<=16 && _y<=16)
-			usr.a_intent_change(INTENT_HARM)
-
-		else if(_x<=16 && _y>=17)
-			usr.a_intent_change(INTENT_HELP)
-
-		else if(_x>=17 && _y<=16)
+		if(_x<=31 && _y<=23)
 			usr.a_intent_change(INTENT_GRAB)
 
-		else if(_x>=17 && _y>=17)
+		else if(_x<=31 && _y>=25)
+			usr.a_intent_change(INTENT_HELP)
+
+		else if(_x>=33 && _y<=23)
+			usr.a_intent_change(INTENT_HARM)
+
+		else if(_x>=33 && _y>=25)
 			usr.a_intent_change(INTENT_DISARM)
 	else
 		return ..()
@@ -304,7 +318,7 @@
 
 /obj/screen/mov_intent
 	name = "run/walk toggle"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen_fallout.dmi'
 	icon_state = "running"
 
 /obj/screen/mov_intent/Click()
@@ -324,7 +338,7 @@
 
 /obj/screen/pull
 	name = "stop pulling"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen_fallout.dmi'
 	icon_state = "pull"
 
 /obj/screen/pull/Click()
@@ -342,7 +356,7 @@
 
 /obj/screen/resist
 	name = "resist"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen_fallout.dmi'
 	icon_state = "act_resist"
 	layer = HUD_LAYER
 	plane = HUD_PLANE
@@ -351,6 +365,7 @@
 	if(isliving(usr))
 		var/mob/living/L = usr
 		L.resist()
+		flick("act_resist_on", src)
 
 /obj/screen/storage
 	name = "storage"
@@ -378,7 +393,7 @@
 
 /obj/screen/throw_catch
 	name = "throw/catch"
-	icon = 'icons/mob/screen_midnight.dmi'
+	icon = 'icons/mob/screen_fallout.dmi'
 	icon_state = "act_throw_off"
 
 /obj/screen/throw_catch/Click()
@@ -388,6 +403,7 @@
 
 /obj/screen/zone_sel
 	name = "damage zone"
+	icon = 'icons/mob/screen_64.dmi'
 	icon_state = "zone_sel"
 	screen_loc = ui_zonesel
 	var/selecting = BODY_ZONE_CHEST
@@ -402,51 +418,51 @@
 	var/choice
 
 	switch(icon_y)
-		if(1 to 9) //Legs
+		if(6 to 23) //Legs
 			switch(icon_x)
-				if(10 to 15)
+				if(10 to 20)
 					choice = BODY_ZONE_R_LEG
-				if(17 to 22)
+				if(21 to 27)
 					choice = BODY_ZONE_L_LEG
 				else
 					return 1
-		if(10 to 13) //Hands and groin
+		if(24 to 27) //Hands and groin
 			switch(icon_x)
-				if(8 to 11)
+				if(13 to 16)
 					choice = BODY_ZONE_R_ARM
-				if(12 to 20)
+				if(17 to 27)
 					choice = BODY_ZONE_PRECISE_GROIN
-				if(21 to 24)
+				if(28 to 31)
 					choice = BODY_ZONE_L_ARM
 				else
 					return 1
-		if(14 to 22) //Chest and arms to shoulders
+		if(28 to 39) //Chest and arms to shoulders
 			switch(icon_x)
-				if(8 to 11)
+				if(13 to 16)
 					choice = BODY_ZONE_R_ARM
-				if(12 to 20)
+				if(17 to 24)
 					choice = BODY_ZONE_CHEST
-				if(21 to 24)
+				if(25 to 31)
 					choice = BODY_ZONE_L_ARM
 				else
 					return 1
-		if(23 to 30) //Head, but we need to check for eye or mouth
-			if(icon_x in 12 to 20)
+		if(40 to 46) //Head, but we need to check for eye or mouth
+			if(icon_x in 18 to 23)
 				choice = BODY_ZONE_HEAD
 				switch(icon_y)
-					if(23 to 24)
-						if(icon_x in 15 to 17)
+					if(40 to 41)
+						if(icon_x in 21 to 23)
 							choice = BODY_ZONE_PRECISE_MOUTH
-					if(26) //Eyeline, eyes are on 15 and 17
-						if(icon_x in 14 to 18)
+					if(43) //Eyeline, eyes are on 15 and 17
+						if(icon_x in 19 to 22)
 							choice = BODY_ZONE_PRECISE_EYES
-					if(25 to 27)
-						if(icon_x in 15 to 17)
+					if(42 to 44)
+						if(icon_x in 20 to 21)
 							choice = BODY_ZONE_PRECISE_EYES
 
 	return set_selected_zone(choice, usr)
 
-/obj/screen/zone_sel/proc/set_selected_zone(choice, mob/user)
+/obj/screen/zone_sel/proc/set_selected_zone (choice, mob/user)
 	if(isobserver(user))
 		return
 
@@ -457,7 +473,7 @@
 
 /obj/screen/zone_sel/update_icon(mob/user)
 	cut_overlays()
-	add_overlay(mutable_appearance('icons/mob/screen_gen.dmi', "[selecting]"))
+	add_overlay(mutable_appearance('icons/mob/screen_64.dmi', "[selecting]"))
 	user.zone_selected = selecting
 
 /obj/screen/zone_sel/alien
@@ -470,7 +486,6 @@
 
 /obj/screen/zone_sel/robot
 	icon = 'icons/mob/screen_cyborg.dmi'
-
 
 /obj/screen/flash
 	name = "flash"
