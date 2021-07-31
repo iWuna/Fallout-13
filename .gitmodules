@@ -1,6 +1,0 @@
-[submodule "interactions/lewd"]
-	path = interactions/lewd
-	url = https://gitlab.com/judgex/desert-rose-sm.git
-[submodule "desert-rose-sm"]
-	path = desert-rose-sm
-	url = https://gitlab.com/FayetteFrost/desert-rose-sm.git

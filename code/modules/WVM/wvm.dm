@@ -838,3 +838,11 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("ORM Board",				/obj/item/circuitboard/machine/ore_redemption,				150)
 		)
 
+#undef STATE_IDLE
+#undef STATE_SERVICE
+#undef STATE_VEND
+#undef STATE_LOCKOPEN
+#undef CASH_CAP_VENDOR
+#undef CASH_AUR_VENDOR
+#undef CASH_DEN_VENDOR
+#undef CASH_NCR_VENDOR

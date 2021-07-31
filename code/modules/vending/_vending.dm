@@ -162,24 +162,24 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 		else
 			product_records += R
 
-/obj/machinery/vending/proc/refill_inventory(obj/item/vending_refill/refill, datum/data/vending_product/machine, var/charge_type = STANDARD_CHARGE)
+/obj/machinery/vending/proc/refill_inventory(obj/item/vending_refill/refill, list/products, var/charge_type = STANDARD_CHARGE)
 	var/total = 0
 	var/to_restock = 0
 
-	for(var/datum/data/vending_product/machine_content in machine)
+	for(var/datum/data/vending_product/machine_content in products)
 		if(machine_content.amount == 0 && refill.charges[charge_type] > 0)
 			machine_content.amount++
 			refill.charges[charge_type]--
 			total++
 		to_restock += machine_content.max_amount - machine_content.amount
 	if(to_restock <= refill.charges[charge_type])
-		for(var/datum/data/vending_product/machine_content in machine)
+		for(var/datum/data/vending_product/machine_content in products)
 			machine_content.amount = machine_content.max_amount
 		refill.charges[charge_type] -= to_restock
 		total += to_restock
 	else
 		var/tmp_charges = refill.charges[charge_type]
-		for(var/datum/data/vending_product/machine_content in machine)
+		for(var/datum/data/vending_product/machine_content in products)
 			if(refill.charges[charge_type] == 0)
 				break
 			var/restock = CEILING(((machine_content.max_amount - machine_content.amount)/to_restock)*tmp_charges, 1)

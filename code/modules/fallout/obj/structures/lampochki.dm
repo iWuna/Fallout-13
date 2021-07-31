@@ -28,3 +28,9 @@
 	. = ..()
 	status = LIGHT_EMPTY
 	update(0)
+
+#undef LIGHT_EMERGENCY_POWER_USE
+#undef LIGHT_OK
+#undef LIGHT_EMPTY
+#undef LIGHT_BROKEN
+#undef LIGHT_BURNED

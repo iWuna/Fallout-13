@@ -202,6 +202,7 @@
 		build_part(D)
 		D = listgetindex(queue, 1)
 	say("Queue processing finished successfully.")
+	processing_queue = FALSE
 
 /obj/machinery/mecha_part_fabricator/proc/list_queue()
 	var/output = "<b>Queue contains:</b>"
@@ -345,12 +346,9 @@
 		add_part_set_to_queue(afilter.get("partset_to_queue"))
 		return update_queue_on_page()
 	if(href_list["process_queue"])
-		spawn(0)
-			if(processing_queue || being_built)
-				return FALSE
-			processing_queue = 1
-			process_queue()
-			processing_queue = 0
+		if(processing_queue || being_built)
+			return FALSE
+		process_queue_wrapper()
 	if(href_list["clear_temp"])
 		temp = null
 	if(href_list["screen"])
@@ -386,6 +384,13 @@
 
 	updateUsrDialog()
 	return
+
+/obj/machinery/mecha_part_fabricator/proc/process_queue_wrapper()
+	set waitfor = FALSE
+
+	processing_queue = TRUE
+	process_queue()
+	processing_queue = FALSE
 
 /obj/machinery/mecha_part_fabricator/on_deconstruction()
 	GET_COMPONENT(materials, /datum/component/material_container)

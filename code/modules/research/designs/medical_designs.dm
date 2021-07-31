@@ -548,7 +548,7 @@
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_SCIENCE
 
 
-datum/design/surgery_revival
+/datum/design/surgery_revival
 	name = "Revival Surgery Disk"
 	desc = "A disk containing the instructions for a Revival surgery."
 	id = "surgery_revival"

@@ -1237,8 +1237,8 @@
 /mob/living/carbon/human/species/strigoi
 	race = /datum/species/strigoi
 
-mob/living/carbon/human/species/supermutant
+/mob/living/carbon/human/species/supermutant
 	race = /datum/species/supermutant
 
-mob/living/carbon/human/species/supermutant/nightkin
+/mob/living/carbon/human/species/supermutant/nightkin
 	race = /datum/species/supermutant/nightkin

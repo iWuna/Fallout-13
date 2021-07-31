@@ -180,7 +180,7 @@
 	category = list("Weapon Parts")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
-/datum/design/advw_alloys
+/datum/design/advw_alloys/super
 	name = "Superlight alloys"
 	desc = "A general crafting part, a craftsman might want to have this."
 	id = "advw_alloys_super"

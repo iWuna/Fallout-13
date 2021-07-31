@@ -42,7 +42,7 @@
 	layer = 2.1
 	resistance_flags = INDESTRUCTIBLE
 
-obj/effect/decal/beach
+/obj/effect/decal/beach
 	name = "beach junk"
 	desc = "Just some beach stuff. It smells of the sea, probably."
 	anchored = 1

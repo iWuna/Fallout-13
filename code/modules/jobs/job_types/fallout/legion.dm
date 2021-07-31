@@ -551,7 +551,7 @@ Vexillarius
 Slavemaster
 */
 
-datum/job/CaesarsLegion/Legionnaire/f13slavemaster
+/datum/job/CaesarsLegion/Legionnaire/f13slavemaster
 	title = "Legion Slavemaster"
 	department_head = list("Legion Centurion")
 	flag = F13SLAVEMASTER

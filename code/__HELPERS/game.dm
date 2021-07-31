@@ -499,9 +499,9 @@
 	if(!SSticker.IsRoundInProgress() || QDELETED(character))
 		return
 	var/area/A = get_area(character)
-//	var/message = "<span class='game deadsay'>Вот тут и начинается история <span class='name'>\
-//		[character.real_name]</span>... \
-//		.</span>"
+//	var/message = """<span class='game deadsay'>Вот тут и начинается история <span class='name'>
+//		[character.real_name]</span>... 
+//		.</span>"""
 //	deadchat_broadcast(message, follow_target = character, message_type=DEADCHAT_ARRIVALRATTLE)
 	message_admins("<span class='name'>\
 		[character.real_name]</span> ([rank]) вошёл на пустошь как \
@@ -512,7 +512,7 @@
 		character.adjustBrainLoss(50)
 		character.adjustCloneLoss(50)
 		character.adjustStaminaLoss(100)
-		to_chat(src, "<font color='red'>Die.</font>")
+		to_chat(character, "<font color='red'>Die.</font>")
 	if((!GLOB.announcement_systems.len) || (!character.mind))
 		return
 	if((character.mind.assigned_role == "Cyborg") || (character.mind.assigned_role == character.mind.special_role))
@@ -533,7 +533,7 @@
 		. = TRUE
 
 
-proc/has_density(var/atom)
+/proc/has_density(var/atom)
 	var/turf/T = get_turf(atom)
 	if(T.density)
 		return 1

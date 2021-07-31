@@ -7,7 +7,9 @@ GLOBAL_PROTECT(security_mode)
 //This happens after the Master subsystem new(s) (it's a global datum)
 //So subsystems globals exist, but are not initialised
 /world/New()
+#ifdef DEBUG
 	enable_debugger()
+#endif
 #ifdef REFERENCE_TRACKING
 	enable_reference_tracking()
 #endif
@@ -57,6 +59,11 @@ GLOBAL_PROTECT(security_mode)
 
 	if(TEST_RUN_PARAMETER in params)
 		HandleTestRun()
+
+/world/Del()
+#ifdef DEBUG
+	disable_debugger()
+#endif
 
 /world/proc/HandleTestRun()
 	//trigger things to run the whole process

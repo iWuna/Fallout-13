@@ -54,10 +54,11 @@
 	//Screen variables: Do not mess with these vars unless you know what you're doing. They're not defines so storage that isn't in the same location can be supported in the future.
 	var/screen_max_columns = 7							//These two determine maximum screen sizes.
 	var/screen_max_rows = INFINITY
-	var/screen_pixel_x = 16								//These two are pixel values for screen loc of boxes and closer
-	var/screen_pixel_y = 16
+	var/screen_pixel_x = 16								//These two are pixel values for screen loc of boxes
+	var/screen_pixel_y = 0
 	var/screen_start_x = 4								//These two are where the storage starts being rendered, screen_loc wise.
-	var/screen_start_y = 2
+	var/screen_start_y = 3
+	var/closer_loc = "CENTER+3:1,SOUTH:14"
 	//End
 
 /datum/component/storage/Initialize(datum/component/storage/concrete/master)
@@ -332,7 +333,7 @@
 				cy++
 				if(cy - screen_start_y >= rows)
 					break
-	closer.screen_loc = "[screen_start_x + cols]:[screen_pixel_x],[screen_start_y]:[screen_pixel_y]"
+	closer.screen_loc = closer_loc
 
 /datum/component/storage/proc/show_to(mob/M)
 	if(!M.client)

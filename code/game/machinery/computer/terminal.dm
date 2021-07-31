@@ -158,28 +158,41 @@
 /obj/machinery/computer/terminal/proc/write_documents()
 	if (doc_title_1)
 		var/file_in_memory = text2path("/datum/terminal/document/[doc_title_1]")
-		var/datum/terminal/document/N = new file_in_memory
-		doc_title_1 = "[N.title]"
-		doc_content_1 = "[N.content]"
+		if(file_in_memory)
+			var/datum/terminal/document/N = new file_in_memory
+			doc_title_1 = "[N.title]"
+			doc_content_1 = "[N.content]"
+		else
+			CRASH("Unrecognized path: /datum/terminal/document/[doc_title_1]")
 	if (doc_title_2)
 		var/file_in_memory = text2path("/datum/terminal/document/[doc_title_2]")
-		var/datum/terminal/document/N = new file_in_memory
-		doc_title_2 = "[N.title]"
-		doc_content_2 = "[N.content]"
+		if(file_in_memory)
+			var/datum/terminal/document/N = new file_in_memory
+			doc_title_2 = "[N.title]"
+			doc_content_2 = "[N.content]"
+		else
+			CRASH("Unrecognized path: /datum/terminal/document/[doc_title_2]")
 	if (doc_title_3)
 		var/file_in_memory = text2path("/datum/terminal/document/[doc_title_3]")
-		var/datum/terminal/document/N = new file_in_memory
-		doc_title_3 = "[N.title]"
-		doc_content_3 = "[N.content]"
+		if(file_in_memory)
+			var/datum/terminal/document/N = new file_in_memory
+			doc_title_3 = "[N.title]"
+			doc_content_3 = "[N.content]"
+		else
+			CRASH("Unrecognized path: /datum/terminal/document/[doc_title_3]")
 	if (doc_title_4)
 		var/file_in_memory = text2path("/datum/terminal/document/[doc_title_4]")
-		var/datum/terminal/document/N = new file_in_memory
-		doc_title_4 = "[N.title]"
-		doc_content_4 = "[N.content]"
+		if(file_in_memory)
+			var/datum/terminal/document/N = new file_in_memory
+			doc_title_4 = "[N.title]"
+			doc_content_4 = "[N.content]"
+		else
+			CRASH("Unrecognized path: /datum/terminal/document/[doc_title_4]")
 	if (doc_title_5)
 		var/file_in_memory = text2path("/datum/terminal/document/[doc_title_5]")
-		var/datum/terminal/document/N = new file_in_memory
-		doc_title_5 = "[N.title]"
-		doc_content_5 = "[N.content]"
-
-	return
+		if(file_in_memory)
+			var/datum/terminal/document/N = new file_in_memory
+			doc_title_5 = "[N.title]"
+			doc_content_5 = "[N.content]"
+		else
+			CRASH("Unrecognized path: /datum/terminal/document/[doc_title_5]")

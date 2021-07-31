@@ -127,3 +127,7 @@
 		new /obj/item/stack/sheet/mineral/sandbags(src.loc)
 		qdel(src)
 		return
+
+#undef METAL
+#undef WOOD
+#undef SAND

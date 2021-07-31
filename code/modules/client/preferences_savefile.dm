@@ -73,7 +73,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//general preferences
 	S["ooccolor"]			>> ooccolor
 	S["lastchangelog"]		>> lastchangelog
-	S["UI_style"]			>> UI_style
 	S["chat_on_map"]		>> chat_on_map  //Runechat Stuff
 	S["max_chat_length"]	>> max_chat_length
 	S["see_chat_non_mob"] 	>> see_chat_non_mob //End of Runchat Stuff
@@ -116,7 +115,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//Sanitize
 	ooccolor			= sanitize_color(sanitize_hexcolor(ooccolor, 6, 1, initial(ooccolor)))
 	lastchangelog		= sanitize_text(lastchangelog, initial(lastchangelog))
-	UI_style			= sanitize_inlist(UI_style, GLOB.available_ui_styles, GLOB.available_ui_styles[1])
 	hotkeys				= sanitize_integer(hotkeys, 0, 1, initial(hotkeys))
 	chat_on_map			= sanitize_integer(chat_on_map, 0, 1, initial(chat_on_map)) //Runechat Stuff
 	max_chat_length 	= sanitize_integer(max_chat_length, 1, CHAT_MESSAGE_MAX_LENGTH, initial(max_chat_length))
@@ -156,7 +154,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//general preferences
 	WRITE_FILE(S["ooccolor"], ooccolor)
 	WRITE_FILE(S["lastchangelog"], lastchangelog)
-	WRITE_FILE(S["UI_style"], UI_style)
 	WRITE_FILE(S["hotkeys"], hotkeys)
 	WRITE_FILE(S["chat_on_map"], chat_on_map)
 	WRITE_FILE(S["max_chat_length"], max_chat_length)
@@ -432,10 +429,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		B_sizes = L.Copy()
 	var/static/min_D
 	if(!min_D)
-		min_D = CONFIG_GET(keyed_number_list/penis_min_inches_prefs)
+		min_D = CONFIG_GET(number/penis_min_inches_prefs)
 	var/static/max_D
 	if(!max_D)
-		max_D = CONFIG_GET(keyed_number_list/penis_max_inches_prefs)
+		max_D = CONFIG_GET(number/penis_max_inches_prefs)
 	var/static/safe_visibilities
 	if(!safe_visibilities)
 		var/list/L = CONFIG_GET(keyed_flag_list/safe_visibility_toggles)

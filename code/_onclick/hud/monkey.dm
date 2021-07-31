@@ -4,7 +4,6 @@
 	var/obj/screen/inventory/inv_box
 
 	action_intent = new /obj/screen/act_intent()
-	action_intent.icon = ui_style
 	action_intent.icon_state = mymob.a_intent
 	action_intent.screen_loc = ui_acti
 	static_inventory += action_intent
@@ -15,10 +14,6 @@
 	using.screen_loc = ui_movi
 	static_inventory += using
 
-	using = new/obj/screen/language_menu
-	using.icon = ui_style
-	static_inventory += using
-
 	using = new /obj/screen/drop()
 	using.icon = ui_style
 	using.screen_loc = ui_drop_throw
@@ -26,22 +21,10 @@
 
 	build_hand_slots()
 
-	using = new /obj/screen/swap_hand()
-	using.icon = ui_style
-	using.icon_state = "swap_1_m"	//extra wide!
-	using.screen_loc = ui_swaphand_position(owner,1)
-	static_inventory += using
-
-	using = new /obj/screen/swap_hand()
-	using.icon = ui_style
-	using.icon_state = "swap_2"
-	using.screen_loc = ui_swaphand_position(owner,2)
-	static_inventory += using
-
 	inv_box = new /obj/screen/inventory()
 	inv_box.name = "mask"
 	inv_box.icon = ui_style
-	inv_box.icon_state = "mask"
+	inv_box.icon_state = "mask_alt"
 //	inv_box.icon_full = "template"
 	inv_box.screen_loc = ui_monkey_mask
 	inv_box.slot_id = SLOT_WEAR_MASK
@@ -50,7 +33,7 @@
 	inv_box = new /obj/screen/inventory()
 	inv_box.name = "neck"
 	inv_box.icon = ui_style
-	inv_box.icon_state = "neck"
+	inv_box.icon_state = "neck_alt"
 //	inv_box.icon_full = "template"
 	inv_box.screen_loc = ui_monkey_neck
 	inv_box.slot_id = SLOT_NECK
@@ -59,7 +42,7 @@
 	inv_box = new /obj/screen/inventory()
 	inv_box.name = "head"
 	inv_box.icon = ui_style
-	inv_box.icon_state = "head"
+	inv_box.icon_state = "head_alt"
 //	inv_box.icon_full = "template"
 	inv_box.screen_loc = ui_monkey_head
 	inv_box.slot_id = SLOT_HEAD
@@ -68,7 +51,7 @@
 	inv_box = new /obj/screen/inventory()
 	inv_box.name = "back"
 	inv_box.icon = ui_style
-	inv_box.icon_state = "back"
+	inv_box.icon_state = "back_alt"
 	inv_box.screen_loc = ui_monkey_back
 	inv_box.slot_id = SLOT_BACK
 	static_inventory += inv_box
@@ -87,7 +70,7 @@
 	pull_icon = new /obj/screen/pull()
 	pull_icon.icon = ui_style
 	pull_icon.update_icon(mymob)
-	pull_icon.screen_loc = ui_pull_resist
+	pull_icon.screen_loc = ui_pull
 	static_inventory += pull_icon
 
 	lingchemdisplay = new /obj/screen/ling/chems()
@@ -98,7 +81,7 @@
 
 
 	zone_select = new /obj/screen/zone_sel()
-	zone_select.icon = ui_style
+	zone_select.icon_state = "zone_sel_bg"
 	zone_select.update_icon(mymob)
 	static_inventory += zone_select
 
@@ -106,7 +89,7 @@
 
 	using = new /obj/screen/resist()
 	using.icon = ui_style
-	using.screen_loc = ui_pull_resist
+	using.screen_loc = ui_resist
 	hotkeybuttons += using
 
 	for(var/obj/screen/inventory/inv in (static_inventory + toggleable_inventory))

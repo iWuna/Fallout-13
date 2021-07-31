@@ -340,7 +340,7 @@
 	owner.add_trait(TRAIT_NOSLIPWATER, "slimestatus")
 	return ..()
 
-datum/status_effect/stabilized/blue/on_remove()
+/datum/status_effect/stabilized/blue/on_remove()
 	owner.remove_trait(TRAIT_NOSLIPWATER, "slimestatus")
 
 /datum/status_effect/stabilized/metal

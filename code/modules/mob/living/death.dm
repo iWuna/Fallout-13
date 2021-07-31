@@ -95,10 +95,7 @@
 				else
 					to_chat(src, sound('sound/f13effects/NAR_5.ogg',0,1,90))
 		else
-			if(1)
-				to_chat(src, sound('sound/f13effects/NAR_6.ogg',0,1,90))
-			else
-				to_chat(src, sound('sound/f13effects/NAR_DTH2.ogg',0,1,90))
+			to_chat(src, sound('sound/f13effects/NAR_6.ogg',0,1,90))
 	for(var/s in ownedSoullinks)
 		var/datum/soullink/S = s
 		S.ownerDies(gibbed)

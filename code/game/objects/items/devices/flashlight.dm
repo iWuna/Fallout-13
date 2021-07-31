@@ -586,7 +586,7 @@
 	///Variable to preserve old lighting behavior in flashlights, to handle darkness.
 	var/dark_light_power = -3
 
-obj/item/flashlight/flashdark/update_brightness(mob/user)
+/obj/item/flashlight/flashdark/update_brightness(mob/user)
 	. = ..()
 	if(on)
 		set_light(dark_light_range, dark_light_power)

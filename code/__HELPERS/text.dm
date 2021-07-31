@@ -771,7 +771,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 
 
 
-proc/TextPreview(var/string,var/len=40)
+/proc/TextPreview(var/string,var/len=40)
 	if(length(string) <= len)
 		if(!length(string))
 			return "\[...\]"

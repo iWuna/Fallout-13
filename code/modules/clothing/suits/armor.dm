@@ -1001,39 +1001,45 @@
 	var/emped = 0
 	var/requires_training = TRUE
 	flags_inv = HIDEJUMPSUIT|HIDENECK|HIDEEYES|HIDEEARS|HIDEFACE|HIDEMASK|HIDEGLOVES|HIDESHOES
-	var/traits = list(TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
+	var/traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	var/hit_reflect_chance = 5 //Делаем рефлекты к ПА, по умолчанию 5 процентов.
-	var/footstep = 1 //Нужно для звука шагов
-	var/datum/component/mobhook //Тоже нужно для звука шагов
+	// var/footstep = 1 //Нужно для звука шагов
+	// var/datum/component/mobhook //Тоже нужно для звука шагов
 
 /obj/item/clothing/suit/armor/f13/power_armor/Initialize()
 	. = ..()
 	AddComponent(/datum/component/spraycan_paintable)
-	START_PROCESSING(SSobj, src)
 
 /obj/item/clothing/suit/armor/f13/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1) //Проверка на навык ношения ПА
-    var/mob/living/carbon/human/H = user
-    if(src == H.wear_suit) //Suit is already equipped
-        return TRUE
-    if (!H.has_trait(TRAIT_PA_WEAR) && slot == SLOT_WEAR_SUIT && requires_training)
-        to_chat(user, "<span class='warning'>You don't have the proper training to operate the power armor!</span>")
-        return 0
-    if(slot == SLOT_WEAR_SUIT)
-        for(var/trait in traits)
-            H.add_trait(trait)
-        return ..()
+	. = ..()
+	if(!.)
+		return
+
+	if(!ishuman(user))
+		return FALSE
+
+	var/mob/living/carbon/human/H = user
+	if (!H.has_trait(TRAIT_PA_WEAR) && requires_training)
+		to_chat(user, "<span class='warning'>You don't have the proper training to operate the power armor!</span>")
+		return FALSE
+
+/obj/item/clothing/suit/armor/f13/power_armor/equipped(mob/user, slot)
+	. = ..()
+	var/mob/living/carbon/human/H = user
+	for(var/trait in traits)
+		H.add_trait(trait, src)
 
 /obj/item/clothing/suit/armor/f13/power_armor/dropped(mob/user)
-    var/mob/living/carbon/human/H = user
-    for(var/trait in traits)
-        H.remove_trait(trait)
-    return ..()
+	var/mob/living/carbon/human/H = user
+	for(var/trait in traits)
+		H.remove_trait(trait, src)
+	return ..()
 
 /obj/item/clothing/suit/armor/f13/power_armor/IsReflect(def_zone) //Код рефлекта для ПА
 	if(!(def_zone in list(BODY_ZONE_CHEST, BODY_ZONE_PRECISE_GROIN, BODY_ZONE_R_ARM, BODY_ZONE_L_ARM, BODY_ZONE_R_LEG, BODY_ZONE_L_LEG))) //If not shot where ablative is covering you, you don't get the reflection bonus!
-		return 0
+		return FALSE
 	if (prob(hit_reflect_chance))
-		return 1
+		return TRUE
 
 /obj/item/clothing/suit/armor/f13/power_armor/emp_act(mob/living/carbon/human/owner, severity) //Код применения ЕМП на ПА
 	. = ..()
@@ -1131,7 +1137,6 @@
 	icon_state = "excavator"
 	item_state = "excavator"
 	slowdown = 0.5 //+0.1 from helmet
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	armor = list("melee" = 60, "bullet" = 55, "laser" = 45, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d
@@ -1139,7 +1144,6 @@
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/medical
@@ -1147,7 +1151,6 @@
 	desc = "The MP-47/A prototype medic power armor is a U.S. Army variant of T-45d power armor. It was designed to administer medical attention to the user as necessary during combat."
 	icon_state = "t45dpowerarmor_med"
 	item_state = "t45dpowerarmor_med"
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	armor = list("melee" = 65, "bullet" = 65, "laser" = 55, "energy" = 65, "bomb" = 65, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 100)
 	slowdown = 0.11
 	heat_protection = 2000
@@ -1155,26 +1158,28 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/medical/equipped(mob/user, slot)
 	. = ..()
+	START_PROCESSING(SSobj, src)
 	if (slot == SLOT_WEAR_SUIT)
 		playsound(src, 'sound/f13effects/MedPA.ogg', 50, 1)
 
-/obj/item/clothing/suit/armor/f13/power_armor/t45d/medical/New() //Начало кода для хила от мед.брони
-	..()
-	START_PROCESSING(SSobj, src)
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/medical/dropped(mob/user)
+	. = ..()
+	STOP_PROCESSING(SSobj, src)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/medical/Destroy()
 	STOP_PROCESSING(SSobj,src)
 	. = ..()
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/medical/process()
-	if(iscarbon(loc))
-		var/mob/living/carbon/M = loc
-		if(M.health < M.maxHealth)
-			new /obj/effect/temp_visual/heal(get_turf(M), "#80F5FF")
-			M.adjustBruteLoss(-3.5) //Heal that poor bastard
-			M.adjustFireLoss(-3.5)
-			M.adjustToxLoss(-3.5)
-			M.adjustOxyLoss(-3.5)
+	var/mob/living/carbon/human/H = loc
+	if(H.wear_suit != src)
+		return
+	if(H.health < H.maxHealth)
+		new /obj/effect/temp_visual/heal(get_turf(H), "#80F5FF")
+		H.adjustBruteLoss(-3.5)
+		H.adjustFireLoss(-3.5)
+		H.adjustToxLoss(-3.5)
+		H.adjustOxyLoss(-3.5)
 
 //Конец кода для хила от мед.брони.
 
@@ -1186,28 +1191,24 @@
 	slowdown = 0 //Okay??
 	hit_reflect_chance = 50 //Щитспавнернская броня, осторожно при выдаче.
 	//flags_inv = HIDEJUMPSUIT|HIDENECK
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/outcast
 	name = "Outcast T-45d"
 	desc = "An outcast power armor, using by Outcasters."
 	icon_state = "t45dpowerarmor_outcast"
 	item_state = "t45dpowerarmor_outcast"
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/military
 	name = "Military T-45d"
 	desc = "A military power armor, that was popular in militia and army."
 	icon_state = "t45dpowerarmor_military"
 	item_state = "t45dpowerarmor_military"
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/foil
 	name = "Foil T-45d"
 	desc = "Very effective against aliens."
 	icon_state = "t45dpowerarmor_foil"
 	item_state = "t45dpowerarmor_foil"
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	armor = list("melee" = 10, "bullet" = 10, "laser" = 15, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
 	requires_training = FALSE
 	slowdown = 1.35
@@ -1219,7 +1220,6 @@
 	desc = "A captured set of T-45d power armor put into use by the NCR, it's been heavily modified and decorated with the head of a bear and intricate gold trimming. A two headed bear is scorched into the breastplate."
 	icon_state = "sierra"
 	item_state = "sierra"
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/knightcaptain
 	name = "Knight-Captain's T-45d Power Armour"
@@ -1227,7 +1227,6 @@
 	icon_state = "t45dkc"
 	item_state = "t45dkc"
 	slowdown = 0.16
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 95, "fire" = 90, "acid" = 100)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t60
@@ -1236,7 +1235,6 @@
 	icon_state = "t60powerarmor"
 	item_state = "t60powerarmor"
 	slowdown = 0.16
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	armor = list("melee" = 75, "bullet" = 70, "laser" = 60, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 100)
 	hit_reflect_chance = 20
 
@@ -1246,7 +1244,6 @@
 	icon_state = "t60powerarmor_tesla"
 	item_state = "t60powerarmor_tesla"
 	slowdown = 0.16
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	armor = list("melee" = 60, "bullet" = 60, "laser" = 75, "energy" = 75, "bomb" = 85, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 100)
 	hit_reflect_chance = 30
 
@@ -1260,7 +1257,6 @@
 	icon_state = "t51bpowerarmor"
 	item_state = "t51bpowerarmor"
 	slowdown = 0.15 //+0.1 from helmet = total 0.25
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	armor = list("melee" = 70, "bullet" = 75, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 	hit_reflect_chance = 15
 
@@ -1275,7 +1271,6 @@
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer. Now ultracite enhanced."
 	icon_state = "ultracitepa"
 	item_state = "ultracitepa"
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	slowdown = 0
 	hit_reflect_chance = 10
 
@@ -1284,7 +1279,6 @@
 	desc = "A BRUTAL set of X-03 Power Armor only for hotty boys."
 	icon_state = "x03powerarmor"
 	item_state = "x03powerarmor"
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	armor = list("melee" = 70, "bullet" = 75, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 100, "acid" = 100)
 	hit_reflect_chance = 15
 	max_heat_protection_temperature = FIRE_IMMUNITY_SUIT_MAX_TEMP_PROTECT
@@ -1298,7 +1292,6 @@
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "advpowerarmor1"
 	item_state = "advpowerarmor1"
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 50, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 	hit_reflect_chance = 20
 
@@ -1308,7 +1301,6 @@
 	icon_state = "advpowerarmor2"
 	item_state = "advpowerarmor2"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	armor = list("melee" = 90, "bullet" = 90, "laser" = 60, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 	hit_reflect_chance = 25
 
@@ -1317,7 +1309,6 @@
 	desc = "A variant of the Enclave's advanced power armor Mk I, jury-rigged with a Tesla device that is capable of dispersing a large percentage of the damage done by directed-energy attacks.<br>As it's made of complex composite materials designed to block most of energy damage - it's notably weaker against kinetic impacts."
 	icon_state = "tesla"
 	item_state = "tesla"
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	armor = list("melee" = 35, "bullet" = 35, "laser" = 95, "energy" = 95, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 	hit_reflect_chance = 50 //Что не зарефлектит, то зарезистит
 
@@ -1330,7 +1321,6 @@
 	desc = "This set of power armor once belonged to the Mid Western branch of the Brotherhood of Steel now residing wherever it's user currently is situated."
 	icon_state = "midwestpa"
 	item_state = "midwestpa"
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 	hit_reflect_chance = 15
 
@@ -1338,7 +1328,6 @@
 	name = "hardened midwestern power armor"
 	desc = "This set of power armor once belonged to the Mid Western branch of the Brotherhood of Steel now residing wherever it's user currently is situated. This particular one has gone through a chemical hardening process, increasing it's armor capabilities."
 	slowdown = 0.15 //+0.1 from helmet = total 0.25
-	traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
 	armor = list("melee" = 70, "bullet" = 65, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0)
 	hit_reflect_chance = 15
 

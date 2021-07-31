@@ -6,7 +6,7 @@
 	layer = MASSIVE_OBJ_LAYER
 	var/random_basetype
 	pre_snow_state = null
-	var/never_random = FALSE // used for the 'random' subclasses.\
+	var/never_random = FALSE // used for the 'random' subclasses.
 
 /obj/structure/sign/bilboards/snow_act()
 	snow = TRUE

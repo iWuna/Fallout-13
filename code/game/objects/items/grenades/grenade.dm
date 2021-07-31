@@ -45,12 +45,6 @@
 		preprime(user, 5, FALSE)
 		return FALSE
 	return TRUE
-	if(user.special.grenade_clumsy)
-		switch(rand(1,5))
-			if(3)
-				to_chat(user, "<span class='warning'>Huh? How does this thing work?</span>")
-				preprime(user, 5, FALSE)
-				return FALSE
 
 
 /obj/item/grenade/examine(mob/user)
