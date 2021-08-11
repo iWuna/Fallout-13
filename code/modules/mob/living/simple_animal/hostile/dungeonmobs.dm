@@ -26,7 +26,6 @@
 	unsuitable_atmos_damage = 20
 	robust_searching = 0
 	gold_core_spawnable = HOSTILE_SPAWN
-	var/multiple_sprites = TRUE
 	faction = list("ghoul")
 	//decompose = TRUE //посибл, перегрузка.
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 2,
@@ -44,22 +43,16 @@
 
 /mob/living/simple_animal/hostile/dungemobs/ghoul/Initialize()
 	. = ..()
-	icon_state = "retro_ghoul-[rand(1,10)]"
-	icon_living = "retro_ghoul-[rand(1,10)]"
+	icon_state += "-[rand(1,10)]"
+	icon_living = icon_state
+	icon_dead = icon_living + "_d"
 
-/mob/living/simple_animal/hostile/dungemobs/ghoul/New()
-	. = ..()
-	if(multiple_sprites)
-		icon_living = icon_state
-		icon_dead = icon_living + "_d"
+
 
 /mob/living/simple_animal/hostile/dungemobs/ghoul/reaver
 	name = "feral ghoul reaver"
 	desc = "A ghoul that has lost it's mind and become aggressive. This one is strapped with metal armor, and appears far stronger."
-	icon = 'icons/mob/ghouls.dmi'
-	icon_state = "ghoulreaver"
-	icon_living = "ghoulreaver"
-	icon_dead = "ghoulreaver_dead"
+	icon = 'icons/mob/wastemobs.dmi'
 	speed = 2
 	maxHealth = 100
 	health = 100
@@ -69,6 +62,9 @@
 
 /mob/living/simple_animal/hostile/dungemobs/ghoul/reaver/Initialize()
 	. = ..()
+	icon_state = "ghoulreaver"
+	icon_living = "ghoulreaver"
+	icon_dead = "ghoulreaver_d"
 
 /mob/living/simple_animal/hostile/dungemobs/ghoul/reaver/Aggro()
 	..()
@@ -105,8 +101,8 @@
 /mob/living/simple_animal/hostile/dungemobs/ghoul/glowing
 	name = "glowing feral ghoul"
 	desc = "A feral ghoul that has absorbed massive amounts of radiation, causing them to glow in the dark and radiate constantly."
-	icon_state = "retro_glowghoul-6"
-	icon_living = "retro_glowghoul-6"
+	icon_state = "retro_glowghoul"
+	icon_living = "retro_glowghoul"
 	icon_dead = "retro_glowghoul_d"
 	maxHealth = 80
 	health = 80
@@ -134,8 +130,6 @@
 /mob/living/simple_animal/hostile/dungemobs/ghoul/glowing/Initialize()
 	. = ..()
 	set_light(2)
-	icon_state = "retro_glowghoul-[rand(1,10)]"
-	icon_living = "retro_glowghoul-[rand(1,10)]"
 
 /mob/living/simple_animal/hostile/dungemobs/ghoul/glowing/Aggro()
 	..()
@@ -211,17 +205,6 @@
 	maxHealth = 90
 	health = 90
 
-/mob/living/simple_animal/hostile/dungemobs/ghoul/soldier/Initialize()
-	. = ..()
-	icon_state = "soldier_ghoul-[rand(1,10)]"
-	icon_living = "soldier_ghoul-[rand(1,10)]"
-
-/mob/living/simple_animal/hostile/dungemobs/ghoul/soldier/New()
-	. = ..()
-	if(multiple_sprites)
-		icon_living = icon_state
-		icon_dead = icon_living + "_d"
-
 /mob/living/simple_animal/hostile/dungemobs/ghoul/soldier/armored
 	name = "Armored Ghoul Soldier"
 	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
@@ -232,11 +215,6 @@
 	icon_gib = "gib"
 	maxHealth = 100
 	health = 100
-
-/mob/living/simple_animal/hostile/dungemobs/ghoul/soldier/armored/Initialize()
-	. = ..()
-	icon_state = "soldier_ghoul_a-[rand(1,10)]"
-	icon_living = "soldier_ghoul_a-[rand(1,10)]"
 
 /mob/living/simple_animal/hostile/dungemobs/ghoul/scorched
 	name = "Scorched Ghoul Soldier"
@@ -266,7 +244,8 @@
 /mob/living/simple_animal/hostile/dungemobs/ghoul/scorched/Initialize()
 	. = ..()
 	icon_state = "scorched_m-[rand(1,5)]"
-	icon_living = "scorched_m-[rand(1,5)]"
+	icon_living = icon_state
+	icon_dead = icon_state + "_d"
 
 /mob/living/simple_animal/hostile/dungemobs/ghoul/scorched/ranged
 	name = "Ranged Ghoul Solder"
@@ -299,7 +278,7 @@
 /mob/living/simple_animal/hostile/dungemobs/ghoul/scorched/ranged/Initialize()
 	. = ..()
 	icon_state = "scorched_r-[rand(1,5)]"
-	icon_living = "scorched_r-[rand(1,5)]"
+	icon_living = icon_state
 
 //////////////////////////Super Mutants////////////////////////
 
