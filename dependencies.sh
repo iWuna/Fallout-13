@@ -18,3 +18,6 @@ export BSQL_VERSION=v1.4.0.0
 
 #node version
 export NODE_VERSION=8
+
+# Python version for mapmerge and other tools
+export PYTHON_VERSION=3.6.8
