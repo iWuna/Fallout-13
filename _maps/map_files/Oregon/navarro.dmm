@@ -1,392 +1,12125 @@
-"aa" = (/turf/closed/indestructible/f13/matrix,/area/f13/wasteland)
-"ab" = (/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"ac" = (/obj/structure/flora/tree/wasteland,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"ad" = (/obj/item/trash/f13/mechanist,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"ae" = (/mob/living/simple_animal/hostile/wolf,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"af" = (/obj/structure/car,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"ag" = (/obj/structure/flora/tree/tall{tag = "icon-tree_3"; icon_state = "tree_3"},/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"ah" = (/obj/structure/flora/tree/tall{tag = "icon-tree_2"; icon_state = "tree_2"},/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"ai" = (/obj/structure/flora/tree/tall,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"aj" = (/obj/structure/bus_door,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"ak" = (/mob/living/simple_animal/hostile/wolf{tag = "icon-dog_angry (WEST)"; icon_state = "dog_angry"; dir = 8},/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"al" = (/obj/effect/spawner/lootdrop/clothing_low,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"am" = (/obj/item/trash/f13/bubblegum,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"an" = (/obj/effect/spawner/lootdrop/food,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"ao" = (/mob/living/simple_animal/hostile/wolf{tag = "icon-dog_angry (EAST)"; icon_state = "dog_angry"; dir = 4},/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"ap" = (/mob/living/simple_animal/hostile/wolf{tag = "icon-dog_angry (NORTH)"; icon_state = "dog_angry"; dir = 1},/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"aq" = (/obj/structure/bonfire,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"ar" = (/obj/item/trash/chips,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"as" = (/mob/living/carbon/human{health = 0; name = "Jacob Blascowish"},/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"at" = (/obj/item/trash/f13/blamco,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"au" = (/obj/machinery/hydroponics/soil,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"av" = (/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"aw" = (/obj/structure/fence/corner{dir = 4; icon_state = "end"},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"ax" = (/obj/structure/fence{dir = 4; icon_state = "straight"},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"ay" = (/obj/structure/fence/corner{dir = 10; icon_state = "corner"},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"az" = (/obj/structure/fence,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"aA" = (/obj/effect/spawner/lootdrop/crafts,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"aB" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 2; icon_state = "outerpavementcorner"},/area/f13/wasteland)
-"aC" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 7; icon_state = "outerpavement"},/area/f13/wasteland)
-"aD" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavementcorner"; dir = 8},/area/f13/wasteland)
-"aE" = (/obj/structure/reagent_dispensers/barrel/explosive,/turf/open/indestructible/ground/outside/sidewalk{dir = 7; icon_state = "outerpavement"},/area/f13/wasteland)
-"aF" = (/obj/structure/reagent_dispensers/barrel/three,/turf/open/indestructible/ground/outside/sidewalk{dir = 7; icon_state = "outerpavement"},/area/f13/wasteland)
-"aG" = (/obj/structure/reagent_dispensers/barrel/two,/turf/open/indestructible/ground/outside/sidewalk{dir = 7; icon_state = "outerpavement"},/area/f13/wasteland)
-"aH" = (/obj/effect/spawner/lootdrop/crate_spawner,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"aI" = (/obj/structure/closet/crate/bin,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"aJ" = (/mob/living/simple_animal/hostile/enclave/soldier,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"aK" = (/obj/item/trash/pistachios,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"aL" = (/obj/structure/reagent_dispensers/barrel/old,/turf/open/indestructible/ground/outside/sidewalk{dir = 7; icon_state = "outerpavement"},/area/f13/wasteland)
-"aM" = (/obj/structure/campfire,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"aN" = (/obj/structure/flora/ausbushes/sunnybush,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"aO" = (/obj/structure/flora/ausbushes/ppflowers,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"aP" = (/obj/item/trash/f13/dog,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"aQ" = (/obj/effect/spawner/lootdrop/crafts,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"aR" = (/obj/structure/statue/gold/hos{desc = "This is statue of most lovely sergeant."; name = "statue of the sergeant Arch Dornan"},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"aS" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 4; icon_state = "outerpavement"},/area/f13/wasteland)
-"aT" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerborder"; dir = 1},/area/f13/wasteland)
-"aU" = (/obj/effect/spawner/lootdrop/grille_or_trash,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"aV" = (/obj/item/clothing/head/f13/bandit,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"aW" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "horizontalbottomborderbottom0"},/area/f13/wasteland)
-"aX" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 4; icon_state = "outerborder"; tag = "icon-outerborder (EAST)"},/area/f13/wasteland)
-"aY" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 8; icon_state = "outerpavement"},/area/f13/wasteland)
-"aZ" = (/obj/structure/reagent_dispensers/barrel/three,/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerborder"; dir = 1},/area/f13/wasteland)
-"ba" = (/obj/item/stock_parts/cell/ammo/mfc,/turf/open/indestructible/ground/outside/sidewalk{dir = 2; icon_state = "outerpavementcorner"},/area/f13/wasteland)
-"bb" = (/obj/structure/reagent_dispensers/barrel/three,/turf/open/indestructible/ground/outside/sidewalk{icon_state = "horizontalbottomborderbottom0"; tag = "icon-horizontalbottomborderbottom0"},/area/f13/wasteland)
-"bc" = (/obj/effect/spawner/lootdrop/crafts,/turf/open/indestructible/ground/outside/sidewalk{icon_state = "horizontalbottomborderbottom0"; tag = "icon-horizontalbottomborderbottom0"},/area/f13/wasteland)
-"bd" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "horizontalbottomborderbottom0"; tag = "icon-horizontalbottomborderbottom0"},/area/f13/wasteland)
-"be" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalrightborderright0"},/area/f13/wasteland)
-"bf" = (/obj/machinery/porta_turret/syndicate{faction = "Enclave"},/turf/open/indestructible/ground/outside/sidewalk,/area/f13/enclave)
-"bg" = (/obj/effect/spawner/lootdrop/trash,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"bh" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalleftborderleft0"},/area/f13/wasteland)
-"bi" = (/obj/structure/reagent_dispensers/barrel/three,/turf/open/indestructible/ground/outside/sidewalk{dir = 4; icon_state = "outerpavement"},/area/f13/wasteland)
-"bj" = (/obj/structure/reagent_dispensers/barrel/two,/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalrightborderright0"},/area/f13/wasteland)
-"bk" = (/turf/closed/wall/f13/vault,/area/f13/enclave)
-"bl" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerborder"; dir = 8},/area/f13/wasteland)
-"bm" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "horizontaltopbordertop0"; tag = "icon-horizontaltopbordertop0"},/area/f13/wasteland)
-"bn" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerborder"; tag = "icon-outerborder"},/area/f13/wasteland)
-"bo" = (/obj/effect/spawner/lootdrop/crafts,/turf/open/indestructible/ground/outside/sidewalk{dir = 4; icon_state = "outerpavement"},/area/f13/wasteland)
-"bp" = (/obj/structure/reagent_dispensers/barrel/old,/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalrightborderright0"},/area/f13/wasteland)
-"bq" = (/obj/structure/reagent_dispensers/barrel/two,/turf/open/floor/plating/tunnel,/area/f13/enclave)
-"br" = (/obj/structure/reagent_dispensers/barrel/four,/turf/open/floor/plating/tunnel,/area/f13/enclave)
-"bs" = (/turf/open/floor/plating/tunnel,/area/f13/enclave)
-"bt" = (/mob/living/simple_animal/hostile/enclave/soldier,/turf/open/floor/plating/tunnel,/area/f13/enclave)
-"bu" = (/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/enclave)
-"bv" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 4; icon_state = "outerpavementcorner"},/area/f13/wasteland)
-"bw" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavement"; dir = 1},/area/f13/wasteland)
-"bx" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavementcorner"; dir = 1},/area/f13/wasteland)
-"by" = (/obj/structure/reagent_dispensers/barrel/four,/obj/item/stock_parts/cell/ammo/mfc,/turf/open/indestructible/ground/outside/sidewalk{icon_state = "horizontalbottomborderbottom0"; tag = "icon-horizontalbottomborderbottom0"},/area/f13/wasteland)
-"bz" = (/obj/structure/reagent_dispensers/barrel/three,/turf/open/floor/plating/tunnel,/area/f13/enclave)
-"bA" = (/obj/structure/decoration/vent,/turf/open/floor/plating/tunnel,/area/f13/enclave)
-"bB" = (/obj/structure/simple_door/blast,/obj/structure/fans/tiny,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"bC" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavement"},/area/f13/wasteland)
-"bD" = (/obj/machinery/light{dir = 8},/turf/open/floor/plating/tunnel,/area/f13/enclave)
-"bE" = (/obj/machinery/light{dir = 4; icon_state = "tube1"},/turf/open/floor/plating/tunnel,/area/f13/enclave)
-"bF" = (/obj/structure/fence/handrail_corner{icon_state = "y_handrail_corner"; dir = 8},/turf/open/indestructible/ground/outside/sidewalk{dir = 1; icon_state = "outerborder"; tag = "icon-outerborder (NORTH)"},/area/f13/enclave)
-"bG" = (/obj/structure/fence/handrail,/turf/open/indestructible/ground/outside/sidewalk{icon_state = "horizontalbottomborderbottom0"},/area/f13/enclave)
-"bH" = (/obj/structure/fence/handrail_corner{icon_state = "y_handrail_corner"; dir = 4},/turf/open/indestructible/ground/outside/sidewalk{dir = 4; icon_state = "outerborder"; tag = "icon-outerborder (EAST)"},/area/f13/enclave)
-"bI" = (/obj/structure/fence/handrail{icon_state = "y_handrail"; dir = 8},/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalrightborderright0"},/area/f13/enclave)
-"bJ" = (/turf/closed/wall/r_wall,/area/f13/enclave)
-"bK" = (/obj/structure/fence/handrail{icon_state = "y_handrail"; dir = 8},/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalleftborderleft0"},/area/f13/enclave)
-"bL" = (/obj/structure/fence/handrail_corner{icon_state = "y_handrail_corner"; dir = 1},/turf/open/indestructible/ground/outside/sidewalk{dir = 8; icon_state = "outerborder"; tag = "icon-outerborder (WEST)"},/area/f13/enclave)
-"bM" = (/obj/structure/fence/handrail,/turf/open/indestructible/ground/outside/sidewalk,/area/f13/enclave)
-"bN" = (/obj/structure/fence/handrail_corner,/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerborder"; tag = "icon-outerborder"},/area/f13/enclave)
-"bO" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 5; icon_state = "outerpavement"},/area/f13/wasteland)
-"bP" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 9; icon_state = "outerpavement"},/area/f13/wasteland)
-"bQ" = (/obj/structure/reagent_dispensers/fueltank,/turf/open/floor/plating/tunnel,/area/f13/enclave)
-"bR" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 6; icon_state = "outerpavement"},/area/f13/wasteland)
-"bS" = (/obj/machinery/space_heater,/turf/open/floor/plating/tunnel,/area/f13/enclave)
-"bT" = (/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"bU" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavement"; dir = 10},/area/f13/wasteland)
-"bV" = (/turf/open/indestructible/ground/outside/road{icon_state = "horizontaltopborderbottom0"},/area/f13/wasteland)
-"bW" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 4; icon_state = "outerbordercorner"; tag = "icon-outerbordercorner (EAST)"},/area/f13/wasteland)
-"bX" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 1; icon_state = "outerbordercorner"; tag = "icon-outerbordercorner (NORTH)"},/area/f13/wasteland)
-"bY" = (/obj/structure/fence/handrail_corner{icon_state = "y_handrail_corner"; dir = 8},/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"bZ" = (/obj/structure/fence/handrail,/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"ca" = (/obj/structure/fence/handrail_corner{icon_state = "y_handrail_corner"; dir = 4},/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"cb" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerbordercorner"; tag = "icon-outerbordercorner"},/area/f13/wasteland)
-"cc" = (/turf/open/indestructible/ground/outside/road{icon_state = "verticalleftborderright0"},/area/f13/wasteland)
-"cd" = (/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
-"ce" = (/obj/structure/fence/handrail{icon_state = "y_handrail"; dir = 8},/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"cf" = (/obj/structure/reagent_dispensers/barrel/three,/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"cg" = (/obj/structure/reagent_dispensers/barrel/explosive,/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"ch" = (/obj/structure/fence/handrail_end/non_dense,/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"ci" = (/turf/open/indestructible/ground/outside/road{icon_state = "transition2"},/area/f13/wasteland)
-"cj" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalrightborderright0"; tag = "icon-verticalrightborderright0"},/area/f13/wasteland)
-"ck" = (/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/enclave)
-"cl" = (/obj/structure/tires/five,/obj/item/stock_parts/cell/ammo/mfc,/turf/open/floor/plating/tunnel,/area/f13/enclave)
-"cm" = (/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"cn" = (/mob/living/simple_animal/hostile/enclave/soldier,/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"co" = (/obj/structure/chalkboard{tag = "icon-board_mess1"; icon_state = "board_mess1"},/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"cp" = (/obj/structure/table,/obj/machinery/workbench/bottler,/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"cq" = (/obj/structure/table,/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"cr" = (/obj/structure/reagent_dispensers/barrel/old,/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"cs" = (/obj/effect/decal/marking{tag = "icon-dottedhorizontal"; icon_state = "dottedhorizontal"},/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
-"ct" = (/obj/structure/simple_door/bunker,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"cu" = (/obj/machinery/workbench,/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"cv" = (/obj/item/stack/sheet/mineral/uranium{amount = 50},/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"cw" = (/obj/item/stock_parts/cell/ammo/mfc,/turf/open/floor/plating/tunnel,/area/f13/enclave)
-"cx" = (/obj/effect/decal/marking{tag = "icon-dottedvertical"; icon_state = "dottedvertical"},/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
-"cy" = (/obj/structure/table,/obj/item/blueprint/misc/stim,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/enclave)
-"cz" = (/obj/effect/spawner/structure/window/reinforced,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"cA" = (/mob/living/simple_animal/hostile/enclave,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/enclave)
-"cB" = (/obj/structure/fence{dir = 4; icon_state = "straight"},/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"cC" = (/obj/structure/fence/door,/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"cD" = (/mob/living/simple_animal/hostile/enclave/scientist,/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"cE" = (/obj/structure/reagent_dispensers/barrel/two,/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"cF" = (/obj/structure/reagent_dispensers/barrel/four,/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"cG" = (/obj/structure/fence/handrail_end/non_dense{icon_state = "y_handrail_end"; dir = 1},/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"cH" = (/obj/machinery/chem_master,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/enclave)
-"cI" = (/obj/structure/table,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/enclave)
-"cJ" = (/obj/structure/fence/handrail_corner{icon_state = "y_handrail_corner"; dir = 1},/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"cK" = (/obj/structure/fence/handrail_corner,/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"cL" = (/obj/item/bodybag,/obj/item/bodybag,/obj/item/bodybag,/obj/item/bodybag,/obj/item/bodybag,/obj/structure/table,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/enclave)
-"cM" = (/obj/effect/spawner/structure/window/reinforced,/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"cN" = (/obj/machinery/workbench/advanced,/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"cO" = (/obj/machinery/workbench/forge,/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"cP" = (/obj/structure/AIcore,/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"cQ" = (/mob/living/simple_animal/hostile/enclave/scientist,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/enclave)
-"cR" = (/obj/structure/table/optable,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/enclave)
-"cS" = (/obj/machinery/chem_dispenser,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/enclave)
-"cT" = (/obj/machinery/iv_drip,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/enclave)
-"cU" = (/obj/machinery/light{dir = 1},/obj/structure/table,/obj/item/stock_parts/cell/ammo/mfc,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/enclave)
-"cV" = (/obj/machinery/light,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/enclave)
-"cW" = (/obj/structure/closet/crate/bin,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/enclave)
-"cX" = (/obj/machinery/recharger,/obj/structure/table,/obj/item/stack/sheet/mineral/uranium{amount = 50},/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"cY" = (/obj/machinery/button/door{id = 99; pixel_z = -25},/obj/structure/rack,/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"cZ" = (/obj/machinery/recharge_station,/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"da" = (/obj/machinery/door/poddoor/shutters/preopen{id = 99},/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"db" = (/obj/vertibird{locked = 1},/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
-"dc" = (/obj/structure/sign/poster{icon_state = "poster26_legit"; pixel_y = 30; tag = "icon-poster26_legit"},/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"dd" = (/mob/living/simple_animal/hostile/enclave/soldier,/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"de" = (/obj/machinery/button/door{id = 99; pixel_y = 25},/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalleftborderleft0"},/area/f13/wasteland)
-"df" = (/turf/open/indestructible/ground/outside/road{icon_state = "verticalrightborderleft0"; tag = "icon-verticalrightborderleft0"},/area/f13/wasteland)
-"dg" = (/mob/living/simple_animal/hostile/enclave/soldier,/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalrightborderright0"},/area/f13/wasteland)
-"dh" = (/turf/open/indestructible/ground/outside/road{icon_state = "verticalrightborderleft0"},/area/f13/wasteland)
-"di" = (/obj/effect/decal/marking{tag = "icon-dottedhorizontaldegraded"; icon_state = "dottedhorizontaldegraded"},/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
-"dj" = (/turf/open/indestructible/ground/outside/road{icon_state = "innershade"},/area/f13/wasteland)
-"dk" = (/turf/open/indestructible/ground/outside/road{icon_state = "innershade"; dir = 8},/area/f13/wasteland)
-"dl" = (/turf/open/indestructible/ground/outside/road{icon_state = "transition6"},/area/f13/wasteland)
-"dm" = (/turf/open/indestructible/ground/outside/road{icon_state = "horizontalinnermain0"},/area/f13/wasteland)
-"dn" = (/turf/open/indestructible/ground/outside/road{icon_state = "verticalinnermain0"; tag = "icon-verticalinnermain0"},/area/f13/wasteland)
-"do" = (/obj/machinery/porta_turret/syndicate{faction = "enclave"},/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"dp" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "horizontaltopbordertop0"},/area/f13/wasteland)
-"dq" = (/obj/structure/closet/bus,/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
-"dr" = (/turf/open/indestructible/ground/outside/road{icon_state = "shadowright"},/area/f13/wasteland)
-"ds" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 1; icon_state = "outerborder"; tag = "icon-outerborder (NORTH)"},/area/f13/wasteland)
-"dt" = (/turf/closed/wall/f13/vault,/area/f13/bar)
-"du" = (/obj/structure/simple_door/bunker,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dv" = (/obj/structure/reagent_dispensers/water_cooler,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dw" = (/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dx" = (/obj/structure/closet/crate/bin,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dy" = (/obj/machinery/light{dir = 1},/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dz" = (/obj/effect/spawner/structure/window/reinforced,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dA" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/closet/fridge,/obj/effect/spawner/lootdrop/food,/obj/effect/spawner/lootdrop/food,/obj/effect/spawner/lootdrop/food,/obj/effect/spawner/lootdrop/food,/obj/effect/spawner/lootdrop/food,/obj/effect/spawner/lootdrop/food,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dB" = (/obj/structure/table,/obj/machinery/chem_dispenser/drinks,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dC" = (/obj/structure/table,/obj/machinery/reagentgrinder,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dD" = (/obj/structure/table,/obj/machinery/chem_dispenser/drinks/beer,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dE" = (/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"dF" = (/obj/machinery/autolathe,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"dG" = (/obj/structure/table,/obj/item/clothing/under/f13/enclave_officer,/obj/item/clothing/suit/armor/bulletproof,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"dH" = (/obj/structure/table,/obj/item/gun/energy/laser/plasma/pistol,/obj/item/stock_parts/cell/ammo/mfc,/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"dI" = (/obj/structure/table,/obj/machinery/recharger,/obj/effect/spawner/lootdrop/armory_contraband,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"dJ" = (/obj/structure/closet/crate/bin,/obj/item/stock_parts/cell/ammo/mfc,/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"dK" = (/obj/machinery/door/airlock/vault,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"dL" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced,/obj/structure/table,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dM" = (/obj/structure/table,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dN" = (/obj/effect/spawner/lootdrop/food,/obj/structure/table,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dO" = (/obj/structure/rack,/obj/item/stack/sheet/cardboard/fifty,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"dP" = (/obj/structure/rack,/obj/item/clothing/suit/bio_suit/f13/hazmat,/obj/item/clothing/suit/bio_suit/f13/hazmat,/obj/item/clothing/head/bio_hood/f13/hazmat,/obj/item/stack/sheet/mineral/uranium{amount = 50},/obj/item/stack/sheet/mineral/uranium{amount = 50},/obj/item/stack/sheet/mineral/uranium{amount = 50},/obj/item/stack/sheet/mineral/uranium{amount = 50},/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"dQ" = (/obj/structure/rack,/obj/item/stack/sheet/metal/fifty,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"dR" = (/obj/machinery/light{dir = 4; icon_state = "tube1"},/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"dS" = (/obj/structure/chair/stool/bar,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dT" = (/obj/item/trash/semki,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"dU" = (/obj/machinery/light{dir = 8},/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dV" = (/obj/structure/stacklifter,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dW" = (/obj/machinery/light{dir = 4; icon_state = "tube1"},/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"dX" = (/obj/structure/table/reinforced,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/window{tag = "icon-left (WEST)"; icon_state = "left"; dir = 8},/obj/structure/bedsheetbin,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"dY" = (/obj/structure/chair/office{dir = 8},/mob/living/simple_animal/hostile/enclave/soldier,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"dZ" = (/obj/structure/rack,/obj/item/clothing/under/f13/dbdu,/obj/item/clothing/under/f13/dbdu,/obj/item/clothing/under/f13/dbdu,/obj/item/clothing/under/f13/dbdu,/obj/item/clothing/under/f13/dbdu,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"ea" = (/obj/effect/landmark/start/f13/usmedic,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/enclave)
-"eb" = (/obj/structure/rack,/obj/item/clothing/under/f13/bdu,/obj/item/clothing/under/f13/bdu,/obj/item/clothing/under/f13/bdu,/obj/item/clothing/under/f13/bdu,/obj/item/clothing/under/f13/bdu,/obj/item/clothing/under/f13/bdu,/obj/item/clothing/under/f13/bdu,/obj/item/clothing/under/f13/bdu,/obj/item/clothing/under/f13/bdu,/obj/item/clothing/under/f13/enclave_officer,/obj/item/clothing/suit/f13/autumn,/obj/item/clothing/suit/f13/autumn,/obj/item/clothing/shoes/f13/military,/obj/item/clothing/shoes/f13/military,/obj/item/clothing/shoes/f13/military,/obj/item/clothing/shoes/f13/military,/obj/item/clothing/shoes/f13/military,/obj/item/clothing/gloves/f13/military,/obj/item/clothing/gloves/f13/military,/obj/item/clothing/gloves/f13/military,/obj/item/clothing/gloves/f13/military,/obj/item/clothing/gloves/f13/military,/obj/item/clothing/gloves/f13/military,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"ec" = (/mob/living/simple_animal/hostile/enclave/soldier,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"ed" = (/mob/living/simple_animal/hostile/enclave/scientist,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"ee" = (/obj/structure/janitorialcart,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"ef" = (/obj/structure/closet/crate/bin,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"eg" = (/obj/structure/punching_bag,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"eh" = (/obj/structure/chair{dir = 4},/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"ei" = (/obj/structure/chair{dir = 8},/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"ej" = (/obj/structure/safe,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"ek" = (/obj/structure/rack,/obj/item/stack/sheet/metal/fifty,/obj/item/stack/sheet/glass/fifty,/obj/item/stack/sheet/mineral/wood,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"el" = (/obj/structure/closet/crate/medical,/obj/item/reagent_containers/hypospray/medipen/stimpak,/obj/item/reagent_containers/hypospray/medipen/stimpak,/obj/item/reagent_containers/hypospray/medipen/stimpak,/obj/item/reagent_containers/hypospray/medipen/stimpak,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/enclave)
-"em" = (/obj/structure/table,/obj/item/gun/energy/laser/plasma/pistol,/turf/open/floor/plasteel/f13{icon_state = "yellowdirtyfull"},/area/f13/enclave)
-"en" = (/obj/machinery/light,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"eo" = (/obj/structure/table,/obj/effect/spawner/lootdrop/food,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"ep" = (/obj/structure/chair{dir = 4},/obj/machinery/light,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"eq" = (/obj/structure/fence,/turf/open/indestructible/ground/outside/sidewalk{dir = 8; icon_state = "outerpavement"},/area/f13/wasteland)
-"er" = (/turf/open/indestructible/ground,/area/f13/forest)
-"es" = (/obj/structure/closet/crate/trashcart,/obj/item/trash/pistachios,/obj/item/stock_parts/cell/ammo/mfc,/turf/open/indestructible/ground,/area/f13/forest)
-"et" = (/obj/item/stack/sheet/mineral/sandbags{amount = 25},/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"eu" = (/obj/item/clothing/gloves/f13/doom,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"ev" = (/obj/structure/fence/corner{dir = 4; icon_state = "end"},/turf/open/indestructible/ground/outside/sidewalk{dir = 10; icon_state = "outerpavement"; tag = "icon-outerpavement (SOUTHWEST)"},/area/f13/wasteland)
-"ew" = (/obj/structure/fence/door,/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavement"},/area/f13/wasteland)
-"ex" = (/obj/structure/fence{dir = 4; icon_state = "straight"},/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavement"},/area/f13/wasteland)
-"ey" = (/obj/item/trash/f13/sugarbombs,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"ez" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "horizontalbottomborderbottom0"},/area/f13/enclave)
-"eA" = (/obj/machinery/porta_turret/syndicate{faction = "Enclave"},/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"eB" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavement"; dir = 1},/area/f13/outpost)
-"eC" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 5; icon_state = "outerpavement"},/area/f13/outpost)
-"eD" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalleftborderleft0"},/area/f13/outpost)
-"eE" = (/turf/open/indestructible/ground/outside/road{icon_state = "verticalleftborderright0"},/area/f13/outpost)
-"eF" = (/turf/open/indestructible/ground/outside/road,/area/f13/outpost)
-"eG" = (/turf/open/indestructible/ground/outside/road{icon_state = "verticalrightborderleft0"},/area/f13/outpost)
-"eH" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalrightborderright0"},/area/f13/outpost)
-"eI" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 9; icon_state = "outerpavement"},/area/f13/outpost)
-"eJ" = (/obj/structure/fence{dir = 4; icon_state = "straight"},/turf/open/indestructible/ground/outside/desert,/area/f13/outpost)
-"eK" = (/obj/structure/fence{tag = "icon-metal_fence3"; icon_state = "metal_fence3"},/turf/open/indestructible/ground/outside/sidewalk{dir = 4; icon_state = "outerpavement"},/area/f13/outpost)
-"eL" = (/obj/structure/fence{tag = "icon-metal_fence2"; icon_state = "metal_fence2"},/obj/effect/step_trigger/message{message = "WELCOME TO CAMP NAVARRO"; name = "navarro welcome"},/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalleftborderleft0"},/area/f13/outpost)
-"eM" = (/obj/effect/step_trigger/message{message = "WELCOME TO CAMP NAVARRO"; name = "navarro welcome"},/turf/open/indestructible/ground/outside/road{icon_state = "verticalleftborderright0"},/area/f13/outpost)
-"eN" = (/obj/effect/step_trigger/message{message = "WELCOME TO CAMP NAVARRO"; name = "navarro welcome"},/turf/open/indestructible/ground/outside/road,/area/f13/outpost)
-"eO" = (/obj/effect/step_trigger/message{message = "WELCOME TO CAMP NAVARRO"; name = "navarro welcome"},/turf/open/indestructible/ground/outside/road{icon_state = "verticalrightborderleft0"},/area/f13/outpost)
-"eP" = (/obj/structure/fence{tag = "icon-metal_fence1"; icon_state = "metal_fence1"},/obj/effect/step_trigger/message{message = "WELCOME TO CAMP NAVARRO"; name = "navarro welcome"},/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalrightborderright0"},/area/f13/outpost)
-"eQ" = (/obj/structure/fence{tag = "icon-metal_fence3"; icon_state = "metal_fence3"},/turf/open/indestructible/ground/outside/sidewalk{dir = 8; icon_state = "outerpavement"},/area/f13/outpost)
-"eR" = (/obj/structure/fence/corner{dir = 9; pixel_x = -2},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"eS" = (/turf/open/indestructible/ground/outside/desert,/area/f13/outpost)
-"eT" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 4; icon_state = "outerpavement"},/area/f13/outpost)
-"eU" = (/mob/living/simple_animal/hostile/enclave/soldier,/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalleftborderleft0"},/area/f13/outpost)
-"eV" = (/mob/living/simple_animal/hostile/enclave/soldier,/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalrightborderright0"},/area/f13/outpost)
-"eW" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 8; icon_state = "outerpavement"},/area/f13/outpost)
-"eX" = (/obj/machinery/light{dir = 8},/turf/open/indestructible/ground/outside/sidewalk{dir = 4; icon_state = "outerpavement"; tag = "icon-outerpavement (EAST)"},/area/f13/wasteland)
-"eY" = (/turf/open/indestructible/ground/outside/sidewalk{dir = 4; icon_state = "outerpavement"; tag = "icon-outerpavement (EAST)"},/area/f13/wasteland)
-"eZ" = (/obj/machinery/porta_turret/syndicate{faction = "enclave"},/turf/open/indestructible/ground/outside/sidewalk,/area/f13/enclave)
-"fa" = (/obj/structure/decoration/reflector,/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
-"fb" = (/obj/item/trash/sosjerky,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"fc" = (/obj/item/trash/f13/instamash,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"fd" = (/obj/structure/closet/cardboard,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"fe" = (/obj/effect/landmark/start{name = "Raider"},/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"ff" = (/mob/living/simple_animal/hostile/radroach,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"fg" = (/mob/living/simple_animal/hostile/cazador,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"fh" = (/obj/structure/billboard/cola,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"fi" = (/obj/effect/bump_teleporter{id = 18},/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
-"fj" = (/obj/effect/bump_teleporter{id = 14; id_target = 16; name = "enclave-wasteland"},/turf/open/indestructible/ground/outside/sidewalk{dir = 4; icon_state = "outerpavement"; tag = "icon-outerpavement (EAST)"},/area/f13/wasteland)
-"fk" = (/obj/effect/bump_teleporter{id = 14; id_target = 16; name = "enclave-wasteland"},/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalleftborderleft0"},/area/f13/wasteland)
-"fl" = (/obj/effect/bump_teleporter{id = 14; id_target = 16; name = "enclave-wasteland"},/turf/open/indestructible/ground/outside/road{icon_state = "verticalleftborderright0"},/area/f13/wasteland)
-"fm" = (/obj/effect/bump_teleporter{id = 14; id_target = 16; name = "enclave-wasteland"},/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
-"fn" = (/obj/effect/bump_teleporter{id = 14; id_target = 16; name = "enclave-wasteland"},/turf/open/indestructible/ground/outside/road{icon_state = "verticalrightborderleft0"},/area/f13/wasteland)
-"fo" = (/obj/effect/bump_teleporter{id = 14; id_target = 16; name = "enclave-wasteland"},/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalrightborderright0"},/area/f13/wasteland)
-"fp" = (/obj/effect/bump_teleporter{id = 14; id_target = 16; name = "enclave-wasteland"},/turf/open/indestructible/ground/outside/sidewalk{dir = 8; icon_state = "outerpavement"},/area/f13/wasteland)
-"fq" = (/obj/structure/table/glass,/obj/item/gun/energy/laser/plasma/pistol,/turf/open/floor/plasteel/f13{icon_state = "whitebluechess"},/area/f13/enclave)
-"fr" = (/obj/structure/table,/obj/item/gun/energy/laser/plasma/pistol,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"fs" = (/obj/structure/table,/obj/item/gun/energy/laser/plasma,/obj/item/stock_parts/cell/ammo/mfc,/obj/item/stock_parts/cell/ammo/mfc,/obj/item/stock_parts/cell/ammo/mfc,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"ft" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/table,/obj/item/gun/energy/laser/plasma/pistol,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"fu" = (/obj/effect/landmark/start/f13/uscommander,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"fv" = (/obj/structure/table,/obj/item/reagent_containers/hypospray/medipen/stimpak,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"fw" = (/obj/effect/landmark/start/f13/usprivate,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"fx" = (/obj/structure/rack,/obj/item/clothing/suit/armor/f13/power_armor/advanced,/obj/item/clothing/head/helmet/f13/power_armor/advanced,/obj/item/gun/energy/laser/plasma,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"fy" = (/obj/structure/table,/obj/item/stock_parts/cell/ammo/mfc,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"fz" = (/obj/structure/chair{dir = 4},/obj/effect/landmark/start/f13/usprivate,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
-"fA" = (/obj/structure/rack,/obj/item/reagent_containers/hypospray/medipen/stimpak,/obj/item/reagent_containers/hypospray/medipen/stimpak,/obj/item/reagent_containers/hypospray/medipen/stimpak,/obj/item/stock_parts/cell/ammo/mfc,/obj/item/stock_parts/cell/ammo/mfc,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"fB" = (/obj/structure/rack,/obj/item/clothing/head/helmet/f13/power_armor/advanced,/obj/item/clothing/suit/armor/f13/power_armor/advanced,/obj/item/gun/energy/laser/plasma,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/enclave)
-"fC" = (/obj/structure/chair{dir = 8},/obj/effect/landmark/start/f13/usprivate,/turf/open/floor/f13{tag = "icon-floordirtysolid"; icon_state = "floordirtysolid"},/area/f13/bar)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/closed/indestructible/f13/matrix,
+/area/f13/wasteland)
+"ab" = (
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"ac" = (
+/obj/structure/flora/tree/wasteland,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"ad" = (
+/obj/item/trash/f13/mechanist,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"ae" = (
+/mob/living/simple_animal/hostile/wolf,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"af" = (
+/obj/structure/car,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"ag" = (
+/obj/structure/flora/tree/tall{
+	tag = "icon-tree_3";
+	icon_state = "tree_3"
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"ah" = (
+/obj/structure/flora/tree/tall{
+	tag = "icon-tree_2";
+	icon_state = "tree_2"
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"ai" = (
+/obj/structure/flora/tree/tall,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"aj" = (
+/obj/structure/bus_door,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"ak" = (
+/mob/living/simple_animal/hostile/wolf{
+	tag = "icon-dog_angry (WEST)";
+	icon_state = "dog_angry";
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"al" = (
+/obj/effect/spawner/lootdrop/clothing_low,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"am" = (
+/obj/item/trash/f13/bubblegum,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"an" = (
+/obj/effect/spawner/lootdrop/food,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"ao" = (
+/mob/living/simple_animal/hostile/wolf{
+	tag = "icon-dog_angry (EAST)";
+	icon_state = "dog_angry";
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"ap" = (
+/mob/living/simple_animal/hostile/wolf{
+	tag = "icon-dog_angry (NORTH)";
+	icon_state = "dog_angry";
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"aq" = (
+/obj/structure/bonfire,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"ar" = (
+/obj/item/trash/chips,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"as" = (
+/mob/living/carbon/human{
+	health = 0;
+	name = "Jacob Blascowish"
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"at" = (
+/obj/item/trash/f13/blamco,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"au" = (
+/obj/machinery/hydroponics/soil,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"av" = (
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"aw" = (
+/obj/structure/fence/corner{
+	dir = 4;
+	icon_state = "end"
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"ax" = (
+/obj/structure/fence{
+	dir = 4;
+	icon_state = "straight"
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"ay" = (
+/obj/structure/fence/corner{
+	dir = 10;
+	icon_state = "corner"
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"az" = (
+/obj/structure/fence,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"aA" = (
+/obj/effect/spawner/lootdrop/crafts,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"aB" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 2;
+	icon_state = "outerpavementcorner"
+	},
+/area/f13/wasteland)
+"aC" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 7;
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"aD" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavementcorner";
+	dir = 8
+	},
+/area/f13/wasteland)
+"aE" = (
+/obj/structure/reagent_dispensers/barrel/explosive,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 7;
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"aF" = (
+/obj/structure/reagent_dispensers/barrel/three,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 7;
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"aG" = (
+/obj/structure/reagent_dispensers/barrel/two,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 7;
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"aH" = (
+/obj/effect/spawner/lootdrop/crate_spawner,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"aI" = (
+/obj/structure/closet/crate/bin,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"aJ" = (
+/mob/living/simple_animal/hostile/enclave/soldier,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"aK" = (
+/obj/item/trash/pistachios,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"aL" = (
+/obj/structure/reagent_dispensers/barrel/old,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 7;
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"aM" = (
+/obj/structure/campfire,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"aN" = (
+/obj/structure/flora/ausbushes/sunnybush,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"aO" = (
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"aP" = (
+/obj/item/trash/f13/dog,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"aQ" = (
+/obj/effect/spawner/lootdrop/crafts,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"aR" = (
+/obj/structure/statue/gold/hos{
+	desc = "This is statue of most lovely sergeant.";
+	name = "statue of the sergeant Arch Dornan"
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"aS" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 4;
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"aT" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerborder";
+	dir = 1
+	},
+/area/f13/wasteland)
+"aU" = (
+/obj/effect/spawner/lootdrop/grille_or_trash,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"aV" = (
+/obj/item/clothing/head/f13/bandit,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"aW" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0"
+	},
+/area/f13/wasteland)
+"aX" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 4;
+	icon_state = "outerborder";
+	tag = "icon-outerborder (EAST)"
+	},
+/area/f13/wasteland)
+"aY" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 8;
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"aZ" = (
+/obj/structure/reagent_dispensers/barrel/three,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerborder";
+	dir = 1
+	},
+/area/f13/wasteland)
+"ba" = (
+/obj/item/stock_parts/cell/ammo/mfc,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 2;
+	icon_state = "outerpavementcorner"
+	},
+/area/f13/wasteland)
+"bb" = (
+/obj/structure/reagent_dispensers/barrel/three,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0";
+	tag = "icon-horizontalbottomborderbottom0"
+	},
+/area/f13/wasteland)
+"bc" = (
+/obj/effect/spawner/lootdrop/crafts,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0";
+	tag = "icon-horizontalbottomborderbottom0"
+	},
+/area/f13/wasteland)
+"bd" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0";
+	tag = "icon-horizontalbottomborderbottom0"
+	},
+/area/f13/wasteland)
+"be" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/wasteland)
+"bf" = (
+/obj/machinery/porta_turret/syndicate{
+	faction = "Enclave"
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/enclave)
+"bg" = (
+/obj/effect/spawner/lootdrop/trash,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"bh" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/wasteland)
+"bi" = (
+/obj/structure/reagent_dispensers/barrel/three,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 4;
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"bj" = (
+/obj/structure/reagent_dispensers/barrel/two,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/wasteland)
+"bk" = (
+/turf/closed/wall/f13/vault,
+/area/f13/enclave)
+"bl" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerborder";
+	dir = 8
+	},
+/area/f13/wasteland)
+"bm" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaltopbordertop0";
+	tag = "icon-horizontaltopbordertop0"
+	},
+/area/f13/wasteland)
+"bn" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerborder";
+	tag = "icon-outerborder"
+	},
+/area/f13/wasteland)
+"bo" = (
+/obj/effect/spawner/lootdrop/crafts,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 4;
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"bp" = (
+/obj/structure/reagent_dispensers/barrel/old,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/wasteland)
+"bq" = (
+/obj/structure/reagent_dispensers/barrel/two,
+/turf/open/floor/plating/tunnel,
+/area/f13/enclave)
+"br" = (
+/obj/structure/reagent_dispensers/barrel/four,
+/turf/open/floor/plating/tunnel,
+/area/f13/enclave)
+"bs" = (
+/turf/open/floor/plating/tunnel,
+/area/f13/enclave)
+"bt" = (
+/mob/living/simple_animal/hostile/enclave/soldier,
+/turf/open/floor/plating/tunnel,
+/area/f13/enclave)
+"bu" = (
+/turf/open/floor/f13{
+	tag = "icon-floorrusty";
+	icon_state = "floorrusty"
+	},
+/area/f13/enclave)
+"bv" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 4;
+	icon_state = "outerpavementcorner"
+	},
+/area/f13/wasteland)
+"bw" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavement";
+	dir = 1
+	},
+/area/f13/wasteland)
+"bx" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavementcorner";
+	dir = 1
+	},
+/area/f13/wasteland)
+"by" = (
+/obj/structure/reagent_dispensers/barrel/four,
+/obj/item/stock_parts/cell/ammo/mfc,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0";
+	tag = "icon-horizontalbottomborderbottom0"
+	},
+/area/f13/wasteland)
+"bz" = (
+/obj/structure/reagent_dispensers/barrel/three,
+/turf/open/floor/plating/tunnel,
+/area/f13/enclave)
+"bA" = (
+/obj/structure/decoration/vent,
+/turf/open/floor/plating/tunnel,
+/area/f13/enclave)
+"bB" = (
+/obj/structure/simple_door/blast,
+/obj/structure/fans/tiny,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"bC" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"bD" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plating/tunnel,
+/area/f13/enclave)
+"bE" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/turf/open/floor/plating/tunnel,
+/area/f13/enclave)
+"bF" = (
+/obj/structure/fence/handrail_corner{
+	icon_state = "y_handrail_corner";
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 1;
+	icon_state = "outerborder";
+	tag = "icon-outerborder (NORTH)"
+	},
+/area/f13/enclave)
+"bG" = (
+/obj/structure/fence/handrail,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0"
+	},
+/area/f13/enclave)
+"bH" = (
+/obj/structure/fence/handrail_corner{
+	icon_state = "y_handrail_corner";
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 4;
+	icon_state = "outerborder";
+	tag = "icon-outerborder (EAST)"
+	},
+/area/f13/enclave)
+"bI" = (
+/obj/structure/fence/handrail{
+	icon_state = "y_handrail";
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/enclave)
+"bJ" = (
+/turf/closed/wall/r_wall,
+/area/f13/enclave)
+"bK" = (
+/obj/structure/fence/handrail{
+	icon_state = "y_handrail";
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/enclave)
+"bL" = (
+/obj/structure/fence/handrail_corner{
+	icon_state = "y_handrail_corner";
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 8;
+	icon_state = "outerborder";
+	tag = "icon-outerborder (WEST)"
+	},
+/area/f13/enclave)
+"bM" = (
+/obj/structure/fence/handrail,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/enclave)
+"bN" = (
+/obj/structure/fence/handrail_corner,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerborder";
+	tag = "icon-outerborder"
+	},
+/area/f13/enclave)
+"bO" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 5;
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"bP" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 9;
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"bQ" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/plating/tunnel,
+/area/f13/enclave)
+"bR" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 6;
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"bS" = (
+/obj/machinery/space_heater,
+/turf/open/floor/plating/tunnel,
+/area/f13/enclave)
+"bT" = (
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"bU" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavement";
+	dir = 10
+	},
+/area/f13/wasteland)
+"bV" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontaltopborderbottom0"
+	},
+/area/f13/wasteland)
+"bW" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 4;
+	icon_state = "outerbordercorner";
+	tag = "icon-outerbordercorner (EAST)"
+	},
+/area/f13/wasteland)
+"bX" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 1;
+	icon_state = "outerbordercorner";
+	tag = "icon-outerbordercorner (NORTH)"
+	},
+/area/f13/wasteland)
+"bY" = (
+/obj/structure/fence/handrail_corner{
+	icon_state = "y_handrail_corner";
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"bZ" = (
+/obj/structure/fence/handrail,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"ca" = (
+/obj/structure/fence/handrail_corner{
+	icon_state = "y_handrail_corner";
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"cb" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerbordercorner";
+	tag = "icon-outerbordercorner"
+	},
+/area/f13/wasteland)
+"cc" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalleftborderright0"
+	},
+/area/f13/wasteland)
+"cd" = (
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
+"ce" = (
+/obj/structure/fence/handrail{
+	icon_state = "y_handrail";
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"cf" = (
+/obj/structure/reagent_dispensers/barrel/three,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"cg" = (
+/obj/structure/reagent_dispensers/barrel/explosive,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"ch" = (
+/obj/structure/fence/handrail_end/non_dense,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"ci" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "transition2"
+	},
+/area/f13/wasteland)
+"cj" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0";
+	tag = "icon-verticalrightborderright0"
+	},
+/area/f13/wasteland)
+"ck" = (
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/enclave)
+"cl" = (
+/obj/structure/tires/five,
+/obj/item/stock_parts/cell/ammo/mfc,
+/turf/open/floor/plating/tunnel,
+/area/f13/enclave)
+"cm" = (
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"cn" = (
+/mob/living/simple_animal/hostile/enclave/soldier,
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"co" = (
+/obj/structure/chalkboard{
+	tag = "icon-board_mess1";
+	icon_state = "board_mess1"
+	},
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"cp" = (
+/obj/structure/table,
+/obj/machinery/workbench/bottler,
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"cq" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"cr" = (
+/obj/structure/reagent_dispensers/barrel/old,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"cs" = (
+/obj/effect/decal/marking{
+	tag = "icon-dottedhorizontal";
+	icon_state = "dottedhorizontal"
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
+"ct" = (
+/obj/structure/simple_door/bunker,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"cu" = (
+/obj/machinery/workbench,
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"cv" = (
+/obj/item/stack/sheet/mineral/uranium{
+	amount = 50
+	},
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"cw" = (
+/obj/item/stock_parts/cell/ammo/mfc,
+/turf/open/floor/plating/tunnel,
+/area/f13/enclave)
+"cx" = (
+/obj/effect/decal/marking{
+	tag = "icon-dottedvertical";
+	icon_state = "dottedvertical"
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
+"cy" = (
+/obj/structure/table,
+/obj/item/blueprint/misc/stim,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/enclave)
+"cz" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"cA" = (
+/mob/living/simple_animal/hostile/enclave,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/enclave)
+"cB" = (
+/obj/structure/fence{
+	dir = 4;
+	icon_state = "straight"
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"cC" = (
+/obj/structure/fence/door,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"cD" = (
+/mob/living/simple_animal/hostile/enclave/scientist,
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"cE" = (
+/obj/structure/reagent_dispensers/barrel/two,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"cF" = (
+/obj/structure/reagent_dispensers/barrel/four,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"cG" = (
+/obj/structure/fence/handrail_end/non_dense{
+	icon_state = "y_handrail_end";
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"cH" = (
+/obj/machinery/chem_master,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/enclave)
+"cI" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/enclave)
+"cJ" = (
+/obj/structure/fence/handrail_corner{
+	icon_state = "y_handrail_corner";
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"cK" = (
+/obj/structure/fence/handrail_corner,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"cL" = (
+/obj/item/bodybag,
+/obj/item/bodybag,
+/obj/item/bodybag,
+/obj/item/bodybag,
+/obj/item/bodybag,
+/obj/structure/table,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/enclave)
+"cM" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"cN" = (
+/obj/machinery/workbench/advanced,
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"cO" = (
+/obj/machinery/workbench/forge,
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"cP" = (
+/obj/structure/AIcore,
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"cQ" = (
+/mob/living/simple_animal/hostile/enclave/scientist,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/enclave)
+"cR" = (
+/obj/structure/table/optable,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/enclave)
+"cS" = (
+/obj/machinery/chem_dispenser,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/enclave)
+"cT" = (
+/obj/machinery/iv_drip,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/enclave)
+"cU" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/table,
+/obj/item/stock_parts/cell/ammo/mfc,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/enclave)
+"cV" = (
+/obj/machinery/light,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/enclave)
+"cW" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/enclave)
+"cX" = (
+/obj/machinery/recharger,
+/obj/structure/table,
+/obj/item/stack/sheet/mineral/uranium{
+	amount = 50
+	},
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"cY" = (
+/obj/machinery/button/door{
+	id = 99;
+	pixel_z = -25
+	},
+/obj/structure/rack,
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"cZ" = (
+/obj/machinery/recharge_station,
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"da" = (
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = 99
+	},
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"db" = (
+/obj/vertibird{
+	locked = 1
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
+"dc" = (
+/obj/structure/sign/poster{
+	icon_state = "poster26_legit";
+	pixel_y = 30;
+	tag = "icon-poster26_legit"
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"dd" = (
+/mob/living/simple_animal/hostile/enclave/soldier,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"de" = (
+/obj/machinery/button/door{
+	id = 99;
+	pixel_y = 25
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/wasteland)
+"df" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalrightborderleft0";
+	tag = "icon-verticalrightborderleft0"
+	},
+/area/f13/wasteland)
+"dg" = (
+/mob/living/simple_animal/hostile/enclave/soldier,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/wasteland)
+"dh" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalrightborderleft0"
+	},
+/area/f13/wasteland)
+"di" = (
+/obj/effect/decal/marking{
+	tag = "icon-dottedhorizontaldegraded";
+	icon_state = "dottedhorizontaldegraded"
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
+"dj" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "innershade"
+	},
+/area/f13/wasteland)
+"dk" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "innershade";
+	dir = 8
+	},
+/area/f13/wasteland)
+"dl" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "transition6"
+	},
+/area/f13/wasteland)
+"dm" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain0"
+	},
+/area/f13/wasteland)
+"dn" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalinnermain0";
+	tag = "icon-verticalinnermain0"
+	},
+/area/f13/wasteland)
+"do" = (
+/obj/machinery/porta_turret/syndicate{
+	faction = "enclave"
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"dp" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaltopbordertop0"
+	},
+/area/f13/wasteland)
+"dq" = (
+/obj/structure/closet/bus,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
+"dr" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "shadowright"
+	},
+/area/f13/wasteland)
+"ds" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 1;
+	icon_state = "outerborder";
+	tag = "icon-outerborder (NORTH)"
+	},
+/area/f13/wasteland)
+"dt" = (
+/turf/closed/wall/f13/vault,
+/area/f13/bar)
+"du" = (
+/obj/structure/simple_door/bunker,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dv" = (
+/obj/structure/reagent_dispensers/water_cooler,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dw" = (
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dx" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dy" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dz" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dA" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/closet/fridge,
+/obj/effect/spawner/lootdrop/food,
+/obj/effect/spawner/lootdrop/food,
+/obj/effect/spawner/lootdrop/food,
+/obj/effect/spawner/lootdrop/food,
+/obj/effect/spawner/lootdrop/food,
+/obj/effect/spawner/lootdrop/food,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dB" = (
+/obj/structure/table,
+/obj/machinery/chem_dispenser/drinks,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dC" = (
+/obj/structure/table,
+/obj/machinery/reagentgrinder,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dD" = (
+/obj/structure/table,
+/obj/machinery/chem_dispenser/drinks/beer,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dE" = (
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"dF" = (
+/obj/machinery/autolathe,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"dG" = (
+/obj/structure/table,
+/obj/item/clothing/under/f13/enclave_officer,
+/obj/item/clothing/suit/armor/bulletproof,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"dH" = (
+/obj/structure/table,
+/obj/item/gun/energy/laser/plasma/pistol,
+/obj/item/stock_parts/cell/ammo/mfc,
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"dI" = (
+/obj/structure/table,
+/obj/machinery/recharger,
+/obj/effect/spawner/lootdrop/armory_contraband,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"dJ" = (
+/obj/structure/closet/crate/bin,
+/obj/item/stock_parts/cell/ammo/mfc,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"dK" = (
+/obj/machinery/door/airlock/vault,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"dL" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/table,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dM" = (
+/obj/structure/table,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dN" = (
+/obj/effect/spawner/lootdrop/food,
+/obj/structure/table,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dO" = (
+/obj/structure/rack,
+/obj/item/stack/sheet/cardboard/fifty,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"dP" = (
+/obj/structure/rack,
+/obj/item/clothing/suit/bio_suit/f13/hazmat,
+/obj/item/clothing/suit/bio_suit/f13/hazmat,
+/obj/item/clothing/head/bio_hood/f13/hazmat,
+/obj/item/stack/sheet/mineral/uranium{
+	amount = 50
+	},
+/obj/item/stack/sheet/mineral/uranium{
+	amount = 50
+	},
+/obj/item/stack/sheet/mineral/uranium{
+	amount = 50
+	},
+/obj/item/stack/sheet/mineral/uranium{
+	amount = 50
+	},
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"dQ" = (
+/obj/structure/rack,
+/obj/item/stack/sheet/metal/fifty,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"dR" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"dS" = (
+/obj/structure/chair/stool/bar,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dT" = (
+/obj/item/trash/semki,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"dU" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dV" = (
+/obj/structure/stacklifter,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dW" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"dX" = (
+/obj/structure/table/reinforced,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/window{
+	tag = "icon-left (WEST)";
+	icon_state = "left";
+	dir = 8
+	},
+/obj/structure/bedsheetbin,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"dY" = (
+/obj/structure/chair/office{
+	dir = 8
+	},
+/mob/living/simple_animal/hostile/enclave/soldier,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"dZ" = (
+/obj/structure/rack,
+/obj/item/clothing/under/f13/dbdu,
+/obj/item/clothing/under/f13/dbdu,
+/obj/item/clothing/under/f13/dbdu,
+/obj/item/clothing/under/f13/dbdu,
+/obj/item/clothing/under/f13/dbdu,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"ea" = (
+/obj/effect/landmark/start/f13/usmedic,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/enclave)
+"eb" = (
+/obj/structure/rack,
+/obj/item/clothing/under/f13/bdu,
+/obj/item/clothing/under/f13/bdu,
+/obj/item/clothing/under/f13/bdu,
+/obj/item/clothing/under/f13/bdu,
+/obj/item/clothing/under/f13/bdu,
+/obj/item/clothing/under/f13/bdu,
+/obj/item/clothing/under/f13/bdu,
+/obj/item/clothing/under/f13/bdu,
+/obj/item/clothing/under/f13/bdu,
+/obj/item/clothing/under/f13/enclave_officer,
+/obj/item/clothing/suit/f13/autumn,
+/obj/item/clothing/suit/f13/autumn,
+/obj/item/clothing/shoes/f13/military,
+/obj/item/clothing/shoes/f13/military,
+/obj/item/clothing/shoes/f13/military,
+/obj/item/clothing/shoes/f13/military,
+/obj/item/clothing/shoes/f13/military,
+/obj/item/clothing/gloves/f13/military,
+/obj/item/clothing/gloves/f13/military,
+/obj/item/clothing/gloves/f13/military,
+/obj/item/clothing/gloves/f13/military,
+/obj/item/clothing/gloves/f13/military,
+/obj/item/clothing/gloves/f13/military,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"ec" = (
+/mob/living/simple_animal/hostile/enclave/soldier,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"ed" = (
+/mob/living/simple_animal/hostile/enclave/scientist,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"ee" = (
+/obj/structure/janitorialcart,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"ef" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"eg" = (
+/obj/structure/punching_bag,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"eh" = (
+/obj/structure/chair{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"ei" = (
+/obj/structure/chair{
+	dir = 8
+	},
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"ej" = (
+/obj/structure/safe,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"ek" = (
+/obj/structure/rack,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/mineral/wood,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"el" = (
+/obj/structure/closet/crate/medical,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/enclave)
+"em" = (
+/obj/structure/table,
+/obj/item/gun/energy/laser/plasma/pistol,
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/enclave)
+"en" = (
+/obj/machinery/light,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"eo" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/food,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"ep" = (
+/obj/structure/chair{
+	dir = 4
+	},
+/obj/machinery/light,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"eq" = (
+/obj/structure/fence,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 8;
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"er" = (
+/turf/open/indestructible/ground,
+/area/f13/forest)
+"es" = (
+/obj/structure/closet/crate/trashcart,
+/obj/item/trash/pistachios,
+/obj/item/stock_parts/cell/ammo/mfc,
+/turf/open/indestructible/ground,
+/area/f13/forest)
+"et" = (
+/obj/item/stack/sheet/mineral/sandbags{
+	amount = 25
+	},
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"eu" = (
+/obj/item/clothing/gloves/f13/doom,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"ev" = (
+/obj/structure/fence/corner{
+	dir = 4;
+	icon_state = "end"
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 10;
+	icon_state = "outerpavement";
+	tag = "icon-outerpavement (SOUTHWEST)"
+	},
+/area/f13/wasteland)
+"ew" = (
+/obj/structure/fence/door,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"ex" = (
+/obj/structure/fence{
+	dir = 4;
+	icon_state = "straight"
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"ey" = (
+/obj/item/trash/f13/sugarbombs,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"ez" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0"
+	},
+/area/f13/enclave)
+"eA" = (
+/obj/machinery/porta_turret/syndicate{
+	faction = "Enclave"
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"eB" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavement";
+	dir = 1
+	},
+/area/f13/outpost)
+"eC" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 5;
+	icon_state = "outerpavement"
+	},
+/area/f13/outpost)
+"eD" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/outpost)
+"eE" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalleftborderright0"
+	},
+/area/f13/outpost)
+"eF" = (
+/turf/open/indestructible/ground/outside/road,
+/area/f13/outpost)
+"eG" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalrightborderleft0"
+	},
+/area/f13/outpost)
+"eH" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/outpost)
+"eI" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 9;
+	icon_state = "outerpavement"
+	},
+/area/f13/outpost)
+"eJ" = (
+/obj/structure/fence{
+	dir = 4;
+	icon_state = "straight"
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/outpost)
+"eK" = (
+/obj/structure/fence{
+	tag = "icon-metal_fence3";
+	icon_state = "metal_fence3"
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 4;
+	icon_state = "outerpavement"
+	},
+/area/f13/outpost)
+"eL" = (
+/obj/structure/fence{
+	tag = "icon-metal_fence2";
+	icon_state = "metal_fence2"
+	},
+/obj/effect/step_trigger/message{
+	message = "WELCOME TO CAMP NAVARRO";
+	name = "navarro welcome"
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/outpost)
+"eM" = (
+/obj/effect/step_trigger/message{
+	message = "WELCOME TO CAMP NAVARRO";
+	name = "navarro welcome"
+	},
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalleftborderright0"
+	},
+/area/f13/outpost)
+"eN" = (
+/obj/effect/step_trigger/message{
+	message = "WELCOME TO CAMP NAVARRO";
+	name = "navarro welcome"
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/f13/outpost)
+"eO" = (
+/obj/effect/step_trigger/message{
+	message = "WELCOME TO CAMP NAVARRO";
+	name = "navarro welcome"
+	},
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalrightborderleft0"
+	},
+/area/f13/outpost)
+"eP" = (
+/obj/structure/fence{
+	tag = "icon-metal_fence1";
+	icon_state = "metal_fence1"
+	},
+/obj/effect/step_trigger/message{
+	message = "WELCOME TO CAMP NAVARRO";
+	name = "navarro welcome"
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/outpost)
+"eQ" = (
+/obj/structure/fence{
+	tag = "icon-metal_fence3";
+	icon_state = "metal_fence3"
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 8;
+	icon_state = "outerpavement"
+	},
+/area/f13/outpost)
+"eR" = (
+/obj/structure/fence/corner{
+	dir = 9;
+	pixel_x = -2
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"eS" = (
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/outpost)
+"eT" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 4;
+	icon_state = "outerpavement"
+	},
+/area/f13/outpost)
+"eU" = (
+/mob/living/simple_animal/hostile/enclave/soldier,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/outpost)
+"eV" = (
+/mob/living/simple_animal/hostile/enclave/soldier,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/outpost)
+"eW" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 8;
+	icon_state = "outerpavement"
+	},
+/area/f13/outpost)
+"eX" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 4;
+	icon_state = "outerpavement";
+	tag = "icon-outerpavement (EAST)"
+	},
+/area/f13/wasteland)
+"eY" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 4;
+	icon_state = "outerpavement";
+	tag = "icon-outerpavement (EAST)"
+	},
+/area/f13/wasteland)
+"eZ" = (
+/obj/machinery/porta_turret/syndicate{
+	faction = "enclave"
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/enclave)
+"fa" = (
+/obj/structure/decoration/reflector,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
+"fb" = (
+/obj/item/trash/sosjerky,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"fc" = (
+/obj/item/trash/f13/instamash,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"fd" = (
+/obj/structure/closet/cardboard,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"fe" = (
+/obj/effect/landmark/start{
+	name = "Raider"
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"ff" = (
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"fg" = (
+/mob/living/simple_animal/hostile/cazador,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"fh" = (
+/obj/structure/billboard/cola,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"fi" = (
+/obj/effect/bump_teleporter{
+	id = 18
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
+"fj" = (
+/obj/effect/bump_teleporter{
+	id = 14;
+	id_target = 16;
+	name = "enclave-wasteland"
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 4;
+	icon_state = "outerpavement";
+	tag = "icon-outerpavement (EAST)"
+	},
+/area/f13/wasteland)
+"fk" = (
+/obj/effect/bump_teleporter{
+	id = 14;
+	id_target = 16;
+	name = "enclave-wasteland"
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/wasteland)
+"fl" = (
+/obj/effect/bump_teleporter{
+	id = 14;
+	id_target = 16;
+	name = "enclave-wasteland"
+	},
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalleftborderright0"
+	},
+/area/f13/wasteland)
+"fm" = (
+/obj/effect/bump_teleporter{
+	id = 14;
+	id_target = 16;
+	name = "enclave-wasteland"
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
+"fn" = (
+/obj/effect/bump_teleporter{
+	id = 14;
+	id_target = 16;
+	name = "enclave-wasteland"
+	},
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalrightborderleft0"
+	},
+/area/f13/wasteland)
+"fo" = (
+/obj/effect/bump_teleporter{
+	id = 14;
+	id_target = 16;
+	name = "enclave-wasteland"
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/wasteland)
+"fp" = (
+/obj/effect/bump_teleporter{
+	id = 14;
+	id_target = 16;
+	name = "enclave-wasteland"
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 8;
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"fq" = (
+/obj/structure/table/glass,
+/obj/item/gun/energy/laser/plasma/pistol,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/enclave)
+"fr" = (
+/obj/structure/table,
+/obj/item/gun/energy/laser/plasma/pistol,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"fs" = (
+/obj/structure/table,
+/obj/item/gun/energy/laser/plasma,
+/obj/item/stock_parts/cell/ammo/mfc,
+/obj/item/stock_parts/cell/ammo/mfc,
+/obj/item/stock_parts/cell/ammo/mfc,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"ft" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/table,
+/obj/item/gun/energy/laser/plasma/pistol,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"fu" = (
+/obj/effect/landmark/start/f13/uscommander,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"fv" = (
+/obj/structure/table,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"fw" = (
+/obj/effect/landmark/start/f13/usprivate,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"fx" = (
+/obj/structure/rack,
+/obj/item/clothing/suit/armor/f13/power_armor/advanced,
+/obj/item/clothing/head/helmet/f13/power_armor/advanced,
+/obj/item/gun/energy/laser/plasma,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"fy" = (
+/obj/structure/table,
+/obj/item/stock_parts/cell/ammo/mfc,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"fz" = (
+/obj/structure/chair{
+	dir = 4
+	},
+/obj/effect/landmark/start/f13/usprivate,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
+"fA" = (
+/obj/structure/rack,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
+/obj/item/stock_parts/cell/ammo/mfc,
+/obj/item/stock_parts/cell/ammo/mfc,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"fB" = (
+/obj/structure/rack,
+/obj/item/clothing/head/helmet/f13/power_armor/advanced,
+/obj/item/clothing/suit/armor/f13/power_armor/advanced,
+/obj/item/gun/energy/laser/plasma,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
+"fC" = (
+/obj/structure/chair{
+	dir = 8
+	},
+/obj/effect/landmark/start/f13/usprivate,
+/turf/open/floor/f13{
+	tag = "icon-floordirtysolid";
+	icon_state = "floordirtysolid"
+	},
+/area/f13/bar)
 
 (1,1,1) = {"
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababaa
-aaababababababababababababababababababababababababababacabababababababababababababadababababababababababababababababababababababababababababacababababababababababababababababababababababababababababaa
-aaabababacababaeabafabababagabababababababababababababababababababababababababababababababababababababacababababababababacabababababababababababahabababababaiabacababababababababababababababababababaa
-aaababajabakababalababababababababababababamagabababababanabababagababababababababababacabababababababababababagabababababababababababababababababababababababababababababababababacabababababababababaa
-aaababaoababababababababababababacababababababababababababababababababaiabababagababagababababaiababababababababababababababababababababaiabababababacabababababababababababababababababapababaiabababaa
-aaababababaqabaiababacabababababababababababababababababacabababadababababababababababababababababababababababababaiabababababababababababababababababababababababababababababababaeababarababababababaa
-aaabababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababacabababababababababahababababababababababababababaiabasabababababababababaa
-aaabababababababamababababatababababababagabababababaiabababagababababababababababababababababababagabababababacababababababababababababababababababababababababacababababababababababababababahabababaa
-aaababaganabalabababababababababagabalababababajababababababababababababababacababadababababababababababababababababababababababababababababacababababababababababababababababababababababababababababaa
-aaababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababahabababababababababacabababababababaa
-aaabababababababababababababababacabababababababagabababababababababababaiabababababababagabacababababababababababababacababababababababababahababababagabababababababababababababababababababababababaa
-aaababababababababababaiababababababababaiabababababababababacababababababababababababababababababababababaiababababababababababaiabababababababababababababababababababababababababauababababababababaa
-aaabababababacababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababaa
-aaabababababababababababababababavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavavabababababaiabababababababababababababababababababaa
-aaabababababababababababababababavawaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxayavababababababacabababababababababababahababababababaa
-aaabababababalababacababababababavazaBaCaCaCaDavaAbaaEaFaGaLaCaCaCaCaCaCaCaCaCaCaCaCaDavavavavavavavavavavavavavavavavavavavavavavavavaBaCaCaCaDazavabababababababababababababaiababababababaiababababaa
-aaababaiabababajabababababagababavazaSaTaWaXaYavavaSaZbybbbcbdbdbdbdbdbdbdbdbdbdbdaXaYavavavavavavavavavavavavavavavavavavavavavavavavaSaTaWaXaYazavabababababababababababababababababababababababababaa
-aaabababababababababababababababavazaSbebfbhaYavaHbibjbkbkbkbkbkbkbkbkbkbkbkbkbkbkbhaYavbkbkbkavavavavavavavavavavavavavavavavavavavavaSbebfbhaYazavabababababababababababababababababababababababababaa
-aaabababababababababababababababavazaSblbmbnaYavavbobpbkbqbrbsbsbsbsbsbsbsbsbsbtbkbhaYavbkbubkavavavavavavavavavavavavavavavavavavavavaSblbmbnaYazavabababababababababababababababababacabababababababaa
-aaababababababababacababababababavazbvbwbwbwbxavavaSbebkclbzbsbsbsbsbsbsbsbsbAbsbkbhaYavbkbBbkavavavavavavavavavavavavavavavavavavavavbvbwbwbwbxazavababababababababababababababahababababababababababaa
-aaababacababababababababababababavazavavavavavavavaSbebkbsbsbsbsbsbsbsbsbsbsbsbsbkbhaYavaIavaJavavaBbCbCbCbCaDavavavavavavavavavavavavavavavavavazavababababababaiababababababababababababababababababaa
-aaabababababababaKabababaiabababavazavavavavavavavaSbebkbDbsbsbsbsbscwbsbsbsbsbEbkbhaYavavavavavavaSbFbGbGbHaYavavavavavavavavavavavavavavavavavazavababababababababababaiababababababababababababababaa
-aaababagababababababababababababavazavavavavavavavaSbebkbsbsbsbsbsbsbsbsbsbsbsbsbkbhaYavavavavavavaSbIbJbJbKaYavavavavavavavavavaMavavavavavavavazavabababababababababababababababababababababababababaa
-aaabababababababababababababababavazavavavavavavavaSbebkbsbsbsbsbsbsbsbsbsbsbsbsbkbhaYavavavavavavaSbIbJbJbKaYavavavavavavavavavavavavavavavavavazavabababababababauababababababababababababaiababababaa
-aaababababababababagababacabababavazavavavavavavavaSbebkbsbsbsbsbsbsbsbsbsbsbsbsbkbhaYavavavavavavaSbLbMbMbNaYavavavavavavavavavavavavavavavavavazavabababababababababababababababababababababababababaa
-aaabababababababababababababababavazavavavavavavavaSbebkbDbsbsbsbsbsbsbsbsbsbsbEbkbhaYavavavavavavbvbObebhbPbxavavavavavavavavavavavavavavavavavazavababababababababababahaNabababababaNabababahabababaa
-aaababababaiababababababababababavazavavavavavavavaSbebkbsbsbsbsbsbsbsbsbsbsbsbsbkbhaYavavavavavavavaSbebhaYavavavavavavavavavavavavavavavavavavazavababababahababababababababababababababababababababaa
-aaababababacababababababababababavazavavavavavavavaSbebkbQbsbsbsbsbsbsbsbsbsbsbsbkbhaYavavavavavavavaSbebhaYavavavavavavavavavavavavavavavavavavazavabababababababababaOababababababaPababababababababaa
-aaabababababababaQababababaQababavazavavaBaCaCaCaCbRbebkbQbAbsbsbsbsbsbsbsbsbAbSbkbhaYavavavavavavaRaSbebhaYavavavavavavavavavavavavavavavavavavazavabababababababahabababababaiabaNababababababaNababaa
-aaabababababababababababababababavazavavaSaTaWaWaWaWbTbkbkbsbsbsbsbsbsbsbsbsbsbkbkbhbUbCbCbCbCbCbCbCbRbebhbUbCbCbCbCbCbCbCbCbCaDavavavavavavavavazavabababababababababababababababababababababababababaa
-aaababababababababababaiababababavazavavaSbebTbTbTbTbTbhbVbVbVbVbVbVbVbVbVbVbVbVbebWbdbdbdbdbdbdbdbdbdbXbWbdbdbdbdbdbdbdbdbdaXaYavavavavavavavavazavababababaiababaPababaNaNabababababacababaiababababaa
-aaababababababagababababababababavazavavaSbebYbZbZcacbbncccdcdcdcdcdcdcdcdcdcdcdblbTbkbkbkbkbkbkbkbTbTbTbkbkbkbkbkbkbkbkbkbkbhaYavavavavavavavavazavababababababababababababababaOababababababababababaa
-aaababaQabafababababababaQabababavazavavaSbececfcgchbhcccdcdcdcdcdcicdcdcdcdcdcdcdcjbkcycIcUcIckbkbTbTbTbkcmcmcncocmcncpdHbkbhaYavavavavavavavavazavabababababababababacababababarababababaNabahabababaa
-aaabababababababababababababababavazavavaSbececrbTbTbhcccdcscdcscdcscdcscdcscdcdcdcjbkcIckckckckbkbTbTbTctcmcucmcvcmcmcmcqbkbhaYavavavavavavavavazavabababababababababababababababababababababababababaa
-aaababababababababababacababababavazavavaSbecedJbTbTbhcccxcdcdcdcdcdcdcdcdcdcxcdcdcjbkckckeackelbkbTbTbTbkcvcqcmcmcmcmcmcqbkbhaYavavavavavavavavazavabababababababababababaiabababababababababababababaa
-aaabababacabababababababababababavazavavaSbececgbTbTbhcccdcdcdcdcdcdcdcdcdcdcdcdcdcjczckckckcAelbkcBcCcBbkcmcqcqemcDcmcmcmbkbhaYavavavavavavavavazavababababacabababababababababababababacababababababaa
-aaabababababababababaiabababababavazavavaSbececEcFcGbhcccxcdcdcdcdcdcdcdcdcdcxcdcdcjczckckcHcIcIbkbTbTbTbkcmcqcmcmcmcmcmcmbkbhaYavavavavavavavavazavababababahababababababababahabababababababababababaa
-aaabababaiababababaUababababababavazavavaSbecJbZbZcKbhcccdcdcdcdcdcdcdcdcdcdcdcdcdcjczeackckckcLbkbTbTbTcMcmcNcmcOcmcmcPcmbkbhaYavavavavavavavavazavabababababababababababababababababababababababababaa
-aaabababababababababababababababavazavavaSbebTbTbTbTbhcccxcdcdcdcdcdcdcdcdcdcxcdcdcjczcQcRckckcSbkbTbTbTcMcmcmcmcmcmcmcmcmbkbhaYavavavavavavavavazavabababababababababababababababababababababababababaa
-aaabababababababababababababababavazavavaSbebTbTbTbTbhcccdcdcdcdcdcdcdcdcdcdcdcdcdcjbkcTfqcVckcWbkcBcBcBbkcXcYcmcmcmcmcZcZbkbhaYavavavavavavavavazavababababababababababababaVabauababababababababababaa
-aaabababababababababacabababababavazavavaSbebTbTbTbTbhcccxcdcdcdcdcdcdcdcdcdcxcdcdcjbkbkbkbkctbkbkbTbTbTbkbkbkdadadabkcMcMbkbhaYavavavavavavavavazavababababababababababaiababababababababaiabababababaa
-aaabababababababababaiabababababavazaBaCbRbebTbTbTbTbhcccdcdcdcdcddbcdcdcdcdcdcdcdcjbTbTdcddbTbTbTbTbTbTbTbTdecccddfdgbTbTbTbhaYavavavaBaCaCaCaDazavabababababababacabababababababababababababababababaa
-aaababababacababababababababababavazaSaTaWaXbTbTbTbTbhcccxcdcdcdcdcdcdcdcdcdcxcdcdcjbTbTbTbTbTbTbTbTbTbTbTbTbhcccddfbebTbTbTbhaYavavavaSaTaWaXaYazavabababababababababababababababababababababababababaa
-aaabababababaUagababababagabababavazaSbebfbhbTbTbTbTbhcccdcdcdcdcdcdcdcdcdcdcdcdcdblbmbmbmbmbmbmbmbmbmbmbmbmbncccddhbebTbTbTbhaYavavavaSbebfbhaYazavabababababaiabababababababacabababababababaPabababaa
-aaabababababababababababababababavazaSblbmbnbTbTbTbTbhcccxcdcdcdcdcdcdcdcdcdcxcdcdbVbVbVbVbVbVbVbVbVbVbVbVbVbVcdcddhbebTbTbTbhaYavavavaSblbmbnaYazavabababababababababababababababababababababababababaa
-aaabababababababababababababababavazbvbwbObebTbTbTbTbhcccddicdcscdcscdcscdcscdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcddhbebTbTbTbhaYavavavbvbwbwbwbxazavabababababababababababababababababababababacabababaa
-aaabababababababababababababababavazavavaSbebTbTbTbTbhccdjcdcdcdcdcdcdcdcdcdcdcdcdcdcddhaTaWaXcccdcdcdcdcdcdcdcdcddhbebTbTbTbhaYavavavavavavavavazavabababababababababababababababababababababababababaa
-aaabababababababababacabababababavazavavaSbebTbTbTbTbhcccdcddkcddldmcdcidncdcdcdcdcdcddhbedobhcccdcdcdcdcdcdcdcdcddhbebTbTbTbhaYavavavavavavavavazavabababababababababababababababababababababababababaa
-aaabababababababababababababababavazavavaSbebTbTbTbTbhcccdcdcdcdcdcdcdcdcddkcdcdcdcdcddhbldpbncccdcdcdcdcdcdcdcdcddhbebTbTbTbhaYavavavavavavavavazavabababahababababababababahababababababaiabababababaa
-aaabababaiababagababababababababavazavavaSbebTbTbTbTbhcccdcdcdcdcddjcicdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcddqcdcddhbebTbTbTbhaYavavavavavavavavazavabababababababababacabababababababababababababababaa
-aaabababababababababababababababavazavavaSbebTbTbTbTbhcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcddrbebTbTbTbhbUaDavavavavavavavazavabababababababababababababababababababababababababaa
-aaababababababababababbgababababavazavavaSbebTbTbTbTbWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaWaXcccddhdsbdbdbdaWaWaWaWaWaWaWbXbTbTbTbWaXaYavavavavavavavazavabababababababababababababababababababauabababababaa
-aaabababababagabababababababababavazavavaSbebTbTbTbTbTbTbTbTbTbTbTbTbTbTbTbTbTbTbTbTbTbhcccddhbebTbTbTbTbTbTbTbTbTbTbTbTbTbTbTbhaYavavavavavavavazavabababababababababababababababababababababababababaa
-aaabababacabababababababababababavazavavaSbedtdtdududtdtdtdtdtdtdtdtdtdtdtdtbTbTbTbTbTbhcccddhbebTbTbTbTbTbTbTbTbTbTbTbTbTbTbTbhaYavavavavavavavazavabababacababababaiababababababababababababababababaa
-aaababababababababaiabacababababavazavavaSbedtdvdwdwdxdydwdwdwdwdwdydwdwdwdtbTbTbTbTbTbhcccidhbebTbTbTbTbkbkbkbkbkbkbkbkbkbkbkbhaYavavavavavavavazavababababababababababababababababaiababababababababaa
-aaabababababababababababababababavazavavaSbedzdwdwdwdwdwdwdwdwdAdwdBdCdDdwdtbTbTbTbTbTbhcccddhbebTbTbTbTctdEdEbkdFdGfrfsdIdFbkbhaYavavavavavavavazavabababababababababababababababababababababababababaa
-aaababababababababababababaiababavazavavaSbedtdwdwdwdwdwdwdwdwftdwdwdwdwdwdtbTbTbTbTbTbhcccddhbebTbTbTbTbkdEdEdKdEdEdEdEdEdEbkbhaYavavavavavavavazavababababababababababahababababababababababababababaa
-aaabababababababbgabababababababavazavavaSbedzdwdwdwfudwdwdwdwdLdMfvdMdNdMdtbTbTbTbTbTbhcccddhbebTbTbTbTczdEfwbkdEdEdOdPdQdRbkbhaYavavavavavavavazavabababababababababababababababababababababababababaa
-aaabababababababababababababababavazavavaSbedzdwdwdwdwdwdwdwdwdwdSdSdSdSdSdtbTbTbTbTbTbhcccddhbebTbTbTbTbkdEdEbkdEdEdEdEdEdEbkbhaYavavavavavavavazavababababababababababababababacababababababababababaa
-aaabababababacababababacabdTababavazavavaSbedtdUdVdwdVdwdVdwdwdwdwdwdwdwdWdtbTbTbTbTbTbhcccddhbebTbTbTbTctfwdEdXdYdEdZfxebdRbkbhaYavavavavavavavazavababababaiababababababababababababababababababababaa
-aaabababababababababababababababavazavavaSbedzdwdwdwecdwdwdwdwdwdwdweddwdwdtbTbTbTbTbTbhcccddhbebTbTbTddbkeeefbkdEdEdEdEdEdEbkbhaYavavavavavavavazavabababababababababababababababababababaiabababababaa
-aaabababababababababababababababavazavavaSbedzdwegdwegdwegdwehfyeifzdMeidwdtbTbTbTbTbTbhcccddhbebTbTbTbTbkbkbkbkejdEekfAfBdRbkbhaYavavavavavavavazavabababababababababababababababababababababababababaa
-aaababababababaiabacababababababavazavavaSbedtdwdwdwdwendwdweheoeiepdMfCdxdtbTbTddbTbTbhcccddhbebTbTbTbTeqeresbketdEdEdEdEdEbkbhaYavavavavavavavazavabababababababababababababababababababababeuabababaa
-aaababababacababababababababababavazavavaSbedtdtdzdzdzdtdzdzdtdzdzdtdzdzdtdtbTbTbTbTbTbhcccddhbebTbTbTbTevewexbkbkbkbkbkbkbkbkbhaYavavavavavavavazavababababahababababababababababababababababababababaa
-aaababababababacababababababababavazaBaCbRblbmbmbmbmbmbmbmbmbmbmbmbmbmbmbmbmbmbTbTbTbTbhcccddhbebTbTbTbTbmbmbmbmbmbmbmbmbmbmbmbnaYavavaBaCaCaCaDazavabababababababababagabababababaiabababababababababaa
-aaababababacabababacabbgabeyababavazaSaTezaXbPbwbwbwbwbwbwbwbwbwbwbwbwbwbwbwbOaTaWaXbTbhcccddhbebTaTaWaXbPbwbwbwbwbwbwbwbwbwbwbwavavavaSaTaWaXaYazavababababababafababababababababababababagabababababaa
-aaabababababababababababababababavazaSbeeAbhaYavavavavavavavavavavavavavavavaSbeeAbhbTbhcccddhbebTbeeAbhaYavavavavavavavavavavavavavavaSbebfbhaYazavababababababababababababababagababababababababababaa
-aaabababababababababababababababavazaSblbmbnaYavavavavavavavavavavavavavavavaSblbmbnbTbhcccddhbebTblbmbnaYavavavavavavavavavavavavavavaSblbmbnaYazavababababacababababababababababababababababacabababaa
-aaabababababababababababababababavazbvbwbwbwbxavavavavavavavavavavavavavavavbveBeBeBeCeDeEeFeGeHeIeBeBbwbxavavavavavavavavavavavavavavbvbwbwbwbxazavabababababababababababababababababababababababababaa
-aaabababababababababababababababavawaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxeJeJeJeKeLeMeNeOePeQeJeJaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxeRavabababababababababababababababababababababababababaa
-aaababababacababababababababababavavavavavavavavavavavavavavavavavavavavavavaveSeSeSeTeUeEeFeGeVeWeSeSavavavavavavavavavavavavavavavavavavavavavavavababababababababababababababababaPafabababababababaa
-aaabababababababababababababababababababababababababababababababababababababavbkczbkeXbhcccddhbeaYaTaWaXababababababababababababababababababababababababababababababababahababababababababababababababaa
-aaabababababababababababababababababababababababababababababababababababababavczfwcteYbhcccddhbeaYbeeZbhabababababababababababababababababababababababababababababababababababababababababababababababaa
-aaababababababababacabababaiabababababbgababababababababababababababababababavbkczbkeXbhcccddhbeaYblbmbnabababababababababababababababababababababababababababaiabababababababababababababaiabababababaa
-aaababababababagababdTababababababababababababababababababababacababababababavavavaveYbhcccddhbeaYavavavabababababababababababababababababababababababababadabababababababababagabababababababababababaa
-aaababababacabababababababababacabababababababababacababababababababababababavavavaveYbhcccddhbeaYavavaMababababagababababababababababababababababababababababababababababababababababababababababababaa
-aaababababababababababababababababababababacababababababababababababdTabababavavavaveYbhcccddhbeaYavavavababababababababababababahababababababababababauabababababababababababababababababababababababaa
-aaababababababbgababababababababababababababababababababababababababababababavavavaveYbhccfadhbeaYavavavabababababababababababababababababababababababababababababababababababababababababababababababaa
-aaabababababababababababahabababababababababababahababababababacababbgabababavavavaveYbhcccddhbeaYavavavabababababababababababababababababababababababababahabababababababababababababababahabababababaa
-aaababababababababababababababacababababababababababababagabababababababababavavavaveYbhcccddhbeaYavavavabababababababababababababababababababahababababababababababababaiabauababababababababababababaa
-aaabababahabauababacababababababababababagabababababababababababababababababavavavaveYbhcccddhbeaYavavavabababababababababababababababababahabababababababababababaeababababababababababababakababababaa
-aaabababababababababaoababababababababauababababababababababababababababababavavavaveYbhcccddhbeaYavavavabababababababababababababababababababababababababababababababababababababababababababababababaa
-aaababababafabababababababababaiababababababababacabfbabababababababababababavavavaveYbhcccddhbeaYavavavababababababahababababababababahabababababababfcabahababababababababababakahabadabababababababaa
-aaababababababababababapababababababababababbgabababababababababababababababavavavaveYbhcccddhbeaYavavavababababababababababababababababababafababahabababababababababababahabababababababababababababaa
-aaabababacababababababababababakabababababababababababababababaiababababababavavavaveYbhcccddhbeaYavavavabababababababababababababahabababababababababapabababababababababababababakabababababababababaa
-aaababababababababababababdTababababababababababababababababababababababababavavavaveYbhccfadhbeaYavavavabababababababababababahabababababababababababababaiabababaoabababababababababababababahabababaa
-aaababababababaiahababababababababababacababababababababababababababababababavavavaveYbhcccddhbeaYavavavababababababababauabababababababababababababababababababababababababafababababababakabababababaa
-aaababauababababababababacabababababababababababababababababababababahabababavavavaveYbhcccddhbeaYavavavababababababababababababababababababahabababababababababababababfcabababfdabahababababababababaa
-aaababababababababaeababababababababababababababahabababababababababababababavavavaveYbhcccddhbeaYavavavababababababababababadabababababagababababababadabababababababababababfeababababababffababababaa
-aaabfgabababababfgababababababababababababababababababacababababababababababavavavaveYbhcccddhbeaYavavavabababababababababababababababababababababababahababababababahababababababababababababababababaa
-aaababababacabababababababababauababababababababababababababababababababababavavavaveYbhcccddhbeaYavavavabababababababababababababababababababababababababababababababababababababababababababababababaa
-aaabababababababababacabababababababababababababababababababababababababababavavavaveYbhcccddhbeaYavavavabababababababababababababababababababauabababababababababababababababababababfeabababababababaa
-aaabababababababababababababababababababababababababababababababababababababavavavaveYbhcccddhbeaYavavavababababababababababahababababababababababababababababafababababababababffababababababffabababaa
-aaabababababfgabababafababababababababagababababababababababababacabababababavavavaveYbhccfadhbeaYavfhavababababagababababababababababababababababababababababababababababababababababababababababababaa
-aaababacabababababababababababababababababababacababababababababababababababavavavaveYbhcccddhbeaYavavavababababababababababababababababahababababahababababababababababababababababababahababababababaa
-aaabababababababababababababababaiababababababababababahabababababababahababavavavaveYbhccfidhbeaYavavavabababababababababababababababababababababababababababahabababfeabababababababababababababababaa
-aaabababfgabababababababababababababababababauabababababababababacabababababavavavaveYbhcccddhbeaYavavavabababababababababababababababababababababababababababababababababababababababababffabababababaa
-aaabababababababababacabababababababababababababababababababababababababababavavavavfjfkflfmfnfofpavavavabababababababababababababababababababababababababababababababababababababababababababababababaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(2,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(3,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+fg
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(4,1,1) = {"
+aa
+ab
+ab
+ab
+aj
+ao
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ac
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aQ
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+au
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+aa
+"}
+(5,1,1) = {"
+aa
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+an
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+fg
+ab
+aa
+"}
+(6,1,1) = {"
+aa
+ab
+ab
+ab
+ak
+ab
+aq
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ac
+ab
+ab
+ab
+ab
+af
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ac
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+af
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(7,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+al
+ab
+ab
+ab
+ac
+ab
+ab
+al
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aU
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+au
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+fg
+ab
+ab
+ab
+ab
+aa
+"}
+(8,1,1) = {"
+aa
+ab
+ab
+ae
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+bg
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(9,1,1) = {"
+aa
+ab
+ab
+ab
+al
+ab
+ab
+ab
+am
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aK
+ab
+ab
+ab
+ab
+ab
+ab
+aQ
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+bg
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+fg
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(10,1,1) = {"
+aa
+ab
+ab
+af
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aU
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ae
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(11,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ac
+ai
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+dT
+ab
+ab
+ab
+ab
+ab
+ab
+ao
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+af
+ab
+ab
+ab
+ac
+aa
+"}
+(12,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+bg
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+bg
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ap
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(13,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aQ
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(14,1,1) = {"
+aa
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+at
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aQ
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+dT
+ab
+ab
+ab
+ab
+ab
+ey
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+dT
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(15,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(16,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ac
+ab
+ab
+ai
+ab
+ak
+ab
+ab
+ab
+ab
+ab
+au
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(17,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ag
+ab
+ac
+ab
+ab
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+aa
+"}
+(18,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+aw
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+aw
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(19,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+al
+ab
+ab
+ab
+ab
+av
+ax
+aB
+aS
+aS
+aS
+bv
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aB
+aS
+aS
+aS
+bv
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aB
+aS
+aS
+aS
+bv
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(20,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aC
+aT
+be
+bl
+bw
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aC
+aT
+be
+bl
+bw
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aC
+aT
+be
+bl
+bw
+ax
+av
+ab
+ab
+bg
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+au
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+aa
+"}
+(21,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ai
+ab
+av
+ax
+aC
+aW
+bf
+bm
+bw
+av
+av
+av
+av
+av
+av
+av
+av
+aB
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+bR
+aW
+bf
+bm
+bO
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+bR
+ez
+eA
+bm
+bw
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(22,1,1) = {"
+aa
+ab
+ab
+ab
+am
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aC
+aX
+bh
+bn
+bw
+av
+av
+av
+av
+av
+av
+av
+av
+aC
+aT
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+aX
+bh
+bn
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+bl
+aX
+bh
+bn
+bw
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(23,1,1) = {"
+aa
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aD
+aY
+aY
+aY
+bx
+av
+av
+av
+av
+av
+av
+av
+av
+aC
+aW
+bT
+bY
+ce
+ce
+ce
+ce
+ce
+cJ
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+dt
+dt
+dz
+dt
+dz
+dz
+dt
+dz
+dz
+dt
+dt
+bm
+bP
+aY
+aY
+bx
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+bg
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+au
+ab
+aa
+"}
+(24,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aj
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aC
+aW
+bT
+bZ
+cf
+cr
+dJ
+cg
+cE
+bZ
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+dt
+dv
+dw
+dw
+dw
+dw
+dU
+dw
+dw
+dw
+dt
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+aa
+"}
+(25,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+av
+ax
+aA
+av
+aH
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aC
+aW
+bT
+bZ
+cg
+bT
+bT
+bT
+cF
+bZ
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+du
+dw
+dw
+dw
+dw
+dw
+dV
+dw
+eg
+dw
+dz
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(26,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+ba
+aS
+bi
+bo
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+bR
+aW
+bT
+ca
+ch
+bT
+bT
+bT
+cG
+cK
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+du
+dw
+dw
+dw
+dw
+dw
+dw
+dw
+dw
+dw
+dz
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(27,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aE
+aZ
+bj
+bp
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+bT
+bT
+cb
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bW
+bT
+dt
+dx
+dw
+dw
+fu
+dw
+dV
+ec
+eg
+dw
+dz
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+fb
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(28,1,1) = {"
+aa
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aF
+by
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bh
+bn
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cd
+aW
+bT
+dt
+dy
+dw
+dw
+dw
+dw
+dw
+dw
+dw
+en
+dt
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+aa
+"}
+(29,1,1) = {"
+aa
+ab
+ab
+ab
+an
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aG
+bb
+bk
+bq
+cl
+bs
+bD
+bs
+bs
+bs
+bD
+bs
+bQ
+bQ
+bk
+bV
+cc
+cd
+cd
+cx
+cd
+cx
+cd
+cx
+cd
+cx
+cd
+cx
+cd
+cx
+cd
+dj
+cd
+cd
+cd
+cd
+aW
+bT
+dt
+dw
+dw
+dw
+dw
+dw
+dV
+dw
+eg
+dw
+dz
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(30,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aL
+bc
+bk
+br
+bz
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bA
+bs
+bV
+cd
+cd
+cs
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+di
+cd
+cd
+cd
+cd
+cd
+aW
+bT
+dt
+dw
+dw
+dw
+dw
+dw
+dw
+dw
+dw
+dw
+dz
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(31,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ac
+ab
+av
+ax
+aC
+bd
+bk
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bV
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+dk
+cd
+cd
+cd
+aW
+bT
+dt
+dw
+dw
+dw
+dw
+dw
+dw
+dw
+eh
+eh
+dt
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(32,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aC
+bd
+bk
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bV
+cd
+cd
+cs
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cs
+cd
+cd
+cd
+cd
+cd
+aW
+bT
+dt
+dw
+dA
+ft
+dL
+dw
+dw
+dw
+fy
+eo
+dz
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(33,1,1) = {"
+aa
+ab
+ab
+ab
+ag
+ab
+ad
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aC
+bd
+bk
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bV
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+dl
+cd
+cd
+cd
+aW
+bT
+dt
+dw
+dw
+dw
+dM
+dS
+dw
+dw
+ei
+ei
+dz
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ac
+ab
+aa
+"}
+(34,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aC
+bd
+bk
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bV
+cd
+ci
+cs
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+db
+cd
+cd
+cd
+cs
+cd
+dm
+cd
+dj
+cd
+aW
+bT
+dt
+dy
+dB
+dw
+fv
+dS
+dw
+dw
+fz
+ep
+dt
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(35,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aC
+bd
+bk
+bs
+bs
+bs
+cw
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bV
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+ci
+cd
+aW
+bT
+dt
+dw
+dC
+dw
+dM
+dS
+dw
+ed
+dM
+dM
+dz
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+dT
+ab
+bg
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(36,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aC
+bd
+bk
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bV
+cd
+cd
+cs
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cs
+cd
+ci
+cd
+cd
+cd
+aW
+bT
+dt
+dw
+dD
+dw
+dN
+dS
+dw
+dw
+ei
+fC
+dz
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+aa
+"}
+(37,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+av
+ax
+aC
+bd
+bk
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bV
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+dn
+cd
+cd
+cd
+aW
+bT
+dt
+dw
+dw
+dw
+dM
+dS
+dW
+dw
+dw
+dx
+dt
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(38,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aC
+bd
+bk
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bV
+cd
+cd
+cs
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cs
+cd
+cd
+dk
+cd
+cd
+aW
+bT
+dt
+dt
+dt
+dt
+dt
+dt
+dt
+dt
+dt
+dt
+dt
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(39,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+av
+ax
+aC
+bd
+bk
+bs
+bA
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bA
+bs
+bV
+cd
+cd
+cd
+cx
+cd
+cx
+cd
+cx
+cd
+cx
+cd
+cx
+cd
+cx
+cd
+cd
+cd
+cd
+cd
+cd
+aW
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bm
+bO
+aS
+aS
+bv
+ax
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aa
+"}
+(40,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aC
+bd
+bk
+bt
+bs
+bs
+bE
+bs
+bs
+bs
+bE
+bs
+bs
+bS
+bk
+bV
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+aW
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+aT
+be
+bl
+eB
+eJ
+eS
+bk
+cz
+bk
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aa
+"}
+(41,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aC
+bd
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+be
+bl
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+aW
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+dd
+bT
+bT
+aW
+eA
+bm
+eB
+eJ
+eS
+cz
+fw
+cz
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aa
+"}
+(42,1,1) = {"
+aa
+ab
+ad
+ab
+ab
+ab
+ab
+ab
+ab
+ad
+ab
+ab
+ab
+ab
+av
+ax
+aC
+aX
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bW
+bT
+cj
+cj
+cj
+cj
+cj
+cj
+cj
+cj
+cj
+cj
+cj
+bl
+bV
+cd
+cd
+cd
+cd
+cd
+cd
+aW
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+aX
+bh
+bn
+eB
+eJ
+eS
+bk
+ct
+bk
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aa
+"}
+(43,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aD
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+bU
+bd
+bk
+bk
+bk
+bk
+cz
+cz
+cz
+cz
+bk
+bk
+bT
+bT
+bm
+bV
+cd
+cd
+cd
+cd
+cd
+cd
+aW
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+eC
+eK
+eT
+eX
+eY
+eX
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+fj
+aa
+"}
+(44,1,1) = {"
+aa
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+bC
+bd
+bk
+cy
+cI
+ck
+ck
+ck
+ea
+cQ
+cT
+bk
+bT
+bT
+bm
+bV
+cd
+dh
+dh
+dh
+cd
+cd
+aX
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+eD
+eL
+eU
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+fk
+aa
+"}
+(45,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+av
+ax
+av
+av
+bk
+bk
+bk
+aI
+av
+av
+av
+av
+av
+av
+av
+av
+bC
+bd
+bk
+cI
+ck
+ck
+ck
+ck
+ck
+cR
+fq
+bk
+dc
+bT
+bm
+bV
+cd
+aT
+be
+bl
+cd
+cd
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+eE
+eM
+eE
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+cc
+fl
+aa
+"}
+(46,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+bk
+bu
+bB
+av
+av
+av
+av
+av
+av
+av
+av
+av
+bC
+bd
+bk
+cU
+ck
+ea
+ck
+cH
+ck
+ck
+cV
+bk
+dd
+bT
+bm
+bV
+cd
+aW
+do
+dp
+cd
+cd
+cd
+cd
+cd
+ci
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+eF
+eN
+eF
+cd
+cd
+cd
+cd
+cd
+cd
+fa
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+fa
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+fa
+cd
+fi
+cd
+fm
+aa
+"}
+(47,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+av
+ax
+av
+av
+bk
+bk
+bk
+aJ
+av
+av
+av
+av
+av
+av
+av
+av
+bC
+bd
+bk
+cI
+ck
+ck
+cA
+cI
+ck
+ck
+ck
+ct
+bT
+bT
+bm
+bV
+cd
+aX
+bh
+bn
+cd
+cd
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+eG
+eO
+eG
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+fn
+aa
+"}
+(48,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+bC
+bd
+bk
+ck
+ck
+el
+el
+cI
+cL
+cS
+cW
+bk
+bT
+bT
+bm
+bV
+cd
+cc
+cc
+cc
+cd
+cd
+ds
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+eH
+eP
+eV
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+be
+fo
+aa
+"}
+(49,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+bC
+bd
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bT
+bT
+bm
+bV
+cd
+cd
+cd
+cd
+cd
+cd
+bd
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+eI
+eQ
+eW
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+fp
+aa
+"}
+(50,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+aB
+aS
+aS
+aS
+aS
+bv
+av
+av
+aR
+bC
+bd
+bT
+bT
+bT
+bT
+cB
+bT
+bT
+bT
+cB
+bT
+bT
+bT
+bm
+bV
+cd
+cd
+cd
+cd
+cd
+cd
+bd
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+aT
+be
+bl
+eB
+eJ
+eS
+aT
+be
+bl
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aa
+"}
+(51,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+bC
+bF
+bI
+bI
+bL
+bO
+aS
+aS
+aS
+bR
+bd
+bT
+bT
+bT
+bT
+cC
+bT
+bT
+bT
+cB
+bT
+bT
+bT
+bm
+bV
+cd
+cd
+cd
+cd
+cd
+cd
+bd
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+aW
+eA
+bm
+eB
+eJ
+eS
+aW
+eZ
+bm
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+fh
+av
+av
+av
+av
+aa
+"}
+(52,1,1) = {"
+aa
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+bC
+bG
+bJ
+bJ
+bM
+be
+be
+be
+be
+be
+bX
+bT
+bT
+bT
+bT
+cB
+bT
+bT
+bT
+cB
+bT
+bT
+bT
+bm
+bV
+cd
+cd
+cd
+cd
+cd
+cd
+aW
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+dd
+bT
+bT
+bT
+bT
+aX
+bh
+bn
+bw
+ax
+av
+aX
+bh
+bn
+av
+aM
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aa
+"}
+(53,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+bC
+bG
+bJ
+bJ
+bM
+bh
+bh
+bh
+bh
+bh
+bW
+bk
+bk
+ct
+bk
+bk
+bk
+cM
+cM
+bk
+bk
+bT
+bT
+bm
+bV
+cd
+cd
+cd
+cd
+cd
+cd
+aW
+bT
+bT
+bk
+ct
+bk
+cz
+bk
+ct
+bk
+bk
+eq
+ev
+bm
+bP
+aY
+aY
+bx
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(54,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+av
+ax
+av
+av
+av
+av
+av
+bC
+bH
+bK
+bK
+bN
+bP
+aY
+aY
+aY
+bU
+bd
+bk
+cm
+cm
+cv
+cm
+cm
+cm
+cm
+cX
+bk
+bT
+bT
+bm
+bV
+cd
+cd
+cd
+cd
+cd
+cd
+aW
+bT
+bT
+bk
+dE
+dE
+dE
+dE
+fw
+ee
+bk
+er
+ew
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(55,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+aD
+aY
+aY
+aY
+aY
+bx
+av
+av
+av
+bC
+bd
+bk
+cm
+cu
+cq
+cq
+cq
+cN
+cm
+cY
+bk
+de
+bh
+bn
+bV
+cd
+cd
+cd
+cd
+dq
+cd
+aW
+bT
+bT
+bk
+dE
+dE
+fw
+dE
+dE
+ef
+bk
+es
+ex
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(56,1,1) = {"
+aa
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+bC
+bd
+bk
+cn
+cm
+cm
+cq
+cm
+cm
+cm
+cm
+da
+cc
+cc
+cc
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+aW
+bT
+bT
+bk
+bk
+dK
+bk
+bk
+dX
+bk
+bk
+bk
+bk
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(57,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+bC
+bd
+bk
+co
+cv
+cm
+em
+cm
+cO
+cm
+cm
+da
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+cd
+aW
+bT
+bT
+bk
+dF
+dE
+dE
+dE
+dY
+dE
+ej
+et
+bk
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+aa
+"}
+(58,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+bC
+bd
+bk
+cm
+cm
+cm
+cD
+cm
+cm
+cm
+cm
+da
+df
+df
+dh
+dh
+dh
+dh
+dh
+dh
+dh
+dr
+aW
+bT
+bT
+bk
+dG
+dE
+dE
+dE
+dE
+dE
+dE
+dE
+bk
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(59,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+bC
+bd
+bk
+cn
+cm
+cm
+cm
+cm
+cm
+cm
+cm
+bk
+dg
+be
+be
+be
+be
+be
+be
+be
+be
+be
+bX
+bT
+bT
+bk
+fr
+dE
+dO
+dE
+dZ
+dE
+ek
+dE
+bk
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(60,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+bC
+bd
+bk
+cp
+cm
+cm
+cm
+cm
+cP
+cm
+cZ
+cM
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bk
+fs
+dE
+dP
+dE
+fx
+dE
+fA
+dE
+bk
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(61,1,1) = {"
+aa
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+bC
+bd
+bk
+dH
+cq
+cq
+cm
+cm
+cm
+cm
+cZ
+cM
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bk
+dI
+dE
+dQ
+dE
+eb
+dE
+fB
+dE
+bk
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+au
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(62,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+bC
+bd
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bk
+dF
+dE
+dR
+dE
+dR
+dE
+dR
+dE
+bk
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(63,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+bC
+aX
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bW
+bT
+bT
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bm
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ad
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(64,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aD
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+bU
+aX
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bh
+bn
+bw
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(65,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+av
+ax
+av
+av
+av
+av
+av
+av
+av
+aM
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aD
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+aY
+av
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(66,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(67,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(68,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aB
+aS
+aS
+aS
+bv
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aB
+aS
+aS
+aS
+bv
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aB
+aS
+aS
+aS
+bv
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(69,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aC
+aT
+be
+bl
+bw
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aC
+aT
+be
+bl
+bw
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aC
+aT
+be
+bl
+bw
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+aa
+"}
+(70,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aC
+aW
+bf
+bm
+bw
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aC
+aW
+bf
+bm
+bw
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aC
+aW
+bf
+bm
+bw
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(71,1,1) = {"
+aa
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ah
+ab
+ab
+av
+ax
+aC
+aX
+bh
+bn
+bw
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aC
+aX
+bh
+bn
+bw
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aC
+aX
+bh
+bn
+bw
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+af
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(72,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ax
+aD
+aY
+aY
+aY
+bx
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aD
+aY
+aY
+aY
+bx
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+aD
+aY
+aY
+aY
+bx
+ax
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+au
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(73,1,1) = {"
+aa
+ab
+ab
+ah
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+av
+ay
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+eR
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(74,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+av
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+aa
+"}
+(75,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(76,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+au
+ab
+ab
+ab
+ab
+ab
+fc
+ab
+ap
+ab
+ab
+ab
+ad
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(77,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(78,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ad
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ah
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(79,1,1) = {"
+aa
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ac
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(80,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+af
+ab
+ab
+ah
+ab
+ab
+aa
+"}
+(81,1,1) = {"
+aa
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+af
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(82,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+au
+ab
+ab
+ab
+ab
+ah
+ab
+aP
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ae
+ab
+ab
+ab
+ab
+ao
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(83,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(84,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aO
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+fe
+ab
+ab
+aa
+"}
+(85,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+aN
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+fc
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(86,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aN
+ab
+ab
+ab
+ab
+aN
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(87,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aV
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+au
+ab
+ab
+ab
+ab
+ab
+ab
+af
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(88,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+fe
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(89,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aO
+ar
+ab
+ab
+ab
+ab
+ab
+ab
+au
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ak
+ab
+ab
+ab
+ab
+fd
+ab
+ab
+ab
+ab
+ff
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(90,1,1) = {"
+aa
+ab
+ab
+ab
+ac
+ab
+ae
+as
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aN
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ak
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(91,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+au
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aP
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aP
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(92,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+aN
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+af
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ad
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+fe
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(93,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ap
+ar
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+aa
+"}
+(94,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aN
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+au
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ag
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ak
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ff
+ab
+aa
+"}
+(95,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ak
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ff
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(96,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ai
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aP
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+eu
+ab
+ab
+ab
+ab
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ah
+ab
+ab
+ab
+ab
+ab
+ab
+ff
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(97,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aN
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(98,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(99,1,1) = {"
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aa
+"}
+(100,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 "}

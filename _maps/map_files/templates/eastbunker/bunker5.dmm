@@ -1,51 +1,493 @@
-"a" = (/turf/closed/mineral,/area/f13/bunker)
-"c" = (/turf/open/indestructible/ground/inside/mountain,/area/f13/bunker)
-"d" = (/obj/structure/flora/wasteplant/wild_fungus,/turf/open/indestructible/ground/inside/mountain,/area/f13/bunker)
-"e" = (/obj/structure/chair/bench,/turf/open/indestructible/ground/inside/mountain,/area/f13/bunker)
-"f" = (/obj/effect/spawner/lootdrop/f13/cash_random_low,/turf/open/indestructible/ground/inside/mountain,/area/f13/bunker)
-"g" = (/obj/item/crafting/coffee_pot,/obj/structure/table/wood,/turf/open/indestructible/ground/inside/mountain,/area/f13/bunker)
-"h" = (/obj/item/chair/wood,/turf/open/indestructible/ground/inside/mountain,/area/f13/bunker)
-"i" = (/obj/item/crafting/campfirekit,/turf/open/indestructible/ground/inside/mountain,/area/f13/bunker)
-"j" = (/obj/structure/flora/ausbushes/lavendergrass{pixel_x = 0; pixel_y = -7},/turf/open/indestructible/ground/inside/mountain,/area/f13/bunker)
-"k" = (/obj/structure/flora/ausbushes/lavendergrass{pixel_x = 12; pixel_y = -21},/turf/open/indestructible/ground/inside/mountain,/area/f13/bunker)
-"l" = (/obj/effect/overlay/rockfloor_side{icon_state = "rockfloor_side"; dir = 1},/obj/effect/overlay/rockfloor_side{icon_state = "rockfloor_side"; dir = 8},/obj/structure/flora/ausbushes/lavendergrass{pixel_x = 5; pixel_y = -9},/turf/open/floor/grass,/area/f13/bunker)
-"m" = (/obj/effect/overlay/rockfloor_side{icon_state = "rockfloor_side"; dir = 1},/turf/open/floor/grass,/area/f13/bunker)
-"n" = (/obj/effect/overlay/rockfloor_side{icon_state = "rockfloor_side"; dir = 1},/obj/structure/flora/ausbushes/lavendergrass{pixel_x = 0; pixel_y = -7},/turf/open/floor/grass,/area/f13/bunker)
-"o" = (/obj/effect/overlay/rockfloor_side{icon_state = "rockfloor_side"; dir = 1},/obj/structure/flora/ausbushes/lavendergrass{pixel_x = 2; pixel_y = 3},/turf/open/floor/grass,/area/f13/bunker)
-"p" = (/obj/effect/overlay/rockfloor_side{icon_state = "rockfloor_side"; dir = 1},/obj/effect/overlay/rockfloor_side{icon_state = "rockfloor_side"; dir = 4},/obj/effect/spawner/lootdrop/f13/seedspawner,/turf/open/floor/grass,/area/f13/bunker)
-"q" = (/obj/structure/flora/ausbushes/lavendergrass{pixel_x = 12; pixel_y = -21},/obj/structure/flora/ausbushes/lavendergrass{pixel_x = 2; pixel_y = 3},/turf/open/indestructible/ground/inside/mountain,/area/f13/bunker)
-"r" = (/obj/effect/overlay/rockfloor_side{icon_state = "rockfloor_side"; dir = 8},/obj/structure/flora/ausbushes/lavendergrass{pixel_x = 2; pixel_y = 3},/turf/open/floor/grass,/area/f13/bunker)
-"s" = (/obj/structure/flora/ausbushes/lavendergrass{pixel_x = 2; pixel_y = 3},/turf/open/floor/grass,/area/f13/bunker)
-"t" = (/obj/structure/flora/ausbushes/sunnybush,/obj/item/flashlight/spotlight{light_power = 1.5; light_range = 5; name = "cave light"},/turf/open/floor/grass,/area/f13/bunker)
-"u" = (/obj/structure/flora/ausbushes/lavendergrass{pixel_x = 5; pixel_y = -9},/turf/open/floor/grass,/area/f13/bunker)
-"v" = (/obj/effect/overlay/rockfloor_side{icon_state = "rockfloor_side"; dir = 4},/obj/structure/flora/ausbushes/lavendergrass{pixel_x = 2; pixel_y = 3},/turf/open/floor/grass,/area/f13/bunker)
-"w" = (/obj/effect/overlay/rockfloor_side{icon_state = "rockfloor_side"; dir = 8},/obj/effect/overlay/rockfloor_side,/turf/open/floor/grass,/area/f13/bunker)
-"x" = (/obj/structure/flora/ausbushes/lavendergrass{pixel_x = 11},/obj/effect/spawner/lootdrop/f13/seedspawner,/turf/open/floor/grass,/area/f13/bunker)
-"y" = (/turf/open/floor/grass,/area/f13/bunker)
-"z" = (/obj/structure/sink/puddle,/turf/open/floor/grass,/area/f13/bunker)
-"A" = (/obj/effect/overlay/rockfloor_side{icon_state = "rockfloor_side"; dir = 4},/obj/structure/flora/ausbushes/lavendergrass{pixel_x = -14},/turf/open/floor/grass,/area/f13/bunker)
-"B" = (/obj/effect/overlay/rockfloor_side,/obj/effect/overlay/rockfloor_side{icon_state = "rockfloor_side"; dir = 8},/obj/structure/flora/ausbushes/lavendergrass{pixel_x = 2; pixel_y = 3},/turf/open/floor/grass,/area/f13/bunker)
-"C" = (/obj/effect/overlay/rockfloor_side,/obj/structure/flora/ausbushes/lavendergrass{pixel_x = 12; pixel_y = -21},/turf/open/floor/grass,/area/f13/bunker)
-"D" = (/obj/effect/overlay/rockfloor_side,/obj/structure/flora/ausbushes/lavendergrass,/turf/open/floor/grass,/area/f13/bunker)
-"E" = (/obj/effect/overlay/rockfloor_side,/obj/effect/overlay/rockfloor_side{icon_state = "rockfloor_side"; dir = 4},/obj/effect/spawner/lootdrop/f13/seedspawner,/turf/open/floor/grass,/area/f13/bunker)
-"F" = (/obj/structure/closet/crate/miningcar{name = "Mining car"},/turf/open/indestructible/ground/inside/mountain,/area/f13/bunker)
-"G" = (/obj/item/t_scanner/adv_mining_scanner/lesser,/turf/open/indestructible/ground/inside/mountain,/area/f13/bunker)
-"H" = (/turf/template_noop,/area/template_noop)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/mineral,
+/area/f13/bunker)
+"c" = (
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
+"d" = (
+/obj/structure/flora/wasteplant/wild_fungus,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
+"e" = (
+/obj/structure/chair/bench,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
+"f" = (
+/obj/effect/spawner/lootdrop/f13/cash_random_low,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
+"g" = (
+/obj/item/crafting/coffee_pot,
+/obj/structure/table/wood,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
+"h" = (
+/obj/item/chair/wood,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
+"i" = (
+/obj/item/crafting/campfirekit,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
+"j" = (
+/obj/structure/flora/ausbushes/lavendergrass{
+	pixel_x = 0;
+	pixel_y = -7
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
+"k" = (
+/obj/structure/flora/ausbushes/lavendergrass{
+	pixel_x = 12;
+	pixel_y = -21
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
+"l" = (
+/obj/effect/overlay/rockfloor_side{
+	icon_state = "rockfloor_side";
+	dir = 1
+	},
+/obj/effect/overlay/rockfloor_side{
+	icon_state = "rockfloor_side";
+	dir = 8
+	},
+/obj/structure/flora/ausbushes/lavendergrass{
+	pixel_x = 5;
+	pixel_y = -9
+	},
+/turf/open/floor/grass,
+/area/f13/bunker)
+"m" = (
+/obj/effect/overlay/rockfloor_side{
+	icon_state = "rockfloor_side";
+	dir = 1
+	},
+/turf/open/floor/grass,
+/area/f13/bunker)
+"n" = (
+/obj/effect/overlay/rockfloor_side{
+	icon_state = "rockfloor_side";
+	dir = 1
+	},
+/obj/structure/flora/ausbushes/lavendergrass{
+	pixel_x = 0;
+	pixel_y = -7
+	},
+/turf/open/floor/grass,
+/area/f13/bunker)
+"o" = (
+/obj/effect/overlay/rockfloor_side{
+	icon_state = "rockfloor_side";
+	dir = 1
+	},
+/obj/structure/flora/ausbushes/lavendergrass{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/turf/open/floor/grass,
+/area/f13/bunker)
+"p" = (
+/obj/effect/overlay/rockfloor_side{
+	icon_state = "rockfloor_side";
+	dir = 1
+	},
+/obj/effect/overlay/rockfloor_side{
+	icon_state = "rockfloor_side";
+	dir = 4
+	},
+/obj/effect/spawner/lootdrop/f13/seedspawner,
+/turf/open/floor/grass,
+/area/f13/bunker)
+"q" = (
+/obj/structure/flora/ausbushes/lavendergrass{
+	pixel_x = 12;
+	pixel_y = -21
+	},
+/obj/structure/flora/ausbushes/lavendergrass{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
+"r" = (
+/obj/effect/overlay/rockfloor_side{
+	icon_state = "rockfloor_side";
+	dir = 8
+	},
+/obj/structure/flora/ausbushes/lavendergrass{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/turf/open/floor/grass,
+/area/f13/bunker)
+"s" = (
+/obj/structure/flora/ausbushes/lavendergrass{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/turf/open/floor/grass,
+/area/f13/bunker)
+"t" = (
+/obj/structure/flora/ausbushes/sunnybush,
+/obj/item/flashlight/spotlight{
+	light_power = 1.5;
+	light_range = 5;
+	name = "cave light"
+	},
+/turf/open/floor/grass,
+/area/f13/bunker)
+"u" = (
+/obj/structure/flora/ausbushes/lavendergrass{
+	pixel_x = 5;
+	pixel_y = -9
+	},
+/turf/open/floor/grass,
+/area/f13/bunker)
+"v" = (
+/obj/effect/overlay/rockfloor_side{
+	icon_state = "rockfloor_side";
+	dir = 4
+	},
+/obj/structure/flora/ausbushes/lavendergrass{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/turf/open/floor/grass,
+/area/f13/bunker)
+"w" = (
+/obj/effect/overlay/rockfloor_side{
+	icon_state = "rockfloor_side";
+	dir = 8
+	},
+/obj/effect/overlay/rockfloor_side,
+/turf/open/floor/grass,
+/area/f13/bunker)
+"x" = (
+/obj/structure/flora/ausbushes/lavendergrass{
+	pixel_x = 11
+	},
+/obj/effect/spawner/lootdrop/f13/seedspawner,
+/turf/open/floor/grass,
+/area/f13/bunker)
+"y" = (
+/turf/open/floor/grass,
+/area/f13/bunker)
+"z" = (
+/obj/structure/sink/puddle,
+/turf/open/floor/grass,
+/area/f13/bunker)
+"A" = (
+/obj/effect/overlay/rockfloor_side{
+	icon_state = "rockfloor_side";
+	dir = 4
+	},
+/obj/structure/flora/ausbushes/lavendergrass{
+	pixel_x = -14
+	},
+/turf/open/floor/grass,
+/area/f13/bunker)
+"B" = (
+/obj/effect/overlay/rockfloor_side,
+/obj/effect/overlay/rockfloor_side{
+	icon_state = "rockfloor_side";
+	dir = 8
+	},
+/obj/structure/flora/ausbushes/lavendergrass{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/turf/open/floor/grass,
+/area/f13/bunker)
+"C" = (
+/obj/effect/overlay/rockfloor_side,
+/obj/structure/flora/ausbushes/lavendergrass{
+	pixel_x = 12;
+	pixel_y = -21
+	},
+/turf/open/floor/grass,
+/area/f13/bunker)
+"D" = (
+/obj/effect/overlay/rockfloor_side,
+/obj/structure/flora/ausbushes/lavendergrass,
+/turf/open/floor/grass,
+/area/f13/bunker)
+"E" = (
+/obj/effect/overlay/rockfloor_side,
+/obj/effect/overlay/rockfloor_side{
+	icon_state = "rockfloor_side";
+	dir = 4
+	},
+/obj/effect/spawner/lootdrop/f13/seedspawner,
+/turf/open/floor/grass,
+/area/f13/bunker)
+"F" = (
+/obj/structure/closet/crate/miningcar{
+	name = "Mining car"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
+"G" = (
+/obj/item/t_scanner/adv_mining_scanner/lesser,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/bunker)
+"H" = (
+/turf/template_noop,
+/area/template_noop)
 
 (1,1,1) = {"
-aaaaaaaaaaHHHHH
-aaaaacdccaaaaHH
-aaaacecccfaaaaH
-aaaccghccccaaaH
-aacciccccdcaaaa
-aadcccccjcccaaa
-acccklmnopcccaa
-acccqrstuvcccaa
-accccwxyzAcccaa
-aaccccBCDEcccaa
-aaccdccccccccaa
-aaaccccFccccaaa
-HaaacGcccccaaaH
-HaaaaaccccaaaaH
-HHaaaacaaaaaaHH
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+H
+H
+H
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+a
+a
+c
+c
+c
+a
+a
+a
+a
+a
+H
+"}
+(3,1,1) = {"
+a
+a
+a
+a
+c
+d
+c
+c
+c
+c
+c
+a
+a
+a
+a
+"}
+(4,1,1) = {"
+a
+a
+a
+c
+c
+c
+c
+c
+c
+c
+c
+c
+a
+a
+a
+"}
+(5,1,1) = {"
+a
+a
+c
+c
+i
+c
+k
+q
+c
+c
+d
+c
+c
+a
+a
+"}
+(6,1,1) = {"
+a
+c
+e
+g
+c
+c
+l
+r
+w
+c
+c
+c
+G
+a
+a
+"}
+(7,1,1) = {"
+a
+d
+c
+h
+c
+c
+m
+s
+x
+B
+c
+c
+c
+c
+c
+"}
+(8,1,1) = {"
+a
+c
+c
+c
+c
+c
+n
+t
+y
+C
+c
+F
+c
+c
+a
+"}
+(9,1,1) = {"
+a
+c
+c
+c
+c
+j
+o
+u
+z
+D
+c
+c
+c
+c
+a
+"}
+(10,1,1) = {"
+a
+a
+f
+c
+d
+c
+p
+v
+A
+E
+c
+c
+c
+c
+a
+"}
+(11,1,1) = {"
+H
+a
+a
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+a
+a
+"}
+(12,1,1) = {"
+H
+a
+a
+a
+a
+c
+c
+c
+c
+c
+c
+c
+a
+a
+a
+"}
+(13,1,1) = {"
+H
+a
+a
+a
+a
+a
+c
+c
+c
+c
+c
+a
+a
+a
+a
+"}
+(14,1,1) = {"
+H
+H
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+H
+"}
+(15,1,1) = {"
+H
+H
+H
+H
+a
+a
+a
+a
+a
+a
+a
+a
+H
+H
+H
 "}
