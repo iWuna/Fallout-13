@@ -1,6 +1,6 @@
 // Tool types
 #define TOOL_CROWBAR 		"Crowbar"
-#define TOOL_MULTITOOL 		"Voltage Scanner"
+#define TOOL_MULTITOOL 		"Multitool"
 #define TOOL_SCREWDRIVER 	"Screwdriver"
 #define TOOL_WIRECUTTER 	"Wirecutter"
 #define TOOL_WRENCH 		"Wrench"
