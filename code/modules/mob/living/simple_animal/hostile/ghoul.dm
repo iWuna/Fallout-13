@@ -42,7 +42,7 @@
 
 	var/multiple_sprites = TRUE
 
-/mob/living/simple_animal/hostile/ghoul/Initialize()
+/mob/living/simple_animal/hostile/ghoul/New()
 	. = ..()
 	if(multiple_sprites)
 		icon_state = initial(icon_state) + "-[rand(1,10)]"
@@ -195,7 +195,7 @@
 	maxHealth = 90
 	health = 90
 
-/mob/living/simple_animal/hostile/ghoul/soldier/Initialize()
+/mob/living/simple_animal/hostile/ghoul/soldier/New()
 	. = ..()
 	if(multiple_sprites)
 		icon_state = initial(icon_state) + "-[rand(1,10)]"
@@ -238,7 +238,7 @@
 	attacktext = "punches"
 	attack_sound = "punch"
 
-/mob/living/simple_animal/hostile/ghoul/scorched/Initialize()
+/mob/living/simple_animal/hostile/ghoul/scorched/New()
 	. = ..()
 	if(multiple_sprites)
 		icon_state = initial(icon_state) + "-[rand(1,5)]"
