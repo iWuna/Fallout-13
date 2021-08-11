@@ -278,7 +278,8 @@
 /mob/living/simple_animal/hostile/dungemobs/ghoul/scorched/ranged/Initialize()
 	. = ..()
 	icon_state = "scorched_r-[rand(1,5)]"
-	icon_living = icon_state
+	icon_living = "scorched_r-[rand(1,5)]"
+	icon_dead = icon_state + "_d"
 
 //////////////////////////Super Mutants////////////////////////
 
