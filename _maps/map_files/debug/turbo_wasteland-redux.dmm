@@ -1,212 +1,4943 @@
-"aa" = (/obj/effect/landmark/start/f13/offduty,/turf/open/floor/f13/wood,/area/f13/building)
-"ab" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavement"; dir = 4},/area/f13/wasteland)
-"ac" = (/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"ad" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalleftborderleft0"},/area/f13/wasteland)
-"ae" = (/turf/open/indestructible/ground/outside/road{icon_state = "verticalleftborderright0"},/area/f13/wasteland)
-"af" = (/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
-"ag" = (/turf/open/indestructible/ground/outside/road{icon_state = "verticalrightborderleft0"},/area/f13/wasteland)
-"ah" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalrightborderright0"},/area/f13/wasteland)
-"ai" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavement"; dir = 8},/area/f13/wasteland)
-"aj" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavement"; dir = 10},/area/f13/wasteland)
-"ak" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavement"},/area/f13/wasteland)
-"al" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavementcorner"; dir = 8},/area/f13/wasteland)
-"am" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerborder"; dir = 8},/area/f13/wasteland)
-"an" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "horizontaltopbordertop0"},/area/f13/wasteland)
-"ao" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerbordercorner"; dir = 8},/area/f13/wasteland)
-"ap" = (/turf/open/indestructible/ground/outside/road{icon_state = "horizontaltopborderbottom0"},/area/f13/wasteland)
-"aq" = (/turf/open/indestructible/ground/outside/road{icon_state = "topshadowright"},/area/f13/wasteland)
-"ar" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalrightborderright3"},/area/f13/wasteland)
-"as" = (/turf/open/indestructible/ground/outside/road{icon_state = "transition2"},/area/f13/wasteland)
-"at" = (/turf/open/indestructible/ground/outside/road{icon_state = "hole"},/area/f13/wasteland)
-"au" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalrightborderright2top"},/area/f13/wasteland)
-"av" = (/turf/open/indestructible/ground/outside/road{icon_state = "transition6"},/area/f13/wasteland)
-"aw" = (/turf/open/indestructible/ground/outside/road{icon_state = "innershade"; dir = 8},/area/f13/wasteland)
-"ax" = (/turf/open/indestructible/ground/outside/road{icon_state = "horizontalbottombordertop0"},/area/f13/wasteland)
-"ay" = (/turf/open/indestructible/ground/outside/road{icon_state = "shadowright"},/area/f13/wasteland)
-"az" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalrightborderright1"},/area/f13/wasteland)
-"aA" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerborder"; dir = 1},/area/f13/wasteland)
-"aB" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "horizontalbottomborderbottom0"},/area/f13/wasteland)
-"aC" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerbordercorner"; dir = 1},/area/f13/wasteland)
-"aD" = (/turf/open/indestructible/ground/outside/road{icon_state = "innershade"; dir = 1},/area/f13/wasteland)
-"aE" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "transition3"},/area/f13/wasteland)
-"aF" = (/turf/open/indestructible/ground/outside/road{icon_state = "verticalleftborderright1"},/area/f13/wasteland)
-"aG" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavement"; dir = 9},/area/f13/wasteland)
-"aH" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavement"; dir = 1},/area/f13/wasteland)
-"aI" = (/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavementcorner"; dir = 1},/area/f13/wasteland)
-"aJ" = (/obj/structure/closet/bus,/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
-"aK" = (/obj/structure/bus_door,/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"aL" = (/turf/open/indestructible/ground/outside/dirt{icon_state = "dirtcorner"},/area/f13/wasteland)
-"aM" = (/turf/open/indestructible/ground/outside/dirt{icon_state = "dirt"},/area/f13/wasteland)
-"aN" = (/turf/open/indestructible/ground/outside/dirt{icon_state = "dirtcorner"; dir = 8},/area/f13/wasteland)
-"aO" = (/turf/open/indestructible/ground/outside/dirt{icon_state = "dirt"; dir = 4},/area/f13/wasteland)
-"aP" = (/turf/open/indestructible/ground/outside/dirt,/area/f13/wasteland)
-"aQ" = (/turf/open/indestructible/ground/outside/dirt{icon_state = "dirt"; dir = 8},/area/f13/wasteland)
-"aR" = (/turf/open/indestructible/ground/outside/dirt{icon_state = "dirt"; dir = 10},/area/f13/wasteland)
-"aS" = (/turf/open/indestructible/ground/outside/dirt{icon_state = "dirtcorner"; dir = 4},/area/f13/wasteland)
-"aT" = (/turf/open/indestructible/ground/outside/dirt{icon_state = "dirt"; dir = 5},/area/f13/wasteland)
-"aU" = (/turf/open/indestructible/ground/outside/dirt{icon_state = "dirt"; dir = 1},/area/f13/wasteland)
-"aV" = (/turf/closed/wall/f13/wood/house/clean,/area/f13/building)
-"aW" = (/obj/structure/chalkboard,/obj/structure/glowshroom,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"aX" = (/obj/structure/dresser,/turf/open/floor/f13/wood,/area/f13/building)
-"aY" = (/obj/structure/chair/comfy,/turf/open/floor/f13/wood,/area/f13/building)
-"aZ" = (/turf/open/floor/plasteel/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"ba" = (/obj/structure/bus_door,/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
-"bb" = (/obj/structure/car,/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
-"bc" = (/obj/structure/closet/crate/wooden,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bd" = (/turf/open/indestructible/ground/outside/dirt{icon_state = "dirtcorner"; dir = 1},/area/f13/wasteland)
-"be" = (/obj/structure/chair/bench,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bf" = (/turf/open/indestructible/ground/outside/water,/area/f13/wasteland)
-"bg" = (/obj/machinery/manned_turret,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bh" = (/obj/structure/window/fulltile/house,/turf/open/indestructible/ground/outside/wood,/area/f13/building)
-"bi" = (/obj/structure/guillotine,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bj" = (/obj/structure/kitchenspike/cross,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bk" = (/obj/structure/ore_box,/obj/machinery/light{icon_state = "tube"; dir = 8},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bl" = (/obj/structure/fermenting_barrel,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bm" = (/obj/structure/table,/obj/item/parcel,/turf/open/floor/f13/wood,/area/f13/building)
-"bn" = (/obj/structure/simple_door/house,/turf/open/floor/f13/wood,/area/f13/building)
-"bo" = (/obj/structure/lamp_post{icon_state = "nvlamp-singles"; dir = 4},/turf/open/indestructible/ground/outside/sidewalk,/area/f13/wasteland)
-"bp" = (/obj/machinery/ammobench/makeshift,/turf/open/floor/f13/wood,/area/f13/building)
-"bq" = (/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"br" = (/obj/structure/fence,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"bs" = (/obj/structure/nest/ghoul,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"bt" = (/obj/structure/lamp_post/quadra,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bu" = (/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bv" = (/obj/effect/landmark/start/f13/overseer,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bw" = (/obj/effect/landmark/start/f13/paladin,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"bx" = (/obj/effect/landmark/start/f13/vaultengineer,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"by" = (/obj/effect/landmark/start/f13/wastelander,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"bz" = (/obj/effect/landmark/observer_start,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bA" = (/obj/structure/safe,/turf/open/floor/f13/wood,/area/f13/building)
-"bB" = (/obj/structure/piano,/turf/open/floor/f13/wood,/area/f13/building)
-"bC" = (/obj/structure/chair/wood/normal{icon_state = "wooden_chair_settler"; dir = 8},/turf/open/floor/f13/wood,/area/f13/building)
-"bD" = (/obj/structure/table,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bE" = (/obj/machinery/light,/turf/open/floor/f13/wood,/area/f13/building)
-"bF" = (/turf/open/indestructible/ground/outside/desert,/area/start)
-"bG" = (/obj/structure/booth{icon_state = "booth_table_end"; dir = 4},/obj/item/storage/box/projectile_components,/turf/open/floor/f13/wood,/area/f13/building)
-"bH" = (/obj/structure/booth/middle{icon_state = "booth_table_middle"; dir = 4},/obj/item/storage/box/projectile_components/advanced,/turf/open/floor/f13/wood,/area/f13/building)
-"bI" = (/obj/structure/table,/obj/item/key/vertibird,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bJ" = (/obj/structure/booth/middle{icon_state = "booth_table_middle"; dir = 4},/obj/item/storage/box/projectile_components/energy,/turf/open/floor/f13/wood,/area/f13/building)
-"bK" = (/obj/structure/booth{icon_state = "booth_table_end"; dir = 8},/obj/item/storage/toolbox/mechanical,/turf/open/floor/f13/wood,/area/f13/building)
-"bL" = (/obj/machinery/bounty_pod,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bM" = (/obj/machinery/bounty_machine,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bN" = (/obj/effect/landmark/latejoin,/turf/open/indestructible/ground/outside/dirt,/area/f13/wasteland)
-"bO" = (/obj/structure/table,/obj/item/crafting/duct_tape,/turf/open/floor/f13/wood,/area/f13/building)
-"bP" = (/turf/open/floor/f13/wood,/area/f13/building)
-"bQ" = (/obj/machinery/light,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"bR" = (/obj/structure/fence,/obj/machinery/light{icon_state = "tube"; dir = 8},/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"bS" = (/obj/structure/fence,/obj/machinery/light{icon_state = "tube"; dir = 4},/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"bT" = (/obj/structure/fence,/obj/machinery/light,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"bU" = (/obj/machinery/light{icon_state = "tube"; dir = 4},/turf/open/floor/f13/wood,/area/f13/building)
-"bV" = (/obj/effect/landmark/start/new_player,/turf/open/indestructible/ground/outside/desert,/area/start)
-"bW" = (/turf/closed/indestructible/splashscreen,/area/start)
-"bX" = (/obj/structure/tires/five,/turf/open/indestructible/ground/outside/sidewalk{icon_state = "outerpavement"},/area/f13/wasteland)
-"bY" = (/obj/structure/tires/two,/turf/open/indestructible/ground/outside/dirt,/area/f13/wasteland)
-"bZ" = (/obj/structure/tires/two,/obj/structure/glowshroom,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"ca" = (/obj/structure/tires/five,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cb" = (/obj/machinery/grill,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cc" = (/obj/structure/tires/five,/turf/open/floor/plasteel/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"cd" = (/obj/effect/mine/explosive,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"ce" = (/obj/effect/mine/explosive,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"cf" = (/obj/structure/table,/obj/item/kitchen/knife,/obj/item/crafting/duct_tape,/turf/open/floor/f13/wood,/area/f13/building)
-"cg" = (/obj/machinery/bounty_pod,/turf/open/floor/f13/wood,/area/f13/building)
-"ch" = (/obj/machinery/bounty_machine/courier/post,/turf/open/floor/f13/wood,/area/f13/building)
-"ci" = (/obj/structure/car/highwayman,/turf/open/indestructible/ground/outside/road,/area/f13/wasteland)
-"cj" = (/obj/structure/cargocrate{icon_state = "cargocrate4"},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"ck" = (/obj/structure/cargocrate{icon_state = "cargocrate5"},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cl" = (/obj/structure/cargocrate{icon_state = "cargocrate3"},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cm" = (/obj/structure/decoration_f13/old_tv,/turf/open/floor/f13/wood,/area/f13/building)
-"cn" = (/obj/structure/table/snooker{icon_state = "nv_pooltable"; dir = 6},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"co" = (/obj/structure/table/snooker,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cp" = (/obj/structure/table/snooker{icon_state = "nv_pooltable"; dir = 10},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cq" = (/obj/structure/table/snooker{icon_state = "nv_pooltable"; dir = 5},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cr" = (/obj/structure/table/snooker{icon_state = "nv_pooltable"; dir = 1},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cs" = (/obj/structure/table/snooker{icon_state = "nv_pooltable"; dir = 9},/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"ct" = (/obj/structure/lattice/catwalk,/turf/open/indestructible/ground/outside/water,/area/f13/wasteland)
-"cu" = (/obj/structure/decoration/rads,/turf/open/floor/plasteel/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"cv" = (/obj/structure/barricade/sandbags,/turf/open/floor/plasteel/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"cw" = (/obj/machinery/manned_turret/ultimate,/turf/open/floor/plasteel/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"cx" = (/obj/structure/barricade/sandbags,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cy" = (/obj/structure/barricade/wooden/strong,/obj/structure/barricade/wooden/planks,/obj/structure/barricade/security,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cz" = (/obj/structure/barricade/wooden/strong,/obj/structure/barricade/wooden/planks,/obj/structure/barricade/security,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"cA" = (/obj/structure/closet/crate/wooden,/obj/item/weldingtool,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cB" = (/obj/structure/target_stake,/obj/item/target/syndicate,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cC" = (/obj/machinery/jukebox,/turf/open/floor/f13/wood,/area/f13/building)
-"cD" = (/obj/machinery/lapvend,/turf/open/floor/f13/wood,/area/f13/building)
-"cE" = (/obj/machinery/workbench/advanced,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cF" = (/obj/machinery/workbench/bottler,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cG" = (/obj/machinery/workbench/forge,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cH" = (/obj/structure/dead_ratvar,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"cI" = (/obj/structure/glowshroom,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cJ" = (/obj/structure/headpike,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cK" = (/obj/structure/mirelurkegg,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"cL" = (/obj/structure/nest/ghoul,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
-"cM" = (/obj/structure/lamp_post/quadra,/turf/open/indestructible/ground/outside/desert,/area/f13/forest)
-"cN" = (/obj/structure/decoration/vent/rusty,/obj/structure/lattice/catwalk,/turf/open/indestructible/ground/outside/water,/area/f13/wasteland)
-"cO" = (/obj/structure/ore_box,/turf/open/indestructible/ground/outside/desert,/area/f13/wasteland)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/landmark/start/f13/offduty,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"ab" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavement";
+	dir = 4
+	},
+/area/f13/wasteland)
+"ac" = (
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"ad" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/wasteland)
+"ae" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalleftborderright0"
+	},
+/area/f13/wasteland)
+"af" = (
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
+"ag" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalrightborderleft0"
+	},
+/area/f13/wasteland)
+"ah" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/wasteland)
+"ai" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavement";
+	dir = 8
+	},
+/area/f13/wasteland)
+"aj" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavement";
+	dir = 10
+	},
+/area/f13/wasteland)
+"ak" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"al" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavementcorner";
+	dir = 8
+	},
+/area/f13/wasteland)
+"am" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerborder";
+	dir = 8
+	},
+/area/f13/wasteland)
+"an" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaltopbordertop0"
+	},
+/area/f13/wasteland)
+"ao" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerbordercorner";
+	dir = 8
+	},
+/area/f13/wasteland)
+"ap" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontaltopborderbottom0"
+	},
+/area/f13/wasteland)
+"aq" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "topshadowright"
+	},
+/area/f13/wasteland)
+"ar" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright3"
+	},
+/area/f13/wasteland)
+"as" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "transition2"
+	},
+/area/f13/wasteland)
+"at" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "hole"
+	},
+/area/f13/wasteland)
+"au" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright2top"
+	},
+/area/f13/wasteland)
+"av" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "transition6"
+	},
+/area/f13/wasteland)
+"aw" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "innershade";
+	dir = 8
+	},
+/area/f13/wasteland)
+"ax" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalbottombordertop0"
+	},
+/area/f13/wasteland)
+"ay" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "shadowright"
+	},
+/area/f13/wasteland)
+"az" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright1"
+	},
+/area/f13/wasteland)
+"aA" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerborder";
+	dir = 1
+	},
+/area/f13/wasteland)
+"aB" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0"
+	},
+/area/f13/wasteland)
+"aC" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerbordercorner";
+	dir = 1
+	},
+/area/f13/wasteland)
+"aD" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "innershade";
+	dir = 1
+	},
+/area/f13/wasteland)
+"aE" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "transition3"
+	},
+/area/f13/wasteland)
+"aF" = (
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalleftborderright1"
+	},
+/area/f13/wasteland)
+"aG" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavement";
+	dir = 9
+	},
+/area/f13/wasteland)
+"aH" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavement";
+	dir = 1
+	},
+/area/f13/wasteland)
+"aI" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavementcorner";
+	dir = 1
+	},
+/area/f13/wasteland)
+"aJ" = (
+/obj/structure/closet/bus,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
+"aK" = (
+/obj/structure/bus_door,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"aL" = (
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirtcorner"
+	},
+/area/f13/wasteland)
+"aM" = (
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirt"
+	},
+/area/f13/wasteland)
+"aN" = (
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirtcorner";
+	dir = 8
+	},
+/area/f13/wasteland)
+"aO" = (
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirt";
+	dir = 4
+	},
+/area/f13/wasteland)
+"aP" = (
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
+"aQ" = (
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirt";
+	dir = 8
+	},
+/area/f13/wasteland)
+"aR" = (
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirt";
+	dir = 10
+	},
+/area/f13/wasteland)
+"aS" = (
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirtcorner";
+	dir = 4
+	},
+/area/f13/wasteland)
+"aT" = (
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirt";
+	dir = 5
+	},
+/area/f13/wasteland)
+"aU" = (
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirt";
+	dir = 1
+	},
+/area/f13/wasteland)
+"aV" = (
+/turf/closed/wall/f13/wood/house/clean,
+/area/f13/building)
+"aW" = (
+/obj/structure/chalkboard,
+/obj/structure/glowshroom,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"aX" = (
+/obj/structure/dresser,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"aY" = (
+/obj/structure/chair/comfy,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"aZ" = (
+/turf/open/floor/plasteel/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/wasteland)
+"ba" = (
+/obj/structure/bus_door,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
+"bb" = (
+/obj/structure/car,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
+"bc" = (
+/obj/structure/closet/crate/wooden,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"bd" = (
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirtcorner";
+	dir = 1
+	},
+/area/f13/wasteland)
+"be" = (
+/obj/structure/chair/bench,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"bf" = (
+/turf/open/indestructible/ground/outside/water,
+/area/f13/wasteland)
+"bg" = (
+/obj/machinery/manned_turret,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"bh" = (
+/obj/structure/window/fulltile/house,
+/turf/open/indestructible/ground/outside/wood,
+/area/f13/building)
+"bi" = (
+/obj/structure/guillotine,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"bj" = (
+/obj/structure/kitchenspike/cross,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"bk" = (
+/obj/structure/ore_box,
+/obj/machinery/light{
+	icon_state = "tube";
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"bl" = (
+/obj/structure/fermenting_barrel,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"bm" = (
+/obj/structure/table,
+/obj/item/parcel,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"bn" = (
+/obj/structure/simple_door/house,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"bo" = (
+/obj/structure/lamp_post{
+	icon_state = "nvlamp-singles";
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"bp" = (
+/obj/machinery/ammobench/makeshift,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"bq" = (
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"br" = (
+/obj/structure/fence,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"bs" = (
+/obj/structure/nest/ghoul,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"bt" = (
+/obj/structure/lamp_post/quadra,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"bu" = (
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"bv" = (
+/obj/effect/landmark/start/f13/overseer,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"bw" = (
+/obj/effect/landmark/start/f13/paladin,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"bx" = (
+/obj/effect/landmark/start/f13/vaultengineer,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"by" = (
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"bz" = (
+/obj/effect/landmark/observer_start,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"bA" = (
+/obj/structure/safe,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"bB" = (
+/obj/structure/piano,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"bC" = (
+/obj/structure/chair/wood/normal{
+	icon_state = "wooden_chair_settler";
+	dir = 8
+	},
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"bD" = (
+/obj/structure/table,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"bE" = (
+/obj/machinery/light,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"bF" = (
+/turf/open/indestructible/ground/outside/desert,
+/area/start)
+"bG" = (
+/obj/structure/booth{
+	icon_state = "booth_table_end";
+	dir = 4
+	},
+/obj/item/storage/box/projectile_components,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"bH" = (
+/obj/structure/booth/middle{
+	icon_state = "booth_table_middle";
+	dir = 4
+	},
+/obj/item/storage/box/projectile_components/advanced,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"bI" = (
+/obj/structure/table,
+/obj/item/key/vertibird,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"bJ" = (
+/obj/structure/booth/middle{
+	icon_state = "booth_table_middle";
+	dir = 4
+	},
+/obj/item/storage/box/projectile_components/energy,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"bK" = (
+/obj/structure/booth{
+	icon_state = "booth_table_end";
+	dir = 8
+	},
+/obj/item/storage/toolbox/mechanical,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"bL" = (
+/obj/machinery/bounty_pod,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"bM" = (
+/obj/machinery/bounty_machine,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"bN" = (
+/obj/effect/landmark/latejoin,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
+"bO" = (
+/obj/structure/table,
+/obj/item/crafting/duct_tape,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"bP" = (
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"bQ" = (
+/obj/machinery/light,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"bR" = (
+/obj/structure/fence,
+/obj/machinery/light{
+	icon_state = "tube";
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"bS" = (
+/obj/structure/fence,
+/obj/machinery/light{
+	icon_state = "tube";
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"bT" = (
+/obj/structure/fence,
+/obj/machinery/light,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"bU" = (
+/obj/machinery/light{
+	icon_state = "tube";
+	dir = 4
+	},
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"bV" = (
+/obj/effect/landmark/start/new_player,
+/turf/open/indestructible/ground/outside/desert,
+/area/start)
+"bW" = (
+/turf/closed/indestructible/splashscreen,
+/area/start)
+"bX" = (
+/obj/structure/tires/five,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland)
+"bY" = (
+/obj/structure/tires/two,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
+"bZ" = (
+/obj/structure/tires/two,
+/obj/structure/glowshroom,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"ca" = (
+/obj/structure/tires/five,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cb" = (
+/obj/machinery/grill,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cc" = (
+/obj/structure/tires/five,
+/turf/open/floor/plasteel/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/wasteland)
+"cd" = (
+/obj/effect/mine/explosive,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"ce" = (
+/obj/effect/mine/explosive,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"cf" = (
+/obj/structure/table,
+/obj/item/kitchen/knife,
+/obj/item/crafting/duct_tape,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"cg" = (
+/obj/machinery/bounty_pod,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"ch" = (
+/obj/machinery/bounty_machine/courier/post,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"ci" = (
+/obj/structure/car/highwayman,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
+"cj" = (
+/obj/structure/cargocrate{
+	icon_state = "cargocrate4"
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"ck" = (
+/obj/structure/cargocrate{
+	icon_state = "cargocrate5"
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cl" = (
+/obj/structure/cargocrate{
+	icon_state = "cargocrate3"
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cm" = (
+/obj/structure/decoration_f13/old_tv,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"cn" = (
+/obj/structure/table/snooker{
+	icon_state = "nv_pooltable";
+	dir = 6
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"co" = (
+/obj/structure/table/snooker,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cp" = (
+/obj/structure/table/snooker{
+	icon_state = "nv_pooltable";
+	dir = 10
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cq" = (
+/obj/structure/table/snooker{
+	icon_state = "nv_pooltable";
+	dir = 5
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cr" = (
+/obj/structure/table/snooker{
+	icon_state = "nv_pooltable";
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cs" = (
+/obj/structure/table/snooker{
+	icon_state = "nv_pooltable";
+	dir = 9
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"ct" = (
+/obj/structure/lattice/catwalk,
+/turf/open/indestructible/ground/outside/water,
+/area/f13/wasteland)
+"cu" = (
+/obj/structure/decoration/rads,
+/turf/open/floor/plasteel/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/wasteland)
+"cv" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plasteel/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/wasteland)
+"cw" = (
+/obj/machinery/manned_turret/ultimate,
+/turf/open/floor/plasteel/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/wasteland)
+"cx" = (
+/obj/structure/barricade/sandbags,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cy" = (
+/obj/structure/barricade/wooden/strong,
+/obj/structure/barricade/wooden/planks,
+/obj/structure/barricade/security,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cz" = (
+/obj/structure/barricade/wooden/strong,
+/obj/structure/barricade/wooden/planks,
+/obj/structure/barricade/security,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"cA" = (
+/obj/structure/closet/crate/wooden,
+/obj/item/weldingtool,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cB" = (
+/obj/structure/target_stake,
+/obj/item/target/syndicate,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cC" = (
+/obj/machinery/jukebox,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"cD" = (
+/obj/machinery/lapvend,
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"cE" = (
+/obj/machinery/workbench/advanced,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cF" = (
+/obj/machinery/workbench/bottler,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cG" = (
+/obj/machinery/workbench/forge,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cH" = (
+/obj/structure/dead_ratvar,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"cI" = (
+/obj/structure/glowshroom,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cJ" = (
+/obj/structure/headpike,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cK" = (
+/obj/structure/mirelurkegg,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"cL" = (
+/obj/structure/nest/ghoul,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"cM" = (
+/obj/structure/lamp_post/quadra,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/forest)
+"cN" = (
+/obj/structure/decoration/vent/rusty,
+/obj/structure/lattice/catwalk,
+/turf/open/indestructible/ground/outside/water,
+/area/f13/wasteland)
+"cO" = (
+/obj/structure/ore_box,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 
 (1,1,1) = {"
-buabacadaeafafagahacaibububububububububucdbububububububububqcebqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbFbFbFbFbFbFbFbFbFbFbFbFbFbFbF
-buabacadaeafafagahacaibububububububububububububububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbFbFbFbFbFbFbFbFbFbFbFbFbFbFbF
-buabacadaeafafagahacaibucdbububububububububububucdbububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbFbFbFbFbFbFbFbFbFbFbFbFbFbFbF
-buabacadaeafafagahacaibubububucdbubububucdbububububububucdbububububububqbqbrbrbrbrbrbrbrbqbqbqbqbqbFbFbFbFbFbFbFbFbFbFbFbFbFbFbF
-buabboadaeafafagahacajbXakakakakakakakakakakakakakakakakakakakakakakalbqbqbrbqbqbqbqbqbrbqbqbqbqbqbFbFbFbFbFbFbFbFbFbFbFbFbFbFbF
-buabacadaeafafagahacacacacacacacacacacacacacacacacacacacacacacacacacaibqbqbrbqbqbqbqbqbrbqbqbqbqbqbFbFbFbFbFbFbFbFbFbFbFbFbFbFbF
-buabacadaeafafagamanananananananananananananananananananananananaoacaibqbqbRbqbqbsbqbqbSbqbqbqbqbqbFbFbFbFbFbFbFbFbFbFbFbFbFbFbF
-buabacadaeafafafapapapapapapapapapapapapapapapapapapapapapapapaqaracaibqbqbrbqbqbqbqbqbrbqbqbqbqbqbFbFbFbFbFbFbFbVbFbFbFbFbFbFbF
-buabacadaeasafafafafbbafafciafatafafafafafafafafafafafaJafafafagauacaibqbqbrbrbrbTbrbrbrbqbqbqbqbqbFbFbFbFbFbFbFbFbFbFbFbFbFbFbF
-buabacadaeavafawaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxayazacaibqbqbqbqbqbqbqbqbqbqbqbqbqbqbFbFbFbFbFbFbFbFbFbFbFbFbFbFbF
-buabacadaeafafagaAaBaBaBaBaBaBaBaBaBaBaBaBaBaBaBaBaBaBaBaBaBaBaBaCacaibqbqbqbqbqbqbqbqbqbqbqbqbqbqbFbFbFbFbFbFbFbFbFbFbFbFbFbFbF
-buabacadaeaDafagahaEacacacacaKacacacacacacacacacacacacacacacacacacacaibqbqbqbqbqbqbqbqbqbqbqbqbqbqbFbFbFbFbFbFbFbFbFbFbFbFbFbFbF
-buabacadaFafafagahacaGaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaIbqbqbqbqbqbqbqbqbqbqbqbqbqbqbFbFbFbFbFbFbFbFbFbFbFbFbFbFbF
-buabacadaeafafagahacaibtbububuaLaMaMaMaMaNbububububububububububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbFbFbFbFbFbFbFbFbFbFbFbFbFbFbF
-buabboadaeatafagahacaibubububuaOaPaPaPaPaQbubububububububqbqbqbububububububububqbqbqbqbqbqbqbqbqbqbWbFbFbFbFbFbFbFbFbFbFbFbFbFbF
-buabacadaeafafagahacaibubububuaOaPaPaPaPaRaNbubububububvbwbxbybububububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubububuaSaUaTaPaPaPaRaNbubLbMbubqbqbqbqbububububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubububububuaOaPaPaPbYaQbububububqbqbqbqbububububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubububububuaOaPaPaPaPaRaNcEcFcGbubububububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubububububuaOaPaPaPaPaPaQbubububububZcIbQbububQbubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubububububuaSaTaPaPaPaPaQbububububucIaVaVaVaVaVaVbubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibububububucObjaOaPaPaPaPaQbjbubibuaWcIaVaXaYaYbPaVbubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabboadaeafafagahacaibububucjbubucaaOaPbNaPaPaQbububububububhbPbmbObPaVbubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibububucIckbubkaOaPaPaPaPaQbucbbubzbIbDbhbPbmcfbPaVbububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibuclbubucAbcblaSaUaUaUaUbdbububububebeaVbPbmbObUaVbububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubububububuaZaZaZaZaZaZccbuaVaVbnaVaVaVbPcgchbPaVbububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubucncocpbuaZbfbfctbfbfaZbgaVbAbPcmbpbBbCbPbPbPaVbubububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubucqcrcsbuaZbfbfcNbfbfaZbgaVbPbPbPbPbPbPaabPbPaVbubububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafbaagahacaibubububububuaZbfbfctbfbfaZbgaVcDbEbGbHbJbKbPbEcCaVbubububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubububucJbucucvaZcwaZcvcubuaVaVaVaVaVaVaVaVaVaVaVbubububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibububububucOcxcxcxcxcxcxcxbubububububububububububububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabboadaeafafagahacaibububucycycxcxbububububucxcxcycybububububububububububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibububucybububububububububububucybububububububububububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibububucybububububububububububucybububububububububububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibububucybububububububububububucybububububububububububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibububucybubucBbucBbucBbucBbubucybububububububububububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafatagahacaibubqbqczczcKbqbsbqbubucLbubucycybqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqczczczczczcycycycycycybubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbubububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbubububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabboadaeafafagahacaibubqbqbqbqbqbqcMbqbububtbububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbubububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbubububububububqbqbqbqbqbqcHbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabboadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbubububububqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbubububububqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbubububububqbqbqbqbqbqbq
-buabacadaeatafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbubububububqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbubububububqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbubububububqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbubububububqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbubububububqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbubububububqbqbqbqbqbqbq
-buabacadaeafafagahacaibubqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabboadaeafafagahacaibubububububububububububububububububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
-buabacadaeafafagahacaibubububububububububububububububububububububqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbqbq
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+"}
+(2,1,1) = {"
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+"}
+(3,1,1) = {"
+ac
+ac
+ac
+ac
+bo
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+bo
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+bo
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+bo
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+bo
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+bo
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+bo
+ac
+"}
+(4,1,1) = {"
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+"}
+(5,1,1) = {"
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+aF
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+"}
+(6,1,1) = {"
+af
+af
+af
+af
+af
+af
+af
+af
+as
+av
+af
+aD
+af
+af
+at
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+at
+af
+af
+af
+af
+af
+af
+af
+af
+"}
+(7,1,1) = {"
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+ba
+af
+af
+af
+af
+af
+af
+af
+at
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+"}
+(8,1,1) = {"
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+af
+af
+aw
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+"}
+(9,1,1) = {"
+ah
+ah
+ah
+ah
+ah
+ah
+am
+ap
+af
+ax
+aA
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+"}
+(10,1,1) = {"
+ac
+ac
+ac
+ac
+ac
+ac
+an
+ap
+af
+ax
+aB
+aE
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+"}
+(11,1,1) = {"
+ai
+ai
+ai
+ai
+aj
+ac
+an
+ap
+bb
+ax
+aB
+ac
+aG
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+"}
+(12,1,1) = {"
+bu
+bu
+bu
+bu
+bX
+ac
+an
+ap
+af
+ax
+aB
+ac
+aH
+bt
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+"}
+(13,1,1) = {"
+bu
+bu
+cd
+bu
+ak
+ac
+an
+ap
+af
+ax
+aB
+ac
+aH
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+cl
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(14,1,1) = {"
+bu
+bu
+bu
+bu
+ak
+ac
+an
+ap
+ci
+ax
+aB
+ac
+aH
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+cn
+cq
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(15,1,1) = {"
+bu
+bu
+bu
+bu
+ak
+ac
+an
+ap
+af
+ax
+aB
+aK
+aH
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+cj
+cI
+bu
+bu
+co
+cr
+bu
+bu
+bu
+cy
+cy
+cy
+cy
+cy
+cz
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(16,1,1) = {"
+bu
+bu
+bu
+cd
+ak
+ac
+an
+ap
+at
+ax
+aB
+ac
+aH
+aL
+aO
+aO
+aS
+bu
+bu
+bu
+bu
+bu
+bu
+ck
+cA
+bu
+cp
+cs
+bu
+cJ
+bu
+cy
+bu
+bu
+bu
+bu
+cz
+cz
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(17,1,1) = {"
+bu
+bu
+bu
+bu
+ak
+ac
+an
+ap
+af
+ax
+aB
+ac
+aH
+aM
+aP
+aP
+aU
+bu
+bu
+bu
+bu
+cO
+bu
+bu
+bc
+bu
+bu
+bu
+bu
+bu
+cO
+cx
+bu
+bu
+bu
+bu
+cK
+cz
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(18,1,1) = {"
+bu
+bu
+bu
+bu
+ak
+ac
+an
+ap
+af
+ax
+aB
+ac
+aH
+aM
+aP
+aP
+aT
+aO
+aO
+aO
+aS
+bj
+ca
+bk
+bl
+aZ
+aZ
+aZ
+aZ
+cu
+cx
+cx
+bu
+bu
+bu
+cB
+bq
+cz
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(19,1,1) = {"
+bu
+bu
+bu
+bu
+ak
+ac
+an
+ap
+af
+ax
+aB
+ac
+aH
+aM
+aP
+aP
+aP
+aP
+aP
+aP
+aT
+aO
+aO
+aO
+aS
+aZ
+bf
+bf
+bf
+cv
+cx
+bu
+bu
+bu
+bu
+bu
+bs
+cz
+bq
+bq
+cM
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(20,1,1) = {"
+bu
+bu
+bu
+bu
+ak
+ac
+an
+ap
+af
+ax
+aB
+ac
+aH
+aM
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aP
+aU
+aZ
+bf
+bf
+bf
+aZ
+cx
+bu
+bu
+bu
+bu
+cB
+bq
+cz
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(21,1,1) = {"
+cd
+bu
+bu
+cd
+ak
+ac
+an
+ap
+af
+ax
+aB
+ac
+aH
+aN
+aQ
+aR
+aP
+aP
+aP
+aP
+aP
+aP
+bN
+aP
+aU
+aZ
+ct
+cN
+ct
+cw
+cx
+bu
+bu
+bu
+bu
+bu
+bu
+cy
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(22,1,1) = {"
+bu
+bu
+bu
+bu
+ak
+ac
+an
+ap
+af
+ax
+aB
+ac
+aH
+bu
+bu
+aN
+aR
+bY
+aP
+aP
+aP
+aP
+aP
+aP
+aU
+aZ
+bf
+bf
+bf
+aZ
+cx
+bu
+bu
+bu
+bu
+cB
+bu
+cy
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(23,1,1) = {"
+bu
+bu
+bu
+bu
+ak
+ac
+an
+ap
+af
+ax
+aB
+ac
+aH
+bu
+bu
+bu
+aN
+aQ
+aR
+aP
+aP
+aP
+aP
+aP
+aU
+aZ
+bf
+bf
+bf
+cv
+cx
+bu
+bu
+bu
+bu
+bu
+cL
+cy
+bu
+bu
+bt
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(24,1,1) = {"
+bu
+bu
+bu
+bu
+ak
+ac
+an
+ap
+af
+ax
+aB
+ac
+aH
+bu
+bu
+bu
+bu
+bu
+aN
+aQ
+aQ
+aQ
+aQ
+aQ
+bd
+cc
+aZ
+aZ
+aZ
+cu
+cx
+cx
+bu
+bu
+bu
+cB
+bu
+cy
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(25,1,1) = {"
+bu
+bu
+cd
+bu
+ak
+ac
+an
+ap
+af
+ax
+aB
+ac
+aH
+bu
+bu
+bu
+bL
+bu
+cE
+bu
+bu
+bj
+bu
+bu
+bu
+bu
+bg
+bg
+bg
+bu
+bu
+cx
+bu
+bu
+bu
+bu
+bu
+cy
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(26,1,1) = {"
+bu
+bu
+bu
+bu
+ak
+ac
+an
+ap
+af
+ax
+aB
+ac
+aH
+bu
+bu
+bu
+bM
+bu
+cF
+bu
+bu
+bu
+bu
+cb
+bu
+aV
+aV
+aV
+aV
+aV
+bu
+cy
+bu
+bu
+bu
+bu
+cy
+cy
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(27,1,1) = {"
+bu
+bu
+bu
+bu
+ak
+ac
+an
+ap
+af
+ax
+aB
+ac
+aH
+bu
+bu
+bu
+bu
+bu
+cG
+bu
+bu
+bi
+bu
+bu
+bu
+aV
+bA
+bP
+cD
+aV
+bu
+cy
+cy
+cy
+cy
+cy
+cy
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(28,1,1) = {"
+bu
+bu
+bu
+bu
+ak
+ac
+an
+ap
+aJ
+ax
+aB
+ac
+aH
+bu
+bu
+bv
+bq
+bq
+bu
+bu
+bu
+bu
+bu
+bz
+bu
+bn
+bP
+bP
+bE
+aV
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(29,1,1) = {"
+bu
+bu
+bu
+cd
+ak
+ac
+an
+ap
+af
+ax
+aB
+ac
+aH
+bu
+bq
+bw
+bq
+bq
+bu
+bu
+bu
+aW
+bu
+bI
+be
+aV
+cm
+bP
+bG
+aV
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(30,1,1) = {"
+bq
+bq
+bq
+bu
+ak
+ac
+an
+ap
+af
+ax
+aB
+ac
+aH
+bu
+bq
+bx
+bq
+bq
+bu
+bZ
+cI
+cI
+bu
+bD
+be
+aV
+bp
+bP
+bH
+aV
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(31,1,1) = {"
+ce
+bq
+bq
+bu
+ak
+ac
+an
+ap
+af
+ax
+aB
+ac
+aH
+bu
+bq
+by
+bq
+bq
+bu
+cI
+aV
+aV
+bh
+bh
+aV
+aV
+bB
+bP
+bJ
+aV
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(32,1,1) = {"
+bq
+bq
+bq
+bu
+ak
+ac
+an
+aq
+ag
+ay
+aB
+ac
+aH
+bu
+bu
+bu
+bu
+bu
+bu
+bQ
+aV
+aX
+bP
+bP
+bP
+bP
+bC
+bP
+bK
+aV
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+"}
+(33,1,1) = {"
+bq
+bq
+bq
+bu
+ak
+ac
+ao
+ar
+au
+az
+aC
+ac
+aH
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+aV
+aY
+bm
+bm
+bm
+cg
+bP
+aa
+bP
+aV
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(34,1,1) = {"
+bq
+bq
+bq
+bu
+ak
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+aH
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+aV
+aY
+bO
+cf
+bO
+ch
+bP
+bP
+bE
+aV
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+cH
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(35,1,1) = {"
+bq
+bq
+bq
+bu
+al
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+aI
+bu
+bu
+bu
+bu
+bu
+bu
+bQ
+aV
+bP
+bP
+bP
+bU
+bP
+bP
+bP
+cC
+aV
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(36,1,1) = {"
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+bu
+bu
+bu
+bu
+aV
+aV
+aV
+aV
+aV
+aV
+aV
+aV
+aV
+aV
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(37,1,1) = {"
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+bu
+bu
+bq
+bq
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(38,1,1) = {"
+bq
+bq
+bq
+br
+br
+br
+bR
+br
+br
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(39,1,1) = {"
+bq
+bq
+bq
+br
+bq
+bq
+bq
+bq
+br
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(40,1,1) = {"
+bq
+bq
+bq
+br
+bq
+bq
+bq
+bq
+br
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(41,1,1) = {"
+bq
+bq
+bq
+br
+bq
+bq
+bs
+bq
+bT
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(42,1,1) = {"
+bq
+bq
+bq
+br
+bq
+bq
+bq
+bq
+br
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+bu
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(43,1,1) = {"
+bq
+bq
+bq
+br
+bq
+bq
+bq
+bq
+br
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(44,1,1) = {"
+bq
+bq
+bq
+br
+br
+br
+bS
+br
+br
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(45,1,1) = {"
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(46,1,1) = {"
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(47,1,1) = {"
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(48,1,1) = {"
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(49,1,1) = {"
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(50,1,1) = {"
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bW
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(51,1,1) = {"
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(52,1,1) = {"
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(53,1,1) = {"
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+"}
+(54,1,1) = {"
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+"}
+(55,1,1) = {"
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+"}
+(56,1,1) = {"
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+"}
+(57,1,1) = {"
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bV
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bu
+bq
+bq
+bq
+"}
+(58,1,1) = {"
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(59,1,1) = {"
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(60,1,1) = {"
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(61,1,1) = {"
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(62,1,1) = {"
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(63,1,1) = {"
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+"}
+(64,1,1) = {"
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
 "}

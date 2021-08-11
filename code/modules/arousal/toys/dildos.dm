@@ -14,6 +14,7 @@
 	var/dildo_shape 	= "human"
 	var/dildo_size		= 2
 	var/dildo_type		= "dildo"//pretty much just used for the icon state
+	var/random_color	= FALSE
 	var/random_size 	= FALSE
 	var/random_shape 	= FALSE
 	var/is_knotted		= FALSE
@@ -102,27 +103,27 @@
 	name 				= "knotted dildo"
 	attack_verb 		= list("penetrated", "knotted", "slapped", "inseminated")
 
-obj/item/dildo/human
+/obj/item/dildo/human
 	dildo_shape 		= "human"
 	name 				= "human dildo"
 	attack_verb = list("penetrated", "slapped", "inseminated")
 
-obj/item/dildo/plain
+/obj/item/dildo/plain
 	dildo_shape 		= "plain"
 	name 				= "plain dildo"
 	attack_verb 		= list("penetrated", "slapped", "inseminated")
 
-obj/item/dildo/flared
+/obj/item/dildo/flared
 	dildo_shape 		= "flared"
 	name 				= "flared dildo"
 	attack_verb 		= list("penetrated", "slapped", "neighed", "gaped", "prolapsed", "inseminated")
 
-obj/item/dildo/flared/huge
+/obj/item/dildo/flared/huge
 	name 				= "literal horse cock"
 	desc 				= "THIS THING IS HUGE!"
 	dildo_size 			= 4
 
-obj/item/dildo/custom
+/obj/item/dildo/custom
 	name 				= "customizable dildo"
 	desc 				= "Thanks to significant advances in synthetic nanomaterials, this dildo is capable of taking on many different forms to fit the user's preferences! Pricy!"
 	can_customize		= TRUE
@@ -133,9 +134,9 @@ obj/item/dildo/custom
 // Suicide acts, by request
 
 /obj/item/dildo/proc/manual_suicide(mob/living/user)
-		user.visible_message("<span class='suicide'>[user] finally finishes deepthroating the [src], and their life.</span>")
-		user.adjustOxyLoss(200)
-		user.death(0)
+	user.visible_message("<span class='suicide'>[user] finally finishes deepthroating the [src], and their life.</span>")
+	user.adjustOxyLoss(200)
+	user.death(0)
 
 /obj/item/dildo/suicide_act(mob/living/user)
 //	is_knotted = ((src.dildo_shape == "knotted")?"They swallowed the knot":"Their face is turning blue")

@@ -1,25 +1,175 @@
-"a" = (/turf/closed/wall/r_wall/f13/vault,/area/shuttle/supply)
-"b" = (/turf/open/floor/plasteel/floorgrime,/area/shuttle/supply)
-"c" = (/obj/machinery/light{dir = 1},/turf/open/floor/plasteel/floorgrime,/area/shuttle/supply)
-"d" = (/obj/structure/simple_door/bunker,/turf/open/floor/plating,/area/shuttle/supply)
-"e" = (/obj/machinery/light{dir = 8},/turf/open/floor/plasteel/floorgrime,/area/shuttle/supply)
-"f" = (/obj/machinery/conveyor{dir = 4; id = "QMLoad2"},/obj/machinery/door/poddoor{id = "QMLoaddoor2"; name = "supply dock loading door"},/turf/open/floor/plating,/area/shuttle/supply)
-"g" = (/obj/machinery/button/door{dir = 2; id = "QMLoaddoor2"; name = "Loading Doors"; pixel_x = 24; pixel_y = 8},/obj/machinery/button/door{id = "QMLoaddoor"; name = "Loading Doors"; pixel_x = 24; pixel_y = -8},/obj/machinery/light{dir = 4},/turf/open/floor/plasteel/floorgrime,/area/shuttle/supply)
-"i" = (/obj/machinery/light,/turf/open/floor/plasteel/floorgrime,/area/shuttle/supply)
-"j" = (/obj/machinery/conveyor{dir = 8; id = "QMLoad"},/obj/machinery/door/poddoor{id = "QMLoaddoor"; name = "supply dock loading door"},/turf/open/floor/plating,/area/shuttle/supply)
-"k" = (/obj/docking_port/mobile/supply{dwidth = 5; width = 12},/obj/structure/simple_door/bunker,/turf/open/floor/plating,/area/shuttle/supply)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"b" = (
+/turf/open/floor/plasteel/floorgrime,
+/area/shuttle/supply)
+"f" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "QMLoad2"
+	},
+/obj/machinery/door/poddoor{
+	id = "QMLoaddoor2";
+	name = "supply dock loading door"
+	},
+/turf/open/floor/plating,
+/area/shuttle/supply)
+"g" = (
+/obj/structure/simple_door/bunker,
+/turf/open/floor/plating,
+/area/shuttle/supply)
+"h" = (
+/obj/machinery/button/door{
+	dir = 2;
+	id = "QMLoaddoor2";
+	name = "Loading Doors";
+	pixel_x = 24;
+	pixel_y = 8
+	},
+/obj/machinery/button/door{
+	id = "QMLoaddoor";
+	name = "Loading Doors";
+	pixel_x = 24;
+	pixel_y = -8
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel/floorgrime,
+/area/shuttle/supply)
+"i" = (
+/obj/docking_port/mobile/supply{
+	dwidth = 5;
+	width = 12
+	},
+/obj/structure/simple_door/bunker,
+/turf/open/floor/plating,
+/area/shuttle/supply)
+"j" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "QMLoad"
+	},
+/obj/machinery/door/poddoor{
+	id = "QMLoaddoor";
+	name = "supply dock loading door"
+	},
+/turf/open/floor/plating,
+/area/shuttle/supply)
+"q" = (
+/obj/machinery/light,
+/turf/open/floor/plasteel/floorgrime,
+/area/shuttle/supply)
+"s" = (
+/turf/closed/wall/r_wall/f13/vault,
+/area/shuttle/supply)
+"w" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel/floorgrime,
+/area/shuttle/supply)
+"x" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel/floorgrime,
+/area/shuttle/supply)
 
 (1,1,1) = {"
-aaaaaaa
-abbcbba
-abbbbba
-abbbbbf
-abbbbbd
-aebbbga
-abbbbbk
-abbbbbj
-abbbbba
-abbbbba
-abbibba
-aaaaaaa
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+"}
+(2,1,1) = {"
+s
+b
+b
+b
+b
+x
+b
+b
+b
+b
+b
+s
+"}
+(3,1,1) = {"
+s
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+s
+"}
+(4,1,1) = {"
+s
+w
+b
+b
+b
+b
+b
+b
+b
+b
+q
+s
+"}
+(5,1,1) = {"
+s
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+s
+"}
+(6,1,1) = {"
+s
+b
+b
+b
+b
+h
+b
+b
+b
+b
+b
+s
+"}
+(7,1,1) = {"
+s
+s
+s
+f
+g
+s
+i
+j
+s
+s
+s
+s
 "}

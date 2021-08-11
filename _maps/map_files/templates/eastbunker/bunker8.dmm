@@ -1,64 +1,604 @@
-"a" = (/turf/closed/wall/rust,/area/f13/bunker)
-"b" = (/obj/structure/table,/obj/effect/spawner/lootdrop/f13/foodspawner,/obj/machinery/light/small{dir = 1},/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/bunker)
-"c" = (/obj/structure/table,/obj/effect/spawner/lootdrop/f13/alcoholspawner,/obj/effect/spawner/lootdrop/f13/foodspawner,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/bunker)
-"d" = (/obj/structure/table,/obj/effect/spawner/lootdrop/f13/foodspawner,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/bunker)
-"e" = (/obj/structure/rack,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/bunker)
-"f" = (/obj/structure/closet/fridge/standard,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/bunker)
-"g" = (/obj/structure/chair{dir = 1; icon_state = "chair"; tag = "icon-chair (NORTH)"},/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/bunker)
-"h" = (/obj/item/chair,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/bunker)
-"i" = (/obj/effect/spawner/lootdrop/f13/foodspawner,/obj/structure/chair{dir = 4},/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/bunker)
-"j" = (/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/bunker)
-"k" = (/obj/machinery/light/small{dir = 8},/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/bunker)
-"l" = (/obj/item/rack_parts,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/bunker)
-"m" = (/obj/structure/mirror{dir = 8; pixel_y = 28},/obj/structure/sink{dir = 1; pixel_y = 23; tag = "icon-sink (NORTH)"},/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/bunker)
-"n" = (/obj/structure/table,/obj/effect/spawner/lootdrop/f13/alcoholspawner,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/bunker)
-"o" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/f13/foodspawner,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/bunker)
-"p" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/f13/resourcespawner,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/bunker)
-"q" = (/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/bunker)
-"r" = (/obj/machinery/light/small,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/bunker)
-"s" = (/turf/template_noop,/area/template_noop)
-"t" = (/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/bunker)
-"u" = (/obj/machinery/shower{layer = 2.8; pixel_y = 32},/obj/structure/decoration/vent,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/bunker)
-"v" = (/obj/machinery/shower{layer = 2.8; pixel_y = 32},/obj/structure/decoration/vent,/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/bunker)
-"w" = (/obj/structure/simple_door/bunker/glass,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/bunker)
-"x" = (/obj/structure/fans/tiny,/obj/machinery/light/small{dir = 8},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/bunker)
-"y" = (/obj/structure/simple_door/bunker,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/bunker)
-"z" = (/obj/structure/simple_door/bunker,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/bunker)
-"A" = (/obj/structure/fans/tiny,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/bunker)
-"B" = (/obj/structure/sign/poster/prewar/poster89{pixel_y = 29},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/bunker)
-"C" = (/obj/machinery/shower{dir = 1; icon_state = "shower"},/obj/structure/decoration/vent,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/bunker)
-"D" = (/obj/machinery/light/small{dir = 8},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/bunker)
-"E" = (/obj/effect/decal/remains/human,/obj/effect/spawner/lootdrop/clothing_high,/obj/effect/decal/cleanable/blood/old{icon_state = "floor5-old"; tag = "icon-floor5-old"},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/bunker)
-"F" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/bunker)
-"G" = (/obj/structure/closet/cabinet,/obj/effect/spawner/lootdrop/f13/traitbooks,/turf/open/floor/carpet/black,/area/f13/bunker)
-"H" = (/turf/open/floor/carpet/black,/area/f13/bunker)
-"I" = (/obj/structure/bed,/obj/structure/sign/poster/contraband/pinup_shower{pixel_y = 31},/turf/open/floor/carpet/black,/area/f13/bunker)
-"J" = (/obj/effect/decal/cleanable/blood/old{icon_state = "floor6-old"; pixel_x = 5; pixel_y = 6; tag = "icon-floor6-old"},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/bunker)
-"K" = (/obj/structure/debris/v4,/obj/effect/decal/remains/human,/obj/effect/decal/cleanable/blood/old{icon_state = "floor1-old"},/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/bunker)
-"L" = (/obj/structure/table,/obj/effect/spawner/lootdrop/f13/crafting,/obj/effect/spawner/lootdrop/f13/attachments,/obj/effect/spawner/lootdrop/f13/resourcespawner,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/bunker)
-"M" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/f13/weapon/melee/tier4,/obj/effect/spawner/lootdrop/f13/alcoholspawner,/turf/open/floor/carpet/black,/area/f13/bunker)
-"N" = (/obj/machinery/light/small,/turf/open/floor/carpet/black,/area/f13/bunker)
-"O" = (/obj/structure/bed,/turf/open/floor/carpet/black,/area/f13/bunker)
-"P" = (/obj/structure/chair{dir = 4; icon_state = "chair"; tag = "icon-chair (EAST)"},/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/bunker)
-"Q" = (/obj/machinery/workbench/advanced,/obj/effect/spawner/lootdrop/f13/armor/tier3,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/bunker)
-"R" = (/obj/structure/decoration/vent,/obj/machinery/shower{dir = 4},/obj/machinery/light/small{dir = 1},/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/bunker)
-"S" = (/obj/structure/decoration/vent,/obj/machinery/shower{dir = 8; icon_state = "shower"; tag = "icon-shower (WEST)"},/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/bunker)
-"T" = (/obj/structure/decoration/vent,/obj/machinery/shower{dir = 4},/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/bunker)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/wall/rust,
+/area/f13/bunker)
+"b" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/foodspawner,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess"
+	},
+/area/f13/bunker)
+"c" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/alcoholspawner,
+/obj/effect/spawner/lootdrop/f13/foodspawner,
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess"
+	},
+/area/f13/bunker)
+"d" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/foodspawner,
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess"
+	},
+/area/f13/bunker)
+"e" = (
+/obj/structure/rack,
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess"
+	},
+/area/f13/bunker)
+"f" = (
+/obj/structure/closet/fridge/standard,
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess"
+	},
+/area/f13/bunker)
+"g" = (
+/obj/structure/chair{
+	dir = 1;
+	icon_state = "chair";
+	tag = "icon-chair (NORTH)"
+	},
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess"
+	},
+/area/f13/bunker)
+"h" = (
+/obj/item/chair,
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess"
+	},
+/area/f13/bunker)
+"i" = (
+/obj/effect/spawner/lootdrop/f13/foodspawner,
+/obj/structure/chair{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess"
+	},
+/area/f13/bunker)
+"j" = (
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess"
+	},
+/area/f13/bunker)
+"k" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess"
+	},
+/area/f13/bunker)
+"l" = (
+/obj/item/rack_parts,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bunker)
+"m" = (
+/obj/structure/mirror{
+	dir = 8;
+	pixel_y = 28
+	},
+/obj/structure/sink{
+	dir = 1;
+	pixel_y = 23;
+	tag = "icon-sink (NORTH)"
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bunker)
+"n" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/alcoholspawner,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bunker)
+"o" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/foodspawner,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/bunker)
+"p" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/resourcespawner,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/bunker)
+"q" = (
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bunker)
+"r" = (
+/obj/machinery/light/small,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bunker)
+"s" = (
+/turf/template_noop,
+/area/template_noop)
+"t" = (
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/bunker)
+"u" = (
+/obj/machinery/shower{
+	layer = 2.8;
+	pixel_y = 32
+	},
+/obj/structure/decoration/vent,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bunker)
+"v" = (
+/obj/machinery/shower{
+	layer = 2.8;
+	pixel_y = 32
+	},
+/obj/structure/decoration/vent,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bunker)
+"w" = (
+/obj/structure/simple_door/bunker/glass,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/bunker)
+"x" = (
+/obj/structure/fans/tiny,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/bunker)
+"y" = (
+/obj/structure/simple_door/bunker,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/bunker)
+"z" = (
+/obj/structure/simple_door/bunker,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bunker)
+"A" = (
+/obj/structure/fans/tiny,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/bunker)
+"B" = (
+/obj/structure/sign/poster/prewar/poster89{
+	pixel_y = 29
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/bunker)
+"C" = (
+/obj/machinery/shower{
+	dir = 1;
+	icon_state = "shower"
+	},
+/obj/structure/decoration/vent,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bunker)
+"D" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/bunker)
+"E" = (
+/obj/effect/decal/remains/human,
+/obj/effect/spawner/lootdrop/clothing_high,
+/obj/effect/decal/cleanable/blood/old{
+	icon_state = "floor5-old";
+	tag = "icon-floor5-old"
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/bunker)
+"F" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/bunker)
+"G" = (
+/obj/structure/closet/cabinet,
+/obj/effect/spawner/lootdrop/f13/traitbooks,
+/turf/open/floor/carpet/black,
+/area/f13/bunker)
+"H" = (
+/turf/open/floor/carpet/black,
+/area/f13/bunker)
+"I" = (
+/obj/structure/bed,
+/obj/structure/sign/poster/contraband/pinup_shower{
+	pixel_y = 31
+	},
+/turf/open/floor/carpet/black,
+/area/f13/bunker)
+"J" = (
+/obj/effect/decal/cleanable/blood/old{
+	icon_state = "floor6-old";
+	pixel_x = 5;
+	pixel_y = 6;
+	tag = "icon-floor6-old"
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/bunker)
+"K" = (
+/obj/structure/debris/v4,
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood/old{
+	icon_state = "floor1-old"
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/bunker)
+"L" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/crafting,
+/obj/effect/spawner/lootdrop/f13/attachments,
+/obj/effect/spawner/lootdrop/f13/resourcespawner,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bunker)
+"M" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/tier4,
+/obj/effect/spawner/lootdrop/f13/alcoholspawner,
+/turf/open/floor/carpet/black,
+/area/f13/bunker)
+"N" = (
+/obj/machinery/light/small,
+/turf/open/floor/carpet/black,
+/area/f13/bunker)
+"O" = (
+/obj/structure/bed,
+/turf/open/floor/carpet/black,
+/area/f13/bunker)
+"P" = (
+/obj/structure/chair{
+	dir = 4;
+	icon_state = "chair";
+	tag = "icon-chair (EAST)"
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bunker)
+"Q" = (
+/obj/machinery/workbench/advanced,
+/obj/effect/spawner/lootdrop/f13/armor/tier3,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bunker)
+"R" = (
+/obj/structure/decoration/vent,
+/obj/machinery/shower{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bunker)
+"S" = (
+/obj/structure/decoration/vent,
+/obj/machinery/shower{
+	dir = 8;
+	icon_state = "shower";
+	tag = "icon-shower (WEST)"
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bunker)
+"T" = (
+/obj/structure/decoration/vent,
+/obj/machinery/shower{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bunker)
 
 (1,1,1) = {"
-aaaaaaaasssssss
-abccdefasssssss
-aghgijjasssssss
-aaaaakjaaaaasss
-almnajjaopaaaaa
-aqqrattattauuva
-aawaattaxtyqqqz
-atAttttBttaCCCa
-aawaaDttEFaaaaa
-aGHIaAJKtqLasss
-aMNOaayaaPQasss
-aaaaaRqSaaaasss
-ssssaTqSassssss
-ssssaTqSassssss
-ssssaazaassssss
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+s
+s
+s
+"}
+(2,1,1) = {"
+a
+b
+g
+a
+l
+q
+a
+t
+a
+G
+M
+a
+s
+s
+s
+"}
+(3,1,1) = {"
+a
+c
+h
+a
+m
+q
+w
+A
+w
+H
+N
+a
+s
+s
+s
+"}
+(4,1,1) = {"
+a
+c
+g
+a
+n
+r
+a
+t
+a
+I
+O
+a
+s
+s
+s
+"}
+(5,1,1) = {"
+a
+d
+i
+a
+a
+a
+a
+t
+a
+a
+a
+a
+a
+a
+a
+"}
+(6,1,1) = {"
+a
+e
+j
+k
+j
+t
+t
+t
+D
+A
+a
+R
+T
+T
+a
+"}
+(7,1,1) = {"
+a
+f
+j
+j
+j
+t
+t
+t
+t
+J
+y
+q
+q
+q
+z
+"}
+(8,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+B
+t
+K
+a
+S
+S
+S
+a
+"}
+(9,1,1) = {"
+s
+s
+s
+a
+o
+t
+x
+t
+E
+t
+a
+a
+a
+a
+a
+"}
+(10,1,1) = {"
+s
+s
+s
+a
+p
+t
+t
+t
+F
+q
+P
+a
+s
+s
+s
+"}
+(11,1,1) = {"
+s
+s
+s
+a
+a
+a
+y
+a
+a
+L
+Q
+a
+s
+s
+s
+"}
+(12,1,1) = {"
+s
+s
+s
+a
+a
+u
+q
+C
+a
+a
+a
+a
+s
+s
+s
+"}
+(13,1,1) = {"
+s
+s
+s
+s
+a
+u
+q
+C
+a
+s
+s
+s
+s
+s
+s
+"}
+(14,1,1) = {"
+s
+s
+s
+s
+a
+v
+q
+C
+a
+s
+s
+s
+s
+s
+s
+"}
+(15,1,1) = {"
+s
+s
+s
+s
+a
+a
+z
+a
+a
+s
+s
+s
+s
+s
+s
 "}

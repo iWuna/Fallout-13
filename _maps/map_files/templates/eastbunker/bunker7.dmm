@@ -1,43 +1,420 @@
-"a" = (/turf/closed/wall/r_wall,/area/f13/bunker)
-"b" = (/obj/structure/decoration/vent/rusty,/turf/closed/wall/r_wall/rust,/area/f13/bunker)
-"c" = (/turf/closed/wall/r_wall/rust,/area/f13/bunker)
-"d" = (/obj/structure/barricade/bars,/turf/open/floor/plating,/area/f13/bunker)
-"h" = (/obj/effect/decal/remains/human,/obj/effect/spawner/lootdrop/f13/armor/tier3,/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"i" = (/obj/item/rack_parts,/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"j" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/f13/resourcespawner,/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"k" = (/mob/living/simple_animal/hostile/handy/protectron,/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"l" = (/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"m" = (/obj/effect/spawner/lootdrop/f13/cash_random_med,/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"n" = (/obj/structure/barricade/sandbags,/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"o" = (/obj/structure/simple_door/blast,/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"p" = (/obj/effect/decal/remains/human,/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"q" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/f13/weapon/gun/tier3,/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"r" = (/obj/structure/rack,/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"s" = (/obj/effect/spawner/lootdrop/f13/junkspawners,/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"t" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/f13/traitbooks,/obj/effect/spawner/lootdrop/f13/junkspawners,/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"u" = (/obj/structure/sign/poster/prewar/poster74{pixel_y = 31},/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"w" = (/obj/structure/simple_door/bunker/glass,/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"x" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/f13/weapon/melee/tier4,/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"y" = (/obj/structure/sign/poster/prewar/corporate_espionage{pixel_y = 31},/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"z" = (/obj/effect/decal/remains/human,/obj/effect/spawner/lootdrop/f13/cash_random_med,/turf/open/floor/f13{icon_state = "floordirtysolid"; tag = "icon-floordirtysolid"},/area/f13/bunker)
-"A" = (/turf/template_noop,/area/template_noop)
-"B" = (/obj/structure/decoration/vent,/turf/closed/wall/r_wall,/area/f13/bunker)
-"C" = (/turf/open/floor/f13{icon_state = "stagestairs"; tag = "icon-stagestairs"},/area/f13/bunker)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/wall/r_wall,
+/area/f13/bunker)
+"b" = (
+/obj/structure/decoration/vent/rusty,
+/turf/closed/wall/r_wall/rust,
+/area/f13/bunker)
+"c" = (
+/turf/closed/wall/r_wall/rust,
+/area/f13/bunker)
+"d" = (
+/obj/structure/barricade/bars,
+/turf/open/floor/plating,
+/area/f13/bunker)
+"h" = (
+/obj/effect/decal/remains/human,
+/obj/effect/spawner/lootdrop/f13/armor/tier3,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"i" = (
+/obj/item/rack_parts,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"j" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/resourcespawner,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"k" = (
+/mob/living/simple_animal/hostile/handy/protectron,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"l" = (
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"m" = (
+/obj/effect/spawner/lootdrop/f13/cash_random_med,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"n" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"o" = (
+/obj/structure/simple_door/blast,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"p" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"q" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/tier3,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"r" = (
+/obj/structure/rack,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"s" = (
+/obj/effect/spawner/lootdrop/f13/junkspawners,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"t" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/traitbooks,
+/obj/effect/spawner/lootdrop/f13/junkspawners,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"u" = (
+/obj/structure/sign/poster/prewar/poster74{
+	pixel_y = 31
+	},
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"w" = (
+/obj/structure/simple_door/bunker/glass,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"x" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/tier4,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"y" = (
+/obj/structure/sign/poster/prewar/corporate_espionage{
+	pixel_y = 31
+	},
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"z" = (
+/obj/effect/decal/remains/human,
+/obj/effect/spawner/lootdrop/f13/cash_random_med,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid";
+	tag = "icon-floordirtysolid"
+	},
+/area/f13/bunker)
+"A" = (
+/turf/template_noop,
+/area/template_noop)
+"B" = (
+/obj/structure/decoration/vent,
+/turf/closed/wall/r_wall,
+/area/f13/bunker)
+"C" = (
+/turf/open/floor/f13{
+	icon_state = "stagestairs";
+	tag = "icon-stagestairs"
+	},
+/area/f13/bunker)
 
 (1,1,1) = {"
-aaaaaabccadddac
-ahijklkcmlnnnna
-amkllllolplllnd
-aqirlplollllpnd
-alplllkclsnnnna
-akllsllccccaddc
-atjrlllukljcAAA
-amllllslllibAAA
-allklplkhmicAAA
-alicwwccccccAAA
-apxcllnlyllaAAA
-aaaasknkzllcAAA
-AAAcllnnnnlaAAA
-AAAbplllllsBAAA
-AAAaacCacbaaAAA
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+A
+A
+A
+"}
+(2,1,1) = {"
+a
+h
+m
+q
+l
+k
+t
+m
+l
+l
+p
+a
+A
+A
+A
+"}
+(3,1,1) = {"
+a
+i
+k
+i
+p
+l
+j
+l
+l
+i
+x
+a
+A
+A
+A
+"}
+(4,1,1) = {"
+a
+j
+l
+r
+l
+l
+r
+l
+k
+c
+c
+a
+c
+b
+a
+"}
+(5,1,1) = {"
+a
+k
+l
+l
+l
+s
+l
+l
+l
+w
+l
+s
+l
+p
+a
+"}
+(6,1,1) = {"
+a
+l
+l
+p
+l
+l
+l
+l
+p
+w
+l
+k
+l
+l
+c
+"}
+(7,1,1) = {"
+b
+k
+l
+l
+k
+l
+l
+s
+l
+c
+n
+n
+n
+l
+C
+"}
+(8,1,1) = {"
+c
+c
+o
+o
+c
+c
+u
+l
+k
+c
+l
+k
+n
+l
+a
+"}
+(9,1,1) = {"
+c
+m
+l
+l
+l
+c
+k
+l
+h
+c
+y
+z
+n
+l
+c
+"}
+(10,1,1) = {"
+a
+l
+p
+l
+s
+c
+l
+l
+m
+c
+l
+l
+n
+l
+b
+"}
+(11,1,1) = {"
+d
+n
+l
+l
+n
+c
+j
+i
+i
+c
+l
+l
+l
+s
+a
+"}
+(12,1,1) = {"
+d
+n
+l
+l
+n
+a
+c
+b
+c
+c
+a
+c
+a
+B
+a
+"}
+(13,1,1) = {"
+d
+n
+l
+p
+n
+d
+A
+A
+A
+A
+A
+A
+A
+A
+A
+"}
+(14,1,1) = {"
+a
+n
+n
+n
+n
+d
+A
+A
+A
+A
+A
+A
+A
+A
+A
+"}
+(15,1,1) = {"
+c
+a
+d
+d
+a
+c
+A
+A
+A
+A
+A
+A
+A
+A
+A
 "}
