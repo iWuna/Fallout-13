@@ -396,6 +396,8 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 
 //Show the ticket panel
 /datum/admin_help/proc/TicketPanel()
+	if(!usr?.client?.holder && (usr?.client != initiator)) // unsure if the second one is necessary
+		return // EMERGENCY FIX
 	var/list/dat = list("<html><meta charset=UTF-8><head><title>Ticket #[id]</title></head>")
 	var/ref_src = "[REF(src)]"
 	dat += "<h4>Admin Help Ticket #[id]: [LinkedReplyName(ref_src)]</h4>"
