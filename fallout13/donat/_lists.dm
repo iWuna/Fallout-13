@@ -22,7 +22,7 @@ GLOBAL_LIST_INIT(donations_list, list(
 		new /datum/donate_info("Santa Hat",					/obj/item/clothing/head/santa,							150),
 		new /datum/donate_info("Crown",						/obj/item/clothing/head/crown/fancy,					500),
 		new /datum/donate_info("Bunny Hat",					/obj/item/clothing/head/bunnyhead,						100),
-		new /datum/donate_info("Dominatrix Cap",			/obj/item/clothing/head/dominatrixcap,					125),
+		new /datum/donate_info("Dominatrix Cap",			/obj/item/clothing/head/dominatrixcap,					100),
 		new /datum/donate_info("Gladiator Helmet",			/obj/item/clothing/head/helmet/gladiator,				150),
 		new /datum/donate_info("White General Cap",			/obj/item/clothing/head/f13/general,					150),
 
