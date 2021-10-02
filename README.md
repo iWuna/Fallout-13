@@ -4,7 +4,7 @@
 
 **Code source:** https://gitlab.com/KoBRaAndrey/F13
 
-**Discord:**  ВРЕМЕННО ОТСУТСТВУЕТ
+**Discord:**  https://discord.gg/yKKJvdX9Yd
 
 ## Terms of service | Условия соглашения
 
@@ -23,7 +23,6 @@ If you desire to host your own server based of Fallout 13 source code - you may 
 *Только следующие сервера по **Fallout 13** имеют отношение к нам:*
 1. **[EN] Fallout 13 - Vault One**
 2. **[RU] Fallout 13 - CBET ATOMA ( Light of the Atom )**
-3. **[RU] Fallout 13 - New Oregon**
 
 **By our terms and conditions we require any potential host to specify that they are an unofficial server in announcements and the Byond HUB.**
 
@@ -51,7 +50,7 @@ Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Fo4an, Hankkits
 
 **Идеи / Тестирование / Поддержка**
 
-Deus66, *DrNuke*, Def0lt, Dillashaw, KleFFir, Fanxelt, AndreyKey.
+Deus66, *DrNuke*, Def0lt, Dillashaw, KleFFir, Fanxelt, AndreyKey <- ты останешься здесь лишь потому что ты действительно проделал большую работу над картой.
 
 **Origins** 
 
