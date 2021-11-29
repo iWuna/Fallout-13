@@ -78,4 +78,4 @@
 
 //fallout 13 ambient music//
 
-#define FALLOUT_WASTELAND list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
+#define FALLOUT_WASTELAND list('sound/f13music/fo2_chapel.ogg', 'sound/f13music/fo2_caves.ogg', 'sound/f13music/fo2_city.ogg', 'sound/f13music/fo2_desert.ogg', 'sound/f13music/fo2_hub.ogg', 'sound/f13music/fo2_necropolis.ogg', 'sound/f13music/fo2_outpost.ogg', 'sound/f13music/fo2_raider.ogg', 'sound/f13music/fo2_ruins.ogg', 'sound/f13music/fo2_tunnels.ogg', 'sound/f13music/fo2_village.ogg', 'sound/f13music/fo2_world.ogg')

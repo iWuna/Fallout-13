@@ -227,7 +227,7 @@
 	broadcasting = FALSE //Отключает передачу звука
 	listening = FALSE //Отключает получение звука
 	freqlock = TRUE //Блокирует на одной частоте
-	
+
 
 
 /obj/item/radio/headset/headset_overseer
@@ -271,7 +271,8 @@
 /obj/item/radio/headset/headset_ncr
 	name = "NCR radio headset"
 	desc = "This is used by the New California Republic.\nTo access the NCR channel, use :w."
-	icon_state = "mine_headset"
+	icon_state = "ncr_headset"
+	item_state = "ncr_headset"
 	keyslot = new /obj/item/encryptionkey/headset_ncr
 	radiosound = 'sound/radio/headset/security.ogg'
 
@@ -282,7 +283,7 @@
 /obj/item/radio/headset/headset_legion
 	name = "Legion radio headset"
 	desc = "This is used by Caesar's Legion.\nTo access the Legion channel, use :e."
-	icon_state = "sec_headset"
+	icon_state = "legion_headset"
 	keyslot = new /obj/item/encryptionkey/headset_legion
 	radiosound = 'sound/radio/headset/security.ogg'
 
