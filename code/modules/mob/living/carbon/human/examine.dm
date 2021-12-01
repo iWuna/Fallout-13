@@ -110,13 +110,6 @@
 	//Status effects
 	msg += status_effect_examines()
 
-//CIT CHANGES START HERE - adds genital details to examine text
-	if(LAZYLEN(internal_organs))
-		for(var/obj/item/organ/genital/dicc in internal_organs)
-			if(istype(dicc) && dicc.is_exposed())
-				. += "[dicc.desc]"
-//END OF CIT CHANGES
-
 	//Jitters
 	switch(jitteriness)
 		if(300 to INFINITY)

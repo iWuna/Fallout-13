@@ -200,6 +200,27 @@
 	item_state = "followersflag"
 	faction = "Followers"
 
+/obj/item/flag/enclave
+	name = "Enclave flag"
+	desc = "A flag with white-red places and blue-white 'E' with stars, the symbol of old times."
+	icon_state = "enclaveflag"
+	item_state = "enclaveflag"
+	faction = "Enclave"
+
+/obj/item/flag/kebab
+	name = "Kebab flag"
+	desc = "A flag with a bigcock roach, the symbol of the Kebab town."
+	icon_state = "kebabflag"
+	item_state = "kebabflag"
+	faction = "Kebab"
+
+/obj/item/flag/ancap
+	name = "Anarchy Capitalism flag"
+	desc = "A flag with a yellow-black smiling face. Some pre-war politics are illustrated here, but nobody can understand."
+	icon_state = "ncrflag"
+	item_state = "ncrflag"
+	faction = "NCR"
+
 /obj/item/flag/snow_act()
 	snow = TRUE
 	if(!faction)
