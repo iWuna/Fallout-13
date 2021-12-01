@@ -24,7 +24,6 @@
 		return
 
 	if(stat != DEAD)
-		handle_arousal()
 		handle_hydration()
 
 	if(..()) //not dead

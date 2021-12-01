@@ -42,8 +42,6 @@
 				adjustStaminaLoss(damage * hit_percent)
 		if(BRAIN)
 			adjustBrainLoss(damage * hit_percent)
-		if(AROUSAL)
-			adjustArousalLoss(damage * hit_percent)
 	return TRUE
 
 

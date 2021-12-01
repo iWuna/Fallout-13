@@ -284,6 +284,7 @@
 	name = "Legion radio headset"
 	desc = "This is used by Caesar's Legion.\nTo access the Legion channel, use :e."
 	icon_state = "legion_headset"
+	item_state = "legion_headset"
 	keyslot = new /obj/item/encryptionkey/headset_legion
 	radiosound = 'sound/radio/headset/security.ogg'
 

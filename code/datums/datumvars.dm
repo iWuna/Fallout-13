@@ -93,7 +93,6 @@
 					CLONE:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=clone'>[M.getCloneLoss()]</a>
 					BRAIN:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=brain'>[M.getBrainLoss()]</a>
 					STAMINA:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=stamina'>[M.getStaminaLoss()]</a>
-					AROUSAL:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=arousal'>[M.getArousalLoss()]</a>
 				</font>
 			"}
 		else
@@ -1294,9 +1293,6 @@
 				if("oxygen")
 					L.adjustOxyLoss(amount)
 					newamt = L.getOxyLoss()
-				if("arousal")
-					L.adjustArousalLoss(amount)
-					newamt = L.getArousalLoss()
 				if("brain")
 					L.adjustBrainLoss(amount)
 					newamt = L.getBrainLoss()

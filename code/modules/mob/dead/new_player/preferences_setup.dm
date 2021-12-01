@@ -32,7 +32,6 @@
 	// Apply the Dummy's preview background first so we properly layer everything else on top of it.
 	mannequin.add_overlay(mutable_appearance('modular_citadel/icons/ui/backgrounds.dmi', bgstate, layer = SPACE_LAYER))
 	copy_to(mannequin)
-	mannequin.update_genitals(TRUE)
 
 	// Determine what job is marked as 'High' priority, and dress them up as such.
 	var/highRankFlag = job_civilian_high | job_medsci_high | job_engsec_high | job_ncr_high | job_legion_high | job_bos_high | job_den_high | job_vault_high | job_wasteland_high | job_enclave_high

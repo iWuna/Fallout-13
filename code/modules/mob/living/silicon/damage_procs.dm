@@ -11,9 +11,6 @@
 		if(OXY)
 			if(damage < 0) //we shouldn't be taking oxygen damage through this proc, but we'll let it heal.
 				adjustOxyLoss(damage * hit_percent)
-		//citadel code
-		if(AROUSAL)
-			adjustArousalLoss(damage * hit_percent)
 	return TRUE
 
 /mob/living/silicon/apply_effect(effect = 0,effecttype = EFFECT_STUN, blocked = FALSE)

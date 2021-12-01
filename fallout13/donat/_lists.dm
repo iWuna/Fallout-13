@@ -161,7 +161,7 @@ GLOBAL_LIST_INIT(donations_list, list(
 		new /datum/donate_info("Old Brat Sweater",			/obj/item/clothing/under/f13/brat,					125),
 		new /datum/donate_info("Black Combat Uniform",		/obj/item/clothing/under/syndicate/combat,			150),
 		new /datum/donate_info("General's apparel",			/obj/item/clothing/under/f13/white_shortdress,		150),
-		
+
 	),
 
 	"Belts" = list(
@@ -245,8 +245,6 @@ GLOBAL_LIST_INIT(donations_list, list(
 		new /datum/donate_info("The Over Power Gun",		/obj/item/gun/energy/laser/practice,				500),
 		new /datum/donate_info("Legendary Sord!",			/obj/item/sord,										300),
 		new /datum/donate_info("Beer Keg",					/obj/structure/reagent_dispensers/beerkeg,			500),
-		new /datum/donate_info("Spare Condom",				/obj/item/condom,									200),
-		new /datum/donate_info("Filled Condom",				/obj/item/condom/filled,							150),
 		new /datum/donate_info("Foil PA Helmet",			/obj/item/clothing/head/helmet/f13/power_armor/t45d/foil,			150),
 		new /datum/donate_info("Foil Power Armor",			/obj/item/clothing/suit/armor/f13/power_armor/t45d/foil,			150),
 		new /datum/donate_info("Pimp-Boy 3000",				/obj/item/pda/pimp_boy_3000,						500),

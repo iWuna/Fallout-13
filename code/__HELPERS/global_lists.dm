@@ -32,31 +32,6 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/caps, GLOB.caps_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_wings, GLOB.moth_wings_list)
 
-	//genitals
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/penis, GLOB.cock_shapes_list)
-	for(var/K in GLOB.cock_shapes_list)
-		var/datum/sprite_accessory/penis/value = GLOB.cock_shapes_list[K]
-		GLOB.cock_shapes_icons[K] = value.icon_state
-
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/vagina, GLOB.vagina_shapes_list)
-	for(var/K in GLOB.vagina_shapes_list)
-		var/datum/sprite_accessory/vagina/value = GLOB.vagina_shapes_list[K]
-		GLOB.vagina_shapes_icons[K] = value.icon_state
-
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/breasts, GLOB.breasts_shapes_list)
-	GLOB.breasts_size_list = list ("a", "b", "c", "d", "e")//  None-selectable through menu "f" "g", "h", "i", "j", "k", "l", "m", "n", "o") //We need the list to choose from initialized, but it's no longer a sprite_accessory thing.
-	GLOB.genital_fluids_list = list ("milk", "semen", "femcum")
-	GLOB.gentlemans_organ_names = list("phallus", "willy", "dick", "prick", "member", "tool", "gentleman's organ", "cock", "wang", "knob", "dong", "joystick", "pecker", "johnson", "weenie", "tadger", "schlong", "thirsty ferret", "baloney pony", "schlanger")
-	for(var/K in GLOB.breasts_shapes_list)
-		var/datum/sprite_accessory/breasts/value = GLOB.breasts_shapes_list[K]
-		GLOB.breasts_shapes_icons[K] = value.icon_state
-
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/testicles, GLOB.balls_shapes_list)
-	for(var/K in GLOB.balls_shapes_list)
-		var/datum/sprite_accessory/testicles/value = GLOB.balls_shapes_list[K]
-		GLOB.balls_shapes_icons[K] = value.icon_state
-//END OF CIT CHANGES
-
 
 	//Species
 	for(var/spath in subtypesof(/datum/species))
