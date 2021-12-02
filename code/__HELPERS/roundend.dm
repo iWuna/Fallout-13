@@ -77,7 +77,7 @@
 	SSblackbox.record_feedback("nested tally", "round_end_stats", num_escapees, list("escapees", "total"))
 	SSblackbox.record_feedback("nested tally", "round_end_stats", GLOB.joined_player_list.len, list("players", "total"))
 	SSblackbox.record_feedback("nested tally", "round_end_stats", GLOB.joined_player_list.len - num_survivors, list("players", "dead"))
-	
+
 	var/datum/gang/largest_gang = null
 	var/mob/living/largest_leader = null
 	var/largest_gang_number = 0
@@ -89,29 +89,28 @@
 			largest_leader = G.leader
 
 	var/discordmsg = ""
-	discordmsg += "\[-------------ФИНАЛ-------------]\n"
-	discordmsg += "Номер Раунда: [GLOB.round_id]\n"
-	discordmsg += "Длительность: [DisplayTimeText(world.time - SSticker.round_start_time)]\n"
-	discordmsg += "Игроков: [GLOB.player_list.len]\n"
-	discordmsg += "Выжили: [num_survivors]\n"
-	discordmsg += "Покинули Область: [num_escapees]\n"
-	discordmsg += "Целостность: [station_integrity]\n"
+	discordmsg += "\[-------------END-------------]\n"
+	discordmsg += "Round id: [GLOB.round_id]\n"
+	discordmsg += "Round duration: [DisplayTimeText(world.time - SSticker.round_start_time)]\n"
+	discordmsg += "Players: [GLOB.player_list.len]\n"
+	discordmsg += "Survived: [num_survivors]\n"
+	discordmsg += "Escaped: [num_escapees]\n"
 	discordmsg += "Trading Protectrons profits: [GLOB.vendor_cash]\n"
 	if(largest_gang)
-		discordmsg += "Самой большой оказалась банда [largest_gang.name], в которой насчитывалось [largest_gang.members.len] игроков, а лидером был [largest_leader.real_name]!\n"
-	discordmsg += "Режим: [SSticker.mode.name]\n"
+		discordmsg += "Most big gang was [largest_gang.name], with [largest_gang.members.len] members, their leader was [largest_leader.real_name]!\n"
+	discordmsg += "Gamemode: [SSticker.mode.name]\n"
 	discordsendmsg("ooc", discordmsg)
 	discordmsg = ""
 	var/list/ded = SSblackbox.first_death
 	if(ded)
-		discordmsg += "Первым поглотила пустошь [ded["name"]] в роли [ded["role"]] где-то в [ded["area"]]\n"
-		var/last_words = ded["last_words"] ? "Последними словами были \"[ded["last_words"]]\"\n" : "Без последнего слова\n"
+		discordmsg += "First blood! [ded["name"]] as [ded["role"]] somewhere at [ded["area"]]\n"
+		var/last_words = ded["last_words"] ? "Last words was \"[ded["last_words"]]\"\n" : "actually nothing.\n"
 		discordmsg += "[last_words]\n"
 	else
-		discordmsg += "Никто не умер!\n"
+		discordmsg += "Nobody died!\n"
 	discordmsg += "--------------------------------------\n"
 	discordsendmsg("ooc", discordmsg)
-	
+
 	. = list()
 	.[POPCOUNT_SURVIVORS] = num_survivors
 	.[POPCOUNT_ESCAPEES] = num_escapees
@@ -197,9 +196,9 @@
 /datum/controller/subsystem/ticker/proc/declare_completion()
 	set waitfor = FALSE
 
-	to_chat(world, "<BR><BR><BR><span class='big bold'>Раунд окончен.</span>")
+	to_chat(world, "<BR><BR><BR><span class='big bold'>Round ended.</span>")
 	if(LAZYLEN(GLOB.round_end_notifiees))
-		send2irc("Notice", "[GLOB.round_end_notifiees.Join(", ")] раунд был окончен.")
+		send2irc("Notice", "[GLOB.round_end_notifiees.Join(", ")] round ended.")
 
 	for(var/I in round_end_events)
 		var/datum/callback/cb = I
@@ -269,11 +268,11 @@
 /datum/controller/subsystem/ticker/proc/standard_reboot()
 	if(ready_for_reboot)
 		if(mode.station_was_nuked)
-			Reboot("Данный регион пустоши был уничтожен ядерной бомбой...", "nuke")
+			Reboot("This wasteland was nuked...", "nuke")
 		else
-			Reboot("Раунд окончен.", "proper completion")
+			Reboot("Round ended.", "proper completion")
 	else
-		CRASH("Попытка стандартной перезагрузки без завершения цикла тикера")
+		CRASH("Attempting a standard reboot without completing the ticker cycle")
 
 //Common part of the report
 /datum/controller/subsystem/ticker/proc/build_roundend_report()
@@ -316,25 +315,25 @@
 			largest_gang = G
 			largest_leader = G.leader
 	parts += "<meta charset=UTF-8>"
-	parts += "[GLOB.TAB]Раунд длился <B>[DisplayTimeText(world.time - SSticker.round_start_time)]</B>"
-	parts += "[GLOB.TAB]Целостность данного региона <B>[mode.station_was_nuked ? "<span class='redtext'>никакая</span>" : "[popcount["station_integrity"]] процентов"]</B>"
-	parts += "[GLOB.TAB]Торговые Роботы получили крышки в размере <B>[GLOB.vendor_cash]</B>"
+	parts += "[GLOB.TAB]Time <B>[DisplayTimeText(world.time - SSticker.round_start_time)]</B>"
+	parts += "[GLOB.TAB]Integrity of this region <B>[mode.station_was_nuked ? "<span class='redtext'>никакая</span>" : "[popcount["station_integrity"]] процентов"]</B>"
+	parts += "[GLOB.TAB]Trading Robots received caps in amounts of <B>[GLOB.vendor_cash]</B>"
 	if(largest_gang)
 		parts += "[GLOB.TAB]Самой большой оказалась банда <B>[largest_gang.name]</B>, в которой насчитывалось [largest_gang.members.len] человек, а лидером был <B>[largest_leader.real_name]!</B>"
 	var/total_players = GLOB.joined_player_list.len
 	if(total_players)
-		parts+= "[GLOB.TAB]Всего на пустошах было человек <B>[total_players]</B>"
+		parts+= "[GLOB.TAB]Total players in wasteland <B>[total_players]</B>"
 		if(station_evacuated)
-			parts += "<BR>[GLOB.TAB]Из них данный регион покинуло <B>[popcount[POPCOUNT_ESCAPEES]] ([PERCENT(popcount[POPCOUNT_ESCAPEES]/total_players)]%)</B>"
-			parts += "[GLOB.TAB](на поезде): <B>[popcount[POPCOUNT_SHUTTLE_ESCAPEES]] ([PERCENT(popcount[POPCOUNT_SHUTTLE_ESCAPEES]/total_players)]%)</B>"
-		parts += "[GLOB.TAB]Выжило всего <B>[popcount[POPCOUNT_SURVIVORS]] ([PERCENT(popcount[POPCOUNT_SURVIVORS]/total_players)]%)</B>"
+			parts += "<BR>[GLOB.TAB]Escaped players <B>[popcount[POPCOUNT_ESCAPEES]] ([PERCENT(popcount[POPCOUNT_ESCAPEES]/total_players)]%)</B>"
+			parts += "[GLOB.TAB](on train): <B>[popcount[POPCOUNT_SHUTTLE_ESCAPEES]] ([PERCENT(popcount[POPCOUNT_SHUTTLE_ESCAPEES]/total_players)]%)</B>"
+		parts += "[GLOB.TAB]Survived <B>[popcount[POPCOUNT_SURVIVORS]] ([PERCENT(popcount[POPCOUNT_SURVIVORS]/total_players)]%)</B>"
 		if(SSblackbox.first_death)
 			var/list/ded = SSblackbox.first_death
 			if(ded.len)
 				parts += "[GLOB.TAB]Первым поглотила пустошь <b>[ded["name"]] в роли [ded["role"]] где-то в [ded["area"]]. Полученый урон [ded["damage"]].[ded["last_words"] ? " Последними словами были: \"[ded["last_words"]]\"" : ""]</b>"
 			//этот коммент чинит синтаксис текста, ибо это говнокод американцев " above
 			else
-				parts += "[GLOB.TAB]<i>Никто не умер на пустошах!</i>"
+				parts += "[GLOB.TAB]<i>Nobody died!</i>"
 	return parts.Join("<br>")
 
 /client/proc/roundend_report_file()
@@ -370,14 +369,14 @@
 					parts += "<span class='marooned'>Вы осталсь в данном регионе под названием [station_name()]...</span>"
 				else
 					parts += "<div class='panel greenborder'>"
-					parts += "<span class='greentext'>Вам удалось пережить всё что происходило в [station_name()] как [M.real_name].</span>"
+					parts += "<span class='greentext'>You managed to survive in [station_name()] as [M.real_name].</span>"
 			else
 				parts += "<div class='panel greenborder'>"
 				parts += "<span class='greentext'>Вам удалось пережить всё что происходило в [station_name()] как [M.real_name].</span>"
 
 		else
 			parts += "<div class='panel redborder'>"
-			parts += "<span class='redtext'>Вас поглотила пустошь в [station_name()]...</span>"
+			parts += "<span class='redtext'>[station_name()] claimed your soul...</span>"
 	else
 		parts += "<div class='panel stationborder'>"
 	parts += "<br>"
@@ -401,7 +400,7 @@
 	for (var/i in GLOB.ai_list)
 		var/mob/living/silicon/ai/aiPlayer = i
 		if(aiPlayer.mind)
-			parts += "<b>[aiPlayer.name]</b> (Игрок: <b>[aiPlayer.mind.key]</b>) соблюдал законы и [aiPlayer.stat != DEAD ? "смог дожить до конца раунда" : "был <span class='redtext'>деактивирован</span>"] с законами:"
+			parts += "<b>[aiPlayer.name]</b> (Player: <b>[aiPlayer.mind.key]</b>) соблюдал законы и [aiPlayer.stat != DEAD ? "смог дожить до конца раунда" : "был <span class='redtext'>деактивирован</span>"] с законами:"
 			parts += aiPlayer.laws.get_law_list(include_zeroth=TRUE)
 
 		parts += "<b>Всего законы были изменены [aiPlayer.law_change_counter] раз</b>"
@@ -412,14 +411,14 @@
 			for(var/mob/living/silicon/robot/robo in aiPlayer.connected_robots)
 				borg_num--
 				if(robo.mind)
-					robolist += "<b>[robo.name]</b> (Игрок: <b>[robo.mind.key]</b>)[robo.stat == DEAD ? " <span class='redtext'>(Деактивирован)</span>" : ""][borg_num ?", ":""]<br>"
+					robolist += "<b>[robo.name]</b> (Player: <b>[robo.mind.key]</b>)[robo.stat == DEAD ? " <span class='redtext'>(Деактивирован)</span>" : ""][borg_num ?", ":""]<br>"
 			parts += "[robolist]"
 		if(!borg_spacer)
 			borg_spacer = TRUE
 
 	for (var/mob/living/silicon/robot/robo in GLOB.silicon_mobs)
 		if (!robo.connected_ai && robo.mind)
-			parts += "[borg_spacer?"<br>":""]<b>[robo.name]</b> (Игрок: <b>[robo.mind.key]</b>) [(robo.stat != DEAD)? "<span class='greentext'>выжил</span> в качестве марионетки ИИ!" : "не смог <span class='redtext'>выжить</span> без ИИ."] Законы:"
+			parts += "[borg_spacer?"<br>":""]<b>[robo.name]</b> (Player: <b>[robo.mind.key]</b>) [(robo.stat != DEAD)? "<span class='greentext'>выжил</span> в качестве марионетки ИИ!" : "не смог <span class='redtext'>выжить</span> без ИИ."] Законы:"
 
 			if(robo) //How the hell do we lose robo between here and the world messages directly above this?
 				parts += robo.laws.get_law_list(include_zeroth=TRUE)
@@ -531,9 +530,9 @@
 	var/text = "<b>[ply.key]</b> was <b>[ply.name]</b>[jobtext] and"
 	if(ply.current)
 		if(ply.current.stat == DEAD)
-			text += " <span class='redtext'>погиб</span>"
+			text += " <span class='redtext'>dead</span>"
 		else
-			text += " <span class='greentext'>выжил</span>"
+			text += " <span class='greentext'>alive</span>"
 		if(fleecheck)
 			var/turf/T = get_turf(ply.current)
 			if(!T || !is_station_level(T.z))
@@ -541,7 +540,7 @@
 		if(ply.current.real_name != ply.name)
 			text += " as <b>[ply.current.real_name]</b>"
 	else
-		text += " и вместе с этим <span class='redtext'>тело было уничтожено</span>"
+		text += " и вместе с этим <span class='redtext'>body destroyed</span>"
 	return text
 
 /proc/printplayerlist(list/players,fleecheck)
@@ -559,9 +558,9 @@
 	var/count = 1
 	for(var/datum/objective/objective in ply.objectives)
 		if(objective.check_completion())
-			objective_parts += "<b>Задачи #[count]</b>: [objective.explanation_text] <span class='greentext'>Выполнил!</span>"
+			objective_parts += "<b>Objectives #[count]</b>: [objective.explanation_text] <span class='greentext'>Выполнил!</span>"
 		else
-			objective_parts += "<b>Задачи #[count]</b>: [objective.explanation_text] <span class='redtext'>Не смог выполнить.</span>"
+			objective_parts += "<b>Objectives #[count]</b>: [objective.explanation_text] <span class='redtext'>Не смог выполнить.</span>"
 		count++
 	return objective_parts.Join("<br>")
 

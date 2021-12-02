@@ -25,13 +25,13 @@
 /obj/item/device/gangtool/attack_self(mob/user)
 	var/datum/gang/GA = user.gang
 	if(!GA || GA.leader != user || GA != gang)
-		to_chat(user, "<span class='warning'>Не включается.</span>")
+		to_chat(user, "<span class='warning'>Doesn't work.</span>")
 		return
 
 	var/dat
 	dat += "Gang Name: <B>[gang.name]</B><br>"
 	dat += "Your Influence: <B>[gang.influence]</B><br>"
-	dat += "Вы можете получить покупить предметы, используя действительную валюту на этом устроистве.<br>"
+	dat += "You can buy items by using this and actual wasteland money.<br>"
 	dat += "<hr>"
 
 	dat += "<br>"
@@ -62,16 +62,16 @@
 		dat += "<br>"
 	dat += "<br>"
 
-	dat += "<a href='?src=\ref[src];choice=refresh'>Обновить</a><br>"
+	dat += "<a href='?src=\ref[src];choice=refresh'>Refresh</a><br>"
 
-	var/datum/browser/popup = new(user, "gangtool", "Добро пожаловать в GandTool", 350, 625)
+	var/datum/browser/popup = new(user, "gangtool", "Welcome to GandTool", 350, 625)
 	popup.set_content(dat)
 	popup.open()
 
 /obj/item/device/gangtool/Topic(href, href_list)
 	var/datum/gang/GA = usr.gang
 	if(!GA || GA.leader != usr)
-		to_chat(usr, "<span class='warning'>Не включается.</span>")
+		to_chat(usr, "<span class='warning'>Doesn't work.</span>")
 		return
 
 	add_fingerprint(usr)

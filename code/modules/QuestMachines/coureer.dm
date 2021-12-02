@@ -23,11 +23,11 @@
 /*
 ================ Content =====================
 */
-/*  КУРЬЕР */
+/*  COUREER */
 
 /obj/machinery/bounty_machine/courier/post
-	name = "Терминал Посылок"
-	desc = "Этот терминал использует курьер, что бы получать новые посылки."
+	name = "Post Terminal"
+	desc = "This terminal used by coureer to manage parcels."
 	icon_state = "terminal"
 	free_access = TRUE
 	quest_type = /datum/bounty_quest/faction/courier
@@ -60,7 +60,7 @@
 		var/caps_count = C.amount
 		stored_caps += caps_count
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
-		to_chat(usr, "<span class='notice'>[stored_caps] крышек добавлено.</span>")
+		to_chat(usr, "<span class='notice'>[stored_caps] caps added.</span>")
 		qdel(C)
 
 /* Spawn all caps on world and clear caps storage */
@@ -82,7 +82,7 @@
 /* Buy item */
 /obj/machinery/bounty_machine/courier/proc/buy(var/item_index, var/mob/user)
 	if(item_index > price_list.len)
-		to_chat(usr, "<span class='warning'>Неверный предмет! *бип*</span>")
+		to_chat(usr, "<span class='warning'>Wrong item! *beep*</span>")
 		return
 
 	if(!connected_pod)
@@ -101,9 +101,9 @@
 
 		// Create item
 		new target_type(connected_pod.loc)
-		to_chat(usr, "<span class='notice'>Готово. *буп-бип*</span>")
+		to_chat(usr, "<span class='notice'>Done. *beep-beep*</span>")
 	else
-		to_chat(usr, "<span class='warning'>Недостаточно средств.</span>")
+		to_chat(usr, "<span class='warning'>Need more caps.</span>")
 
 /*  INTERACTION */
 /obj/machinery/bounty_machine/courier/attackby(var/obj/item/OtherItem, var/mob/living/carbon/human/user, parameters)
@@ -111,10 +111,10 @@
 	if(OtherItem.GetID())
 		if(allowed(user))
 			locked = !locked
-			to_chat(user, "<span class='notice'>Вы [src.locked ? "заблокировали" : "разблокировали"] терминал.</span>")
-			to_chat(user, "<span class='danger'>Не забудьте заблокировать терминал, курьер.</span>")
+			to_chat(user, "<span class='notice'>You [src.locked ? "blocked" : "unblocked"] terminal.</span>")
+			to_chat(user, "<span class='danger'>Don't forget to logoff terminal, Courier.</span>")
 		else
-			to_chat(user, "<span class='danger'>Доступ запрещен..</span>")
+			to_chat(user, "<span class='danger'>Access denied..</span>")
 		return
 
 	// CAPS
@@ -125,10 +125,10 @@
 /* Shop UI*/
 /obj/machinery/bounty_machine/courier/proc/GetShopUI()
 	var/dat = {"<meta charset="UTF-8">"}
-	dat += "<h1>Посылки и поощерения</h1>"
-	dat += "<a href='?src=\ref[src];exit=1'>Выход</a><br><br>"
-	dat += "<font color = 'green'>Баланс: [stored_caps]</font>"
-	dat += "<a href='?src=\ref[src];removecaps=1'>Забрать</a><br>"
+	dat += "<h1>Parcels and goodies</h1>"
+	dat += "<a href='?src=\ref[src];exit=1'>Exit</a><br><br>"
+	dat += "<font color = 'green'>Balance: [stored_caps]</font>"
+	dat += "<a href='?src=\ref[src];removecaps=1'>Withdrawl</a><br>"
 
 	dat += "<div class='statusDisplay'>"
 	for(var/i = 1; i <= price_list.len; i++)
@@ -138,11 +138,11 @@
 		if(stored_caps < price_list[itm_type])
 			dat += "<a href='?src=\ref[src];examine=[i]'>?</a>"
 			dat += "<font color = 'grey'><b> [itm_ref] - [price] </b></font>"
-			dat += "<a href='?src=\ref[src];buy=[i]'>Купить</a><br>"
+			dat += "<a href='?src=\ref[src];buy=[i]'>Buy</a><br>"
 		else
 			dat += "<a href='?src=\ref[src];examine=[i]'>?</a>"
 			dat += "<font color = 'green'><b> [itm_ref] - [price] </b></font>"
-			dat += "<a href='?src=\ref[src];buy=[i]'>Купить</a><br>"
+			dat += "<a href='?src=\ref[src];buy=[i]'>Buy</a><br>"
 	dat += ""
 	dat += "</div>"
 	return dat
@@ -156,12 +156,12 @@
 	dat += "<h1>Wasteland Parcel Post</h1>"
 
 	if(connected_pod)
-		dat += "<font color='green'>Квантовая площадка найдена</font><br>"
-		dat += "<a href='?src=\ref[src];findpod=1'>Сканировать</a>"
+		dat += "<font color='green'>Quantum pad connected!</font><br>"
+		dat += "<a href='?src=\ref[src];findpod=1'>Scan</a>"
 	else
-		dat += "<font color='red'>Квантовая площадка не обнаружена</font><br>"
-		dat += "<a href='?src=\ref[src];findpod=1'>Сканировать</a>"
-	dat += "<a href='?src=\ref[src];shop=1'>Посылки и поощерения</a><br>"
+		dat += "<font color='red'>Quantum pad not connected!</font><br>"
+		dat += "<a href='?src=\ref[src];findpod=1'>Scan</a>"
+	dat += "<a href='?src=\ref[src];shop=1'>Parcels and goodies</a><br>"
 	dat += "<style>.leftimg {float:left;margin: 7px 7px 7px 0;}</style>"
 
 	dat += "<h2>Contracts:</h2>"
@@ -170,14 +170,14 @@
 		//usr << browse_rsc(Q.GetIconWithPath(), Q.employer_icon)
 		dat += "<div class='statusDisplay'>"
 		dat += "<font color='green'><b>ID: </b> [Q.name]</font><br>"
-		dat += "<font color='green'><b>Заказчик: </b> [Q.employer]</font><br>"
-		dat += "<font color='green'><b>Сообщение:</b></font>"
+		dat += "<font color='green'><b>Employer: </b> [Q.employer]</font><br>"
+		dat += "<font color='green'><b>Message:</b></font>"
 		dat += "<font color='green'>[Q.desc]</font><br><br>"
-		dat += "<font color='green'><b>Надо: </b></font>"
+		dat += "<font color='green'><b>Need: </b></font>"
 		dat += "<font color='green'><i>[Q.need_message]. </i></font><br>"
-		dat += "<font color='green'><b>Награда за доставку:</b></font>"
-		dat += "<font color='green'> [Q.caps_reward] крышек</font><br>"
-		dat += "<a href='?src=\ref[src];completequest=[item_index]'>Отправить</a><br>"
+		dat += "<font color='green'><b>Reward:</b></font>"
+		dat += "<font color='green'> [Q.caps_reward] caps</font><br>"
+		dat += "<a href='?src=\ref[src];completequest=[item_index]'>Send</a><br>"
 		dat += "</div>"
 		item_index++
 
@@ -196,7 +196,7 @@
 		popup.set_title_image(usr.browse_rsc_icon(src.icon, src.icon_state))
 		popup.open()
 	else
-		to_chat(usr, "<span class='danger'>Доступ запрещен.</span>")
+		to_chat(usr, "<span class='danger'>Access denied.</span>")
 
 /* Topic */
 /obj/machinery/bounty_machine/courier/Topic(href, href_list)

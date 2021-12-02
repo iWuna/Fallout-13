@@ -18,9 +18,9 @@
 
 /obj/item/radio/headset/examine(mob/user)
 	..()
-	to_chat(user, "<span class='notice'>Что бы говорить в радио, поставьте перед вводимым текстом символ <b>;</b></span>")
+	to_chat(user, "<span class='notice'>To speak into the radio, put a symbol in front of the input text <b>;</b></span>")
 	if (command)
-		to_chat(user, "<span class='notice'>Alt-click включает громкий режим.</span>")
+		to_chat(user, "<span class='notice'>Alt-click enables loud mode.</span>")
 
 /obj/item/radio/headset/Initialize()
 	. = ..()

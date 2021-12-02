@@ -1,6 +1,6 @@
 /obj/item/mark
 	name = "postal mark"
-	desc = "Важная бумажка для курьера, если вы не курьер, отдайте её ему."
+	desc = "An important piece of paper for the courier, if you are not a courier, give it to him."
 	icon = 'icons/obj/quest_items.dmi'
 	icon_state = "marka1"
 
@@ -10,7 +10,7 @@
 
 /obj/item/parcel
 	name = "parcel"
-	desc = "Посылка явно содержащая в себе что-то ценное, а может и не очень."
+	desc = "The package clearly contains something valuable, and maybe not so much."
 	icon = 'icons/obj/quest_items.dmi'
 	icon_state = "bigbox"
 	item_state = "bigbox"
@@ -187,7 +187,7 @@
 			recipient = player.mind
 			break
 
-	message_admins("посылка для [recipient] создана.")
+	message_admins("parcel for [recipient] generated.")
 
 /obj/item/parcel/attackby(obj/item/I, mob/user, params)
 	..()
@@ -205,30 +205,30 @@
 				if(icon_state == "smallbox")
 					icon_state = "smallbox1"
 					item_state = "smallbox"
-				desc = "Посылка явно содержащая в себе что-то ценное, предназначена для [recipient.name]."
+				desc = "A package clearly containing something valuable is intended for [recipient.name]."
 				qdel(I)
 				prepared = TRUE
 				screwup_chance = rand(50,70)
 	else
 		if(istype(I, /obj/item/kitchen/knife) | istype(I, /obj/item/claymore/machete) | istype(I, /obj/item/switchblade))
 			if (!isturf(src.loc) || !(locate(/obj/structure/table) in src.loc) && !(locate(/obj/structure/table/optable) in src.loc))
-				to_chat(user, "<span class='warning'>Вы должны делать это на столе.</span>")
+				to_chat(user, "<span class='warning'>You need table to do this.</span>")
 				return FALSE
 			if(user.mind == recipient)
 				if(do_after(user, 30, target = src))
 					var/obj/item/booty = pick(success_list)
 					booty = new booty(loc)
 					new /obj/item/mark(loc)
-					to_chat(user, "<span class='notice'>Вы нашли [booty] внутри посылки.</span>")
+					to_chat(user, "<span class='notice'>You found [booty] inside of parcel.</span>")
 					qdel(src)
 			else
 				if(do_after(user, 50, target = src))
 					if(prob(screwup_chance))
-						to_chat(user, "<span class='notice'>Вы умудрились сломать содержимое посылки...</span>")
+						to_chat(user, "<span class='notice'>You managed to break the contents of the parcel...</span>")
 						new /obj/effect/gibspawner/robot(src.loc)
 						qdel(src)
 					else
 						var/obj/item/booty = pick(failure_list)
 						booty = new booty(loc)
-						to_chat(user, "<span class='notice'>Вы нашли [booty] внутри [src].</span>")
+						to_chat(user, "<span class='notice'>You found [booty] inside of parcel.</span>")
 						qdel(src)

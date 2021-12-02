@@ -500,15 +500,15 @@
 		return
 	var/area/A = get_area(character)
 //	var/message = """<span class='game deadsay'>Вот тут и начинается история <span class='name'>
-//		[character.real_name]</span>... 
+//		[character.real_name]</span>...
 //		.</span>"""
 //	deadchat_broadcast(message, follow_target = character, message_type=DEADCHAT_ARRIVALRATTLE)
 	message_admins("<span class='name'>\
-		[character.real_name]</span> ([rank]) вошёл на пустошь как \
+		[character.real_name]</span> ([rank]) enters wasteland as \
 		<span class='name'>[A.name]</span>.")
 
 	if(character.special.total() > 40)
-		message_admins("[key_name_admin(character.ckey)] имеет более 40 очков SPECIAL!!!")
+		message_admins("[key_name_admin(character.ckey)] has more than 40 SPECIAL points!!!")
 		character.adjustBrainLoss(50)
 		character.adjustCloneLoss(50)
 		character.adjustStaminaLoss(100)

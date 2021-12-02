@@ -994,8 +994,8 @@ Ranger -- Split into Patrol and Scout
 	faction = "NCR"
 	total_positions = 2
 	spawn_positions = 2
-	description = "Как Патрульный Рейнджер, вы патрулируете пустошь, помогаете нуждающимся или находящимся в беде, а также захватываете, восстанавливаете или нейтрализуете цели во службу Республики. Вы были отправлены сюда для улучшения общественного мнения о Республике, служа обществу, неся правосудие и подавляя работорговцев с рейдерами в регионе. Так как в рядах рейнджерах  нет определенных званий, что подразумевает под собой взаимоуважение в ваших рядах. Но обычно, командующим в среде Рейнджеров являются Ветераны Рейнджеры – в силу своего опыта и знаний, что могут дать преимущество вашим силам.."
-	supervisors = "Ветеран Рейнджер"
+	description = "As a Patrol Ranger, you patrol the wasteland, help those in need or in need, and capture, restore or neutralize targets in the service of the Republic. You were sent here to improve public opinion of the Republic, serving the public, bringing justice and suppressing slave traders with raiders in the region. Since there are no specific ranks in the ranks of rangers, which implies mutual respect in your ranks. But usually, the commander among the Rangers are Veteran Rangers - by virtue of their experience and knowledge, which can give an advantage to your forces.."
+	supervisors = "Veteran Ranger"
 	selection_color = "#fff5cc"
 
 	exp_requirements = 560
@@ -1045,7 +1045,7 @@ Ranger -- Split into Patrol and Scout
 	total_positions = 2
 	spawn_positions = 2
 	description = "Как Скаут Рейнджер, вы выполняете разведку, а также участвуете в специальных операция Республики. Вы были отправлены сюда для  нейтрализации угроз для Республики, а так же помощи Патрульным Рейнджерам в поиске Работорговцев и Рейдеров, для осуществления над ними правосудия. Так как в рядах рейнджерах  нет определенных званий, что подразумевает под собой взаимоуважение в ваших рядах. Но обычно, командующим в среде Рейнджеров являются Ветераны Рейнджеры – в силу своего опыта и знаний, что могут дать преимущество вашим силам.    ."
-	supervisors = "Ветеран Рейнджер"
+	supervisors = "Veteran Ranger"
 	selection_color = "#fff5cc"
 
 	exp_requirements = 450

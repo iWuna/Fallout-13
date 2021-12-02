@@ -448,8 +448,8 @@
  * Racks
  */
 /obj/structure/rack
-	name = "стеллаж"
-	desc = "Обычный стеллаж для хранения всяких вещей."
+	name = "rack"
+	desc = "Simple rack to store stuff."
 	icon = 'icons/fallout/objects/structures/furniture.dmi'
 	icon_state = "shelf"
 	layer = TABLE_LAYER

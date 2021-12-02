@@ -60,14 +60,14 @@
 	..()
 
 	if(statpanel("Status"))
-		stat(null, "Взаимодействие: [a_intent]")
-		stat(null, "Режим ходьбы: [m_intent]")
+		stat(null, "Intent: [a_intent]")
+		stat(null, "Move type: [m_intent]")
 		if(internal)
 			if(!internal.air_contents)
 				qdel(internal)
 			else
 				stat("Internal Atmosphere Info", internal.name)
-				stat("Давление", internal.air_contents.return_pressure())
+				stat("Pressure", internal.air_contents.return_pressure())
 				stat("Distribution Pressure", internal.distribute_pressure)
 
 		if(mind)
