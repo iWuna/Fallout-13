@@ -50,6 +50,7 @@
 			<A href='?src=[REF(src)];[HrefToken()];secrets=monkey'>Turn all humans into monkeys</A><BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=allspecies'>Change the species of all humans</A><BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=anime'>Chinese Cartoons</A><BR>
+			<A href='?src=[REF(src)];[HrefToken()];secrets=furry'>Dressup all humans into Vanotyan regular clothes</A><BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=power'>Make all areas powered</A><BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=unpower'>Make all areas unpowered</A><BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=quickpower'>Power all SMES</A><BR>
@@ -429,6 +430,34 @@
 							I.item_flags |= NODROP
 				else
 					to_chat(H, "You're not kawaii enough for this.")
+
+		if("furry")
+			if(!check_rights(R_FUN))
+				message_admins("[key_name_admin(usr)] bratan ne nado.")
+				return
+			SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Dressup all humans into Vanotyan regular clothes"))
+			message_admins("[key_name_admin(usr)] made everybody furry.")
+			for(var/mob/living/carbon/human/H in GLOB.carbon_list)
+				var/fursuit = pick(list(/obj/item/clothing/suit/f13/fursuit1, /obj/item/clothing/suit/f13/fursuit2, /obj/item/clothing/suit/f13/fursuit3))
+				var/furhead = /obj/item/clothing/head/f13/furhead1
+				if(fursuit == /obj/item/clothing/suit/f13/fursuit1)
+					furhead = /obj/item/clothing/head/f13/furhead1
+				if(fursuit == /obj/item/clothing/suit/f13/fursuit2)
+					furhead = /obj/item/clothing/head/f13/furhead2
+				if(fursuit == /obj/item/clothing/suit/f13/fursuit3)
+					furhead = /obj/item/clothing/head/f13/furhead3
+				var/obj/item/clothing/I = new fursuit
+				var/obj/item/clothing/A = new furhead
+				var/oldsuit = H.wear_suit
+				var/oldhat = H.head
+				H.temporarilyRemoveItemFromInventory(H.wear_suit, TRUE, FALSE)
+				H.temporarilyRemoveItemFromInventory(H.head, TRUE, FALSE)
+				H.equip_to_slot_or_del(I, SLOT_WEAR_SUIT)
+				H.equip_to_slot_or_del(A, SLOT_HEAD)
+				qdel(oldsuit)
+				qdel(oldhat)
+				I.item_flags |= NODROP
+				A.item_flags |= NODROP
 
 		if("whiteout")
 			if(!check_rights(R_FUN))
