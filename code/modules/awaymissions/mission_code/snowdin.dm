@@ -521,8 +521,7 @@
 
 /obj/effect/spawner/lootdrop/snowdin/dungeonheavy
 	name = "dungeon heavy"
-	loot = list(/obj/item/twohanded/singularityhammer = 25,
-				/obj/item/twohanded/mjollnir = 10,
+	loot = list(/obj/item/twohanded/mjollnir = 10,
 				/obj/item/twohanded/fireaxe = 25,
 				/obj/item/organ/brain/alien = 17,
 				/obj/item/twohanded/dualsaber = 15,

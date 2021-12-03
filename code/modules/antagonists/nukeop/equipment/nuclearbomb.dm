@@ -455,11 +455,13 @@
 	SSticker.roundend_check_paused = FALSE
 
 /obj/machinery/nuclearbomb/proc/really_actually_explode(off_station)
+	var/turf/bomb_location = get_turf(src)
 	Cinematic(get_cinematic_type(off_station),world,CALLBACK(SSticker,/datum/controller/subsystem/ticker/proc/station_explosion_detonation,src))
-	INVOKE_ASYNC(GLOBAL_PROC,.proc/KillEveryoneOnZLevel, z)
+	if(off_station != NUKE_NEAR_MISS)
+		INVOKE_ASYNC(GLOBAL_PROC,.proc/KillEveryoneOnZLevel, bomb_location.z)
 
 /obj/machinery/nuclearbomb/proc/get_cinematic_type(off_station)
-	if(off_station < 2)
+	if(off_station < NUKE_NEAR_MISS)
 		return CINEMATIC_SELFDESTRUCT
 	else
 		return CINEMATIC_SELFDESTRUCT_MISS
@@ -533,6 +535,7 @@
 	if(!z)
 		return
 	for(var/mob/M in GLOB.mob_list)
+		to_chat(M, "<span class='userdanger'>You are shredded to atoms!</span>")
 		if(M.stat != DEAD && M.z == z)
 			M.gib()
 
