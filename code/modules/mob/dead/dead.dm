@@ -46,9 +46,9 @@ INITIALIZE_IMMEDIATE(/mob/dead)
 	if(time_remaining > 0)
 		stat(null, "Time to start: [round(time_remaining/10)]с")
 	else if(time_remaining == -10)
-		stat(null, "Время до начала: ОСТАНОВЛЕНО")
+		stat(null, "Time to start: DELAYED")
 	else
-		stat(null, "Время до начала: СКОРО")
+		stat(null, "Time to start: SOON")
 
 	stat(null, "Players: [SSticker.totalPlayers]")
 	if(client.holder)
