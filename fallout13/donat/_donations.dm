@@ -18,7 +18,7 @@
 
 
 	if(!SSticker || SSticker.current_state < GAME_STATE_PLAYING)
-		to_chat(src,"<span class='warning'>Не так быстро, игра ещё не началась!</span>")
+		to_chat(src,"<span class='warning'>Not so fast, game didn't started yet!</span>")
 		return
 
 	if (!GLOB.donators[ckey]) //If it doesn't exist yet
@@ -28,7 +28,7 @@
 	if(D)
 		D.ShowPanel(src)
 	else
-		to_chat(src,"<span class='warning'>Вы не донатили, извините.</span>")
+		to_chat(src,"<span class='warning'>Donate first.</span>")
 
 GLOBAL_LIST_EMPTY(donate_icon_cache)
 GLOBAL_LIST_EMPTY(donators)
@@ -51,17 +51,17 @@ GLOBAL_LIST_EMPTY(donators)
 
 /datum/donator/proc/ShowPanel(mob/user)
 	var/list/dat = list("<center>")
-	dat += "Подношение Хаббологу!"
+	dat += "Hubbologs tribute!"
 	dat += "</center>"
 
 	dat += "<HR>"
-	dat += "<h3>МАШИНА ДОНАТОВ. Баланс: [money]</h3>"
+	dat += "<h3>DONATION MACHINE. Balance: [money]</h3>"
 	dat += "<div class='statusDisplay'>"
 	dat += "<table>"
 	for(var/L in GLOB.donations_list)
 		dat += "<tr><td></td><td><center><b>[L]</b></center></td><td></td><td></td></tr>"
 		for(var/datum/donate_info/prize in GLOB.donations_list[L])
-			dat += "<tr><td><img src='data:image/jpeg;base64,[GetIconForProduct(prize)]'/></td><td>[prize.name]</td><td>[prize.cost]</td><td><A href='?src=\ref[src];getdonate=\ref[prize]'>Получить</A></td></tr>"
+			dat += "<tr><td><img src='data:image/jpeg;base64,[GetIconForProduct(prize)]'/></td><td>[prize.name]</td><td>[prize.cost]</td><td><A href='?src=\ref[src];getdonate=\ref[prize]'>Get</A></td></tr>"
 	dat += "</table>"
 	dat += "</div>"
 
@@ -83,23 +83,23 @@ GLOBAL_LIST_EMPTY(donators)
 	var/mob/living/carbon/human/user = usr
 
 	if(!SSticker || SSticker.current_state < 3)
-		to_chat(user,"<span class='warning'>Игра ещё не началась!</span>")
+		to_chat(user,"<span class='warning'>Game didn't started yet!</span>")
 		return 0
 
 	if((world.time-SSticker.round_start_time)>DONATIONS_SPAWN_WINDOW && !istype(get_area(user), /area/f13/bar))
-		to_chat(user,"<span class='warning'>Вам нужно быть в баре.</span>")
+		to_chat(user,"<span class='warning'>You should be in Bar.</span>")
 		return 0
 
 	if(prize.cost > money)
-		to_chat(user,"<span class='warning'>У вас недостаточно баланса.</span>")
+		to_chat(user,"<span class='warning'>Not enough money.</span>")
 		return 0
 
 	if(!allowed_num_items)
-		to_chat(user,"<span class='warning'>Вы достигли максимума. Молодец.</span>")
+		to_chat(user,"<span class='warning'>Maximum items.</span>")
 		return 0
 
 	if(!user)
-		to_chat(user,"<span class='warning'>Вам нужно быть живым.</span>")
+		to_chat(user,"<span class='warning'>You should be alive.</span>")
 		return 0
 
 	if(!ispath(prize.path_to))
@@ -109,19 +109,19 @@ GLOBAL_LIST_EMPTY(donators)
 		return 0
 
 	if(prize.stock <= 0)
-		to_chat(user,"<span class='warning'>Поставки <b>[prize.name]</b> закончились.</span>")
+		to_chat(user,"<span class='warning'>Supplies of <b>[prize.name]</b> ended.</span>")
 		return 0
 
 	if(prize.special)
 		if (prize.special != user.ckey)
-			to_chat(user,"<span class='warning'>Этот предмет предназначен для <b>[prize.special]</b>.</span>")
+			to_chat(user,"<span class='warning'>This item are specially for <b>[prize.special]</b>.</span>")
 			return 0
 
 	var/list/slots = list(
-		"сумке" = SLOT_IN_BACKPACK,
-		"левом кармане" = SLOT_L_STORE,
-		"правом кармане" = SLOT_R_STORE,
-		"руке" = SLOT_GENERC_DEXTROUS_STORAGE
+		"backpack" = SLOT_IN_BACKPACK,
+		"left pocket" = SLOT_L_STORE,
+		"right pocket" = SLOT_R_STORE,
+		"hand" = SLOT_GENERC_DEXTROUS_STORAGE
 	)
 
 	prize.stock--
@@ -133,10 +133,10 @@ GLOBAL_LIST_EMPTY(donators)
 		where = user.equip_in_one_of_slots(spawned, slots, qdel_on_fail=0)
 
 	if (!where)
-		to_chat(user,"<span class='info'>Ваш [prize.name] был создан!</span>")
+		to_chat(user,"<span class='info'>Your [prize.name] was created!</span>")
 		spawned.anchored = FALSE
 	else
-		to_chat(user,"<span class='info'>Ваш [prize.name] был создан в [where]!</span>")
+		to_chat(user,"<span class='info'>Your [prize.name] was created in [where]!</span>")
 
 	money -= prize.cost
 	allowed_num_items--
