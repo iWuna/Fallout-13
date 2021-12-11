@@ -625,3 +625,30 @@
 	icon_state = "su_zubenkomp"
 	item_state = "su_zubenkomp"
 	armor = list("melee" = 30, "bullet" = 25, "laser" = 25, "energy" = 20, "bomb" = 20, "bio" = 20, "rad" = 30, "fire" = 20, "acid" = 10)
+
+/obj/item/clothing/suit/f13/fursuit1
+	name = "orange fursuit"
+	desc = "Fucking furries..."
+	icon_state = "fursuit1"
+	item_state = "fursuit1"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
+	item_flags = NODROP
+
+/obj/item/clothing/suit/f13/fursuit2
+	name = "blue fursuit"
+	desc = "Fucking furries..."
+	icon_state = "fursuit2"
+	item_state = "fursuit2"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
+	item_flags = NODROP
+
+/obj/item/clothing/suit/f13/fursuit3
+	name = "red fursuit"
+	desc = "Fucking furries..."
+	icon_state = "fursuit3"
+	item_state = "fursuit3"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
+	item_flags = NODROP

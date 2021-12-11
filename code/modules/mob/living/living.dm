@@ -3,13 +3,6 @@
 	var/has_dick = FALSE
 	var/has_vulva = FALSE
 	var/has_breast = FALSE
-	var/last_partner
-	var/last_orifice
-	var/lastmoan
-	var/sexual_potency =  15
-	var/lust_tolerance = 100
-	var/lust = 0
-	var/multiorgasms = 0
 	var/refactory_period = 0
 	var/memcount = 0
 //end of lewd
@@ -25,8 +18,6 @@
 	GLOB.mob_living_list += src
 
 	//lewd
-	sexual_potency = (prob(80) ? rand(9, 14) : pick(rand(5, 13), rand(15, 20)))
-	lust_tolerance = (prob(80) ? rand(150, 300) : pick(rand(10, 100), rand(350,600)))
 	if(gender == MALE)
 		has_dick = TRUE
 		has_vulva = FALSE

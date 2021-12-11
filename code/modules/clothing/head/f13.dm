@@ -510,3 +510,30 @@
 	icon_state = "hat_zubenkomp"
 	item_state = "hat_zubenkomp"
 	armor = list("melee" = 10, "bullet" = 16, "laser" = 15, "energy" = 5, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+
+/obj/item/clothing/head/f13/furhead1
+	name = "orange furry mask"
+	desc = "Fucking furries..."
+	icon_state = "furhead1"
+	item_state = "furhead1"
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	item_flags = NODROP
+
+/obj/item/clothing/head/f13/furhead2
+	name = "blue furry mask"
+	desc = "Fucking furries..."
+	icon_state = "furhead2"
+	item_state = "furhead2"
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	item_flags = NODROP
+
+/obj/item/clothing/head/f13/furhead3
+	name = "red furry mask"
+	desc = "Fucking furries..."
+	icon_state = "furhead3"
+	item_state = "furhead3"
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	item_flags = NODROP

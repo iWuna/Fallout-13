@@ -454,10 +454,19 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "throwing"
 	item_state = "knife"
-	force = 20
-	throwforce = 20
-	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 51, "embedded_fall_chance" = 10)
+	force = 25
+	throwforce = 25
+	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 75, "embedded_fall_chance" = 25)
 	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/throwing_star/throwingknife/afterattack(atom/target, mob/living/user, flag, params)
+	. = ..()
+	if(flag && user.a_intent == INTENT_HARM) //melee attack
+		return
+	if(!istype(user))
+		return
+	src.forceMove(get_turf(src))
+	src.throw_at(target, 25, 3, user)
 
 /obj/item/throwing_star/spear/harpoon
 	name = "harpoon"
