@@ -1,7 +1,7 @@
 ﻿<!-- Most valid html will work in here, excluding images. -->
 <hr>
-<h1 style="text-align: center;">Welcome to Fallout 13</h1>
+<h1 style="text-align: center;">Добро пожаловать на Fallout 13</h1>
 <hr>
-<p style="text-align: center;"><a href="https://www.reddit.com/r/Fallout13/">Our Reddit</a>. <em><br />All donations goes for development .</em><br /><br /> <em><strong>Development is still in Beta, so don't expect a perfectly balanced action in a boundless Wasteland, with all sorts of incredible things that you've been dreaming about for so long.<br /> <br />Welcome to our <a href="https://discord.gg/3cSzQur6JQ">Discord</a> - we're funny.</strong></em> <br /></p>
+<p style="text-align: center;"><a href="https://www.reddit.com/r/Fallout13/">Наш реддит</a>. <em><br />Донаты будут направленны на разработку.</em><br /><br /> <em><strong>Разработка всё еще на стадии Бета, так что не надейтесь на идеально сбалансированный экшон в безграничной Пустоши, с всякими невероятными штуками о которых вы так давно мечтали.<br /> <br />Заходите поболтать в наш дружелюбный <a href="https://discord.gg/GEMmJYV">Дискорд чат</a> - с нами интересно.</strong></em> <br /><strong>Пожалуйста <a href="https://goo.gl/tskzbM">ПРОЧТИТЕ ПРАВИЛА СЕРВЕРА</a> - ignorantia juris non excusat (незнание правил не освобождает от ответственности)!</strong></p>
 <hr />
-<p><em><br />Enjoy your game!</em></p><hr>
+<p><em><br />Наслаждайтесь плодами наших усердных трудов, и поддержите разработку!</em></p><hr>
