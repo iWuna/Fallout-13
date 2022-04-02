@@ -4,7 +4,7 @@
 
 **Code source:** https://gitlab.com/KoBRaAndrey/F13
 
-**Discord:**  https://discord.gg/yKKJvdX9Yd
+**Discord:**  N/A
 
 ## Terms of service | Условия соглашения
 
