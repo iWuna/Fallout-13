@@ -50,7 +50,7 @@
 			<A href='?src=[REF(src)];[HrefToken()];secrets=monkey'>Turn all humans into monkeys</A><BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=allspecies'>Change the species of all humans</A><BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=anime'>Chinese Cartoons</A><BR>
-			<A href='?src=[REF(src)];[HrefToken()];secrets=furry'>Dressup all humans into Vanotyan regular clothes</A><BR>
+			<A href='?src=[REF(src)];[HrefToken()];secrets=furry'>Dressup all humans into 2ch regular clothes</A><BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=power'>Make all areas powered</A><BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=unpower'>Make all areas unpowered</A><BR>
 			<A href='?src=[REF(src)];[HrefToken()];secrets=quickpower'>Power all SMES</A><BR>
@@ -435,7 +435,7 @@
 			if(!check_rights(R_FUN))
 				message_admins("[key_name_admin(usr)] bratan ne nado.")
 				return
-			SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Dressup all humans into Vanotyan regular clothes"))
+			SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Dressup all humans into 2ch regular clothes"))
 			message_admins("[key_name_admin(usr)] made everybody furry.")
 			for(var/mob/living/carbon/human/H in GLOB.carbon_list)
 				var/fursuit = pick(list(/obj/item/clothing/suit/f13/fursuit1, /obj/item/clothing/suit/f13/fursuit2, /obj/item/clothing/suit/f13/fursuit3))

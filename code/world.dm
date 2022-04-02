@@ -7,7 +7,7 @@
 	area = /area/f13/wasteland
 	view = "15x15"
 	hub = "Exadv1.spacestation13"
-	name = "\[EN\] Fallout 13 - BLOODLEAF"
+	name = "\[RU\] Fallout 13 - NEW ERA"
 	fps = 20
 #ifdef FIND_REF_NO_CHECK_TICK
 	loop_checks = FALSE

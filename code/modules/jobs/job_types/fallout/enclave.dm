@@ -158,7 +158,7 @@ HEAVY!
 	backpack_contents = list(
 			/obj/item/ammo_box/magazine/m12g/dragon = 2
 		)
-	whitelist = list("dosiozborn", "happypala44", "vanotyan", "fiaskin")
+	whitelist = list("alexam")
 
 /datum/job/enclave/f13usheavy
 	title = "US Heavy Soldier"
