@@ -38,7 +38,7 @@
 	idlesound = list('sound/f13npc/ghoul/idle.ogg')
 	death_sound = 'sound/f13npc/ghoul/ghoul_death.ogg'
 
-	XP = 15
+	XP = 5
 
 	var/multiple_sprites = TRUE
 

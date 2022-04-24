@@ -9,6 +9,14 @@
 	else
 		. += grab_state * 3 //can't go fast while grabbing something.
 
+
+	if(istype(src, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = src
+		if(istype(H.wear_suit, /obj/item/clothing/suit/armor/f13/power_armor))
+			var/obj/item/clothing/suit/armor/f13/power_armor/PA = H.wear_suit
+			if(!PA.enabled)
+				. += 15
+
 	if(!get_leg_ignore()) //ignore the fact we lack legs
 		var/leg_amount = get_num_legs()
 		. += 6 - 3*leg_amount //the fewer the legs, the slower the mob

@@ -47,6 +47,8 @@
 	idlesound = list('sound/f13npc/deathclaw/idle.ogg',)
 	death_sound = 'sound/f13npc/deathclaw/death.ogg'
 
+	XP = 15
+
 /mob/living/simple_animal/hostile/deathclaw/playable
 	emote_taunt_sound = null
 	emote_taunt = null

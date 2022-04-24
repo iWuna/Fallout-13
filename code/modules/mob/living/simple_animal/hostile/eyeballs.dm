@@ -27,3 +27,5 @@
 
 	faction = list("spooky")
 	del_on_death = 1
+
+	XP = 2

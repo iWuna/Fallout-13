@@ -45,6 +45,8 @@
 
 	var/list/synth_overlays[SYNTH_TOTAL_LAYERS]
 
+	XP = 10
+
 /mob/living/simple_animal/hostile/synth/playable
 	emote_taunt_sound = null
 	emote_taunt = null
@@ -64,6 +66,8 @@
 	icon_gib = "synthmk2_d"
 	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/f13weapons/laser_rifle.ogg'
+
+	XP = 12
 
 /mob/living/simple_animal/hostile/synth/mk2/playable
 	emote_taunt_sound = null
@@ -129,4 +133,4 @@
 	return ..()
 
 /mob/living/simple_animal/hostile/synth/regenerate_icons()
-	update_inv_hands()	
+	update_inv_hands()

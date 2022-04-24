@@ -42,6 +42,8 @@
 	death_sound = 'sound/f13npc/centaur/centaur_death.ogg'
 	attack_sound = 'sound/f13npc/centaur/lash.ogg'
 
+	XP = 5
+
 /obj/item/projectile/neurotox
 	name = "spit"
 	damage = 30

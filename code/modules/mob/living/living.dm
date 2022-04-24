@@ -17,6 +17,8 @@
 	faction += "[REF(src)]"
 	GLOB.mob_living_list += src
 
+	experience = new /datum/experience(src)
+
 	//lewd
 	if(gender == MALE)
 		has_dick = TRUE

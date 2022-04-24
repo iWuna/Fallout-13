@@ -29,6 +29,8 @@
 	status_flags = CANPUSH
 	del_on_death = 1
 
+	XP = 5
+
 /mob/living/simple_animal/hostile/raider/thief
 
 /mob/living/simple_animal/hostile/raider/thief/movement_delay()
@@ -81,7 +83,7 @@
 	health = 180
 	projectiletype = /obj/item/projectile/bullet/c45
 	projectilesound = 'sound/weapons/gunshot.ogg'
-	
+
 /mob/living/simple_animal/hostile/raider/ranged/boss
 	name = "Raider Boss"
 	icon_state = "raiderboss"

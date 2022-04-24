@@ -30,6 +30,8 @@
 							/obj/item/stack/sheet/animalhide/human = 1,
 							/obj/item/stack/sheet/bone = 1)
 
+	XP = 5
+
 /mob/living/simple_animal/hostile/trog/sporecarrier
 	name = "spore carrier"
 	desc = "A victim of the beauveria mordicana fungus, these corpses sole purpose is to spread its spores."

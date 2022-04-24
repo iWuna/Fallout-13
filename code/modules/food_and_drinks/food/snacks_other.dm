@@ -78,7 +78,7 @@
 	foodtype = VEGETABLES | DAIRY
 
 /obj/item/reagent_containers/food/snacks/tatofries
-	name = "tao fries"
+	name = "tato fries"
 	desc = "Tato fries are served hot, either soft or crispy, and are generally eaten through out the wasteland as part of lunch or dinner or by themselves as a snack."
 	icon_state = "fries"
 	list_reagents = list("nutriment" = 4)

@@ -38,6 +38,8 @@
 
 	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
 
+	XP = 7
+
 /mob/living/simple_animal/hostile/handy/playable
 	ranged = FALSE
 	health = 300
@@ -86,6 +88,8 @@
 
 	aggrosound = list('sound/f13npc/gutsy/aggro1.ogg', 'sound/f13npc/gutsy/aggro2.ogg', 'sound/f13npc/gutsy/aggro3.ogg', 'sound/f13npc/gutsy/aggro4.ogg', 'sound/f13npc/gutsy/aggro5.ogg', 'sound/f13npc/gutsy/aggro6.ogg')
 	idlesound = list('sound/f13npc/gutsy/idle1.ogg', 'sound/f13npc/gutsy/idle2.ogg', 'sound/f13npc/gutsy/idle3.ogg')
+
+	XP = 10
 
 /mob/living/simple_animal/hostile/handy/gutsy/playable
 	ranged = FALSE
@@ -136,69 +140,9 @@
 	death_sound = null
 	attack_sound = null
 
-
+	XP = 8
 
 /mob/living/simple_animal/hostile/handy/securitron/AttackingTarget()
-	. = ..()
-
-/mob/living/simple_animal/hostile/handy/liberator
-	name = "liberator"
-	desc = "A small pre-War droned used by the People's Liberation Army."
-	icon_state = "liberator"
-	icon_living = "liberator"
-	icon_dead = "liberator_d"
-	icon_gib = "liberator_g"
-	health = 80
-	maxHealth = 80
-	melee_damage_lower = 5
-	melee_damage_upper = 10
-	attacktext = "slaps"
-	attack_sound = 'sound/weapons/punch1.ogg'
-	projectilesound = 'sound/weapons/laser.ogg'
-	projectiletype = /obj/item/projectile/beam/laser/pistol
-	extra_projectiles = 1
-	ranged = TRUE
-	retreat_distance = 2
-	minimum_distance = 2
-	check_friendly_fire = TRUE
-	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
-	emote_taunt_sound = null
-	emote_taunt = list("levels its laser")
-	aggrosound = null
-	idlesound = null
-	death_sound = null
-	attack_sound = null
-
-/mob/living/simple_animal/hostile/handy/liberator_yellow
-	name = "liberator"
-	desc = "A small pre-War droned used by the People's Liberation Army."
-	icon_state = "liberator_y"
-	icon_living = "liberator_y"
-	icon_dead = "liberator_y_d"
-	health = 80
-	maxHealth = 80
-	melee_damage_lower = 5
-	melee_damage_upper = 10
-	attacktext = "slaps"
-	attack_sound = 'sound/weapons/punch1.ogg'
-	projectilesound = 'sound/weapons/laser.ogg'
-	projectiletype = /obj/item/projectile/beam/laser/pistol
-	extra_projectiles = 1
-	ranged = TRUE
-	retreat_distance = 2
-	minimum_distance = 2
-	check_friendly_fire = TRUE
-	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
-	emote_taunt_sound = null
-	emote_taunt = list("levels its laser")
-	aggrosound = null
-	idlesound = null
-	death_sound = null
-	attack_sound = null
-
-
-
-/mob/living/simple_animal/hostile/handy/liberator_yellow/AttackingTarget()
 	. = ..()
 
 /mob/living/simple_animal/hostile/handy/robobrain
@@ -228,7 +172,7 @@
 	death_sound = null
 	attack_sound = null
 
-
+	XP = 6
 
 /mob/living/simple_animal/hostile/handy/robobrain/AttackingTarget()
 	. = ..()
@@ -260,7 +204,7 @@
 	death_sound = null
 	attack_sound = null
 
-
+	XP = 7
 
 /mob/living/simple_animal/hostile/handy/securitron/AttackingTarget()
 	. = ..()
@@ -293,6 +237,8 @@
 
 	aggrosound = list('sound/f13npc/protectron/aggro1.ogg', 'sound/f13npc/protectron/aggro2.ogg', 'sound/f13npc/protectron/aggro3.ogg', 'sound/f13npc/protectron/aggro4.ogg')
 	idlesound = list('sound/f13npc/protectron/idle1.ogg', 'sound/f13npc/protectron/idle2.ogg', 'sound/f13npc/protectron/idle3.ogg', 'sound/f13npc/protectron/idle4.ogg',)
+
+	XP = 5
 
 /mob/living/simple_animal/hostile/handy/protectron/playable
 	ranged = FALSE
@@ -366,6 +312,8 @@
 
 	aggrosound = list('sound/f13npc/sentry/aggro1.ogg', 'sound/f13npc/sentry/aggro2.ogg', 'sound/f13npc/sentry/aggro3.ogg', 'sound/f13npc/sentry/aggro4.ogg', 'sound/f13npc/sentry/aggro5.ogg')
 	idlesound = list('sound/f13npc/sentry/idle1.ogg', 'sound/f13npc/sentry/idle2.ogg', 'sound/f13npc/sentry/idle3.ogg', 'sound/f13npc/sentry/idle4.ogg')
+
+	XP = 7
 
 /mob/living/simple_animal/hostile/handy/sentrybot/playable
 	ranged = FALSE
@@ -450,6 +398,8 @@
 
 	aggrosound = FALSE
 	idlesound = FALSE
+
+	XP = 15
 
 /mob/living/simple_animal/hostile/handy/assaultron/playable
 	see_in_dark = 8
@@ -557,3 +507,5 @@
 	force_threshold = 10
 	anchored = TRUE
 	del_on_death = FALSE
+
+	XP = 15

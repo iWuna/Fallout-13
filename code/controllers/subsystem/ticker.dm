@@ -646,13 +646,8 @@ SUBSYSTEM_DEF(ticker)
 	save_admin_data()
 	if(!round_end_sound)
 		round_end_sound = pick(\
-		'sound/roundend/round_end_title_1.wav',
-		'sound/roundend/round_end_title_2.wav',
-		'sound/roundend/round_end_title_3.wav',
-		'sound/roundend/newroundsexy.ogg',
-		'sound/roundend/bangindonk.ogg',
-		'sound/roundend/its_only_game.ogg',
-		'sound/roundend/yeehaw.ogg',
+		'sound/roundend/warneverchanges.ogg',
+		'sound/roundend/wheresthekaboom.ogg',
 		'sound/roundend/roundend_jean_baptist.ogg',
 		'sound/roundend/roundend_smoothskin.ogg',
 		'sound/roundend/roundend_tunnel_snakes_rule.ogg',

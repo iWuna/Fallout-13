@@ -980,7 +980,11 @@
 */
 // salvaged/broken power armor, does not require PA training
 
+/datum/action/item_action/toggle/pa_cell
+	button_icon_state = "pa_cell"
 
+/datum/action/item_action/toggle/pa_toggle
+	button_icon_state = "pa_onoff"
 
 /obj/item/clothing/suit/armor/f13/power_armor
 	w_class = WEIGHT_CLASS_HUGE
@@ -1002,13 +1006,27 @@
 	var/requires_training = TRUE
 	flags_inv = HIDEJUMPSUIT|HIDENECK|HIDEEYES|HIDEEARS|HIDEFACE|HIDEMASK|HIDEGLOVES|HIDESHOES
 	var/traits = list(TRAIT_IRONFIST, TRAIT_STUNIMMUNE, TRAIT_PUSHIMMUNE)
-	var/hit_reflect_chance = 5 //Делаем рефлекты к ПА, по умолчанию 5 процентов.
-	// var/footstep = 1 //Нужно для звука шагов
-	// var/datum/component/mobhook //Тоже нужно для звука шагов
+	var/hit_reflect_chance = 5 //Делаем рефлекты к ПА, по умолчанию 5 процентов.в
+
+//small rework to make PA work like in F4 and F76.
+
+	actions_types = list(/datum/action/item_action/toggle/pa_cell, /datum/action/item_action/toggle/pa_toggle)
+
+	var/obj/item/stock_parts/cell_pa/power_cell = null
+	var/mob/living/carbon/human/current_user = null
+
+	var/default_power_usage = 10
+	var/current_power_usage = null
+	var/enabled = FALSE
+
+	var/datum/component/mobhook
+	var/footstep = 1
+
 
 /obj/item/clothing/suit/armor/f13/power_armor/Initialize()
 	. = ..()
 	AddComponent(/datum/component/spraycan_paintable)
+	current_power_usage = default_power_usage
 
 /obj/item/clothing/suit/armor/f13/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1) //Проверка на навык ношения ПА
 	. = ..()
@@ -1050,15 +1068,20 @@
 		if(ismob(loc))
 			to_chat(loc, "<span class='warning'>Warning: electromagnetic surge detected in armor. Rerouting power to emergency systems.</span>")
 			playsound(src, 'sound/f13effects/emp_PA.ogg', 80, 1)
-			slowdown += 15
-			armor = armor.modifyRating(melee = -20, bullet = -20, laser = -20)
+			//slowdown += 15
+			//armor = armor.modifyRating(melee = -20, bullet = -20, laser = -20)
 			emped = 1
+			power_cell.emp_act()
 			spawn(50) //5 seconds of being slow and weak
 				to_chat(loc, "<span class='warning'>Armor power reroute successful. All systems operational.</span>")
-				slowdown -= 15
+				//slowdown -= 15
 				armor = armor.modifyRating(melee = 20, bullet = 20, laser = 20)
 				emped = 0
-/* Звуки сервоприводов закоменчены, ибо режут слух, ну их нахуй.
+
+
+// Звуки сервоприводов закоменчены, ибо режут слух, ну их нахуй.
+// Звуки раскоменчены, иди нахуй.
+
 /obj/item/clothing/suit/armor/f13/power_armor/proc/on_mob_move() //Звук движения сервоприводов при ходьбе в ПА
 	var/mob/living/carbon/human/H = loc
 	if(!istype(H) || H.wear_suit != src)
@@ -1068,6 +1091,7 @@
 		footstep = 0//Если закоментить строчку, на каждый шаг будет звук, а пока через шаг или два.
 	else
 		footstep++
+
 /obj/item/clothing/suit/armor/f13/power_armor/equipped(mob/user, slot)
 	. = ..()
 	if (slot == SLOT_WEAR_SUIT)
@@ -1075,8 +1099,10 @@
 			QDEL_NULL(mobhook)
 		if (!mobhook)
 			mobhook = user.AddComponent(/datum/component/redirect, list(COMSIG_MOVABLE_MOVED), CALLBACK(src, .proc/on_mob_move))
+
 	else
 		QDEL_NULL(mobhook)
+
 
 /obj/item/clothing/suit/armor/f13/power_armor/dropped()
 	. = ..()
@@ -1085,7 +1111,72 @@
 /obj/item/clothing/suit/armor/f13/power_armor/Destroy()
 	QDEL_NULL(mobhook) // mobhook is not our component
 	return ..()
-*/
+
+/obj/item/clothing/suit/armor/f13/power_armor/ui_action_click(mob/user, actiontype)
+	if(istype(actiontype, /datum/action/item_action/toggle/pa_cell))
+		ejectInsertCell()
+		return
+
+	if(istype(actiontype, /datum/action/item_action/toggle/pa_toggle))
+		onOffPA()
+		return
+
+/obj/item/clothing/suit/armor/f13/power_armor/verb/onOffPA()
+	set name = "Switch Armor Power"
+	set category = "Power Armor"
+	set src in view(1)
+
+	if(!power_cell || power_cell.charge <= 0)
+		to_chat(usr, "<span class='userdanger'>There's no power.</span>")
+		return
+
+	enabled = !enabled
+	if(enabled)
+		if(do_after(usr, 5, target = loc))
+			to_chat(usr, "<span class='green'>[src] activated.</span>")
+			powerControl()
+	else
+		if(do_after(usr, 5, target = loc))
+			to_chat(usr, "<span class='notice'>[src] deactivated.</span>")
+
+/obj/item/clothing/suit/armor/f13/power_armor/verb/ejectInsertCell()
+	set name = "Manipulate Fusion Core"
+	set category = "Power Armor"
+	set src in view(1)
+
+	if(!power_cell)
+		if(istype(usr.get_active_held_item(), /obj/item/stock_parts/cell_pa))
+			if(do_after(usr, 15, target = loc))
+				power_cell = usr.get_active_held_item()
+				usr.drop_all_held_items()
+				power_cell.forceMove(src)
+				powerControl()
+				to_chat(usr, "<span class='notice'>You inserted [power_cell.name] to [src].</span>")
+				playsound(src.loc, 'sound/weapons/selector.ogg', 40, 0, 0)
+				return
+		to_chat(usr, "<span class='warning'>There's no Fusion core!</span>")
+		return
+	else
+		if(do_after(usr, 10, target = loc))
+			to_chat(usr, "<span class='green'>You ejected [power_cell.name] from [src].</span>")
+			playsound(src.loc, 'sound/weapons/selector.ogg', 40, 0, 0)
+			usr.put_in_hands(power_cell)
+			power_cell = null
+
+/obj/item/clothing/suit/armor/f13/power_armor/proc/powerControl()
+	if(!power_cell || power_cell.charge <= 0)
+		enabled = FALSE
+		return
+
+	START_PROCESSING(SSobj, src)
+	playsound(src.loc, 'sound/weapons/flash.ogg', 40, 0, 0)
+
+/obj/item/clothing/suit/armor/f13/power_armor/process()
+	if(!power_cell || !power_cell.using(current_power_usage) || !enabled)
+		enabled = FALSE
+		STOP_PROCESSING(SSobj, src)
+		to_chat(usr, "<span class='boldwarning'>[src] deactivates!.</span>")
+
 /obj/item/clothing/suit/armor/f13/power_armor/t45b
 	name = "salvaged T-45b power armor"
 	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and stripped out servomotors. Bulky and slow, but almost as good as the real thing."

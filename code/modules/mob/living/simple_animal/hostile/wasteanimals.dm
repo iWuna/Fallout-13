@@ -36,6 +36,8 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	death_sound = 'sound/f13npc/cazador/cazador_death.ogg'
 
+	XP = 2
+
 /mob/living/simple_animal/hostile/cazador/playable
 	emote_taunt_sound = null
 	emote_taunt = null
@@ -73,6 +75,8 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 10
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/cazador_meat = 1, /obj/item/stack/sheet/animalhide/chitin = 1, /obj/item/stack/sheet/sinew = 1)
+
+	XP = 1
 
 /mob/living/simple_animal/hostile/cazador/young/playable
 	emote_taunt_sound = null
@@ -149,6 +153,7 @@
 
 	death_sound = 'sound/f13npc/scorpion/death.ogg'
 
+	XP = 4
 
 /mob/living/simple_animal/hostile/radscorpion/AttackingTarget()
 	. = ..()
@@ -201,6 +206,8 @@
 	aggrosound = list('sound/f13npc/gecko/gecko_alert.ogg', )
 	death_sound = 'sound/f13npc/gecko/gecko_death.ogg'
 
+	XP = 3
+
 /mob/living/simple_animal/hostile/gecko/playable
 	health = 200
 	maxHealth = 200
@@ -250,6 +257,8 @@
 	idlesound = list('sound/f13npc/roach/idle1.ogg', 'sound/f13npc/roach/idle2.ogg', 'sound/f13npc/roach/idle3.ogg',)
 	death_sound = 'sound/f13npc/roach/roach_death.ogg'
 
+	XP = 1
+
 /mob/living/simple_animal/hostile/giantant
 	name = "fireant"
 	desc = "A large mutated insect that finds its way everywhere."
@@ -283,6 +292,8 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	a_intent = INTENT_HARM
 	//decompose = TRUE // Посибл перегрузка
+
+	XP = 4
 
 /mob/living/simple_animal/hostile/giantant/Initialize()
 	. = ..()
@@ -324,6 +335,8 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	//decompose = TRUE //Посибл перегрузка.
 	a_intent = INTENT_HARM
+
+	XP = 5
 
 /mob/living/simple_animal/hostile/fireant/Initialize()
 	. = ..()
@@ -384,6 +397,7 @@
 	var/spawn_time = 30 SECONDS
 	var/spawn_text = "hatches from"
 
+	XP = 10
 
 /mob/living/simple_animal/hostile/giantantqueen/Initialize()
 	. = ..()
@@ -474,6 +488,8 @@
 	death_sound = 'sound/f13npc/nightstalker/death.ogg'
 	attack_sound = 'sound/f13npc/nightstalker/attack1.ogg'
 
+	XP = 6
+
 /mob/living/simple_animal/hostile/stalkeryoung/playable
 	health = 250
 	maxHealth = 250
@@ -529,6 +545,8 @@
 	faction = list("gecko")
 	gold_core_spawnable = HOSTILE_SPAWN
 	a_intent = INTENT_HARM
+
+	XP = 8
 
 /mob/living/simple_animal/hostile/stalker/playable
 	health = 300
@@ -586,6 +604,8 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	a_intent = INTENT_HARM
 
+	XP = 4
+
 /mob/living/simple_animal/hostile/bloatfly/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		return
@@ -633,6 +653,8 @@
 	idlesound = list('sound/f13npc/molerat/idle.ogg')
 	death_sound = 'sound/f13npc/molerat/death.ogg'
 
+	XP = 2
+
 /mob/living/simple_animal/hostile/radscorpion/black
 	name = "giant rad scorpion"
 	desc = "A giant irradiated scorpion with a black exoskeleton. Its appearance makes you shudder in fear.<br>This one has giant pincers."
@@ -646,6 +668,8 @@
 	melee_damage_upper = 30
 	move_to_delay = 4
 	gold_core_spawnable = HOSTILE_SPAWN
+
+	XP = 5
 
 /mob/living/simple_animal/hostile/mirelurk
 	name = "mirelurk"
@@ -661,6 +685,8 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 20
 	gold_core_spawnable = HOSTILE_SPAWN
+
+	XP = 5
 
 /mob/living/simple_animal/hostile/fireant/Initialize()
 	. = ..()
@@ -684,6 +710,8 @@
 	melee_damage_upper = 45
 	gold_core_spawnable = HOSTILE_SPAWN
 
+	XP = 8
+
 /mob/living/simple_animal/hostile/fireant/Initialize()
 	. = ..()
 
@@ -705,6 +733,8 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 10
 	gold_core_spawnable = HOSTILE_SPAWN
+
+	XP = 3
 
 /mob/living/simple_animal/hostile/mirelurk/baby/Initialize()
 	. = ..()

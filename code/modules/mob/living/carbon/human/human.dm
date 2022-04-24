@@ -115,6 +115,19 @@
 						var/datum/disease/D = thing
 						stat("*", "[D.name], Type: [D.spread_text], Stage: [D.stage]/[D.max_stages], Possible Cure: [D.cure_text]")
 
+	//POWER ARMOR
+	if(istype(wear_suit, /obj/item/clothing/suit/armor/f13/power_armor))
+		var/obj/item/clothing/suit/armor/f13/power_armor/PA = wear_suit
+		if(statpanel("Status"))
+			if(PA.enabled)
+				stat("PA Status: On.")
+			else
+				stat("PA Status: Off.")
+
+			if(PA.power_cell)
+				stat("PA Cell: [round(PA.power_cell.percent())]%")
+			else
+				stat("PA Cell: ..Missing..")
 
 /mob/living/carbon/human/show_inv(mob/user)
 	user.set_machine(src)
