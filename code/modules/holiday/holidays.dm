@@ -201,6 +201,16 @@
 	begin_month = JULY
 	drone_hat = /obj/item/clothing/head/nursehat
 
+/datum/holiday/lgbt
+	name = "Pride Month"
+	begin_day = 2
+	begin_month = JUNE
+
+/datum/holiday/trans
+	name = "International Transgender Day of Visibility"
+	begin_day = 31
+	begin_month = MARCH
+
 /datum/holiday/UFO
 	name = "UFO Day"
 	begin_day = 2
