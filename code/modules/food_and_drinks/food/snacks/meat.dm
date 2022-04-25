@@ -213,6 +213,30 @@
 	cooked_type = /obj/item/reagent_containers/food/snacks/meat/steak/ghoul
 	slice_path = null
 
+/obj/item/reagent_containers/food/snacks/meat/slab/brahminliver
+	name = "Raw Brahmin Liver"
+	desc = "The raw tongue of a brahmin, a wastelander favorite"
+	icon_state = "Brahmin Liver"
+	bitesize = 3
+	filling_color = "#CD853F"
+	list_reagents = list("nutriment" = 3, "vitamin" = 2)
+	cooked_type = /obj/item/reagent_containers/food/snacks/f13/brahminliver
+	slice_path = /obj/item/reagent_containers/food/snacks/meat/rawcutlet/brahminliver
+	tastes = list("beef" = 4, "tender meat" = 1)
+	foodtype = MEAT | RAW
+
+/obj/item/reagent_containers/food/snacks/meat/slab/brahmintongue
+	name = "Raw Brahmin Tongue"
+	desc = "The raw tongue of a brahmin, a wastelander favorite"
+	icon_state = "BrahminTongue"
+	bitesize = 3
+	filling_color = "#CD853F"
+	list_reagents = list("nutriment" = 3, "vitamin" = 2)
+	cooked_type = /obj/item/reagent_containers/food/snacks/f13/brahmintongue
+	slice_path = /obj/item/reagent_containers/food/snacks/meat/rawcutlet/brahmintongue
+	tastes = list("beef" = 4, "tender meat" = 1)
+	foodtype = MEAT | RAW
+
 /obj/item/reagent_containers/food/snacks/meat/steak/ghoul
 	name = "ghoul steak"
 	desc = "Why would you even cook this?"
@@ -495,6 +519,18 @@
 	cooked_type = /obj/item/reagent_containers/food/snacks/meat/cutlet/spider
 	tastes = list("cobwebs" = 1)
 
+/obj/item/reagent_containers/food/snacks/meat/rawcutlet/brahminliver
+	name = "brahmin liver slices"
+	icon_state = "chopped_liver"
+	cooked_type = /obj/item/reagent_containers/food/snacks/meat/cutlet/brahminliver
+	tastes = list("meat" = 1, "slimy" = 1)
+
+/obj/item/reagent_containers/food/snacks/meat/rawcutlet/brahmintongue
+	name = "brahmin tongue slices"
+	icon_state = "chopped_tongue"
+	cooked_type = /obj/item/reagent_containers/food/snacks/meat/cutlet/brahmintongue
+	tastes = list("meat" = 1, "slimy" = 1)
+
 //Cooked cutlets
 
 /obj/item/reagent_containers/food/snacks/meat/cutlet
@@ -530,3 +566,13 @@
 /obj/item/reagent_containers/food/snacks/meat/cutlet/spider
 	name = "spider cutlet"
 	tastes = list("cobwebs" = 1)
+
+/obj/item/reagent_containers/food/snacks/meat/cutlet/brahminliver
+	icon_state = "chopped_liver_cooked"
+	tastes = list("tender meat" = 1)
+	foodtype = MEAT | GROSS
+
+/obj/item/reagent_containers/food/snacks/meat/cutlet/brahmintongue
+	icon_state = "chopped_tongue_cooked"
+	tastes = list("tender meat" = 1)
+	foodtype = MEAT | GROSS
