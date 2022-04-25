@@ -66,10 +66,13 @@
 		plane_masters["[instance.plane]"] = instance
 		instance.backdrop(mymob)
 
-/datum/hud/Destroy(mob/user)
-	qdel(hide_actions_toggle)
-	qdel(module_store_icon)
-	qdel(static_inventory)
+/datum/hud/Destroy()
+	if(mymob.hud_used == src)
+		mymob.hud_used = null
+
+	QDEL_NULL(hide_actions_toggle)
+	QDEL_NULL(module_store_icon)
+	QDEL_LIST(static_inventory)
 
 	inv_slots.Cut()
 	action_intent = null
