@@ -29,9 +29,13 @@
 								/obj/item/reagent_containers/pill/patch/hydra = 15, //Гидра
 								/obj/item/reagent_containers/pill/patch/steady = 20, //Стреди
 								/obj/item/reagent_containers/pill/patch/turbo = 15, // Турбо
-								/obj/item/reagent_containers/pill/patch/medcase = 100 //Мед кейс
-
-
+								/obj/item/reagent_containers/pill/patch/medcase = 100, //Мед кейс
+								/obj/item/gun/ballistic/automatic/pistol/ninemil = 25,
+								/obj/item/gun/ballistic/revolver/colt6520 = 30,
+								/obj/item/gun/ballistic/rifle/enfield = 35,
+								/obj/item/gun/ballistic/automatic/pistol/n99 = 30,
+								/obj/item/gun/ballistic/automatic/pistol/pistol22 = 20,
+								/obj/item/gun/ballistic/revolver/widowmaker = 40
 								)
 
 /obj/machinery/mineral/wasteland_trader/general
@@ -54,7 +58,7 @@
 	. = ..()
 	var/dat
 	dat +="<div class='statusDisplay'>"
-	dat += "<b>Всего крышек в автомате:</b> [stored_caps]. <A href='?src=[REF(src)];choice=eject'>Eject caps</A><br>"
+	dat += "<b>Caps:</b> [stored_caps]. <A href='?src=[REF(src)];choice=eject'>Eject caps</A><br>"
 	dat += "</div>"
 	dat += "<br>"
 	dat +="<div class='statusDisplay'>"

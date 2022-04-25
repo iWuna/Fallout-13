@@ -1,5 +1,5 @@
 /datum/outfit/ninja
-	name = "Space Ninja"
+	name = "Chineese Spy"
 	uniform = /obj/item/clothing/under/color/black
 	suit = /obj/item/clothing/suit/space/space_ninja
 	glasses = /obj/item/clothing/glasses/night

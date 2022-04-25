@@ -66,13 +66,10 @@
 		plane_masters["[instance.plane]"] = instance
 		instance.backdrop(mymob)
 
-/datum/hud/Destroy()
-	if(mymob.hud_used == src)
-		mymob.hud_used = null
-
-	QDEL_NULL(hide_actions_toggle)
-	QDEL_NULL(module_store_icon)
-	QDEL_LIST(static_inventory)
+/datum/hud/Destroy(mob/user)
+	qdel(hide_actions_toggle)
+	qdel(module_store_icon)
+	qdel(static_inventory)
 
 	inv_slots.Cut()
 	action_intent = null
@@ -84,16 +81,16 @@
 	throw_icon = null
 	QDEL_LIST(infodisplay)
 
-	healths = null
-	healthdoll = null
-	internals = null
-	mood = null
-	lingchemdisplay = null
-	devilsouldisplay = null
-	lingstingdisplay = null
-	blobpwrdisplay = null
-	alien_plasma_display = null
-	alien_queen_finder = null
+	user.healths = null
+	user.healthdoll = null
+	user.internals = null
+	user.mood = null
+	user.lingchemdisplay = null
+	user.devilsouldisplay = null
+	user.lingstingdisplay = null
+	user.blobpwrdisplay = null
+	user.alien_plasma_display = null
+	user.alien_queen_finder = null
 
 	QDEL_LIST_ASSOC_VAL(plane_masters)
 	QDEL_LIST(screenoverlays)

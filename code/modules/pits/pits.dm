@@ -15,7 +15,7 @@
 	..()
 	parent = lnk
 
-/obj/dugpit/container_resist(mob/living/user)
+/obj/dugpit/container_resist(mob/carbon/user)
 	//try to unbury self
 	to_chat(user, "<span class='danger'>You start digging from inside, trying to unbury self!</span>")
 	if(do_after(user, (50), target = src))
@@ -61,7 +61,7 @@
 			storedindex = storedindex+1
 
 		if(istype(W, /obj/item/stack/ore/glass) && pit_sand < 1 )
-			var/obj/item/stack/ore/glass/sand_target = W
+			var/obj/item/stack/ore/glass/sand_target = pit_sand
 			usr.show_message("<span class='notice'>You fill the hole with sand</span>", 1)
 			if (pit_sand == 0)
 				if (sand_target.amount >= 1)
@@ -69,7 +69,6 @@
 					pit_sand = pit_sand + 1
 			if (sand_target.amount == 0)
 				qdel(W)
-
 
 /turf/open/indestructible/ground/outside/desert/attack_hand(mob/living/carbon/human/M)
 	if (dug)
@@ -204,7 +203,6 @@
 				handleRCL(W, user)
 
 			return FALSE
-
 
 /turf/open/indestructible/ground/outside/desert/proc/gets_dug(mob/user)
 	if(dug)

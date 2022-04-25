@@ -10,7 +10,8 @@
 
 /obj/screen/ghost/jumptomob/Click()
 	var/mob/dead/observer/G = usr
-	G.jumptomob()
+	if(G.started_as_observer) //for safety
+		G.jumptomob()
 
 /obj/screen/ghost/orbit
 	name = "Orbit"

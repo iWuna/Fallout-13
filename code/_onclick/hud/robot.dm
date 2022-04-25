@@ -9,7 +9,7 @@
 	if(isobserver(usr))
 		return 1
 
-/obj/screen/robot/module/Click()
+/obj/screen/robot/module/attack()
 	if(..())
 		return
 	var/mob/living/silicon/robot/R = usr
@@ -22,7 +22,7 @@
 	name = "module1"
 	icon_state = "inv1"
 
-/obj/screen/robot/module1/Click()
+/obj/screen/robot/module1/attack()
 	if(..())
 		return
 	var/mob/living/silicon/robot/R = usr
@@ -32,7 +32,7 @@
 	name = "module2"
 	icon_state = "inv2"
 
-/obj/screen/robot/module2/Click()
+/obj/screen/robot/module2/attack()
 	if(..())
 		return
 	var/mob/living/silicon/robot/R = usr
@@ -42,7 +42,7 @@
 	name = "module3"
 	icon_state = "inv3"
 
-/obj/screen/robot/module3/Click()
+/obj/screen/robot/module3/attack()
 	if(..())
 		return
 	var/mob/living/silicon/robot/R = usr
@@ -52,7 +52,7 @@
 	name = "radio"
 	icon_state = "radio"
 
-/obj/screen/robot/radio/Click()
+/obj/screen/robot/radio/attack()
 	if(..())
 		return
 	var/mob/living/silicon/robot/R = usr
@@ -62,7 +62,7 @@
 	name = "store"
 	icon_state = "store"
 
-/obj/screen/robot/store/Click()
+/obj/screen/robot/store/attack()
 	if(..())
 		return
 	var/mob/living/silicon/robot/R = usr
@@ -72,7 +72,7 @@
 	name = "headlamp"
 	icon_state = "lamp0"
 
-/obj/screen/robot/lamp/Click()
+/obj/screen/robot/lamp/attack()
 	if(..())
 		return
 	var/mob/living/silicon/robot/R = usr
@@ -82,7 +82,7 @@
 	name = "ion thrusters"
 	icon_state = "ionpulse0"
 
-/obj/screen/robot/thrusters/Click()
+/obj/screen/robot/thrusters/attack()
 	if(..())
 		return
 	var/mob/living/silicon/robot/R = usr
