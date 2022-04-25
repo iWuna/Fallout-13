@@ -42,7 +42,7 @@
 	visible_message("<span class='danger'>[L] [spawn_text] [src].</span>")
 
 /obj/structure/nest/attackby(obj/item/I, mob/living/user, params)
-	if(user.a_intent == INTENT_HARM)	
+	if(user.a_intent == INTENT_HARM)
 		to_chat(user, "<span class='warning'>You feel it is impossible to hit a hole!</span>")
 		return
 
@@ -114,13 +114,13 @@
 
 /obj/structure/nest/ghoul
 	name = "ghoul nest"
-	mob_types = list(/mob/living/simple_animal/hostile/ghoul = 5, 
-					/mob/living/simple_animal/hostile/ghoul/reaver = 3, 
+	mob_types = list(/mob/living/simple_animal/hostile/ghoul = 5,
+					/mob/living/simple_animal/hostile/ghoul/reaver = 3,
 					/mob/living/simple_animal/hostile/ghoul/glowing = 1)
 
 /obj/structure/nest/deathclaw
 	name = "deathclaw nest"
-	mob_types = list(/mob/living/simple_animal/hostile/deathclaw = 5, 
+	mob_types = list(/mob/living/simple_animal/hostile/deathclaw = 5,
 					/mob/living/simple_animal/hostile/deathclaw/mother = 1)
 
 /obj/structure/nest/scorpion
@@ -130,3 +130,11 @@
 /obj/structure/nest/radroach
 	name = "radroach nest"
 	mob_types = list(/mob/living/simple_animal/hostile/radroach = 1)
+
+/obj/structure/nest/squirrel
+	name = "sqirrel drey"
+	icon = 'icons/fallout/flora/talltrees.dmi'
+	icon_state = "drey"
+	max_mobs = 2
+	spawn_delay = 420
+	mob_types = list(/mob/living/simple_animal/squirrel = 1)
