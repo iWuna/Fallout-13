@@ -43,10 +43,10 @@ GLOBAL_LIST_EMPTY(donators)
 
 /datum/donator/New(ckey, money)
 	..()
-	ownerkey = src.name //for fast processing
+	ownerkey = ckey //for fast processing
 	src.money = money
 	maxmoney = money
-	GLOB.donators[name] = src
+	GLOB.donators[ckey] = src
 
 
 /datum/donator/proc/ShowPanel(mob/user)

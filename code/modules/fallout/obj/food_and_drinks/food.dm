@@ -69,6 +69,38 @@
 	cooked_type = /obj/item/reagent_containers/food/snacks/meat/steak/stalker
 	slice_path = null
 
+/obj/item/reagent_containers/food/snacks/meat/slab/brahminliver
+	name = "Raw Brahmin Liver"
+	desc = "The raw tongue of a brahmin, a wastelander favorite"
+	icon_state = "Brahmin Liver"
+	bitesize = 3
+	filling_color = "#CD853F"
+	list_reagents = list("nutriment" = 3, "vitamin" = 2)
+	cooked_type = /obj/item/reagent_containers/food/snacks/f13/brahminliver
+	tastes = list("beef" = 4, "tender meat" = 1)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/meat/slab/brahmintongue
+	name = "Raw Brahmin Tongue"
+	desc = "The raw tongue of a brahmin, a wastelander favorite"
+	icon_state = "BrahminTongue"
+	bitesize = 3
+	filling_color = "#CD853F"
+	list_reagents = list("nutriment" = 3, "vitamin" = 2)
+	cooked_type = /obj/item/reagent_containers/food/snacks/f13/brahmintongue
+	tastes = list("beef" = 4, "tender meat" = 1)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/f13/rawantbrain
+	name = "Raw Ant Brain"
+	desc = "Goppy reddish-grey flesh dug out of the brain case of a giant ant."
+	icon_state = "AntBrain"
+	bitesize = 3
+	filling_color = "#CD853F"
+	list_reagents = list("nutriment" = 3, "vitamin" = 2)
+	tastes = list("fat" = 4, "bitter meat" = 1)
+	foodtype = MEAT
+
 //WASTELAND STEAKS
 
 /obj/item/reagent_containers/food/snacks/meat/steak/stalker
@@ -387,6 +419,69 @@
 	list_reagents = list("nutriment" = 20, "vitamin" = 9)
 	tastes = list("cake" = 1, "crab" = 5)
 	filling_color = "#406618"
+
+/obj/item/reagent_containers/food/snacks/f13/pemmican
+	name = "pemmican"
+	desc = "A well-known food in survivalist circles, pemmican is a mixture of fat and protein from the meat of an animal."
+	icon_state = "phelmbiscuit"
+	list_reagents = list("nutriment" = 2, "vitamin" = 4)
+	tastes = list("dried meat" = 8, "Sawdust" = 4, "Corn" = 1)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/f13/friedbrahminskin
+	name = "Brahmin cracklings"
+	desc = "Cracklings are the solid material which remains after rendering animal fat and skin to produce lard, tallow, or schmaltz. It is often eaten as a snack food or made into animal feed. It is also used in cooking."
+	icon_state = "Fried Brahmin Skin"
+	filling_color = "#CD5C5C"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 1)
+	list_reagents = list("nutriment" = 6, "vitamin" = 1)
+	tastes = list("crispy skin" = 1)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/f13/brahminwellington
+	name = "Brahmin wellington"
+	desc = "A pie made of fillet steak coated with pâté and duxelles, which is then wrapped in molerat ham and puff pastry"
+	icon_state = "Brahmin Wellington"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 2)
+	bitesize = 4
+	filling_color = "#FFA07A"
+	list_reagents = list("nutriment" = 8)
+	tastes = list("smokey meat" = 3, "cheese" = 1, "sour cream" = 1, "flaky crust" = 2)
+	foodtype = MEAT | GRAIN
+
+/obj/item/reagent_containers/food/snacks/f13/deathclawwellington
+	name = "Deathclaw wellington"
+	desc = "A pie made of top grade steak coated with pâté and duxelles, which is then wrapped in molerat ham and buttery puff pastry"
+	icon_state = "Deathclaw Wellington"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 2)
+	bitesize = 4
+	filling_color = "#FFA07A"
+	list_reagents = list("nutriment" = 8)
+	tastes = list("high grade meat" = 2, "smokey meat" = 3, "cheese" = 1, "sour cream" = 1, "flaky crust" = 2)
+	foodtype = MEAT | GRAIN
+
+
+/obj/item/reagent_containers/food/snacks/f13/brahminliver
+	name = "Charred Brahmin Liver"
+	desc = "A fatty brahmin liver roasted in a cast iron pan over mesquite wood."
+	icon_state = "Charred Brahmin Liver"
+	bitesize = 3
+	filling_color = "#CD853F"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 4)
+	list_reagents = list("nutriment" = 5)
+	tastes = list("slow cooked liver" = 4, "delicious crunch" = 1)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/f13/brahmintongue
+	name = "Brahmin Tongue"
+	desc = "A brahmin tongue slow roasted over an open fire and topped with a large amount of thick brown gravy"
+	icon_state = "stewedsoymeat"
+	bitesize = 3
+	filling_color = "#CD853F"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 4)
+	list_reagents = list("nutriment" = 5)
+	tastes = list("top quality beef" = 4, "tender meat" = 1, "tasty gravy" = 1)
+	foodtype = MEAT
 
 //Junk food from trash//
 

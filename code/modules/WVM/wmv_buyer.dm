@@ -31,10 +31,7 @@
 								/obj/item/reagent_containers/pill/patch/turbo = 15, // Турбо
 								/obj/item/reagent_containers/pill/patch/medcase = 100, //Мед кейс
 								/obj/item/gun/ballistic/automatic/pistol/ninemil = 25,
-								/obj/item/gun/ballistic/revolver/colt6520 = 30,
-								/obj/item/gun/ballistic/rifle/enfield = 35,
 								/obj/item/gun/ballistic/automatic/pistol/n99 = 30,
-								/obj/item/gun/ballistic/automatic/pistol/pistol22 = 20,
 								/obj/item/gun/ballistic/revolver/widowmaker = 40
 								)
 

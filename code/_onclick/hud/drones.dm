@@ -11,14 +11,14 @@
 	inv_box.slot_id = SLOT_GENERC_DEXTROUS_STORAGE
 	static_inventory += inv_box
 
-	user.inv_box = new /obj/screen/inventory()
-	user.inv_box.name = "internal storage"
-	user.inv_box.icon = ui_style
-	user.inv_box.icon_state = "suit_storage"
+	inv_box = new /obj/screen/inventory()
+	inv_box.name = "internal storage"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "suit_storage"
 //	inv_box.icon_full = "template"
-	user.inv_box.screen_loc = ui_drone_head
-	user.inv_box.slot_id = SLOT_HEAD
-	user.static_inventory += inv_box
+	inv_box.screen_loc = ui_drone_head
+	inv_box.slot_id = SLOT_HEAD
+	static_inventory += inv_box
 
 	for(var/obj/screen/inventory/inv in (static_inventory + toggleable_inventory))
 		if(inv.slot_id)

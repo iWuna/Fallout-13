@@ -15,7 +15,7 @@
 	..()
 	parent = lnk
 
-/obj/dugpit/container_resist(mob/carbon/user)
+/obj/dugpit/container_resist(mob/living/carbon/user)
 	//try to unbury self
 	to_chat(user, "<span class='danger'>You start digging from inside, trying to unbury self!</span>")
 	if(do_after(user, (50), target = src))

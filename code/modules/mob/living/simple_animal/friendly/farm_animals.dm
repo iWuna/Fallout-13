@@ -387,7 +387,7 @@
 	emote_hear = list("brays.")
 	var/obj/item/inventory_back
 	speak_chance = 0.4
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4, /obj/item/reagent_containers/food/snacks/rawbrahminliver = 1, /obj/item/reagent_containers/food/snacks/rawbrahmintongue = 2, /obj/item/stack/sheet/animalhide/brahmin = 3)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4, /obj/item/reagent_containers/food/snacks/meat/slab/brahminliver = 1, /obj/item/reagent_containers/food/snacks/meat/slab/brahmintongue = 2, /obj/item/stack/sheet/animalhide/brahmin = 3)
 
 /mob/living/simple_animal/hostile/retaliate/goat/bighorn
 	name = "big horner"

@@ -113,7 +113,7 @@
 		/obj/item/reagent_containers/glass/bowl = 1,
 		/obj/item/reagent_containers/food/snacks/grown/feracactus = 1,
 		/obj/item/reagent_containers/food/snacks/grown/pricklypear = 1,
-		/obj/item/reagent_containers/food/snacks/friedbrahminskin = 1,
+		/obj/item/reagent_containers/food/snacks/f13/friedbrahminskin = 1,
 		/obj/item/reagent_containers/food/snacks/grown/pinyon = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/salad/desertsalad

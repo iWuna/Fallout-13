@@ -81,16 +81,16 @@
 	throw_icon = null
 	QDEL_LIST(infodisplay)
 
-	user.healths = null
-	user.healthdoll = null
-	user.internals = null
-	user.mood = null
-	user.lingchemdisplay = null
-	user.devilsouldisplay = null
-	user.lingstingdisplay = null
-	user.blobpwrdisplay = null
-	user.alien_plasma_display = null
-	user.alien_queen_finder = null
+	healths = null
+	healthdoll = null
+	internals = null
+	mood = null
+	lingchemdisplay = null
+	devilsouldisplay = null
+	lingstingdisplay = null
+	blobpwrdisplay = null
+	alien_plasma_display = null
+	alien_queen_finder = null
 
 	QDEL_LIST_ASSOC_VAL(plane_masters)
 	QDEL_LIST(screenoverlays)

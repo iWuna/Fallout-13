@@ -96,7 +96,7 @@
     	/obj/item/reagent_containers/food/snacks/sosjerky/healthy = 2,
     	/obj/item/reagent_containers/food/snacks/tallow = 1
 	)
-	result = /obj/item/reagent_containers/food/snacks/pemmican
+	result = /obj/item/reagent_containers/food/snacks/f13/pemmican
 	category = CAT_FOOD
 	subcategory = CAT_WASTEFOOD
 
