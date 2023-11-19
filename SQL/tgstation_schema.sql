@@ -458,7 +458,7 @@ CREATE TABLE `custom_items` (
   `rolename` varchar(250) NOT NULL,
   `itempath` varchar(250) NOT NULL,
   `description` varchar(250),
-  PRIMARY KEY (`id`);
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `role_whitelist`;
