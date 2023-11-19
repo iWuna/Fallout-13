@@ -472,7 +472,7 @@ CREATE TABLE `role_whitelist` (
 DROP TABLE IF EXISTS `donations`;
 CREATE TABLE `donations` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `byond` varchar(32) NOT NULL,
+  `ckey` varchar(32) NOT NULL,
   `sum` INT NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
