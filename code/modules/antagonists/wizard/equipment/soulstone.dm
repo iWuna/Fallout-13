@@ -251,9 +251,7 @@
 	S.cancel_camera()
 	name = "soulstone: Shade of [T.real_name]"
 	icon_state = "soulstone2"
-	if(U && (iswizard(U) || usability))
-		to_chat(S, "Your soul has been captured! You are now bound to [U.real_name]'s will. Help [U.p_them()] succeed in [U.p_their()] goals at all costs.")
-	else if(U && iscultist(U))
+	if(U && iscultist(U))
 		to_chat(S, "Your soul has been captured! You are now bound to the cult's will. Help them succeed in their goals at all costs.")
 	if(vic && U)
 		to_chat(U, "<span class='info'><b>Capture successful!</b>:</span> [T.real_name]'s soul has been ripped from [T.p_their()] body and stored within the soul stone.")

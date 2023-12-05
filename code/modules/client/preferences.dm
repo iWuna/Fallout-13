@@ -324,17 +324,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<table width='100%'><tr><td width='24%' valign='top'>"
 
 			dat += "<b>Species:</b><BR><a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a><BR>"
-
-			dat += "<b>Underwear:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=underwear;task=input'>[underwear]</a>"
-			if(GLOB.underwear_list[underwear]?.has_color)
-				dat += "<b>Underwear Color:</b> <span style='border:1px solid #161616; background-color: #[undie_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=undie_color;task=input'>Change</a><BR>"
-			dat += "<b>Undershirt:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=undershirt;task=input'>[undershirt]</a>"
-			if(GLOB.undershirt_list[undershirt]?.has_color)
-				dat += "<b>Undershirt Color:</b> <span style='border:1px solid #161616; background-color: #[shirt_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=shirt_color;task=input'>Change</a><BR>"
-			dat += "<b>Socks:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=socks;task=input'>[socks]</a>"
-			if(GLOB.socks_list[socks]?.has_color)
-				dat += "<b>Socks Color:</b> <span style='border:1px solid #161616; background-color: #[socks_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=socks_color;task=input'>Change</a><BR>"
-			dat += "<b>Backpack:</b><BR><a href ='?_src_=prefs;preference=bag;task=input'>[backbag]</a><BR>"
+			//dat += "<b>Backpack:</b><BR><a href ='?_src_=prefs;preference=bag;task=input'>[backbag]</a><BR>"
 			dat += "<b>Uplink Spawn Location:</b><BR><a href ='?_src_=prefs;preference=uplink_loc;task=input'>[uplink_spawn_loc]</a><BR></td>"
 			dat += "</td>"
 
@@ -639,7 +629,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			if(jobban_isbanned(user, ROLE_SYNDICATE))
 				dat += "<font color=red><b>You are banned from antagonist roles.</b></font>"
 				src.be_special = list()
-
 
 			for (var/i in GLOB.special_roles)
 				if(jobban_isbanned(user, i))

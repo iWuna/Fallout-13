@@ -356,12 +356,6 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 			if("changeling")
 				if(M.mind.has_antag_datum(/datum/antagonist/changeling,TRUE))
 					return 2
-			if("wizard")
-				if(iswizard(M))
-					return 2
-			if("apprentice")
-				if(M.mind in SSticker.mode.apprentices)
-					return 2
 			if("monkey")
 				if(isliving(M))
 					var/mob/living/L = M

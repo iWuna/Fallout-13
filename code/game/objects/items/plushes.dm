@@ -544,13 +544,6 @@
 	icon_state = "plush-idiot"
 	toysound = list('sound/effects/idiot.ogg' = 1)
 
-/obj/item/toy/plush/plush_vladick
-	name = "Vladick's plush"
-	desc = "Best gay battle unit ever."
-	icon = 'icons/obj/plushes.dmi'
-	icon_state = "plush-vladick"
-	toysound = list('sound/effects/vladikmoan.ogg' = 1)
-
 /obj/item/toy/plush/plush_deathclaw
 	name = "Plushie non-death claw"
 	desc = "Cute and dangerous little boy."

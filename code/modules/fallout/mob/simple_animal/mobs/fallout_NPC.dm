@@ -539,7 +539,7 @@
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
-	speak = "Yes!"
+	speak = ""
 	speak_emote = list("rushes")
 	speak_chance = 2
 
@@ -571,7 +571,7 @@
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
-	speak = "Yes!"
+	speak = ""
 	speak_emote = list("rushes")
 	speak_chance = 2
 

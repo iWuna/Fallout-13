@@ -221,7 +221,6 @@ GLOBAL_LIST_INIT(donations_list, list(
 		new /datum/donate_info("Deathclaw Plush",			/obj/item/toy/plush/plush_deathclaw,				150),
 		new /datum/donate_info("Supermutant Plush",			/obj/item/toy/plush/plush_super,					150),
 		new /datum/donate_info("Ghoul Plush",				/obj/item/toy/plush/plush_ghoul,					150),
-		new /datum/donate_info("Vladick Plush",				/obj/item/toy/plush/plush_vladick,					150),
 		new /datum/donate_info("Urist Plush",				/obj/item/toy/plush/plush_urist,					150),
 		new /datum/donate_info("Ulyess Plush",				/obj/item/toy/plush/plush_bearnbull,				150),
 		new /datum/donate_info("Khan Plush",				/obj/item/toy/plush/plush_punk,						150),

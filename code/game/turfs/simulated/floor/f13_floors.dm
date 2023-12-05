@@ -44,8 +44,8 @@
 #define DESOLATE_PLANT_SPAWN_LIST list(/obj/structure/flora/grass/wasteland = 1)
 
 /turf/open/floor/plating/f13/outside/desert
-	name = "песок"
-	desc = "Песок. Много песка."
+	name = "sand"
+	desc = "Sand, a lot of sand."
 	icon = 'icons/turf/f13desert.dmi'
 	icon_state = "wasteland1"
 

@@ -88,10 +88,6 @@ GLOBAL_VAR_INIT(summon_magic_triggered, FALSE)
 /proc/give_guns(mob/living/carbon/human/H)
 	if(H.stat == DEAD || !(H.client))
 		return
-	if(H.mind)
-		if(iswizard(H) || H.mind.has_antag_datum(/datum/antagonist/survivalist/guns))
-			return
-
 	if(prob(GLOB.summon_guns_triggered) && !(H.mind.has_antag_datum(/datum/antagonist)))
 		SSticker.mode.traitors += H.mind
 
@@ -110,10 +106,6 @@ GLOBAL_VAR_INIT(summon_magic_triggered, FALSE)
 /proc/give_magic(mob/living/carbon/human/H)
 	if(H.stat == DEAD || !(H.client))
 		return
-	if(H.mind)
-		if(iswizard(H) || H.mind.has_antag_datum(/datum/antagonist/survivalist/magic))
-			return
-
 	if(prob(GLOB.summon_magic_triggered) && !(H.mind.has_antag_datum(/datum/antagonist)))
 		H.mind.add_antag_datum(/datum/antagonist/survivalist/magic)
 		H.log_message("<font color='red'>Was made into a survivalist, and trusts no one!</font>", INDIVIDUAL_ATTACK_LOG)

@@ -46,35 +46,14 @@
 				output += "<p>\[ [LINKIFY_READY("Ready", PLAYER_READY_TO_PLAY)] | [LINKIFY_READY("Not Ready", PLAYER_NOT_READY)] | <b> Observe </b> \]</p>"
 	*/
 		output += "<p>Game will start soon!</p>"
-		output += "<p><a href='byond://?src=[REF(src)];refresh=1'>(Refresh)</a></p>"
+		output += "<p><a href='byond://?src=[REF(src)];refresh=1'>Refresh</a></p>"
 	else
 		output += "<p><a href='byond://?src=[REF(src)];manifest=1'>Player List</a></p>"
 		output += "<p><a href='byond://?src=[REF(src)];late_join=1'>Join Game!</a></p>"
-
-	if(!IsGuestKey(src.key))
-		if (SSdbcore.Connect())
-			var/isadmin = 0
-			if(src.client && src.client.holder)
-				isadmin = 1
-			var/datum/DBQuery/query_get_new_polls = SSdbcore.NewQuery("SELECT id FROM [format_table_name("poll_question")] WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM [format_table_name("poll_vote")] WHERE ckey = \"[ckey]\") AND id NOT IN (SELECT pollid FROM [format_table_name("poll_textreply")] WHERE ckey = \"[ckey]\")")
-			var/rs = REF(src)
-			if(query_get_new_polls.Execute())
-				var/newpoll = 0
-				if(query_get_new_polls.NextRow())
-					newpoll = 1
-
-				if(newpoll)
-					output += "<p><b><a href='byond://?src=[rs];showpoll=1'>Show Player Polls</A> (NEW!)</b></p>"
-				else
-					output += "<p><a href='byond://?src=[rs];showpoll=1'>Show Player Polls</A></p>"
-			qdel(query_get_new_polls)
-			if(QDELETED(src))
-				return
-
 	output += "</center>"
 
 	//src << browse(output,"window=playersetup;size=210x240;can_close=0")
-	var/datum/browser/popup = new(src, "playersetup", "<div align='center'>New Player Options</div>", 250, 265)
+	var/datum/browser/popup = new(src, "playersetup", "<div align='center'>Player Options</div>", 250, 265)
 	popup.set_window_options("can_close=0")
 	popup.set_content(output)
 	popup.open(0)
